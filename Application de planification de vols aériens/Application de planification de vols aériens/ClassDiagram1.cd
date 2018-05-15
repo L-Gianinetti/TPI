@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="0.1 N">
+    <Position X="7.302" Y="3.885" Height="0.354" Width="0.7" />
+  </Comment>
+  <Class Name="Application_de_planification_de_vols_aériens.Airport" Collapsed="true">
+    <Position X="7" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Airport.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Application_de_planification_de_vols_aériens.DBConnexion" Collapsed="true">
+    <Position X="2.25" Y="2" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>IDhgAAAIKAiCgAAAhAAAAAAIIQAEhAAghgAAgAAACAI=</HashCode>
+      <FileName>DBConnexion.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="FlightSchedule" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Application_de_planification_de_vols_aériens.Flight" Collapsed="true">
+    <Position X="7.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAIAAIAAAICAAAAAAQIAAAECAAAAAgAAAABAAA=</HashCode>
+      <FileName>Flight.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Airport" />
+      <Property Name="Line" />
+      <Property Name="FlightSchedule" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Application_de_planification_de_vols_aériens.FlightSchedule" Collapsed="true">
+    <Position X="4.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAACAAAAAQAAAAAAAAAAAgCAAAAAAAAAAAAA=</HashCode>
+      <FileName>FlightSchedule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Application_de_planification_de_vols_aériens.frmAffectationVol" Collapsed="true">
+    <Position X="17.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAKEAAACAAACAAAAgAACAgAACEA=</HashCode>
+      <FileName>frmAffectationVol.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Application_de_planification_de_vols_aériens.frmVacances" Collapsed="true">
+    <Position X="11" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAUAAAAACAAAAgKAACIAAACAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>frmVacances.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Pilot" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Application_de_planification_de_vols_aériens.frmVacancesAffichage" Collapsed="true">
+    <Position X="12.75" Y="10.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACiAEAAAAAACAAQACAAgAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>frmVacancesAffichage.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Vacation" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Application_de_planification_de_vols_aériens.Line" Collapsed="true">
+    <Position X="12.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAABAIAAAAAIAAAAAAAAAAEAAAABAAAAAAAAABAA=</HashCode>
+      <FileName>Line.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Airport" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Application_de_planification_de_vols_aériens.Pilot" Collapsed="true">
+    <Position X="9.25" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEgAAABAAAIAAAAAAAwAgAAEAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>Pilot.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Airport" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Application_de_planification_de_vols_aériens.Program" Collapsed="true">
+    <Position X="16.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Application_de_planification_de_vols_aériens.Vacation" Collapsed="true">
+    <Position X="13" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAEAAAABAAAAAAAACAAAAAgAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Vacation.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Pilot1" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
