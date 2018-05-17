@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespace_application__de__planification__de__vols__a_xC3_xA9riens" kind="namespace" language="C#">
+    <compoundname>Application_de_planification_de_vols_aériens</compoundname>
+    <innerclass refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_affichage" prot="public">Application_de_planification_de_vols_aériens::Affichage</innerclass>
+    <innerclass refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_airport" prot="public">Application_de_planification_de_vols_aériens::Airport</innerclass>
+    <innerclass refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection" prot="public">Application_de_planification_de_vols_aériens::DBConnection</innerclass>
+    <innerclass refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_flight" prot="public">Application_de_planification_de_vols_aériens::Flight</innerclass>
+    <innerclass refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_flight_schedule" prot="public">Application_de_planification_de_vols_aériens::FlightSchedule</innerclass>
+    <innerclass refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_affectation_vol" prot="public">Application_de_planification_de_vols_aériens::frmAffectationVol</innerclass>
+    <innerclass refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion" prot="public">Application_de_planification_de_vols_aériens::frmGestion</innerclass>
+    <innerclass refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacances" prot="public">Application_de_planification_de_vols_aériens::frmVacances</innerclass>
+    <innerclass refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacances_affichage" prot="public">Application_de_planification_de_vols_aériens::frmVacancesAffichage</innerclass>
+    <innerclass refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_line" prot="public">Application_de_planification_de_vols_aériens::Line</innerclass>
+    <innerclass refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot" prot="public">Application_de_planification_de_vols_aériens::Pilot</innerclass>
+    <innerclass refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_program" prot="public">Application_de_planification_de_vols_aériens::Program</innerclass>
+    <innerclass refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_vacation" prot="public">Application_de_planification_de_vols_aériens::Vacation</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Airport.cs" line="8" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,143 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_vacation" kind="class" language="C#" prot="public">
+    <compoundname>Application_de_planification_de_vols_aériens::Vacation</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_vacation_1ac4b3dcb52878e430d9de3d64972161b0" prot="private" static="no" mutable="no">
+        <type>DateTime</type>
+        <definition>DateTime Application_de_planification_de_vols_aériens.Vacation.startDate</definition>
+        <argsstring></argsstring>
+        <name>startDate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Vacation.cs" line="11" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Vacation.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_vacation_1a4cda35b70d8a4b33b73000ecaca0fac3" prot="private" static="no" mutable="no">
+        <type>DateTime</type>
+        <definition>DateTime Application_de_planification_de_vols_aériens.Vacation.endDate</definition>
+        <argsstring></argsstring>
+        <name>endDate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Vacation.cs" line="12" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Vacation.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_vacation_1a6d53f1e9d9f77cd5e174d0675becf5b1" prot="private" static="no" mutable="no">
+        <type><ref refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot" kindref="compound">Pilot</ref></type>
+        <definition>Pilot Application_de_planification_de_vols_aériens.Vacation.pilot</definition>
+        <argsstring></argsstring>
+        <name>pilot</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Vacation.cs" line="13" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Vacation.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_vacation_1a5ebeb112b3fffb8c5325ac0ce7000ad6" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DateTime</type>
+        <definition>DateTime Application_de_planification_de_vols_aériens.Vacation.StartDate</definition>
+        <argsstring></argsstring>
+        <name>StartDate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Vacation.cs" line="16" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Vacation.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_vacation_1ae255a27724aa8d84aee0fa8ec23a4878" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DateTime</type>
+        <definition>DateTime Application_de_planification_de_vols_aériens.Vacation.EndDate</definition>
+        <argsstring></argsstring>
+        <name>EndDate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Vacation.cs" line="29" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Vacation.cs" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_vacation_1a87be5d673051905ea03c547cb55ec866" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot" kindref="compound">Pilot</ref></type>
+        <definition>Pilot Application_de_planification_de_vols_aériens.Vacation.Pilot</definition>
+        <argsstring></argsstring>
+        <name>Pilot</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Vacation.cs" line="42" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Vacation.cs" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_vacation_1a6820353b10a0f3e779e014d751337b75" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot" kindref="compound">Pilot</ref></type>
+        <definition>Pilot Application_de_planification_de_vols_aériens.Vacation.Pilot1</definition>
+        <argsstring></argsstring>
+        <name>Pilot1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Vacation.cs" line="56" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Vacation.cs" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_vacation_1abd1900c4e75c89a0a681c8fd83d6f6fc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Application_de_planification_de_vols_aériens.Vacation.Vacation</definition>
+        <argsstring>(DateTime startDate, DateTime endDate, Pilot pilot)</argsstring>
+        <name>Vacation</name>
+        <param>
+          <type>DateTime</type>
+          <declname>startDate</declname>
+        </param>
+        <param>
+          <type>DateTime</type>
+          <declname>endDate</declname>
+        </param>
+        <param>
+          <type><ref refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot" kindref="compound">Pilot</ref></type>
+          <declname>pilot</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Vacation.cs" line="68" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Vacation.cs" bodystart="68" bodyend="73"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Vacation.cs" line="10" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Vacation.cs" bodystart="9" bodyend="74"/>
+    <listofallmembers>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_vacation_1a4cda35b70d8a4b33b73000ecaca0fac3" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Vacation</scope><name>endDate</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_vacation_1ae255a27724aa8d84aee0fa8ec23a4878" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Vacation</scope><name>EndDate</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_vacation_1a6d53f1e9d9f77cd5e174d0675becf5b1" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Vacation</scope><name>pilot</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_vacation_1a87be5d673051905ea03c547cb55ec866" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Vacation</scope><name>Pilot</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_vacation_1a6820353b10a0f3e779e014d751337b75" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Vacation</scope><name>Pilot1</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_vacation_1a5ebeb112b3fffb8c5325ac0ce7000ad6" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Vacation</scope><name>StartDate</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_vacation_1ac4b3dcb52878e430d9de3d64972161b0" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Vacation</scope><name>startDate</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_vacation_1abd1900c4e75c89a0a681c8fd83d6f6fc" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Vacation</scope><name>Vacation</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

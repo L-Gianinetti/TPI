@@ -8,36 +8,12 @@ namespace Application_de_planification_de_vols_aériens
 {
     public class Line
     {
-        private Airport departureAirport;
-        private Airport arrivalAirport;
+        private int idDepartureAirport;
+        private int idArrivalAirport;
         private string distance;
 
         #region accessors
-        internal Airport DepartureAirport
-        {
-            get
-            {
-                return departureAirport;
-            }
 
-            set
-            {
-                departureAirport = value;
-            }
-        }
-
-        internal Airport ArrivalAirport
-        {
-            get
-            {
-                return arrivalAirport;
-            }
-
-            set
-            {
-                arrivalAirport = value;
-            }
-        }
 
         public string Distance
         {
@@ -51,23 +27,40 @@ namespace Application_de_planification_de_vols_aériens
                 distance = value;
             }
         }
-        #endregion
 
-        public Airport Airport
+        public int IdDepartureAirport
         {
             get
             {
-                throw new System.NotImplementedException();
+                return idDepartureAirport;
             }
 
             set
             {
+                idDepartureAirport = value;
             }
         }
 
-        public Line(Airport departureAirport, Airport arrivalAirport, string distance)
+        public int IdArrivalAirport
         {
+            get
+            {
+                return idArrivalAirport;
+            }
 
+            set
+            {
+                idArrivalAirport = value;
+            }
+        }
+        #endregion
+
+
+        public Line(int idDepartureAirport, int idArrivalAirport, string distance)
+        {
+            this.IdArrivalAirport = idArrivalAirport;
+            this.IdDepartureAirport = idDepartureAirport;
+            this.distance = distance;
         }
     }
 }

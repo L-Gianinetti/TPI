@@ -33,24 +33,23 @@
             this.cmdGestion = new System.Windows.Forms.Button();
             this.grbGestion = new System.Windows.Forms.GroupBox();
             this.grbLigne = new System.Windows.Forms.GroupBox();
+            this.cboLieuArrivee = new System.Windows.Forms.ComboBox();
+            this.cboLieuDepart = new System.Windows.Forms.ComboBox();
             this.cmdAjouterLigne = new System.Windows.Forms.Button();
-            this.lstLieuDepart = new System.Windows.Forms.ListBox();
-            this.lstLieuArrivee = new System.Windows.Forms.ListBox();
-            this.txtLieuArrivee = new System.Windows.Forms.TextBox();
             this.lblLieuDepart = new System.Windows.Forms.Label();
             this.lblDistance = new System.Windows.Forms.Label();
-            this.txtLieuDepart = new System.Windows.Forms.TextBox();
             this.lblLieuArrivee = new System.Windows.Forms.Label();
             this.txtDistance = new System.Windows.Forms.TextBox();
             this.grbVol = new System.Windows.Forms.GroupBox();
+            this.cboLigne = new System.Windows.Forms.ComboBox();
             this.cmdAjouterVol = new System.Windows.Forms.Button();
             this.dtpDateArrivee = new System.Windows.Forms.DateTimePicker();
             this.dtpDateDepart = new System.Windows.Forms.DateTimePicker();
-            this.lstLigne = new System.Windows.Forms.ListBox();
             this.lblDateDepart = new System.Windows.Forms.Label();
             this.lblDateArrivee = new System.Windows.Forms.Label();
             this.lblLigne = new System.Windows.Forms.Label();
             this.grbPilote = new System.Windows.Forms.GroupBox();
+            this.cboAeroportAffectation = new System.Windows.Forms.ComboBox();
             this.cmdAjouterPilote = new System.Windows.Forms.Button();
             this.txtHeuresVol = new System.Windows.Forms.TextBox();
             this.txtPrenom = new System.Windows.Forms.TextBox();
@@ -59,12 +58,21 @@
             this.lblHeuresVol = new System.Windows.Forms.Label();
             this.lblAeroportAffectation = new System.Windows.Forms.Label();
             this.lblNom = new System.Windows.Forms.Label();
-            this.cboAeroportAffectation = new System.Windows.Forms.ComboBox();
+            this.lblHeureDepart = new System.Windows.Forms.Label();
+            this.lblHeureArrivee = new System.Windows.Forms.Label();
+            this.nudHDepart = new System.Windows.Forms.NumericUpDown();
+            this.nudMDepart = new System.Windows.Forms.NumericUpDown();
+            this.nudHArrivee = new System.Windows.Forms.NumericUpDown();
+            this.nudMArrivee = new System.Windows.Forms.NumericUpDown();
             this.Entete.SuspendLayout();
             this.grbGestion.SuspendLayout();
             this.grbLigne.SuspendLayout();
             this.grbVol.SuspendLayout();
             this.grbPilote.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudHDepart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudMDepart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudHArrivee)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudMArrivee)).BeginInit();
             this.SuspendLayout();
             // 
             // Entete
@@ -109,13 +117,11 @@
             // 
             // grbLigne
             // 
+            this.grbLigne.Controls.Add(this.cboLieuArrivee);
+            this.grbLigne.Controls.Add(this.cboLieuDepart);
             this.grbLigne.Controls.Add(this.cmdAjouterLigne);
-            this.grbLigne.Controls.Add(this.lstLieuDepart);
-            this.grbLigne.Controls.Add(this.lstLieuArrivee);
-            this.grbLigne.Controls.Add(this.txtLieuArrivee);
             this.grbLigne.Controls.Add(this.lblLieuDepart);
             this.grbLigne.Controls.Add(this.lblDistance);
-            this.grbLigne.Controls.Add(this.txtLieuDepart);
             this.grbLigne.Controls.Add(this.lblLieuArrivee);
             this.grbLigne.Controls.Add(this.txtDistance);
             this.grbLigne.Location = new System.Drawing.Point(7, 386);
@@ -124,6 +130,22 @@
             this.grbLigne.TabIndex = 2;
             this.grbLigne.TabStop = false;
             this.grbLigne.Text = "Ligne";
+            // 
+            // cboLieuArrivee
+            // 
+            this.cboLieuArrivee.FormattingEnabled = true;
+            this.cboLieuArrivee.Location = new System.Drawing.Point(535, 34);
+            this.cboLieuArrivee.Name = "cboLieuArrivee";
+            this.cboLieuArrivee.Size = new System.Drawing.Size(291, 21);
+            this.cboLieuArrivee.TabIndex = 19;
+            // 
+            // cboLieuDepart
+            // 
+            this.cboLieuDepart.FormattingEnabled = true;
+            this.cboLieuDepart.Location = new System.Drawing.Point(110, 35);
+            this.cboLieuDepart.Name = "cboLieuDepart";
+            this.cboLieuDepart.Size = new System.Drawing.Size(224, 21);
+            this.cboLieuDepart.TabIndex = 18;
             // 
             // cmdAjouterLigne
             // 
@@ -134,29 +156,6 @@
             this.cmdAjouterLigne.Text = "Ajouter";
             this.cmdAjouterLigne.UseVisualStyleBackColor = true;
             this.cmdAjouterLigne.Click += new System.EventHandler(this.cmdAjouterLigne_Click);
-            // 
-            // lstLieuDepart
-            // 
-            this.lstLieuDepart.FormattingEnabled = true;
-            this.lstLieuDepart.Location = new System.Drawing.Point(111, 61);
-            this.lstLieuDepart.Name = "lstLieuDepart";
-            this.lstLieuDepart.Size = new System.Drawing.Size(120, 95);
-            this.lstLieuDepart.TabIndex = 10;
-            // 
-            // lstLieuArrivee
-            // 
-            this.lstLieuArrivee.FormattingEnabled = true;
-            this.lstLieuArrivee.Location = new System.Drawing.Point(618, 60);
-            this.lstLieuArrivee.Name = "lstLieuArrivee";
-            this.lstLieuArrivee.Size = new System.Drawing.Size(120, 95);
-            this.lstLieuArrivee.TabIndex = 11;
-            // 
-            // txtLieuArrivee
-            // 
-            this.txtLieuArrivee.Location = new System.Drawing.Point(618, 34);
-            this.txtLieuArrivee.Name = "txtLieuArrivee";
-            this.txtLieuArrivee.Size = new System.Drawing.Size(100, 20);
-            this.txtLieuArrivee.TabIndex = 15;
             // 
             // lblLieuDepart
             // 
@@ -176,17 +175,10 @@
             this.lblDistance.TabIndex = 7;
             this.lblDistance.Text = "Distance séparant les deux lieux (km) :";
             // 
-            // txtLieuDepart
-            // 
-            this.txtLieuDepart.Location = new System.Drawing.Point(111, 31);
-            this.txtLieuDepart.Name = "txtLieuDepart";
-            this.txtLieuDepart.Size = new System.Drawing.Size(100, 20);
-            this.txtLieuDepart.TabIndex = 14;
-            // 
             // lblLieuArrivee
             // 
             this.lblLieuArrivee.AutoSize = true;
-            this.lblLieuArrivee.Location = new System.Drawing.Point(526, 34);
+            this.lblLieuArrivee.Location = new System.Drawing.Point(453, 34);
             this.lblLieuArrivee.Name = "lblLieuArrivee";
             this.lblLieuArrivee.Size = new System.Drawing.Size(76, 13);
             this.lblLieuArrivee.TabIndex = 5;
@@ -201,10 +193,16 @@
             // 
             // grbVol
             // 
+            this.grbVol.Controls.Add(this.nudMArrivee);
+            this.grbVol.Controls.Add(this.nudHArrivee);
+            this.grbVol.Controls.Add(this.nudMDepart);
+            this.grbVol.Controls.Add(this.nudHDepart);
+            this.grbVol.Controls.Add(this.lblHeureArrivee);
+            this.grbVol.Controls.Add(this.lblHeureDepart);
+            this.grbVol.Controls.Add(this.cboLigne);
             this.grbVol.Controls.Add(this.cmdAjouterVol);
             this.grbVol.Controls.Add(this.dtpDateArrivee);
             this.grbVol.Controls.Add(this.dtpDateDepart);
-            this.grbVol.Controls.Add(this.lstLigne);
             this.grbVol.Controls.Add(this.lblDateDepart);
             this.grbVol.Controls.Add(this.lblDateArrivee);
             this.grbVol.Controls.Add(this.lblLigne);
@@ -214,6 +212,14 @@
             this.grbVol.TabIndex = 1;
             this.grbVol.TabStop = false;
             this.grbVol.Text = "Vol";
+            // 
+            // cboLigne
+            // 
+            this.cboLigne.FormattingEnabled = true;
+            this.cboLigne.Location = new System.Drawing.Point(113, 103);
+            this.cboLigne.Name = "cboLigne";
+            this.cboLigne.Size = new System.Drawing.Size(586, 21);
+            this.cboLigne.TabIndex = 17;
             // 
             // cmdAjouterVol
             // 
@@ -239,14 +245,6 @@
             this.dtpDateDepart.Size = new System.Drawing.Size(200, 20);
             this.dtpDateDepart.TabIndex = 10;
             // 
-            // lstLigne
-            // 
-            this.lstLigne.FormattingEnabled = true;
-            this.lstLigne.Location = new System.Drawing.Point(91, 66);
-            this.lstLigne.Name = "lstLigne";
-            this.lstLigne.Size = new System.Drawing.Size(120, 95);
-            this.lstLigne.TabIndex = 9;
-            // 
             // lblDateDepart
             // 
             this.lblDateDepart.AutoSize = true;
@@ -268,7 +266,7 @@
             // lblLigne
             // 
             this.lblLigne.AutoSize = true;
-            this.lblLigne.Location = new System.Drawing.Point(23, 66);
+            this.lblLigne.Location = new System.Drawing.Point(19, 103);
             this.lblLigne.Name = "lblLigne";
             this.lblLigne.Size = new System.Drawing.Size(39, 13);
             this.lblLigne.TabIndex = 4;
@@ -291,6 +289,14 @@
             this.grbPilote.TabIndex = 0;
             this.grbPilote.TabStop = false;
             this.grbPilote.Text = "Pilote";
+            // 
+            // cboAeroportAffectation
+            // 
+            this.cboAeroportAffectation.FormattingEnabled = true;
+            this.cboAeroportAffectation.Location = new System.Drawing.Point(155, 98);
+            this.cboAeroportAffectation.Name = "cboAeroportAffectation";
+            this.cboAeroportAffectation.Size = new System.Drawing.Size(234, 21);
+            this.cboAeroportAffectation.TabIndex = 16;
             // 
             // cmdAjouterPilote
             // 
@@ -359,13 +365,71 @@
             this.lblNom.TabIndex = 0;
             this.lblNom.Text = "Nom :";
             // 
-            // cboAeroportAffectation
+            // lblHeureDepart
             // 
-            this.cboAeroportAffectation.FormattingEnabled = true;
-            this.cboAeroportAffectation.Location = new System.Drawing.Point(155, 98);
-            this.cboAeroportAffectation.Name = "cboAeroportAffectation";
-            this.cboAeroportAffectation.Size = new System.Drawing.Size(234, 21);
-            this.cboAeroportAffectation.TabIndex = 16;
+            this.lblHeureDepart.AutoSize = true;
+            this.lblHeureDepart.Location = new System.Drawing.Point(26, 68);
+            this.lblHeureDepart.Name = "lblHeureDepart";
+            this.lblHeureDepart.Size = new System.Drawing.Size(90, 13);
+            this.lblHeureDepart.TabIndex = 18;
+            this.lblHeureDepart.Text = "Heure de départ :";
+            // 
+            // lblHeureArrivee
+            // 
+            this.lblHeureArrivee.AutoSize = true;
+            this.lblHeureArrivee.Location = new System.Drawing.Point(408, 68);
+            this.lblHeureArrivee.Name = "lblHeureArrivee";
+            this.lblHeureArrivee.Size = new System.Drawing.Size(85, 13);
+            this.lblHeureArrivee.TabIndex = 19;
+            this.lblHeureArrivee.Text = "Heure d\'arrivée :";
+            // 
+            // nudHDepart
+            // 
+            this.nudHDepart.Location = new System.Drawing.Point(123, 68);
+            this.nudHDepart.Maximum = new decimal(new int[] {
+            23,
+            0,
+            0,
+            0});
+            this.nudHDepart.Name = "nudHDepart";
+            this.nudHDepart.Size = new System.Drawing.Size(40, 20);
+            this.nudHDepart.TabIndex = 20;
+            // 
+            // nudMDepart
+            // 
+            this.nudMDepart.Location = new System.Drawing.Point(171, 68);
+            this.nudMDepart.Maximum = new decimal(new int[] {
+            59,
+            0,
+            0,
+            0});
+            this.nudMDepart.Name = "nudMDepart";
+            this.nudMDepart.Size = new System.Drawing.Size(40, 20);
+            this.nudMDepart.TabIndex = 21;
+            // 
+            // nudHArrivee
+            // 
+            this.nudHArrivee.Location = new System.Drawing.Point(493, 68);
+            this.nudHArrivee.Maximum = new decimal(new int[] {
+            23,
+            0,
+            0,
+            0});
+            this.nudHArrivee.Name = "nudHArrivee";
+            this.nudHArrivee.Size = new System.Drawing.Size(40, 20);
+            this.nudHArrivee.TabIndex = 23;
+            // 
+            // nudMArrivee
+            // 
+            this.nudMArrivee.Location = new System.Drawing.Point(539, 68);
+            this.nudMArrivee.Maximum = new decimal(new int[] {
+            59,
+            0,
+            0,
+            0});
+            this.nudMArrivee.Name = "nudMArrivee";
+            this.nudMArrivee.Size = new System.Drawing.Size(40, 20);
+            this.nudMArrivee.TabIndex = 24;
             // 
             // frmGestion
             // 
@@ -385,6 +449,10 @@
             this.grbVol.PerformLayout();
             this.grbPilote.ResumeLayout(false);
             this.grbPilote.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudHDepart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudMDepart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudHArrivee)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudMArrivee)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -402,9 +470,7 @@
         private System.Windows.Forms.Label lblDistance;
         private System.Windows.Forms.Label lblLieuArrivee;
         private System.Windows.Forms.TextBox txtDistance;
-        private System.Windows.Forms.TextBox txtLieuArrivee;
         private System.Windows.Forms.Label lblDateDepart;
-        private System.Windows.Forms.TextBox txtLieuDepart;
         private System.Windows.Forms.Label lblDateArrivee;
         private System.Windows.Forms.Label lblLigne;
         private System.Windows.Forms.TextBox txtPrenom;
@@ -415,13 +481,19 @@
         private System.Windows.Forms.Label lblNom;
         private System.Windows.Forms.TextBox txtHeuresVol;
         private System.Windows.Forms.Button cmdAjouterLigne;
-        private System.Windows.Forms.ListBox lstLieuDepart;
-        private System.Windows.Forms.ListBox lstLieuArrivee;
         private System.Windows.Forms.Button cmdAjouterVol;
         private System.Windows.Forms.DateTimePicker dtpDateArrivee;
         private System.Windows.Forms.DateTimePicker dtpDateDepart;
-        private System.Windows.Forms.ListBox lstLigne;
         private System.Windows.Forms.Button cmdAjouterPilote;
         private System.Windows.Forms.ComboBox cboAeroportAffectation;
+        private System.Windows.Forms.ComboBox cboLieuArrivee;
+        private System.Windows.Forms.ComboBox cboLieuDepart;
+        private System.Windows.Forms.ComboBox cboLigne;
+        private System.Windows.Forms.NumericUpDown nudMArrivee;
+        private System.Windows.Forms.NumericUpDown nudHArrivee;
+        private System.Windows.Forms.NumericUpDown nudMDepart;
+        private System.Windows.Forms.NumericUpDown nudHDepart;
+        private System.Windows.Forms.Label lblHeureArrivee;
+        private System.Windows.Forms.Label lblHeureDepart;
     }
 }

@@ -67,45 +67,13 @@ namespace Application_de_planification_de_vols_aériens
         }
         #endregion
 
-        public Airport Airport
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-
-            set
-            {
-            }
-        }
-
-        public Line Line
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-
-            set
-            {
-            }
-        }
-
-        public FlightSchedule FlightSchedule
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-
-            set
-            {
-            }
-        }
 
         public Flight(string name, DateTime departureDate, DateTime arrivalDate, Line flightLine)
         {
-
+            this.name = name;
+            this.departureDate = departureDate;
+            this.arrivalDate = arrivalDate;
+            this.flightLine = flightLine;
         }
 
     }

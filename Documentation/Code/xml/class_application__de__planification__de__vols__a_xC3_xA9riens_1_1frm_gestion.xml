@@ -1,0 +1,729 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion" kind="class" language="C#" prot="public">
+    <compoundname>Application_de_planification_de_vols_aériens::frmGestion</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Form</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a4a395d8a265d8df6d136be102d62cdd3" prot="private" static="no" mutable="no">
+        <type>List&lt; string &gt;</type>
+        <definition>List&lt;string&gt; Application_de_planification_de_vols_aériens.frmGestion.airportList</definition>
+        <argsstring></argsstring>
+        <name>airportList</name>
+        <initializer>= new List&lt;string&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.cs" line="15" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1aab5310d69e44c3ea92d35cd848cf6f26" prot="private" static="no" mutable="no">
+        <type><ref refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot" kindref="compound">Pilot</ref></type>
+        <definition>Pilot Application_de_planification_de_vols_aériens.frmGestion.newPilot</definition>
+        <argsstring></argsstring>
+        <name>newPilot</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.cs" line="16" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a532b10d8c172f8924bbb60e4e5d9c3a3" prot="private" static="no" mutable="no">
+        <type><ref refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_airport" kindref="compound">Airport</ref></type>
+        <definition>Airport Application_de_planification_de_vols_aériens.frmGestion.airport</definition>
+        <argsstring></argsstring>
+        <name>airport</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.cs" line="17" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1ad7367b7aed616bcae659f3c037f8992c" prot="private" static="no" mutable="no">
+        <type><ref refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection" kindref="compound">DBConnection</ref></type>
+        <definition>DBConnection Application_de_planification_de_vols_aériens.frmGestion.dbConnexion</definition>
+        <argsstring></argsstring>
+        <name>dbConnexion</name>
+        <initializer>= new <ref refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection" kindref="compound">DBConnection</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.cs" line="18" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a877cda6dfab874264645890d023d389e" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer Application_de_planification_de_vols_aériens.frmGestion.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.Designer.cs" line="8" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.Designer.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a0672075e981f4769f02ce236ed755599" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Panel</type>
+        <definition>System.Windows.Forms.Panel Application_de_planification_de_vols_aériens.frmGestion.Entete</definition>
+        <argsstring></argsstring>
+        <name>Entete</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.Designer.cs" line="394" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.Designer.cs" bodystart="394" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1abb866487dbab263f68d308967644d8fa" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button Application_de_planification_de_vols_aériens.frmGestion.cmdAffichage</definition>
+        <argsstring></argsstring>
+        <name>cmdAffichage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.Designer.cs" line="395" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.Designer.cs" bodystart="395" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1affe6bc519bf3301344b99109a0722846" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button Application_de_planification_de_vols_aériens.frmGestion.cmdGestion</definition>
+        <argsstring></argsstring>
+        <name>cmdGestion</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.Designer.cs" line="396" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.Designer.cs" bodystart="396" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a2385aa4ebb346e33c2d62715657bc5e2" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.GroupBox</type>
+        <definition>System.Windows.Forms.GroupBox Application_de_planification_de_vols_aériens.frmGestion.grbGestion</definition>
+        <argsstring></argsstring>
+        <name>grbGestion</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.Designer.cs" line="397" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.Designer.cs" bodystart="397" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a8626f211cddc7b21a02d0646012afcd5" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.GroupBox</type>
+        <definition>System.Windows.Forms.GroupBox Application_de_planification_de_vols_aériens.frmGestion.grbLigne</definition>
+        <argsstring></argsstring>
+        <name>grbLigne</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.Designer.cs" line="398" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.Designer.cs" bodystart="398" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a468caad17053e33046dc0a64d845ae37" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.GroupBox</type>
+        <definition>System.Windows.Forms.GroupBox Application_de_planification_de_vols_aériens.frmGestion.grbVol</definition>
+        <argsstring></argsstring>
+        <name>grbVol</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.Designer.cs" line="399" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.Designer.cs" bodystart="399" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1ac1bbd6ab5753b106d051402fe63a5272" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.GroupBox</type>
+        <definition>System.Windows.Forms.GroupBox Application_de_planification_de_vols_aériens.frmGestion.grbPilote</definition>
+        <argsstring></argsstring>
+        <name>grbPilote</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.Designer.cs" line="400" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.Designer.cs" bodystart="400" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a7d0affa09fee370fec4bb44bc773bff9" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label Application_de_planification_de_vols_aériens.frmGestion.lblLieuDepart</definition>
+        <argsstring></argsstring>
+        <name>lblLieuDepart</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.Designer.cs" line="401" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.Designer.cs" bodystart="401" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1ad268e55e3bb2446b784f98e0f6c577a9" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label Application_de_planification_de_vols_aériens.frmGestion.lblDistance</definition>
+        <argsstring></argsstring>
+        <name>lblDistance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.Designer.cs" line="402" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.Designer.cs" bodystart="402" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a213a2d4d99ca1a7fbfc3d2f411a7588d" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label Application_de_planification_de_vols_aériens.frmGestion.lblLieuArrivee</definition>
+        <argsstring></argsstring>
+        <name>lblLieuArrivee</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.Designer.cs" line="403" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.Designer.cs" bodystart="403" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1af5ef661dd241d6a613ab56f877550803" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TextBox</type>
+        <definition>System.Windows.Forms.TextBox Application_de_planification_de_vols_aériens.frmGestion.txtDistance</definition>
+        <argsstring></argsstring>
+        <name>txtDistance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.Designer.cs" line="404" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.Designer.cs" bodystart="404" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1acdb061c2e6ae29384dfad38679cc23b3" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TextBox</type>
+        <definition>System.Windows.Forms.TextBox Application_de_planification_de_vols_aériens.frmGestion.txtLieuArrivee</definition>
+        <argsstring></argsstring>
+        <name>txtLieuArrivee</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.Designer.cs" line="405" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.Designer.cs" bodystart="405" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a8ae4de70fde2ccb417684c515b9228c7" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label Application_de_planification_de_vols_aériens.frmGestion.lblDateDepart</definition>
+        <argsstring></argsstring>
+        <name>lblDateDepart</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.Designer.cs" line="406" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.Designer.cs" bodystart="406" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a1af54009f9634e23de5987fc3ba73ec4" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TextBox</type>
+        <definition>System.Windows.Forms.TextBox Application_de_planification_de_vols_aériens.frmGestion.txtLieuDepart</definition>
+        <argsstring></argsstring>
+        <name>txtLieuDepart</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.Designer.cs" line="407" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.Designer.cs" bodystart="407" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a0750db21bfe52022e14d074e6789c439" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label Application_de_planification_de_vols_aériens.frmGestion.lblDateArrivee</definition>
+        <argsstring></argsstring>
+        <name>lblDateArrivee</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.Designer.cs" line="408" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.Designer.cs" bodystart="408" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a76f8643d734127c4008814dc45c47d35" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label Application_de_planification_de_vols_aériens.frmGestion.lblLigne</definition>
+        <argsstring></argsstring>
+        <name>lblLigne</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.Designer.cs" line="409" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.Designer.cs" bodystart="409" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a74b54feee48e8861cac24562304cfe24" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TextBox</type>
+        <definition>System.Windows.Forms.TextBox Application_de_planification_de_vols_aériens.frmGestion.txtPrenom</definition>
+        <argsstring></argsstring>
+        <name>txtPrenom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.Designer.cs" line="410" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.Designer.cs" bodystart="410" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a795b42c8f0db20331721d4b8147c09b7" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TextBox</type>
+        <definition>System.Windows.Forms.TextBox Application_de_planification_de_vols_aériens.frmGestion.txtNom</definition>
+        <argsstring></argsstring>
+        <name>txtNom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.Designer.cs" line="411" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.Designer.cs" bodystart="411" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1aaabb360531e840581b2ff3388697e808" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label Application_de_planification_de_vols_aériens.frmGestion.lblPrenom</definition>
+        <argsstring></argsstring>
+        <name>lblPrenom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.Designer.cs" line="412" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.Designer.cs" bodystart="412" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a5a8d67d5caab7fb863a4747ece7c24a8" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label Application_de_planification_de_vols_aériens.frmGestion.lblHeuresVol</definition>
+        <argsstring></argsstring>
+        <name>lblHeuresVol</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.Designer.cs" line="413" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.Designer.cs" bodystart="413" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a9e4372683d7cdf6d2a1e5c6866982764" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label Application_de_planification_de_vols_aériens.frmGestion.lblAeroportAffectation</definition>
+        <argsstring></argsstring>
+        <name>lblAeroportAffectation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.Designer.cs" line="414" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.Designer.cs" bodystart="414" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a0a94d40889c94e06abe70b388fce5339" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label Application_de_planification_de_vols_aériens.frmGestion.lblNom</definition>
+        <argsstring></argsstring>
+        <name>lblNom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.Designer.cs" line="415" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.Designer.cs" bodystart="415" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a47480f70477c57b65610df2728ce738e" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TextBox</type>
+        <definition>System.Windows.Forms.TextBox Application_de_planification_de_vols_aériens.frmGestion.txtHeuresVol</definition>
+        <argsstring></argsstring>
+        <name>txtHeuresVol</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.Designer.cs" line="416" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.Designer.cs" bodystart="416" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a0a51cc48442402d1d4b5c21174f03c9e" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button Application_de_planification_de_vols_aériens.frmGestion.cmdAjouterLigne</definition>
+        <argsstring></argsstring>
+        <name>cmdAjouterLigne</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.Designer.cs" line="417" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.Designer.cs" bodystart="417" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a4eb961fccbe8cecbaddf371b7bc6d473" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ListBox</type>
+        <definition>System.Windows.Forms.ListBox Application_de_planification_de_vols_aériens.frmGestion.lstLieuDepart</definition>
+        <argsstring></argsstring>
+        <name>lstLieuDepart</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.Designer.cs" line="418" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.Designer.cs" bodystart="418" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1afa521c200954a79af2cf63c156072fca" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ListBox</type>
+        <definition>System.Windows.Forms.ListBox Application_de_planification_de_vols_aériens.frmGestion.lstLieuArrivee</definition>
+        <argsstring></argsstring>
+        <name>lstLieuArrivee</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.Designer.cs" line="419" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.Designer.cs" bodystart="419" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a3f1096ce601057ebe043c5240a56d086" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button Application_de_planification_de_vols_aériens.frmGestion.cmdAjouterVol</definition>
+        <argsstring></argsstring>
+        <name>cmdAjouterVol</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.Designer.cs" line="420" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.Designer.cs" bodystart="420" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a91d46eae359ac28552c92fc2201fa9d9" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DateTimePicker</type>
+        <definition>System.Windows.Forms.DateTimePicker Application_de_planification_de_vols_aériens.frmGestion.dtpDateArrivee</definition>
+        <argsstring></argsstring>
+        <name>dtpDateArrivee</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.Designer.cs" line="421" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.Designer.cs" bodystart="421" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a47076d06eaeff02114b55b4ce5015fd2" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DateTimePicker</type>
+        <definition>System.Windows.Forms.DateTimePicker Application_de_planification_de_vols_aériens.frmGestion.dtpDateDepart</definition>
+        <argsstring></argsstring>
+        <name>dtpDateDepart</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.Designer.cs" line="422" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.Designer.cs" bodystart="422" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a1c09d4b886b845d58fb1d88887b4eb0c" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ListBox</type>
+        <definition>System.Windows.Forms.ListBox Application_de_planification_de_vols_aériens.frmGestion.lstLigne</definition>
+        <argsstring></argsstring>
+        <name>lstLigne</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.Designer.cs" line="423" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.Designer.cs" bodystart="423" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a9161eff66dab2afdc8e77bd13e152796" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button Application_de_planification_de_vols_aériens.frmGestion.cmdAjouterPilote</definition>
+        <argsstring></argsstring>
+        <name>cmdAjouterPilote</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.Designer.cs" line="424" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.Designer.cs" bodystart="424" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a940fc6b4e3b96eccd37863c5bf346f60" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ComboBox</type>
+        <definition>System.Windows.Forms.ComboBox Application_de_planification_de_vols_aériens.frmGestion.cboAeroportAffectation</definition>
+        <argsstring></argsstring>
+        <name>cboAeroportAffectation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.Designer.cs" line="425" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.Designer.cs" bodystart="425" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1aeb18ad09492b87eab030ed2f9179af97" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Application_de_planification_de_vols_aériens.frmGestion.frmGestion</definition>
+        <argsstring>()</argsstring>
+        <name>frmGestion</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.cs" line="19" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.cs" bodystart="19" bodyend="22"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a66121dfc77c9288ff3003e94c1a667a8" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.frmGestion.cmdAffichage_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>cmdAffichage_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.cs" line="24" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.cs" bodystart="24" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1af15e1741d262b92e0a19215a2e61123a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.frmGestion.cmdAjouterPilote_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>cmdAjouterPilote_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.cs" line="29" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.cs" bodystart="29" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a2934d0d67815af1bc3011bf0241528c1" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.frmGestion.cmdAjouterVol_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>cmdAjouterVol_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.cs" line="44" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.cs" bodystart="44" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a9badf6662403084a54817bbeae5ecb09" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.frmGestion.cmdAjouterLigne_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>cmdAjouterLigne_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.cs" line="49" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.cs" bodystart="49" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a475585049344d140cda88c21467041cb" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.frmGestion.frmGestion_Load</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>frmGestion_Load</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.cs" line="54" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.cs" bodystart="54" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1ab11b84bcc3fdbdc425ecb5f156a9e4d5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.frmGestion.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.Designer.cs" line="29" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.Designer.cs" bodystart="29" bodyend="390"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1ae67280db69c5f87a5351f8729389d995" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void Application_de_planification_de_vols_aériens.frmGestion.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.Designer.cs" line="14" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.Designer.cs" bodystart="14" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="17">
+        <label>Form</label>
+      </node>
+      <node id="16">
+        <label>Application_de_planification_de_vols_aériens.frmGestion</label>
+        <link refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion"/>
+        <childnode refid="17" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="19">
+        <label>Form</label>
+      </node>
+      <node id="18">
+        <label>Application_de_planification_de_vols_aériens.frmGestion</label>
+        <link refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion"/>
+        <childnode refid="19" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.cs" line="14" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmGestion.cs" bodystart="13" bodyend="62"/>
+    <listofallmembers>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a532b10d8c172f8924bbb60e4e5d9c3a3" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmGestion</scope><name>airport</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a4a395d8a265d8df6d136be102d62cdd3" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmGestion</scope><name>airportList</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a940fc6b4e3b96eccd37863c5bf346f60" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmGestion</scope><name>cboAeroportAffectation</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1abb866487dbab263f68d308967644d8fa" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmGestion</scope><name>cmdAffichage</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a66121dfc77c9288ff3003e94c1a667a8" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmGestion</scope><name>cmdAffichage_Click</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a0a51cc48442402d1d4b5c21174f03c9e" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmGestion</scope><name>cmdAjouterLigne</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a9badf6662403084a54817bbeae5ecb09" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmGestion</scope><name>cmdAjouterLigne_Click</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a9161eff66dab2afdc8e77bd13e152796" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmGestion</scope><name>cmdAjouterPilote</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1af15e1741d262b92e0a19215a2e61123a" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmGestion</scope><name>cmdAjouterPilote_Click</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a3f1096ce601057ebe043c5240a56d086" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmGestion</scope><name>cmdAjouterVol</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a2934d0d67815af1bc3011bf0241528c1" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmGestion</scope><name>cmdAjouterVol_Click</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1affe6bc519bf3301344b99109a0722846" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmGestion</scope><name>cmdGestion</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a877cda6dfab874264645890d023d389e" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmGestion</scope><name>components</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1ad7367b7aed616bcae659f3c037f8992c" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmGestion</scope><name>dbConnexion</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1ae67280db69c5f87a5351f8729389d995" prot="protected" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmGestion</scope><name>Dispose</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a91d46eae359ac28552c92fc2201fa9d9" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmGestion</scope><name>dtpDateArrivee</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a47076d06eaeff02114b55b4ce5015fd2" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmGestion</scope><name>dtpDateDepart</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a0672075e981f4769f02ce236ed755599" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmGestion</scope><name>Entete</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1aeb18ad09492b87eab030ed2f9179af97" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmGestion</scope><name>frmGestion</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a475585049344d140cda88c21467041cb" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmGestion</scope><name>frmGestion_Load</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a2385aa4ebb346e33c2d62715657bc5e2" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmGestion</scope><name>grbGestion</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a8626f211cddc7b21a02d0646012afcd5" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmGestion</scope><name>grbLigne</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1ac1bbd6ab5753b106d051402fe63a5272" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmGestion</scope><name>grbPilote</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a468caad17053e33046dc0a64d845ae37" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmGestion</scope><name>grbVol</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1ab11b84bcc3fdbdc425ecb5f156a9e4d5" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmGestion</scope><name>InitializeComponent</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a9e4372683d7cdf6d2a1e5c6866982764" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmGestion</scope><name>lblAeroportAffectation</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a0750db21bfe52022e14d074e6789c439" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmGestion</scope><name>lblDateArrivee</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a8ae4de70fde2ccb417684c515b9228c7" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmGestion</scope><name>lblDateDepart</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1ad268e55e3bb2446b784f98e0f6c577a9" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmGestion</scope><name>lblDistance</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a5a8d67d5caab7fb863a4747ece7c24a8" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmGestion</scope><name>lblHeuresVol</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a213a2d4d99ca1a7fbfc3d2f411a7588d" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmGestion</scope><name>lblLieuArrivee</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a7d0affa09fee370fec4bb44bc773bff9" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmGestion</scope><name>lblLieuDepart</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a76f8643d734127c4008814dc45c47d35" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmGestion</scope><name>lblLigne</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a0a94d40889c94e06abe70b388fce5339" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmGestion</scope><name>lblNom</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1aaabb360531e840581b2ff3388697e808" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmGestion</scope><name>lblPrenom</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1afa521c200954a79af2cf63c156072fca" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmGestion</scope><name>lstLieuArrivee</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a4eb961fccbe8cecbaddf371b7bc6d473" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmGestion</scope><name>lstLieuDepart</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a1c09d4b886b845d58fb1d88887b4eb0c" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmGestion</scope><name>lstLigne</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1aab5310d69e44c3ea92d35cd848cf6f26" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmGestion</scope><name>newPilot</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1af5ef661dd241d6a613ab56f877550803" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmGestion</scope><name>txtDistance</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a47480f70477c57b65610df2728ce738e" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmGestion</scope><name>txtHeuresVol</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1acdb061c2e6ae29384dfad38679cc23b3" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmGestion</scope><name>txtLieuArrivee</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a1af54009f9634e23de5987fc3ba73ec4" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmGestion</scope><name>txtLieuDepart</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a795b42c8f0db20331721d4b8147c09b7" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmGestion</scope><name>txtNom</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a74b54feee48e8861cac24562304cfe24" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmGestion</scope><name>txtPrenom</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

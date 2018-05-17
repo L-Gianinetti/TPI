@@ -1,0 +1,541 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection" kind="class" language="C#" prot="public">
+    <compoundname>Application_de_planification_de_vols_aériens::DBConnection</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a64a62bed87ae84182a869be049fcab96" prot="private" static="no" mutable="no">
+        <type>MySqlConnection</type>
+        <definition>MySqlConnection Application_de_planification_de_vols_aériens.DBConnection.connection</definition>
+        <argsstring></argsstring>
+        <name>connection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/DBConnection.cs" line="11" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/DBConnection.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a5b77be805c5f4a9fd10d034a499aae29" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Application_de_planification_de_vols_aériens.DBConnection.DBConnection</definition>
+        <argsstring>()</argsstring>
+        <name>DBConnection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/DBConnection.cs" line="13" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/DBConnection.cs" bodystart="13" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1ae72153b925013e8d443dc00182854764" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.DBConnection.AddPilot</definition>
+        <argsstring>(Pilot pilot, int idAirport)</argsstring>
+        <name>AddPilot</name>
+        <param>
+          <type><ref refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot" kindref="compound">Pilot</ref></type>
+          <declname>pilot</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>idAirport</declname>
+        </param>
+        <briefdescription>
+<para>Add a pilot in db </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pilot</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/DBConnection.cs" line="35" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/DBConnection.cs" bodystart="35" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1aba7d640ebac4084922480a5ffceeb68b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.DBConnection.AddFlight</definition>
+        <argsstring>(Flight flight)</argsstring>
+        <name>AddFlight</name>
+        <param>
+          <type><ref refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_flight" kindref="compound">Flight</ref></type>
+          <declname>flight</declname>
+        </param>
+        <briefdescription>
+<para>Add a flight in db </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>flight</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/DBConnection.cs" line="53" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/DBConnection.cs" bodystart="53" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a8d35c0d9469e7b17c9b955d2aca1efc0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.DBConnection.AddLine</definition>
+        <argsstring>(Line line)</argsstring>
+        <name>AddLine</name>
+        <param>
+          <type><ref refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_line" kindref="compound">Line</ref></type>
+          <declname>line</declname>
+        </param>
+        <briefdescription>
+<para>add a line in db </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>line</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/DBConnection.cs" line="62" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/DBConnection.cs" bodystart="62" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a17666c54ee62031392cd4ddd1a46dbf8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.DBConnection.AddVacation</definition>
+        <argsstring>(Vacation vacation)</argsstring>
+        <name>AddVacation</name>
+        <param>
+          <type><ref refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_vacation" kindref="compound">Vacation</ref></type>
+          <declname>vacation</declname>
+        </param>
+        <briefdescription>
+<para>add a vacation in db </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vacation</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/DBConnection.cs" line="71" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/DBConnection.cs" bodystart="71" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1add4822006e003d561654b683b0d8dfee" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; string &gt;</type>
+        <definition>List&lt;string&gt; Application_de_planification_de_vols_aériens.DBConnection.GetAirportName</definition>
+        <argsstring>()</argsstring>
+        <name>GetAirportName</name>
+        <briefdescription>
+<para>Retourne les noms des aéroports </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/DBConnection.cs" line="80" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/DBConnection.cs" bodystart="80" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1af878298b3a50db2f4891e3b01db669db" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Application_de_planification_de_vols_aériens.DBConnection.GetAirportId</definition>
+        <argsstring>(Airport airport)</argsstring>
+        <name>GetAirportId</name>
+        <param>
+          <type><ref refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_airport" kindref="compound">Airport</ref></type>
+          <declname>airport</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/DBConnection.cs" line="110" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/DBConnection.cs" bodystart="110" bodyend="138"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a9073627466db67d9aba523f18ab2bc68" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string Application_de_planification_de_vols_aériens.DBConnection.GetLineName</definition>
+        <argsstring>()</argsstring>
+        <name>GetLineName</name>
+        <briefdescription>
+<para>Retourne le nom d&apos;une ligne </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/DBConnection.cs" line="144" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/DBConnection.cs" bodystart="144" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a9ff481b893a3e1cd55394fa65297704e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string Application_de_planification_de_vols_aériens.DBConnection.GetPilotName</definition>
+        <argsstring>()</argsstring>
+        <name>GetPilotName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/DBConnection.cs" line="158" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/DBConnection.cs" bodystart="158" bodyend="161"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1ad041e4922b70a65313b1ce52479c05c7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string Application_de_planification_de_vols_aériens.DBConnection.GetPilotFirstName</definition>
+        <argsstring>()</argsstring>
+        <name>GetPilotFirstName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/DBConnection.cs" line="163" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/DBConnection.cs" bodystart="163" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1aaf3eb0f47d0b71ba4741d7bec63bd25f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string Application_de_planification_de_vols_aériens.DBConnection.GetPilotAssignmentAirport</definition>
+        <argsstring>()</argsstring>
+        <name>GetPilotAssignmentAirport</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/DBConnection.cs" line="168" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/DBConnection.cs" bodystart="168" bodyend="171"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a95536a5ab1ed7649f6cc7041dd95bcff" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Application_de_planification_de_vols_aériens.DBConnection.GetPilotFlightTime</definition>
+        <argsstring>()</argsstring>
+        <name>GetPilotFlightTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/DBConnection.cs" line="173" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/DBConnection.cs" bodystart="173" bodyend="176"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1ac6da9b298612ab02a7090d3fa89dbe17" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string Application_de_planification_de_vols_aériens.DBConnection.GetPilotCurrentLocation</definition>
+        <argsstring>()</argsstring>
+        <name>GetPilotCurrentLocation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/DBConnection.cs" line="178" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/DBConnection.cs" bodystart="178" bodyend="181"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1aa15a5f671cde72dc156a9d5952c3609c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>DateTime</type>
+        <definition>DateTime Application_de_planification_de_vols_aériens.DBConnection.GetPilotLastFlightDate</definition>
+        <argsstring>()</argsstring>
+        <name>GetPilotLastFlightDate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/DBConnection.cs" line="183" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/DBConnection.cs" bodystart="183" bodyend="186"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a8c9de18c2e255cf77edd3053a5a06c59" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>DateTime</type>
+        <definition>DateTime Application_de_planification_de_vols_aériens.DBConnection.GetPilotFlightsDepartureDates</definition>
+        <argsstring>()</argsstring>
+        <name>GetPilotFlightsDepartureDates</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/DBConnection.cs" line="188" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/DBConnection.cs" bodystart="188" bodyend="191"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a32525877ff035ce55c8abfb6fa5c24be" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>DateTime</type>
+        <definition>DateTime Application_de_planification_de_vols_aériens.DBConnection.GetPilotFlightsArrivalDates</definition>
+        <argsstring>()</argsstring>
+        <name>GetPilotFlightsArrivalDates</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/DBConnection.cs" line="193" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/DBConnection.cs" bodystart="193" bodyend="196"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1ae057fe63e5698bb502dbc1f31c2ce389" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Application_de_planification_de_vols_aériens.DBConnection.GetPilotId</definition>
+        <argsstring>(string pilotName)</argsstring>
+        <name>GetPilotId</name>
+        <param>
+          <type>string</type>
+          <declname>pilotName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/DBConnection.cs" line="199" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/DBConnection.cs" bodystart="199" bodyend="202"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a108cdd46a86772d2cb0dfb31af46120e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string Application_de_planification_de_vols_aériens.DBConnection.GetFlightName</definition>
+        <argsstring>()</argsstring>
+        <name>GetFlightName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/DBConnection.cs" line="212" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/DBConnection.cs" bodystart="212" bodyend="215"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a13dab08b7a87ed82777c04f4371fad48" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string Application_de_planification_de_vols_aériens.DBConnection.GetFlightLine</definition>
+        <argsstring>()</argsstring>
+        <name>GetFlightLine</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/DBConnection.cs" line="217" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/DBConnection.cs" bodystart="217" bodyend="220"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1ae745a66da1339032df2af3eac3866f4c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>DateTime</type>
+        <definition>DateTime Application_de_planification_de_vols_aériens.DBConnection.GetDepartureDate</definition>
+        <argsstring>()</argsstring>
+        <name>GetDepartureDate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/DBConnection.cs" line="222" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/DBConnection.cs" bodystart="222" bodyend="225"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1afcdef17d01756ef24b3d682f2abb5622" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>DateTime</type>
+        <definition>DateTime Application_de_planification_de_vols_aériens.DBConnection.GetArrivalDate</definition>
+        <argsstring>()</argsstring>
+        <name>GetArrivalDate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/DBConnection.cs" line="227" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/DBConnection.cs" bodystart="227" bodyend="230"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1ac8d400c57f79b093ef717f092a4087a7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string Application_de_planification_de_vols_aériens.DBConnection.GetFlightPilots</definition>
+        <argsstring>()</argsstring>
+        <name>GetFlightPilots</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/DBConnection.cs" line="232" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/DBConnection.cs" bodystart="232" bodyend="235"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a4d666e36896247534aa7fb4ed5f8f23d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string Application_de_planification_de_vols_aériens.DBConnection.GetLineDepartureAirport</definition>
+        <argsstring>()</argsstring>
+        <name>GetLineDepartureAirport</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/DBConnection.cs" line="245" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/DBConnection.cs" bodystart="245" bodyend="248"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1ad631728bffd9c822f8661cf73989281b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string Application_de_planification_de_vols_aériens.DBConnection.GetLineArrivalAirport</definition>
+        <argsstring>()</argsstring>
+        <name>GetLineArrivalAirport</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/DBConnection.cs" line="250" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/DBConnection.cs" bodystart="250" bodyend="253"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a1714ac4acc0e5fbdd4d1822efc2b7f28" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>DateTime</type>
+        <definition>DateTime Application_de_planification_de_vols_aériens.DBConnection.GetPilotVacationStartDate</definition>
+        <argsstring>()</argsstring>
+        <name>GetPilotVacationStartDate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/DBConnection.cs" line="262" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/DBConnection.cs" bodystart="262" bodyend="265"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1ab79d22c8ff2a9ae813f8e067d18e4709" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>DateTime</type>
+        <definition>DateTime Application_de_planification_de_vols_aériens.DBConnection.GetPilotVacationEndDate</definition>
+        <argsstring>()</argsstring>
+        <name>GetPilotVacationEndDate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/DBConnection.cs" line="266" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/DBConnection.cs" bodystart="266" bodyend="269"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1ae4aef5a9ce1b329ff552d60ebc6213ee" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.DBConnection.UpdatePilotCurrentLocation</definition>
+        <argsstring>(int idPilot)</argsstring>
+        <name>UpdatePilotCurrentLocation</name>
+        <param>
+          <type>int</type>
+          <declname>idPilot</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/DBConnection.cs" line="273" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/DBConnection.cs" bodystart="273" bodyend="276"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a2aa12044a1cf5d02a1a46b3587c645ea" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.DBConnection.UpdatePilotVacation</definition>
+        <argsstring>(int idPilot)</argsstring>
+        <name>UpdatePilotVacation</name>
+        <param>
+          <type>int</type>
+          <declname>idPilot</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/DBConnection.cs" line="278" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/DBConnection.cs" bodystart="278" bodyend="281"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1aa8a36ce7b7f566ffcbe3a87adf53a8dc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.DBConnection.DeletePilotVacation</definition>
+        <argsstring>(int idPilot)</argsstring>
+        <name>DeletePilotVacation</name>
+        <param>
+          <type>int</type>
+          <declname>idPilot</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/DBConnection.cs" line="283" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/DBConnection.cs" bodystart="283" bodyend="286"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a675822fa82f0302e9cfc5b310a69247e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.DBConnection.InitConnection</definition>
+        <argsstring>()</argsstring>
+        <name>InitConnection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/DBConnection.cs" line="17" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/DBConnection.cs" bodystart="17" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a4a023f7f1a1ec2a308ce715e0f7565be" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.DBConnection.InitConnexion</definition>
+        <argsstring>()</argsstring>
+        <name>InitConnexion</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/DBConnection.cs" line="24" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/DBConnection.cs" bodystart="24" bodyend="27"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/DBConnection.cs" line="10" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/DBConnection.cs" bodystart="9" bodyend="294"/>
+    <listofallmembers>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1aba7d640ebac4084922480a5ffceeb68b" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::DBConnection</scope><name>AddFlight</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a8d35c0d9469e7b17c9b955d2aca1efc0" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::DBConnection</scope><name>AddLine</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1ae72153b925013e8d443dc00182854764" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::DBConnection</scope><name>AddPilot</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a17666c54ee62031392cd4ddd1a46dbf8" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::DBConnection</scope><name>AddVacation</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a64a62bed87ae84182a869be049fcab96" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::DBConnection</scope><name>connection</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a5b77be805c5f4a9fd10d034a499aae29" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::DBConnection</scope><name>DBConnection</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1aa8a36ce7b7f566ffcbe3a87adf53a8dc" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::DBConnection</scope><name>DeletePilotVacation</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1af878298b3a50db2f4891e3b01db669db" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::DBConnection</scope><name>GetAirportId</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1add4822006e003d561654b683b0d8dfee" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::DBConnection</scope><name>GetAirportName</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1afcdef17d01756ef24b3d682f2abb5622" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::DBConnection</scope><name>GetArrivalDate</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1ae745a66da1339032df2af3eac3866f4c" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::DBConnection</scope><name>GetDepartureDate</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a13dab08b7a87ed82777c04f4371fad48" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::DBConnection</scope><name>GetFlightLine</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a108cdd46a86772d2cb0dfb31af46120e" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::DBConnection</scope><name>GetFlightName</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1ac8d400c57f79b093ef717f092a4087a7" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::DBConnection</scope><name>GetFlightPilots</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1ad631728bffd9c822f8661cf73989281b" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::DBConnection</scope><name>GetLineArrivalAirport</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a4d666e36896247534aa7fb4ed5f8f23d" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::DBConnection</scope><name>GetLineDepartureAirport</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a9073627466db67d9aba523f18ab2bc68" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::DBConnection</scope><name>GetLineName</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1aaf3eb0f47d0b71ba4741d7bec63bd25f" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::DBConnection</scope><name>GetPilotAssignmentAirport</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1ac6da9b298612ab02a7090d3fa89dbe17" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::DBConnection</scope><name>GetPilotCurrentLocation</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1ad041e4922b70a65313b1ce52479c05c7" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::DBConnection</scope><name>GetPilotFirstName</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a32525877ff035ce55c8abfb6fa5c24be" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::DBConnection</scope><name>GetPilotFlightsArrivalDates</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a8c9de18c2e255cf77edd3053a5a06c59" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::DBConnection</scope><name>GetPilotFlightsDepartureDates</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a95536a5ab1ed7649f6cc7041dd95bcff" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::DBConnection</scope><name>GetPilotFlightTime</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1ae057fe63e5698bb502dbc1f31c2ce389" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::DBConnection</scope><name>GetPilotId</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1aa15a5f671cde72dc156a9d5952c3609c" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::DBConnection</scope><name>GetPilotLastFlightDate</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a9ff481b893a3e1cd55394fa65297704e" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::DBConnection</scope><name>GetPilotName</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1ab79d22c8ff2a9ae813f8e067d18e4709" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::DBConnection</scope><name>GetPilotVacationEndDate</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a1714ac4acc0e5fbdd4d1822efc2b7f28" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::DBConnection</scope><name>GetPilotVacationStartDate</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a675822fa82f0302e9cfc5b310a69247e" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::DBConnection</scope><name>InitConnection</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a4a023f7f1a1ec2a308ce715e0f7565be" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::DBConnection</scope><name>InitConnexion</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1ae4aef5a9ce1b329ff552d60ebc6213ee" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::DBConnection</scope><name>UpdatePilotCurrentLocation</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a2aa12044a1cf5d02a1a46b3587c645ea" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::DBConnection</scope><name>UpdatePilotVacation</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

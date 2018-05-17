@@ -1,0 +1,243 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacances" kind="class" language="C#" prot="public">
+    <compoundname>Application_de_planification_de_vols_aériens::frmVacances</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Form</basecompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacances_1af6e090d6dbb07f82465b2a258f33f539" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot" kindref="compound">Pilot</ref></type>
+        <definition>Pilot Application_de_planification_de_vols_aériens.frmVacances.Pilot</definition>
+        <argsstring></argsstring>
+        <name>Pilot</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmVacances.cs" line="21" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmVacances.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacances_1af6b553540998435890d071f0f2ae7109" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer Application_de_planification_de_vols_aériens.frmVacances.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmVacances.Designer.cs" line="8" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmVacances.Designer.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacances_1ab6ef3a19b32651938d3d7cd19aad0564" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label Application_de_planification_de_vols_aériens.frmVacances.lblSemaine1Debut</definition>
+        <argsstring></argsstring>
+        <name>lblSemaine1Debut</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmVacances.Designer.cs" line="100" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmVacances.Designer.cs" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacances_1a98067d14c94813df51dcd3f97ba3d42d" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label Application_de_planification_de_vols_aériens.frmVacances.lblSemaine1Fin</definition>
+        <argsstring></argsstring>
+        <name>lblSemaine1Fin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmVacances.Designer.cs" line="101" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmVacances.Designer.cs" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacances_1acaa4c35e4449fca2d5feae69b74ce5a8" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DateTimePicker</type>
+        <definition>System.Windows.Forms.DateTimePicker Application_de_planification_de_vols_aériens.frmVacances.dtpSemain1Debut</definition>
+        <argsstring></argsstring>
+        <name>dtpSemain1Debut</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmVacances.Designer.cs" line="102" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmVacances.Designer.cs" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacances_1a9d03a7ac5c00f49d49f90b6eb045733b" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DateTimePicker</type>
+        <definition>System.Windows.Forms.DateTimePicker Application_de_planification_de_vols_aériens.frmVacances.dtpSemain1Fin</definition>
+        <argsstring></argsstring>
+        <name>dtpSemain1Fin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmVacances.Designer.cs" line="103" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmVacances.Designer.cs" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacances_1a1c1347db6075bfd0211644f4c7619597" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button Application_de_planification_de_vols_aériens.frmVacances.cmdValider</definition>
+        <argsstring></argsstring>
+        <name>cmdValider</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmVacances.Designer.cs" line="104" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmVacances.Designer.cs" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacances_1af6ec175b735c98e670f562feb41dc256" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Application_de_planification_de_vols_aériens.frmVacances.frmVacances</definition>
+        <argsstring>()</argsstring>
+        <name>frmVacances</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmVacances.cs" line="16" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmVacances.cs" bodystart="16" bodyend="19"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacances_1af754dc6178c2ca5a2ea9b20a630cea0d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.frmVacances.cmdValider_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>cmdValider_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmVacances.cs" line="33" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmVacances.cs" bodystart="33" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacances_1a8614a0c3b5d9ae741e7d2b7cff2d53c4" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.frmVacances.frmVacances_Load</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>frmVacances_Load</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmVacances.cs" line="38" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmVacances.cs" bodystart="38" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacances_1a032d2b057f4364e3d7fab1491bc771a2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.frmVacances.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmVacances.Designer.cs" line="29" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmVacances.Designer.cs" bodystart="29" bodyend="96"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacances_1a618e271102d37f12ad7dad5d252e2492" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void Application_de_planification_de_vols_aériens.frmVacances.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmVacances.Designer.cs" line="14" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmVacances.Designer.cs" bodystart="14" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="21">
+        <label>Form</label>
+      </node>
+      <node id="20">
+        <label>Application_de_planification_de_vols_aériens.frmVacances</label>
+        <link refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacances"/>
+        <childnode refid="21" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="23">
+        <label>Form</label>
+      </node>
+      <node id="22">
+        <label>Application_de_planification_de_vols_aériens.frmVacances</label>
+        <link refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacances"/>
+        <childnode refid="23" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmVacances.cs" line="14" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/frmVacances.cs" bodystart="13" bodyend="41"/>
+    <listofallmembers>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacances_1a1c1347db6075bfd0211644f4c7619597" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmVacances</scope><name>cmdValider</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacances_1af754dc6178c2ca5a2ea9b20a630cea0d" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmVacances</scope><name>cmdValider_Click</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacances_1af6b553540998435890d071f0f2ae7109" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmVacances</scope><name>components</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacances_1a618e271102d37f12ad7dad5d252e2492" prot="protected" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmVacances</scope><name>Dispose</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacances_1acaa4c35e4449fca2d5feae69b74ce5a8" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmVacances</scope><name>dtpSemain1Debut</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacances_1a9d03a7ac5c00f49d49f90b6eb045733b" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmVacances</scope><name>dtpSemain1Fin</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacances_1af6ec175b735c98e670f562feb41dc256" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmVacances</scope><name>frmVacances</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacances_1a8614a0c3b5d9ae741e7d2b7cff2d53c4" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmVacances</scope><name>frmVacances_Load</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacances_1a032d2b057f4364e3d7fab1491bc771a2" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmVacances</scope><name>InitializeComponent</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacances_1ab6ef3a19b32651938d3d7cd19aad0564" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmVacances</scope><name>lblSemaine1Debut</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacances_1a98067d14c94813df51dcd3f97ba3d42d" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmVacances</scope><name>lblSemaine1Fin</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacances_1af6e090d6dbb07f82465b2a258f33f539" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmVacances</scope><name>Pilot</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_602a183f22112cbf5449f95c8262b728" kind="dir">
+    <compoundname>P:/TPI</compoundname>
+    <innerdir refid="dir_97d7edaaf1ab98cda07177be86033d38">P:/TPI/Application de planification de vols aériens</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="P:/TPI/"/>
+  </compounddef>
+</doxygen>

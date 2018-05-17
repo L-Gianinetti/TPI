@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace Application_de_planification_de_vols_aériens
 {
@@ -14,6 +15,8 @@ namespace Application_de_planification_de_vols_aériens
     {
         List<string> airportList = new List<string>();
         Pilot newPilot;
+        Line line;
+        Flight fligth;
         Airport airport;
         DBConnection dbConnexion = new DBConnection();
         public frmGestion()
@@ -26,38 +29,310 @@ namespace Application_de_planification_de_vols_aériens
 
         }
 
-        private void cmdAjouterPilote_Click(object sender, EventArgs e)
+        public void cmdAjouterPilote_Click(object sender, EventArgs e)
         {
-            if(cboAeroportAffectation.SelectedIndex > -1)
+            try
             {
-                airport = new Airport(cboAeroportAffectation.SelectedItem.ToString());
-                int idAirport = dbConnexion.GetAirportId(airport);
-                newPilot = new Pilot(txtNom.Text, txtPrenom.Text, int.Parse(txtHeuresVol.Text), airport);
-                dbConnexion.AddPilot(newPilot, idAirport);
+                //If all conditions are satisfied adds a pilot
+                if (ArePilotFieldsFilled() && DoesStringContainsOnlyLetters(txtNom.Text) && DoesStringContainsOnlyLetters(txtPrenom.Text) && DoesStringContainsOnlyNumbers(txtHeuresVol.Text) && ArePilotNameLengthOrPilotFirstNameLengthCorrect(txtNom.Text) && ArePilotNameLengthOrPilotFirstNameLengthCorrect(txtPrenom.Text) && !DoesFlightTimeBeginWith0(txtHeuresVol.Text))
+                {
+                    airport = new Airport(cboAeroportAffectation.SelectedItem.ToString());
+                    int idAirport = dbConnexion.GetAirportId(airport);
+                    newPilot = new Pilot(txtNom.Text, txtPrenom.Text, int.Parse(txtHeuresVol.Text), airport);
+                    dbConnexion.AddPilot(newPilot, idAirport);
+                }
             }
-            else
+            catch(Exception ex)
             {
-                MessageBox.Show("Veuillez sélectionner un aéroport d'affectation svp!");
+                MessageBox.Show(ex.Message);
             }
         }
-
+        //TODO
         private void cmdAjouterVol_Click(object sender, EventArgs e)
         {
+            try
+            {
+                fligth = new Flight()
+            }
+            catch
+            {
 
+            }
         }
 
         private void cmdAjouterLigne_Click(object sender, EventArgs e)
         {
 
+            try
+            {
+                //If all conditions are satisfied add a line
+                if(!DoesDistanceBeginWith0(txtDistance.Text) && DoesDistanceContainsOnlyNumbers(txtDistance.Text) && AreLineFieldsFilled() && !AreDepartureAirportAndArrivalAirportEqual())
+                {
+                    Airport departureAirport = new Airport(cboLieuDepart.SelectedItem.ToString());
+                    Airport arrivalAirport = new Airport(cboLieuArrivee.SelectedItem.ToString());
+                    int idDepartureAirport = dbConnexion.GetAirportId(departureAirport);
+                    int idArrivalAirport = dbConnexion.GetAirportId(arrivalAirport);
+                    line = new Line(idDepartureAirport, idArrivalAirport, txtDistance.Text);
+                    Line line1 = new Line(idArrivalAirport, idDepartureAirport, txtDistance.Text);
+                    dbConnexion.AddLine(line);
+                    dbConnexion.AddLine(line1);
+                }
+
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void frmGestion_Load(object sender, EventArgs e)
         {
+            //Add airportsNames in comboboxes
             airportList = dbConnexion.GetAirportName();
             airportList.ForEach(delegate (String airport)
                 {
                     cboAeroportAffectation.Items.Add(airport);
+                    cboLieuArrivee.Items.Add(airport);
+                    cboLieuDepart.Items.Add(airport);
                 });
+            List<string> lineList = dbConnexion.GetLinesNames();
+            lineList.ForEach(delegate (string line)
+            {
+                cboLigne.Items.Add(line);
+            });
         }
+
+        #region checkPilotFiedls
+        /// <summary>
+        /// Throw exception if string does not contains only letters
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        private bool DoesStringContainsOnlyLetters(string input)
+        {
+            bool output = Regex.IsMatch(input, @"^[a-zA-Z]+$");
+            if (!output)
+            {
+                Exception exception = new Exception("Le prénom/nom ne contient pas uniquement des lettres");
+                throw exception;
+            }
+            return output;
+        }
+
+        /// <summary>
+        /// Throw exception if string contains others chars than numbers
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        private bool DoesStringContainsOnlyNumbers(string input)
+        {
+            bool output = Regex.IsMatch(input, @"^[0-9]+$");
+            if (!output)
+            {
+                Exception exception = new Exception("Les heures de vols contiennent d'autres caractères que des chiffres");
+                throw exception;
+            }
+            return output;
+        }
+
+        /// <summary>
+        /// Throw exception if a requiered field is empty
+        /// </summary>
+        /// <returns></returns>
+        private bool ArePilotFieldsFilled()
+        {
+            bool output = false;
+            if (txtNom.Text != string.Empty && txtPrenom.Text != string.Empty && txtHeuresVol.Text != string.Empty && cboAeroportAffectation.SelectedIndex > -1)
+            {
+                output = true;
+                
+            }
+            else
+            {
+                Exception exception = new Exception("Un ou plusieurs des champs requis ne sont pas remplis, veuillez les remplir afin de pouvoir ajouter un pilote !");
+                throw exception;
+            }
+            return output;
+        }
+
+        /// <summary>
+        /// Throw exception if pilotNameLength or pilotFirstNameLength are higher than 45 chars;
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        private bool ArePilotNameLengthOrPilotFirstNameLengthCorrect(string input)
+        {
+            bool output;
+            if (input.Length < 46)
+            {
+                output = true;
+            }
+            else
+            {
+                output = false;
+                Exception exception = new Exception("Le nom ou prénom du pilote ne peut faire plus de 45 caractères");
+                throw exception;
+            }
+            return output;
+        }
+
+        /// <summary>
+        /// Throw exception if FlightTime begins with 0
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        private bool DoesFlightTimeBeginWith0(string input)
+        {
+            bool output;
+            string firstLetter = input.Substring(0, 1);
+            if(firstLetter == "0")
+            {
+                output = true;
+                Exception exception = new Exception("Les heures de vols ne peuvent commencer par un zéro !");
+                throw exception;
+            }
+            else
+            {
+                output = false;
+            }
+            return output;
+        }
+        /*PAS UTILE PARCE QUE '-' N'EST PSA UN NOMBRE DONC DEJA GERE PAR UNE AUTRE EXCEPTION
+        /// <summary>
+        /// Throw exception if FlightTime is a negative number
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        private bool IsFlightTimeAPositiveNumber(string input)
+        {
+            bool output = false;
+            if (DoesDistanceContainsOnlyNumbers(input))
+            {
+                int distance = int.Parse(input);
+                if (distance > 0)
+                {
+                    output = true;
+                }
+                else
+                {
+                    output = false;
+                    Exception exception = new Exception("La distance doit etre un nomnre positif");
+                    throw exception;
+                }
+            }
+            return output;
+        }*/
+        #endregion
+
+        #region checkLineFields
+        /// <summary>
+        /// Throw exception if Distance begins with 0
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        private bool DoesDistanceBeginWith0(string input)
+        {
+            bool output;
+            string firstLetter = input.Substring(0, 1);
+            if (firstLetter == "0")
+            {
+                output = true;
+                Exception exception = new Exception("La distance ne peut pas commencer par 0 !");
+                throw exception;
+            }
+            else
+            {
+                output = false;
+            }
+            return output;
+        }
+        /// <summary>
+        /// Throw exception if distance contains others chars than numbers
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        private bool DoesDistanceContainsOnlyNumbers(string input)
+        {
+            bool output = Regex.IsMatch(input, @"^[0-9]+$");
+            if (!output)
+            {
+                Exception exception = new Exception("La distance contient d'autres caractères que des chiffres!");
+                throw exception;
+            }
+            return output;
+        }
+        /// <summary>
+        /// Throw exception if a field isnt filled
+        /// </summary>
+        /// <returns></returns>
+        private bool AreLineFieldsFilled()
+        {
+            bool output = false;
+            if(cboLieuArrivee.SelectedIndex >-1 && cboLieuDepart.SelectedIndex > -1 && txtDistance.Text != string.Empty)
+            {
+                output = true;
+            }
+            else if(cboLieuArrivee.SelectedIndex == -1 || cboLieuDepart.SelectedIndex == -1)
+            {
+                output = false;
+                Exception exception = new Exception("Veuillez sélectionner un lieu de départ et un lieu d'arrivée");
+                throw exception;
+            }
+            else if(txtDistance.Text == string.Empty)
+            {
+                output = false;
+                Exception exception = new Exception("Veuillez indiquer une distance");
+                throw exception;
+            }
+            return output;
+        }
+        /// <summary>
+        /// Throw exception if DepartureAirport and ArrivalAirport are the same
+        /// </summary>
+        /// <returns></returns>
+        private bool AreDepartureAirportAndArrivalAirportEqual()
+        {
+            bool output;
+            if(cboLieuArrivee.SelectedItem.ToString() == cboLieuDepart.SelectedItem.ToString())
+            {
+                output = true;
+                Exception exception = new Exception("Le lieu de départ et le lieu d'arrivée ne peuvent être les mêmes");
+                throw exception;
+            }
+            else
+            {
+                output = false;
+            }
+            return output;
+        }
+
+        /*PAS UTILE PARCE QUE LE '-' EST PAS UN CHIFFRE DONC DEJA GERE PAR AUTRE EXCEPTION
+        /// <summary>
+        /// Throw exception if distance is a negative number
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        private bool IsDistanceAPositiveNumber(string input)
+        {
+            bool output = false;
+            if (DoesDistanceContainsOnlyNumbers(input))
+            {
+                int distance = int.Parse(input);
+                if(distance > 0)
+                {
+                    output = true;
+                }
+                else
+                {
+                    output = false;
+                    Exception exception = new Exception("La distance doit etre un nomnre positif");
+                    throw exception;
+                }
+            }
+            return output;
+        }*/
+        #endregion
+
+
     }
 }

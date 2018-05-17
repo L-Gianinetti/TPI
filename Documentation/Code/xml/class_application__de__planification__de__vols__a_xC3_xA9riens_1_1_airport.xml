@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_airport" kind="class" language="C#" prot="public">
+    <compoundname>Application_de_planification_de_vols_aériens::Airport</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_airport_1ae98996e1a993b287cf123bbed957f9f1" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string Application_de_planification_de_vols_aériens.Airport.name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Airport.cs" line="11" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Airport.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_airport_1a25b8937bd4f555b7597bd2ac771da73d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string Application_de_planification_de_vols_aériens.Airport.Name</definition>
+        <argsstring></argsstring>
+        <name>Name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Airport.cs" line="15" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Airport.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_airport_1a5507521a7e89a1cef679eff2a043f89c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Application_de_planification_de_vols_aériens.Airport.Airport</definition>
+        <argsstring>(string name)</argsstring>
+        <name>Airport</name>
+        <param>
+          <type>string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Airport.cs" line="29" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Airport.cs" bodystart="29" bodyend="32"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Airport.cs" line="10" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Airport.cs" bodystart="9" bodyend="33"/>
+    <listofallmembers>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_airport_1a5507521a7e89a1cef679eff2a043f89c" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Airport</scope><name>Airport</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_airport_1ae98996e1a993b287cf123bbed957f9f1" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Airport</scope><name>name</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_airport_1a25b8937bd4f555b7597bd2ac771da73d" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Airport</scope><name>Name</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
