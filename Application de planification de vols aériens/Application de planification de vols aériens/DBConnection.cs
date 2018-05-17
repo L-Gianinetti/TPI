@@ -293,11 +293,42 @@ namespace Application_de_planification_de_vols_aériens
 
 
         #region Pilot
-        /*
+        
         public List<Pilot> GetPilots()
         {
-            
-        }*/
+            List<Pilot> pilots = new List<Pilot>();
+            try
+            {
+                //ouverture de la connexion SQL
+                this.connection.Open();
+
+                //Création d'une commande SQL en fonction de l'object connection
+                MySqlCommand cmd = this.connection.CreateCommand();
+
+                //Requête SQL
+                cmd.CommandText = "SELECT pilotName, pilotFirstName, flightTime, airportName from pilot inner join airport on fkAirport = idAirport";
+
+
+                //Exécution de la commande SQL
+                cmd.ExecuteNonQuery();
+
+
+                
+                var cmdReader = cmd.ExecuteReader();
+                while (cmdReader.Read())
+                {
+                    pilots.Add(new Pilot(cmdReader[0].ToString(), cmdReader[1].ToString(),int.Parse(cmdReader[2].ToString()),cmdReader[3].ToString()));
+                }
+
+
+                this.connection.Close();
+            }
+            catch
+            {
+
+            }
+            return pilots;
+        }
         public string GetPilotName()
         {
             return string.Empty;

@@ -12,6 +12,7 @@ namespace Application_de_planification_de_vols_aériens
 {
     public partial class Affichage : Form
     {
+        DBConnection dbConnection = new DBConnection();
         public Affichage()
         {
             InitializeComponent();
@@ -38,6 +39,27 @@ namespace Application_de_planification_de_vols_aériens
         }
 
         private void cmdPlanifier_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Affichage_Load(object sender, EventArgs e)
+        {
+            List<Pilot> pilots = new List<Pilot>();
+            pilots = dbConnection.GetPilots();
+            pilots.ForEach(delegate (Pilot pilot)
+            {
+                string[] row = new string[] { pilot.Name, pilot.FirstName, pilot.AssignmentAirportName, pilot.FlightTime.ToString() };
+                dgvPilotes.Rows.Add(row);
+            });
+        }
+
+        private void grbAffichage_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvPilotes_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

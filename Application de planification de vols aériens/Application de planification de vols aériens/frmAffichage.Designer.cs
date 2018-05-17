@@ -36,9 +36,16 @@
             this.dgvLignes = new System.Windows.Forms.DataGridView();
             this.colLieuDepart = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colLieuArrivee = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDistance = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grbVols = new System.Windows.Forms.GroupBox();
             this.cmdPlanifier = new System.Windows.Forms.Button();
             this.dgvVols = new System.Windows.Forms.DataGridView();
+            this.colName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colLigne = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDateDepart = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDateArrivee = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPilote1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPilote2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grbPilotes = new System.Windows.Forms.GroupBox();
             this.cmdPlanifierVacances = new System.Windows.Forms.Button();
             this.cmdAfficherVacances = new System.Windows.Forms.Button();
@@ -50,13 +57,6 @@
             this.colPrenom = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colAeroportAffectation = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colHeuresVol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDistance = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colLigne = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDateDepart = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDateArrivee = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPilote1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPilote2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlEntete.SuspendLayout();
             this.grbAffichage.SuspendLayout();
             this.grbLignes.SuspendLayout();
@@ -106,6 +106,7 @@
             this.grbAffichage.TabIndex = 0;
             this.grbAffichage.TabStop = false;
             this.grbAffichage.Text = "Affichage";
+            this.grbAffichage.Enter += new System.EventHandler(this.grbAffichage_Enter);
             // 
             // grbLignes
             // 
@@ -138,6 +139,11 @@
             // 
             this.colLieuArrivee.HeaderText = "Lieu d\'arrivée";
             this.colLieuArrivee.Name = "colLieuArrivee";
+            // 
+            // colDistance
+            // 
+            this.colDistance.HeaderText = "Distance";
+            this.colDistance.Name = "colDistance";
             // 
             // grbVols
             // 
@@ -174,6 +180,36 @@
             this.dgvVols.Name = "dgvVols";
             this.dgvVols.Size = new System.Drawing.Size(641, 92);
             this.dgvVols.TabIndex = 0;
+            // 
+            // colName
+            // 
+            this.colName.HeaderText = "Nom";
+            this.colName.Name = "colName";
+            // 
+            // colLigne
+            // 
+            this.colLigne.HeaderText = "Ligne";
+            this.colLigne.Name = "colLigne";
+            // 
+            // colDateDepart
+            // 
+            this.colDateDepart.HeaderText = "Date départ";
+            this.colDateDepart.Name = "colDateDepart";
+            // 
+            // colDateArrivee
+            // 
+            this.colDateArrivee.HeaderText = "Date arrivée";
+            this.colDateArrivee.Name = "colDateArrivee";
+            // 
+            // colPilote1
+            // 
+            this.colPilote1.HeaderText = "Pilote n°1";
+            this.colPilote1.Name = "colPilote1";
+            // 
+            // colPilote2
+            // 
+            this.colPilote2.HeaderText = "Pilote n°2";
+            this.colPilote2.Name = "colPilote2";
             // 
             // grbPilotes
             // 
@@ -247,8 +283,9 @@
             this.colHeuresVol});
             this.dgvPilotes.Location = new System.Drawing.Point(30, 19);
             this.dgvPilotes.Name = "dgvPilotes";
-            this.dgvPilotes.Size = new System.Drawing.Size(443, 94);
+            this.dgvPilotes.Size = new System.Drawing.Size(638, 94);
             this.dgvPilotes.TabIndex = 1;
+            this.dgvPilotes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPilotes_CellContentClick);
             // 
             // colNom
             // 
@@ -270,41 +307,6 @@
             this.colHeuresVol.HeaderText = "Heures de vol à son actif";
             this.colHeuresVol.Name = "colHeuresVol";
             // 
-            // colDistance
-            // 
-            this.colDistance.HeaderText = "Distance";
-            this.colDistance.Name = "colDistance";
-            // 
-            // colName
-            // 
-            this.colName.HeaderText = "Nom";
-            this.colName.Name = "colName";
-            // 
-            // colLigne
-            // 
-            this.colLigne.HeaderText = "Ligne";
-            this.colLigne.Name = "colLigne";
-            // 
-            // colDateDepart
-            // 
-            this.colDateDepart.HeaderText = "Date départ";
-            this.colDateDepart.Name = "colDateDepart";
-            // 
-            // colDateArrivee
-            // 
-            this.colDateArrivee.HeaderText = "Date arrivée";
-            this.colDateArrivee.Name = "colDateArrivee";
-            // 
-            // colPilote1
-            // 
-            this.colPilote1.HeaderText = "Pilote n°1";
-            this.colPilote1.Name = "colPilote1";
-            // 
-            // colPilote2
-            // 
-            this.colPilote2.HeaderText = "Pilote n°2";
-            this.colPilote2.Name = "colPilote2";
-            // 
             // Affichage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -314,6 +316,7 @@
             this.Controls.Add(this.pnlEntete);
             this.Name = "Affichage";
             this.Text = "Planification de vols aériens - Affichage";
+            this.Load += new System.EventHandler(this.Affichage_Load);
             this.pnlEntete.ResumeLayout(false);
             this.grbAffichage.ResumeLayout(false);
             this.grbLignes.ResumeLayout(false);

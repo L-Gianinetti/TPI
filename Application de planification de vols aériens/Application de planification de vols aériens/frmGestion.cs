@@ -26,7 +26,9 @@ namespace Application_de_planification_de_vols_aériens
 
         private void cmdAffichage_Click(object sender, EventArgs e)
         {
-
+            Affichage frmAffichage = new Affichage();
+            frmAffichage.Show();
+ 
         }
 
         public void cmdAjouterPilote_Click(object sender, EventArgs e)
@@ -40,6 +42,7 @@ namespace Application_de_planification_de_vols_aériens
                     int idAirport = dbConnexion.GetAirportId(airport);
                     newPilot = new Pilot(txtNom.Text, txtPrenom.Text, int.Parse(txtHeuresVol.Text), airport);
                     dbConnexion.AddPilot(newPilot, idAirport);
+                    MessageBox.Show("Le pilote a bien été ajouté");
                 }
             }
             catch(Exception ex)
@@ -50,63 +53,15 @@ namespace Application_de_planification_de_vols_aériens
         //TODO
         private void cmdAjouterVol_Click(object sender, EventArgs e)
         {
-            try
-            {
-                int departureH = (int)nudHDepart.Value;
-                string sDepartureH = departureH.ToString();
-                int departureM = (int)nudMDepart.Value;
-                string sDepartureM = departureM.ToString();
-                int arrivalH = (int)nudHArrivee.Value;
-                int arrivalM = (int)nudHArrivee.Value;
-                if (departureH < 10)
-                {
-                    sDepartureH = "0" + departureH;
-                }
-                if(departureM < 10)
-                {
-                    sDepartureM = "0" + departureM;
-                }
-                string[] airportsNames = cboLigne.SelectedItem.ToString().Split('/');
-                Airport departureAirport = new Airport(airportsNames[0]);
-                Airport arrivalAirport = new Airport(airportsNames[1].Substring(1,airportsNames[1].Length-1));
-                string departureAirportAcronym = dbConnexion.GetAirportAcronym(departureAirport);
-                string arrivalAirportAcronym = dbConnexion.GetAirportAcronym(arrivalAirport);
-                MessageBox.Show(airportsNames[1]);
-                int idDepartureAirport = dbConnexion.GetAirportId(departureAirport);
-                int idArrivalAirport = dbConnexion.GetAirportId(arrivalAirport);
-                MessageBox.Show(idDepartureAirport.ToString() + "-"+idArrivalAirport.ToString());
-                int lineDistance = dbConnexion.GetLineDistance(idDepartureAirport, idArrivalAirport);
-                line = new Line(idDepartureAirport, idArrivalAirport, lineDistance);
-                int idLine = dbConnexion.GetLineId(idDepartureAirport, idArrivalAirport);
-                int departureYear = dtpDateDepart.Value.Year;
-                int departureMonth = dtpDateDepart.Value.Month;
-                string sDepartureMonth = departureMonth.ToString();
-                int departureDay = dtpDateDepart.Value.Day;
-                string sDepartureDay = departureDay.ToString();
-                if(departureMonth < 10)
-                {
-                    sDepartureMonth = "0" + departureMonth;
-                }
-                if (departureDay < 10)
-                {
-                    sDepartureDay = "0" + departureDay;
-                }
-                string flightName = departureAirportAcronym + arrivalAirportAcronym + dtpDateDepart.Value.Year  + sDepartureMonth  + sDepartureDay +  sDepartureH + sDepartureM;
 
-                DateTime departureDate = new DateTime(dtpDateDepart.Value.Year, dtpDateDepart.Value.Month, dtpDateDepart.Value.Day, departureH, departureM, 0, 0);
-                DateTime arrivalDate = new DateTime(dtpDateArrivee.Value.Year, dtpDateArrivee.Value.Month, dtpDateArrivee.Value.Day, arrivalH, arrivalM, 0, 0);
-
-                MessageBox.Show(departureDate.ToString());
-
-                flight = new Flight(flightName, departureDate, arrivalDate, line);
-                dbConnexion.AddFlight(flight, idLine);
-
-
-            }
-            catch
-            {
-
-            }
+            string[] airportsNames = cboLigne.SelectedItem.ToString().Split('/');
+            Airport departureAirport = new Airport(airportsNames[0]);
+            Airport arrivalAirport = new Airport(airportsNames[1].Substring(1, airportsNames[1].Length - 1));
+            int idDepartureAirport = dbConnexion.GetAirportId(departureAirport);
+            int idArrivalAirport = dbConnexion.GetAirportId(arrivalAirport);
+            int idLine = dbConnexion.GetLineId(idDepartureAirport, idArrivalAirport);
+            dbConnexion.AddFlight(flight, idLine);
+            MessageBox.Show("Le vol a bien été ajouté");
         }
 
         private void cmdAjouterLigne_Click(object sender, EventArgs e)
@@ -125,6 +80,7 @@ namespace Application_de_planification_de_vols_aériens
                     Line line1 = new Line(idArrivalAirport, idDepartureAirport, int.Parse(txtDistance.Text));
                     dbConnexion.AddLine(line);
                     dbConnexion.AddLine(line1);
+                    MessageBox.Show("La ligne a bien été ajoutée, une ligne retour a aussi été ajoutée");
                 }
 
             }
@@ -136,6 +92,7 @@ namespace Application_de_planification_de_vols_aériens
 
         private void frmGestion_Load(object sender, EventArgs e)
         {
+            cmdAjouterVol.Enabled = false;
             //Add airportsNames in comboboxes
             airportList = dbConnexion.GetAirportName();
             airportList.ForEach(delegate (String airport)
@@ -355,6 +312,7 @@ namespace Application_de_planification_de_vols_aériens
             return output;
         }
 
+
         /*PAS UTILE PARCE QUE LE '-' EST PAS UN CHIFFRE DONC DEJA GERE PAR AUTRE EXCEPTION
         /// <summary>
         /// Throw exception if distance is a negative number
@@ -382,6 +340,120 @@ namespace Application_de_planification_de_vols_aériens
         }*/
         #endregion
 
+        private void cmdDateArrivee_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (AreFlightFieldsFilled())
+                {
+                    if(dtpDateDepart.Value.Year == DateTime.Now.Year && dtpDateDepart.Value.Month == DateTime.Now.Month && dtpDateDepart.Value.Day == DateTime.Now.Day)
+                    {
+                        if(MessageBox.Show("La date du vol n'a pas été modifiée cela vous convient-il ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                        {
+                            return;
+                        }
+                    }
+                    if(nudHDepart.Value == 0 && nudHArrivee.Value == 0)
+                    {
+                        if (MessageBox.Show("L'heure du vol n'a pas été modifiée cela vous convient-il ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                        {
+                            return;
+                        }
+                    }
 
+                    int departureH = (int)nudHDepart.Value;
+                    string sDepartureH = departureH.ToString();
+                    int departureM = (int)nudMDepart.Value;
+                    string sDepartureM = departureM.ToString();
+                    int arrivalH = (int)nudHArrivee.Value;
+                    int arrivalM = (int)nudHArrivee.Value;
+                    if (departureH < 10)
+                    {
+                        sDepartureH = "0" + departureH;
+                    }
+                    if (departureM < 10)
+                    {
+                        sDepartureM = "0" + departureM;
+                    }
+                    string[] airportsNames = cboLigne.SelectedItem.ToString().Split('/');
+                    Airport departureAirport = new Airport(airportsNames[0]);
+                    Airport arrivalAirport = new Airport(airportsNames[1].Substring(1, airportsNames[1].Length - 1));
+                    string departureAirportAcronym = dbConnexion.GetAirportAcronym(departureAirport);
+                    string arrivalAirportAcronym = dbConnexion.GetAirportAcronym(arrivalAirport);
+
+                    int idDepartureAirport = dbConnexion.GetAirportId(departureAirport);
+                    int idArrivalAirport = dbConnexion.GetAirportId(arrivalAirport);
+
+                    int lineDistance = dbConnexion.GetLineDistance(idDepartureAirport, idArrivalAirport);
+                    line = new Line(idDepartureAirport, idArrivalAirport, lineDistance);
+                    int idLine = dbConnexion.GetLineId(idDepartureAirport, idArrivalAirport);
+                    int departureYear = dtpDateDepart.Value.Year;
+                    int departureMonth = dtpDateDepart.Value.Month;
+                    string sDepartureMonth = departureMonth.ToString();
+                    int departureDay = dtpDateDepart.Value.Day;
+                    string sDepartureDay = departureDay.ToString();
+                    if (departureMonth < 10)
+                    {
+                        sDepartureMonth = "0" + departureMonth;
+                    }
+                    if (departureDay < 10)
+                    {
+                        sDepartureDay = "0" + departureDay;
+                    }
+                    string flightName = departureAirportAcronym + arrivalAirportAcronym + dtpDateDepart.Value.Year + sDepartureMonth + sDepartureDay + sDepartureH + sDepartureM;
+
+                    DateTime departureDate = new DateTime(dtpDateDepart.Value.Year, dtpDateDepart.Value.Month, dtpDateDepart.Value.Day, departureH, departureM, 0, 0);
+
+                    MessageBox.Show(departureDate.ToString());
+
+                    flight = new Flight(flightName, departureDate, line);
+
+                    nudHArrivee.Value = flight.ArrivalDate.Hour;
+                    nudMArrivee.Value = flight.ArrivalDate.Minute;
+                    dtpDateArrivee.Value = flight.ArrivalDate;
+                    cmdAjouterVol.Enabled = true;
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void cboLigne_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cmdAjouterVol.Enabled = false;
+        }
+
+        private void nudHDepart_ValueChanged(object sender, EventArgs e)
+        {
+            cmdAjouterVol.Enabled = false;
+        }
+
+        private void nudMDepart_ValueChanged(object sender, EventArgs e)
+        {
+            cmdAjouterVol.Enabled = false;
+        }
+
+        private void dtpDateDepart_ValueChanged(object sender, EventArgs e)
+        {
+            cmdAjouterVol.Enabled = false;
+        }
+
+        private bool AreFlightFieldsFilled()
+        {
+            bool output;
+            if(cboLigne.SelectedIndex > -1 )
+            {
+                output = true;
+            }
+            else
+            {
+                output = false;
+                Exception exception = new Exception("Veuillez choisir une ligne pour le vol");
+                throw exception; 
+            }
+            return output;
+        }
     }
 }

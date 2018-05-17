@@ -41,6 +41,12 @@
             this.lblLieuArrivee = new System.Windows.Forms.Label();
             this.txtDistance = new System.Windows.Forms.TextBox();
             this.grbVol = new System.Windows.Forms.GroupBox();
+            this.nudMArrivee = new System.Windows.Forms.NumericUpDown();
+            this.nudHArrivee = new System.Windows.Forms.NumericUpDown();
+            this.nudMDepart = new System.Windows.Forms.NumericUpDown();
+            this.nudHDepart = new System.Windows.Forms.NumericUpDown();
+            this.lblHeureArrivee = new System.Windows.Forms.Label();
+            this.lblHeureDepart = new System.Windows.Forms.Label();
             this.cboLigne = new System.Windows.Forms.ComboBox();
             this.cmdAjouterVol = new System.Windows.Forms.Button();
             this.dtpDateArrivee = new System.Windows.Forms.DateTimePicker();
@@ -58,21 +64,16 @@
             this.lblHeuresVol = new System.Windows.Forms.Label();
             this.lblAeroportAffectation = new System.Windows.Forms.Label();
             this.lblNom = new System.Windows.Forms.Label();
-            this.lblHeureDepart = new System.Windows.Forms.Label();
-            this.lblHeureArrivee = new System.Windows.Forms.Label();
-            this.nudHDepart = new System.Windows.Forms.NumericUpDown();
-            this.nudMDepart = new System.Windows.Forms.NumericUpDown();
-            this.nudHArrivee = new System.Windows.Forms.NumericUpDown();
-            this.nudMArrivee = new System.Windows.Forms.NumericUpDown();
+            this.cmdDateArrivee = new System.Windows.Forms.Button();
             this.Entete.SuspendLayout();
             this.grbGestion.SuspendLayout();
             this.grbLigne.SuspendLayout();
             this.grbVol.SuspendLayout();
-            this.grbPilote.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudHDepart)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudMDepart)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudHArrivee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudMArrivee)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudHArrivee)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudMDepart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudHDepart)).BeginInit();
+            this.grbPilote.SuspendLayout();
             this.SuspendLayout();
             // 
             // Entete
@@ -193,6 +194,7 @@
             // 
             // grbVol
             // 
+            this.grbVol.Controls.Add(this.cmdDateArrivee);
             this.grbVol.Controls.Add(this.nudMArrivee);
             this.grbVol.Controls.Add(this.nudHArrivee);
             this.grbVol.Controls.Add(this.nudMDepart);
@@ -213,6 +215,76 @@
             this.grbVol.TabStop = false;
             this.grbVol.Text = "Vol";
             // 
+            // nudMArrivee
+            // 
+            this.nudMArrivee.Enabled = false;
+            this.nudMArrivee.Location = new System.Drawing.Point(539, 68);
+            this.nudMArrivee.Maximum = new decimal(new int[] {
+            59,
+            0,
+            0,
+            0});
+            this.nudMArrivee.Name = "nudMArrivee";
+            this.nudMArrivee.Size = new System.Drawing.Size(40, 20);
+            this.nudMArrivee.TabIndex = 24;
+            // 
+            // nudHArrivee
+            // 
+            this.nudHArrivee.Enabled = false;
+            this.nudHArrivee.Location = new System.Drawing.Point(493, 68);
+            this.nudHArrivee.Maximum = new decimal(new int[] {
+            23,
+            0,
+            0,
+            0});
+            this.nudHArrivee.Name = "nudHArrivee";
+            this.nudHArrivee.Size = new System.Drawing.Size(40, 20);
+            this.nudHArrivee.TabIndex = 23;
+            // 
+            // nudMDepart
+            // 
+            this.nudMDepart.Location = new System.Drawing.Point(171, 68);
+            this.nudMDepart.Maximum = new decimal(new int[] {
+            59,
+            0,
+            0,
+            0});
+            this.nudMDepart.Name = "nudMDepart";
+            this.nudMDepart.Size = new System.Drawing.Size(40, 20);
+            this.nudMDepart.TabIndex = 21;
+            this.nudMDepart.ValueChanged += new System.EventHandler(this.nudMDepart_ValueChanged);
+            // 
+            // nudHDepart
+            // 
+            this.nudHDepart.Location = new System.Drawing.Point(123, 68);
+            this.nudHDepart.Maximum = new decimal(new int[] {
+            23,
+            0,
+            0,
+            0});
+            this.nudHDepart.Name = "nudHDepart";
+            this.nudHDepart.Size = new System.Drawing.Size(40, 20);
+            this.nudHDepart.TabIndex = 20;
+            this.nudHDepart.ValueChanged += new System.EventHandler(this.nudHDepart_ValueChanged);
+            // 
+            // lblHeureArrivee
+            // 
+            this.lblHeureArrivee.AutoSize = true;
+            this.lblHeureArrivee.Location = new System.Drawing.Point(408, 68);
+            this.lblHeureArrivee.Name = "lblHeureArrivee";
+            this.lblHeureArrivee.Size = new System.Drawing.Size(85, 13);
+            this.lblHeureArrivee.TabIndex = 19;
+            this.lblHeureArrivee.Text = "Heure d\'arrivée :";
+            // 
+            // lblHeureDepart
+            // 
+            this.lblHeureDepart.AutoSize = true;
+            this.lblHeureDepart.Location = new System.Drawing.Point(26, 68);
+            this.lblHeureDepart.Name = "lblHeureDepart";
+            this.lblHeureDepart.Size = new System.Drawing.Size(90, 13);
+            this.lblHeureDepart.TabIndex = 18;
+            this.lblHeureDepart.Text = "Heure de départ :";
+            // 
             // cboLigne
             // 
             this.cboLigne.FormattingEnabled = true;
@@ -220,6 +292,7 @@
             this.cboLigne.Name = "cboLigne";
             this.cboLigne.Size = new System.Drawing.Size(586, 21);
             this.cboLigne.TabIndex = 17;
+            this.cboLigne.SelectedIndexChanged += new System.EventHandler(this.cboLigne_SelectedIndexChanged);
             // 
             // cmdAjouterVol
             // 
@@ -233,6 +306,7 @@
             // 
             // dtpDateArrivee
             // 
+            this.dtpDateArrivee.Enabled = false;
             this.dtpDateArrivee.Location = new System.Drawing.Point(493, 34);
             this.dtpDateArrivee.Name = "dtpDateArrivee";
             this.dtpDateArrivee.Size = new System.Drawing.Size(200, 20);
@@ -244,6 +318,7 @@
             this.dtpDateDepart.Name = "dtpDateDepart";
             this.dtpDateDepart.Size = new System.Drawing.Size(200, 20);
             this.dtpDateDepart.TabIndex = 10;
+            this.dtpDateDepart.ValueChanged += new System.EventHandler(this.dtpDateDepart_ValueChanged);
             // 
             // lblDateDepart
             // 
@@ -365,71 +440,15 @@
             this.lblNom.TabIndex = 0;
             this.lblNom.Text = "Nom :";
             // 
-            // lblHeureDepart
+            // cmdDateArrivee
             // 
-            this.lblHeureDepart.AutoSize = true;
-            this.lblHeureDepart.Location = new System.Drawing.Point(26, 68);
-            this.lblHeureDepart.Name = "lblHeureDepart";
-            this.lblHeureDepart.Size = new System.Drawing.Size(90, 13);
-            this.lblHeureDepart.TabIndex = 18;
-            this.lblHeureDepart.Text = "Heure de départ :";
-            // 
-            // lblHeureArrivee
-            // 
-            this.lblHeureArrivee.AutoSize = true;
-            this.lblHeureArrivee.Location = new System.Drawing.Point(408, 68);
-            this.lblHeureArrivee.Name = "lblHeureArrivee";
-            this.lblHeureArrivee.Size = new System.Drawing.Size(85, 13);
-            this.lblHeureArrivee.TabIndex = 19;
-            this.lblHeureArrivee.Text = "Heure d\'arrivée :";
-            // 
-            // nudHDepart
-            // 
-            this.nudHDepart.Location = new System.Drawing.Point(123, 68);
-            this.nudHDepart.Maximum = new decimal(new int[] {
-            23,
-            0,
-            0,
-            0});
-            this.nudHDepart.Name = "nudHDepart";
-            this.nudHDepart.Size = new System.Drawing.Size(40, 20);
-            this.nudHDepart.TabIndex = 20;
-            // 
-            // nudMDepart
-            // 
-            this.nudMDepart.Location = new System.Drawing.Point(171, 68);
-            this.nudMDepart.Maximum = new decimal(new int[] {
-            59,
-            0,
-            0,
-            0});
-            this.nudMDepart.Name = "nudMDepart";
-            this.nudMDepart.Size = new System.Drawing.Size(40, 20);
-            this.nudMDepart.TabIndex = 21;
-            // 
-            // nudHArrivee
-            // 
-            this.nudHArrivee.Location = new System.Drawing.Point(493, 68);
-            this.nudHArrivee.Maximum = new decimal(new int[] {
-            23,
-            0,
-            0,
-            0});
-            this.nudHArrivee.Name = "nudHArrivee";
-            this.nudHArrivee.Size = new System.Drawing.Size(40, 20);
-            this.nudHArrivee.TabIndex = 23;
-            // 
-            // nudMArrivee
-            // 
-            this.nudMArrivee.Location = new System.Drawing.Point(539, 68);
-            this.nudMArrivee.Maximum = new decimal(new int[] {
-            59,
-            0,
-            0,
-            0});
-            this.nudMArrivee.Name = "nudMArrivee";
-            this.nudMArrivee.Size = new System.Drawing.Size(40, 20);
-            this.nudMArrivee.TabIndex = 24;
+            this.cmdDateArrivee.Location = new System.Drawing.Point(445, 138);
+            this.cmdDateArrivee.Name = "cmdDateArrivee";
+            this.cmdDateArrivee.Size = new System.Drawing.Size(118, 23);
+            this.cmdDateArrivee.TabIndex = 25;
+            this.cmdDateArrivee.Text = "Voir date arrivée";
+            this.cmdDateArrivee.UseVisualStyleBackColor = true;
+            this.cmdDateArrivee.Click += new System.EventHandler(this.cmdDateArrivee_Click);
             // 
             // frmGestion
             // 
@@ -447,12 +466,12 @@
             this.grbLigne.PerformLayout();
             this.grbVol.ResumeLayout(false);
             this.grbVol.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudMArrivee)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudHArrivee)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudMDepart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudHDepart)).EndInit();
             this.grbPilote.ResumeLayout(false);
             this.grbPilote.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudHDepart)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudMDepart)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudHArrivee)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudMArrivee)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -495,5 +514,6 @@
         private System.Windows.Forms.NumericUpDown nudHDepart;
         private System.Windows.Forms.Label lblHeureArrivee;
         private System.Windows.Forms.Label lblHeureDepart;
+        private System.Windows.Forms.Button cmdDateArrivee;
     }
 }
