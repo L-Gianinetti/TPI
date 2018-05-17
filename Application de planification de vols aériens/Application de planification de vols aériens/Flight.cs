@@ -12,7 +12,9 @@ namespace Application_de_planification_de_vols_aériens
         private DateTime departureDate;
         private DateTime arrivalDate;
         private Line flightLine;
-
+        private int flightTimeM;
+        private int flightTimeH;
+        private int airplaneSpeed = 900;
         #region accessors
         public string Name
         {
@@ -65,6 +67,32 @@ namespace Application_de_planification_de_vols_aériens
                 flightLine = value;
             }
         }
+
+        public int FlightTimeM
+        {
+            get
+            {
+                return flightTimeM;
+            }
+
+            set
+            {
+                flightTimeM = value;
+            }
+        }
+
+        public int FlightTimeH
+        {
+            get
+            {
+                return flightTimeH;
+            }
+
+            set
+            {
+                flightTimeH = value;
+            }
+        }
         #endregion
 
 
@@ -74,6 +102,11 @@ namespace Application_de_planification_de_vols_aériens
             this.departureDate = departureDate;
             this.arrivalDate = arrivalDate;
             this.flightLine = flightLine;
+
+            FlightTimeM = flightLine.Distance / airplaneSpeed;
+            FlightTimeH = (FlightTimeM - (FlightTimeM % 60)) / 60;
+            FlightTimeM = FlightTimeM - (FlightTimeH * 60);
+
         }
 
     }

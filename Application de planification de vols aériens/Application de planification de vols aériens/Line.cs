@@ -10,12 +10,12 @@ namespace Application_de_planification_de_vols_aériens
     {
         private int idDepartureAirport;
         private int idArrivalAirport;
-        private string distance;
+        private int distance;
 
         #region accessors
 
 
-        public string Distance
+        public int Distance
         {
             get
             {
@@ -56,7 +56,7 @@ namespace Application_de_planification_de_vols_aériens
         #endregion
 
 
-        public Line(int idDepartureAirport, int idArrivalAirport, string distance)
+        public Line(int idDepartureAirport, int idArrivalAirport, int distance)
         {
             this.IdArrivalAirport = idArrivalAirport;
             this.IdDepartureAirport = idDepartureAirport;

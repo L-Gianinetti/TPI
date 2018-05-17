@@ -16,7 +16,7 @@ namespace Application_de_planification_de_vols_aériens
         List<string> airportList = new List<string>();
         Pilot newPilot;
         Line line;
-        Flight fligth;
+        Flight flight;
         Airport airport;
         DBConnection dbConnexion = new DBConnection();
         public frmGestion()
@@ -52,7 +52,56 @@ namespace Application_de_planification_de_vols_aériens
         {
             try
             {
-                fligth = new Flight()
+                int departureH = (int)nudHDepart.Value;
+                string sDepartureH = departureH.ToString();
+                int departureM = (int)nudMDepart.Value;
+                string sDepartureM = departureM.ToString();
+                int arrivalH = (int)nudHArrivee.Value;
+                int arrivalM = (int)nudHArrivee.Value;
+                if (departureH < 10)
+                {
+                    sDepartureH = "0" + departureH;
+                }
+                if(departureM < 10)
+                {
+                    sDepartureM = "0" + departureM;
+                }
+                string[] airportsNames = cboLigne.SelectedItem.ToString().Split('/');
+                Airport departureAirport = new Airport(airportsNames[0]);
+                Airport arrivalAirport = new Airport(airportsNames[1].Substring(1,airportsNames[1].Length-1));
+                string departureAirportAcronym = dbConnexion.GetAirportAcronym(departureAirport);
+                string arrivalAirportAcronym = dbConnexion.GetAirportAcronym(arrivalAirport);
+                MessageBox.Show(airportsNames[1]);
+                int idDepartureAirport = dbConnexion.GetAirportId(departureAirport);
+                int idArrivalAirport = dbConnexion.GetAirportId(arrivalAirport);
+                MessageBox.Show(idDepartureAirport.ToString() + "-"+idArrivalAirport.ToString());
+                int lineDistance = dbConnexion.GetLineDistance(idDepartureAirport, idArrivalAirport);
+                line = new Line(idDepartureAirport, idArrivalAirport, lineDistance);
+                int idLine = dbConnexion.GetLineId(idDepartureAirport, idArrivalAirport);
+                int departureYear = dtpDateDepart.Value.Year;
+                int departureMonth = dtpDateDepart.Value.Month;
+                string sDepartureMonth = departureMonth.ToString();
+                int departureDay = dtpDateDepart.Value.Day;
+                string sDepartureDay = departureDay.ToString();
+                if(departureMonth < 10)
+                {
+                    sDepartureMonth = "0" + departureMonth;
+                }
+                if (departureDay < 10)
+                {
+                    sDepartureDay = "0" + departureDay;
+                }
+                string flightName = departureAirportAcronym + arrivalAirportAcronym + dtpDateDepart.Value.Year  + sDepartureMonth  + sDepartureDay +  sDepartureH + sDepartureM;
+
+                DateTime departureDate = new DateTime(dtpDateDepart.Value.Year, dtpDateDepart.Value.Month, dtpDateDepart.Value.Day, departureH, departureM, 0, 0);
+                DateTime arrivalDate = new DateTime(dtpDateArrivee.Value.Year, dtpDateArrivee.Value.Month, dtpDateArrivee.Value.Day, arrivalH, arrivalM, 0, 0);
+
+                MessageBox.Show(departureDate.ToString());
+
+                flight = new Flight(flightName, departureDate, arrivalDate, line);
+                dbConnexion.AddFlight(flight, idLine);
+
+
             }
             catch
             {
@@ -72,8 +121,8 @@ namespace Application_de_planification_de_vols_aériens
                     Airport arrivalAirport = new Airport(cboLieuArrivee.SelectedItem.ToString());
                     int idDepartureAirport = dbConnexion.GetAirportId(departureAirport);
                     int idArrivalAirport = dbConnexion.GetAirportId(arrivalAirport);
-                    line = new Line(idDepartureAirport, idArrivalAirport, txtDistance.Text);
-                    Line line1 = new Line(idArrivalAirport, idDepartureAirport, txtDistance.Text);
+                    line = new Line(idDepartureAirport, idArrivalAirport, int.Parse(txtDistance.Text));
+                    Line line1 = new Line(idArrivalAirport, idDepartureAirport, int.Parse(txtDistance.Text));
                     dbConnexion.AddLine(line);
                     dbConnexion.AddLine(line1);
                 }
