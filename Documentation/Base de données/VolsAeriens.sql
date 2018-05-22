@@ -124,7 +124,7 @@ ENGINE = InnoDB;
 -- Table `PlanificationVolsAeriens`.`Vacation`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `PlanificationVolsAeriens`.`Vacation` (
-  `idVacation` INT NOT NULL,
+  `idVacation` INT NOT NULL AUTO_INCREMENT,
   `startDate` DATE NOT NULL,
   `endDate` DATE NOT NULL,
   `fkPilot` INT NOT NULL,

@@ -30,7 +30,31 @@ namespace Application_de_planification_de_vols_aériens
 
         private void cmdPlanifierVacances_Click(object sender, EventArgs e)
         {
+            if(dgvPilotes.SelectedRows.Count > 0)
+            {
+                int selectedrowindex = dgvPilotes.SelectedCells[0].RowIndex;
+                DataGridViewRow selectedRow = dgvPilotes.Rows[selectedrowindex];
 
+                int idPilot = Convert.ToInt32(selectedRow.Cells["colIdPilot"].Value);
+
+                if(idPilot == 0)
+                {
+                    MessageBox.Show("Veuillez sélectionner une seule ligne et non la totalité du tableau !");
+                    return;
+                }
+                MessageBox.Show(idPilot.ToString());
+                frmVacances frmVacances = new frmVacances(idPilot);
+                frmVacances.Show();
+                DialogResult res = frmVacances.DialogResult;
+                if (res == DialogResult.OK)
+                {
+                    frmVacances.Close();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Veuillez sélectionner une ligne dans le tableau. Vous pouvez sélectionner la ligne grâce à la colonne située tout à gauche du tableau.");
+            }
         }
 
         private void cmdGenererPlanning_Click(object sender, EventArgs e)

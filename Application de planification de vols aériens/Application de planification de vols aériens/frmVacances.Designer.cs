@@ -30,8 +30,8 @@
         {
             this.lblSemaine1Debut = new System.Windows.Forms.Label();
             this.lblSemaine1Fin = new System.Windows.Forms.Label();
-            this.dtpSemain1Debut = new System.Windows.Forms.DateTimePicker();
-            this.dtpSemain1Fin = new System.Windows.Forms.DateTimePicker();
+            this.dtpDebut = new System.Windows.Forms.DateTimePicker();
+            this.dtpFin = new System.Windows.Forms.DateTimePicker();
             this.cmdValider = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -53,22 +53,23 @@
             this.lblSemaine1Fin.TabIndex = 7;
             this.lblSemaine1Fin.Text = "Date de fin :";
             // 
-            // dtpSemain1Debut
+            // dtpDebut
             // 
-            this.dtpSemain1Debut.Location = new System.Drawing.Point(216, 19);
-            this.dtpSemain1Debut.Name = "dtpSemain1Debut";
-            this.dtpSemain1Debut.Size = new System.Drawing.Size(200, 20);
-            this.dtpSemain1Debut.TabIndex = 17;
+            this.dtpDebut.Location = new System.Drawing.Point(216, 19);
+            this.dtpDebut.Name = "dtpDebut";
+            this.dtpDebut.Size = new System.Drawing.Size(200, 20);
+            this.dtpDebut.TabIndex = 17;
             // 
-            // dtpSemain1Fin
+            // dtpFin
             // 
-            this.dtpSemain1Fin.Location = new System.Drawing.Point(216, 48);
-            this.dtpSemain1Fin.Name = "dtpSemain1Fin";
-            this.dtpSemain1Fin.Size = new System.Drawing.Size(200, 20);
-            this.dtpSemain1Fin.TabIndex = 18;
+            this.dtpFin.Location = new System.Drawing.Point(216, 48);
+            this.dtpFin.Name = "dtpFin";
+            this.dtpFin.Size = new System.Drawing.Size(200, 20);
+            this.dtpFin.TabIndex = 18;
             // 
             // cmdValider
             // 
+            this.cmdValider.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.cmdValider.Location = new System.Drawing.Point(354, 89);
             this.cmdValider.Name = "cmdValider";
             this.cmdValider.Size = new System.Drawing.Size(75, 23);
@@ -83,8 +84,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(479, 125);
             this.Controls.Add(this.cmdValider);
-            this.Controls.Add(this.dtpSemain1Fin);
-            this.Controls.Add(this.dtpSemain1Debut);
+            this.Controls.Add(this.dtpFin);
+            this.Controls.Add(this.dtpDebut);
             this.Controls.Add(this.lblSemaine1Fin);
             this.Controls.Add(this.lblSemaine1Debut);
             this.Name = "frmVacances";
@@ -99,8 +100,8 @@
 
         private System.Windows.Forms.Label lblSemaine1Debut;
         private System.Windows.Forms.Label lblSemaine1Fin;
-        private System.Windows.Forms.DateTimePicker dtpSemain1Debut;
-        private System.Windows.Forms.DateTimePicker dtpSemain1Fin;
+        private System.Windows.Forms.DateTimePicker dtpDebut;
+        private System.Windows.Forms.DateTimePicker dtpFin;
         private System.Windows.Forms.Button cmdValider;
     }
 }
