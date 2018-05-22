@@ -45,13 +45,9 @@ namespace Application_de_planification_de_vols_aériens
 
         private void Affichage_Load(object sender, EventArgs e)
         {
-            List<Pilot> pilots = new List<Pilot>();
-            pilots = dbConnection.GetPilots();
-            pilots.ForEach(delegate (Pilot pilot)
-            {
-                string[] row = new string[] { pilot.Name, pilot.FirstName, pilot.AssignmentAirportName, pilot.FlightTime.ToString() };
-                dgvPilotes.Rows.Add(row);
-            });
+            displayPilots();
+            displayFlights();
+            displayLines();
         }
 
         private void grbAffichage_Enter(object sender, EventArgs e)
@@ -62,6 +58,54 @@ namespace Application_de_planification_de_vols_aériens
         private void dgvPilotes_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void displayPilots()
+        {
+            List<Pilot> pilots = new List<Pilot>();
+            pilots = dbConnection.GetPilots();
+            pilots.ForEach(delegate (Pilot pilot)
+            {
+                string[] row = new string[] { pilot.Id.ToString(), pilot.Name, pilot.FirstName, pilot.AssignmentAirportName, pilot.FlightTime.ToString() };
+                dgvPilotes.Rows.Add(row);
+            });
+        }
+        private void displayFlights()
+        {
+            List<Flight> flights = new List<Flight>();
+            flights = dbConnection.GetFlights();
+            flights.ForEach(delegate (Flight flight)
+            {
+                string pilotName1 = string.Empty;
+                string pilotName2 = string.Empty;
+                if(flight.IdFlight > 0)
+                {
+                    List<string> idPilots = dbConnection.GetPilotsFromFlight(flight.IdFlight);
+                    if (idPilots.Any())
+                    {
+                        pilotName1 = dbConnection.GetPilotFullName(int.Parse(idPilots[0].ToString()));
+                        pilotName2 = dbConnection.GetPilotFullName(int.Parse(idPilots[1].ToString()));
+                    }
+                }
+                
+                
+
+                string[] row = new string[] { flight.Name, flight.IdLine.ToString(), flight.SDepartureDate, flight.SArrivalDate, pilotName1, pilotName2};
+                dgvVols.Rows.Add(row);
+            });
+        }
+
+        private void displayLines()
+        {
+            List<Line> lines = new List<Line>();
+            lines = dbConnection.GetLines();
+            lines.ForEach(delegate (Line line)
+            {
+                string departureAirportName = dbConnection.GetAirportName(line.IdDepartureAirport);
+                string arrivalAirportName = dbConnection.GetAirportName(line.IdArrivalAirport);
+                string[] row = new string[] { line.IdLine.ToString(), departureAirportName, arrivalAirportName, line.Distance.ToString() };
+                dgvLignes.Rows.Add(row);
+            });
         }
     }
 }

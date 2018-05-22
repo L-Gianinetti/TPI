@@ -10,6 +10,7 @@ namespace Application_de_planification_de_vols_aériens
     {
         private string name;
         private string firstName;
+        private int id;
         private int flightTime;
         private Airport assignmentAirport;
         string assignmentAirportName;
@@ -80,6 +81,19 @@ namespace Application_de_planification_de_vols_aériens
             }
         }
 
+        public int Id
+        {
+            get
+            {
+                return id;
+            }
+
+            set
+            {
+                id = value;
+            }
+        }
+
 
 
         #endregion
@@ -98,12 +112,13 @@ namespace Application_de_planification_de_vols_aériens
         }
 
         //Test pour l'affichage pilotes
-        public Pilot(string name, string firstName, int flightTime, string assignmentAirportName)
+        public Pilot(int id,string name, string firstName, int flightTime, string assignmentAirportName)
         {
             this.name = name;
             this.firstName = firstName;
             this.flightTime = flightTime;
             this.AssignmentAirportName = assignmentAirportName;
+            this.id = id;
         }
     }
 }

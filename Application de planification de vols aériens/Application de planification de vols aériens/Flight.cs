@@ -8,13 +8,19 @@ namespace Application_de_planification_de_vols_aériens
 {
     public class Flight
     {
+        DBConnection dbConnection = new DBConnection();
         private string name;
+        private int idFlight;
+        private string sDepartureDate;
+        private string sArrivalDate;
         private DateTime departureDate;
         private DateTime arrivalDate;
         private Line flightLine;
         private double flightTimeM;
         private double flightTimeH;
+        private int idLine;
         private int airplaneSpeed = 900;
+        private string lineName = string.Empty;
         #region accessors
         public string Name
         {
@@ -93,6 +99,71 @@ namespace Application_de_planification_de_vols_aériens
                 flightTimeH = value;
             }
         }
+
+        public int IdLine
+        {
+            get
+            {
+                return idLine;
+            }
+
+            set
+            {
+                idLine = value;
+            }
+        }
+
+        public string LineName
+        {
+            get
+            {
+                return lineName;
+            }
+
+            set
+            {
+                lineName = value;
+            }
+        }
+
+        public string SDepartureDate
+        {
+            get
+            {
+                return sDepartureDate;
+            }
+
+            set
+            {
+                sDepartureDate = value;
+            }
+        }
+
+        public string SArrivalDate
+        {
+            get
+            {
+                return sArrivalDate;
+            }
+
+            set
+            {
+                sArrivalDate = value;
+            }
+        }
+
+        public int IdFlight
+        {
+            get
+            {
+                return idFlight;
+            }
+
+            set
+            {
+                idFlight = value;
+            }
+        }
         #endregion
 
 
@@ -112,5 +183,15 @@ namespace Application_de_planification_de_vols_aériens
 
         }
 
+        public Flight(int idFlight,string name, string departureDate, string arrivalDate, int idLine)
+        {
+            this.idFlight = idFlight;
+            this.name = name;
+            this.SDepartureDate = departureDate;
+            this.SArrivalDate = arrivalDate;
+            this.idLine = idLine;
+
+            //this.lineName = dbConnection.GetLineName(idLine);
+        }
     }
 }

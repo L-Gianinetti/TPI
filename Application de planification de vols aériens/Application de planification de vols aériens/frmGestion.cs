@@ -94,7 +94,7 @@ namespace Application_de_planification_de_vols_aériens
         {
             cmdAjouterVol.Enabled = false;
             //Add airportsNames in comboboxes
-            airportList = dbConnexion.GetAirportName();
+            airportList = dbConnexion.GetAirportsNames();
             airportList.ForEach(delegate (String airport)
                 {
                     cboAeroportAffectation.Items.Add(airport);
