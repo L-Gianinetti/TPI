@@ -106,7 +106,7 @@ namespace Application_de_planification_de_vols_aériens
 
                 string flightName = Convert.ToString(selectedRow.Cells["colName"].Value);
                 frmAffectationVol frmAffectationVol = new frmAffectationVol(flightName);
-                if (flightName == string.Empty)
+                if (flightName == "0")
                 {
                     MessageBox.Show("Veuillez sélectionner une seule ligne et non la totalité du tableau !");
                     return;
@@ -168,8 +168,10 @@ namespace Application_de_planification_de_vols_aériens
                     List<string> idPilots = dbConnection.GetPilotsFromFlight(flight.IdFlight);
                     if (idPilots.Any())
                     {
-                        pilotName1 = dbConnection.GetPilotFullName(int.Parse(idPilots[0].ToString()));
-                        pilotName2 = dbConnection.GetPilotFullName(int.Parse(idPilots[1].ToString()));
+                        for(int i = 0; i < idPilots.Count; i++)
+                        {
+                            pilotName1 = dbConnection.GetPilotFullName(int.Parse(idPilots[i].ToString()));
+                        }
                     }
                 }
                 

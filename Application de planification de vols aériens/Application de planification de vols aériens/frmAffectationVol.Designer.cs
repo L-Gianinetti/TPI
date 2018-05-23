@@ -103,6 +103,7 @@
             this.Controls.Add(this.lblPilotesDisponbiles);
             this.Name = "frmAffectationVol";
             this.Text = "Affectation d\'un vol ";
+            this.Load += new System.EventHandler(this.frmAffectationVol_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

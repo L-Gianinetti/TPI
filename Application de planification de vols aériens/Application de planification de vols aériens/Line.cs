@@ -111,9 +111,6 @@ namespace Application_de_planification_de_vols_aériens
             this.idDepartureAirport = idDepartureAirport;
             this.distance = distance;
             this.idLine = idLine;
-
-            //arrivalAirportName = dbConnection.GetAirportName(idArrivalAirport);
-            //departureAirportName = dbConnection.GetAirportName(idDepartureAirport);
         }
 
     }

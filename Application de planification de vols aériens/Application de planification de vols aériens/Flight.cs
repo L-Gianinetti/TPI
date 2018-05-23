@@ -166,21 +166,18 @@ namespace Application_de_planification_de_vols_aériens
         }
         #endregion
 
+        public Flight()
+        {
+
+        }
 
         public Flight(string name, DateTime departureDate,Line flightLine)
         {
             this.name = name;
             this.departureDate = departureDate;
             this.flightLine = flightLine;
-            /*
-            FlightTimeM = (flightLine.Distance / airplaneSpeed)*60;
-            FlightTimeH = (FlightTimeM - (FlightTimeM % 60)) / 60;
-            FlightTimeM = FlightTimeM - (FlightTimeH * 60);*/
-            flightTimeH = (this.flightLine.Distance / airplaneSpeed);
-            
+            flightTimeH = calculateFlightTime(this.flightLine.Distance);        
             arrivalDate = departureDate.AddHours(flightTimeH);
-            //arrivalDate = arrivalDate.AddMinutes(FlightTimeM);
-
         }
 
         public Flight(int idFlight,string name, string departureDate, string arrivalDate, int idLine)
@@ -190,8 +187,19 @@ namespace Application_de_planification_de_vols_aériens
             this.SDepartureDate = departureDate;
             this.SArrivalDate = arrivalDate;
             this.idLine = idLine;
+        }
 
-            //this.lineName = dbConnection.GetLineName(idLine);
+        public double calculateFlightTime(int distance)
+        {
+            flightTimeH = distance / airplaneSpeed;
+            return flightTimeH;
+        }
+
+        public int getDepartureAirportId()
+        {
+            string acronym = name.Substring(0, 3);
+            int airportId = dbConnection.GetAirportId(acronym);
+            return airportId;
         }
     }
 }
