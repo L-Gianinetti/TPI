@@ -25,30 +25,64 @@ namespace Application_de_planification_de_vols_aériens
 
         private void cmdAfficherVacances_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void cmdPlanifierVacances_Click(object sender, EventArgs e)
-        {
-            if(dgvPilotes.SelectedRows.Count > 0)
+            if (dgvPilotes.SelectedRows.Count > 0)
             {
                 int selectedrowindex = dgvPilotes.SelectedCells[0].RowIndex;
                 DataGridViewRow selectedRow = dgvPilotes.Rows[selectedrowindex];
-
                 int idPilot = Convert.ToInt32(selectedRow.Cells["colIdPilot"].Value);
-
+                MessageBox.Show(idPilot.ToString());
                 if(idPilot == 0)
                 {
                     MessageBox.Show("Veuillez sélectionner une seule ligne et non la totalité du tableau !");
                     return;
                 }
-                MessageBox.Show(idPilot.ToString());
-                frmVacances frmVacances = new frmVacances(idPilot);
-                frmVacances.Show();
-                DialogResult res = frmVacances.DialogResult;
-                if (res == DialogResult.OK)
+                else
                 {
-                    frmVacances.Close();
+                    frmVacancesAffichage frmVacancesAffichage = new frmVacancesAffichage(idPilot);
+                    frmVacancesAffichage.Show();
+                    DialogResult res = frmVacancesAffichage.DialogResult;
+                    if (res == DialogResult.OK)
+                    {
+                        frmVacancesAffichage.Close();
+                    }
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Veuillez sélectionner une ligne dans le tableau. Vous pouvez sélectionner la ligne grâce à la colonne située tout à gauche du tableau.");
+            }
+
+        }
+
+        private void cmdPlanifierVacances_Click(object sender, EventArgs e)
+        {
+
+            if (dgvPilotes.SelectedRows.Count > 0)
+            {
+                
+                int selectedrowindex = dgvPilotes.SelectedCells[0].RowIndex;
+                DataGridViewRow selectedRow = dgvPilotes.Rows[selectedrowindex];
+
+                int idPilot = Convert.ToInt32(selectedRow.Cells["colIdPilot"].Value);
+                frmVacances frmVacances = new frmVacances(idPilot);
+                if (idPilot == 0)
+                {
+                    MessageBox.Show("Veuillez sélectionner une seule ligne et non la totalité du tableau !");
+                    return;
+                }
+                else if (!frmVacances.VacationDaysLeft())
+                {
+                    MessageBox.Show("Le pilote a déjà pris ses 25 jours/5semaines de vacances !");
+                }
+                else
+                {
+                    frmVacances.Show();
+                    DialogResult res = frmVacances.DialogResult;
+                    if (res == DialogResult.OK)
+                    {
+                        frmVacances.Close();
+                    }
                 }
             }
             else
@@ -64,7 +98,34 @@ namespace Application_de_planification_de_vols_aériens
 
         private void cmdPlanifier_Click(object sender, EventArgs e)
         {
+            if (dgvVols.SelectedRows.Count > 0)
+            {
 
+                int selectedrowindex = dgvVols.SelectedCells[0].RowIndex;
+                DataGridViewRow selectedRow = dgvVols.Rows[selectedrowindex];
+
+                string flightName = Convert.ToString(selectedRow.Cells["colName"].Value);
+                frmAffectationVol frmAffectationVol = new frmAffectationVol(flightName);
+                if (flightName == string.Empty)
+                {
+                    MessageBox.Show("Veuillez sélectionner une seule ligne et non la totalité du tableau !");
+                    return;
+                }
+                else
+                {
+                    MessageBox.Show(flightName);
+                    frmAffectationVol.Show();
+                    DialogResult res = frmAffectationVol.DialogResult;
+                    if (res == DialogResult.OK)
+                    {
+                        frmAffectationVol.Close();
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Veuillez sélectionner une ligne dans le tableau. Vous pouvez sélectionner la ligne grâce à la colonne située tout à gauche du tableau.");
+            }
         }
 
         private void Affichage_Load(object sender, EventArgs e)

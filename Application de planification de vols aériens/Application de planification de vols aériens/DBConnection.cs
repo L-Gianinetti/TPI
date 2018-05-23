@@ -20,12 +20,6 @@ namespace Application_de_planification_de_vols_aériens
             this.connection = new MySqlConnection(connectionString);
         }
 
-
-        private void InitConnexion()
-        {
-
-        }
-
         #region Gestion
 
         /// <summary>
@@ -447,7 +441,7 @@ namespace Application_de_planification_de_vols_aériens
                 MySqlCommand cmd = this.connection.CreateCommand();
 
                 //Requête SQL
-                cmd.CommandText = "SELECT fkPilot from flight_has_pilot where fkFlight =\"" + idFlight + "";
+                cmd.CommandText = "SELECT fkPilot from flight_has_pilot where fkFlight =\"" + idFlight + "\"";
 
 
                 //Exécution de la commande SQL
@@ -471,7 +465,7 @@ namespace Application_de_planification_de_vols_aériens
 
         }
 
-        public List<string> GetVacation(int idPilot)
+        public List<string> GetVacationEndDates(int idPilot)
         {
             List<string> vacations = new List<string>();
             try
@@ -483,7 +477,7 @@ namespace Application_de_planification_de_vols_aériens
                 MySqlCommand cmd = this.connection.CreateCommand();
 
                 //Requête SQL
-                cmd.CommandText = "SELECT startDate,endDate from vacation where fkPilot =\"" + idPilot + "";
+                cmd.CommandText = "SELECT endDate from vacation where fkPilot =\"" + idPilot + "\" order by idVacation";
 
 
                 //Exécution de la commande SQL
@@ -494,15 +488,53 @@ namespace Application_de_planification_de_vols_aériens
                 var cmdReader = cmd.ExecuteReader();
                 while (cmdReader.Read())
                 {
-                    vacations.Add(string.Format("{0 / 1}", cmdReader[0], cmdReader[1]));
+                    vacations.Add(string.Format("{0}", cmdReader[0]));
                 }
 
 
                 this.connection.Close();
             }
-            catch
+            catch (MySqlException e)
             {
+                Console.WriteLine(e.Message);
+            }
 
+            return vacations;
+        }
+
+        public List<string> GetVacationStartDates(int idPilot)
+        {
+            List<string> vacations = new List<string>();
+            try
+            {
+                this.connection.Close();
+                //ouverture de la connexion SQL
+                this.connection.Open();
+
+                //Création d'une commande SQL en fonction de l'object connection
+                MySqlCommand cmd = this.connection.CreateCommand();
+
+                //Requête SQL
+                cmd.CommandText = "SELECT startDate from vacation where fkPilot =\"" + idPilot + "\" order by idVacation";
+
+
+                //Exécution de la commande SQL
+                cmd.ExecuteNonQuery();
+
+
+
+                var cmdReader = cmd.ExecuteReader();
+                while (cmdReader.Read())
+                {
+                    vacations.Add(string.Format("{0}", cmdReader[0]));
+                }
+
+
+                this.connection.Close();
+            }
+            catch(MySqlException e)
+            {
+                Console.WriteLine(e.Message);
             }
             return vacations;
         }
@@ -591,7 +623,7 @@ namespace Application_de_planification_de_vols_aériens
                 MySqlCommand cmd = this.connection.CreateCommand();
 
                 //Requête SQL
-                cmd.CommandText = "SELECT pilotName, pilotFirstName from pilot where idPilot =\"" + idPilot + "";
+                cmd.CommandText = "SELECT pilotName, pilotFirstName from pilot where idPilot =\"" + idPilot + "\"";
 
 
                 //Exécution de la commande SQL

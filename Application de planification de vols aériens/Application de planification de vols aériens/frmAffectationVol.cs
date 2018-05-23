@@ -12,9 +12,24 @@ namespace Application_de_planification_de_vols_aériens
 {
     public partial class frmAffectationVol : Form
     {
-        public frmAffectationVol()
+        private string flightName;
+        public frmAffectationVol(string name)
         {
             InitializeComponent();
+            this.flightName = name;
+        }
+
+        public string FlightName
+        {
+            get
+            {
+                return flightName;
+            }
+
+            set
+            {
+                flightName = value;
+            }
         }
 
         private void cmdAjouter_Click(object sender, EventArgs e)
