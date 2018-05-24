@@ -12,9 +12,11 @@ namespace Application_de_planification_de_vols_aériens
 {
     public partial class frmAffectationVol : Form
     {
+        
         DBConnection dbConnection = new DBConnection();
         private string flightName;
         private int idFlight;
+        Pilot pilot = new Pilot();
         Flight flight = new Flight();
         
         public frmAffectationVol(string name)
@@ -105,6 +107,24 @@ namespace Application_de_planification_de_vols_aériens
                 {
                     lstPilotesDisponibles.Items.Remove(lstPilotesDisponibles.Items[i]);
                 }
+            }
+        }
+
+        private void RemovePilotsHaventRestThisWeek()
+        {
+            for (int i = 0; i < lstPilotesDisponibles.Items.Count; i++)
+            {
+                string infosPilot = lstPilotesDisponibles.Items[i].ToString();
+                string[] infoPilot = infosPilot.Split(':');
+                int idPilot = int.Parse(infoPilot[0]);
+
+                int leftDays = DateTimeExtensions.GetDaysLeftInCurrentWeek();
+                bool hasRest = pilot.HasPilotRestThisWeek(idPilot);
+                if (!hasRest)
+                {
+
+                }
+
             }
         }
     }

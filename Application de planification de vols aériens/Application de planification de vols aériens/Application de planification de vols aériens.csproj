@@ -55,6 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Airport.cs" />
+    <Compile Include="DateTimeExtensions.cs" />
     <Compile Include="DBConnection.cs" />
     <Compile Include="Flight.cs" />
     <Compile Include="FlightSchedule.cs" />

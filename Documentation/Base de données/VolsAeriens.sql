@@ -154,3 +154,9 @@ insert into Airport (idAirport, airportName, airportAcronym, airportCountry) val
 insert into Airport (idAirport, airportName, airportAcronym, airportCountry) values (8, 'Aeroport international de Kotoka', 'ACC','Ghana');
 insert into Airport (idAirport, airportName, airportAcronym, airportCountry) values (9, 'Aeroport international d\'Atlantic City', 'ACH', 'Etats-Unis');
 insert into Airport (idAirport, airportName, airportAcronym, airportCountry) values (10, 'Aeroport international d\'Adana-Sakirpasa', 'ADA','Turquie');
+
+
+insert into Pilot(idPilot, pilotFirstName, pilotName, flightTime, fkAirport, fkAirportCurrentLocation) values (999, "Ben","Gianinetti", 250, 1,1);
+insert into Line(idLine,distance, fkDepartureAirport, fkArrivalAirport) values (999,900,1,6);
+insert into Flight(idFlight,flightName, departureDate, arrivalDate, fkLine) values(999, "ACHABQ201805241200","2018-05-24 12:00:00","2018-05-24 13:00:00",999);
+insert into flight_has_pilot(fkFlight, fkPilot) values (999,999);

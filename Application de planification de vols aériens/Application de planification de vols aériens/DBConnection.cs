@@ -832,9 +832,11 @@ namespace Application_de_planification_de_vols_aériens
             return 0;
         }
 
-        public int GetPilotCurrentLocation(int idPilot, DateTime currentDate)
+        public int GetPilotCurrentLocation(int idPilot, string currentDate)
         {
             string idAirport = string.Empty;
+
+            Console.WriteLine("DATE :   " + currentDate);
             try
             {
                 //ouverture de la connexion SQL
@@ -844,7 +846,7 @@ namespace Application_de_planification_de_vols_aériens
                 MySqlCommand cmd = this.connection.CreateCommand();
 
                 //Requête SQL
-                cmd.CommandText = "SELECT fkArrivalAirport from flight_has_pilot inner join flight on idFlight = fkFlight inner join line on idLine = fkLine where fkPilot =\"" + idPilot + "\"  and arrivalDate <\"" + currentDate + "\" order by arrivalDate desc limit 1";
+                cmd.CommandText = "SELECT fkArrivalAirport from flight_has_pilot inner join flight on idFlight = fkFlight inner join line on idLine = fkLine where fkPilot =\"" + idPilot + "\"  and arrivalDate <\"" + currentDate +"\" order by arrivalDate desc limit 1";
 
 
                 //Exécution de la commande SQL
@@ -865,7 +867,15 @@ namespace Application_de_planification_de_vols_aériens
             {
 
             }
-            return int.Parse(idAirport);
+            if(idAirport == string.Empty)
+            {
+                return 0;
+            }
+            else
+            {
+                return int.Parse(idAirport);
+            }
+
         }
 
         public DateTime GetPilotLastFlightDate(int idPilot)
@@ -1029,6 +1039,81 @@ namespace Application_de_planification_de_vols_aériens
                 Console.WriteLine(e.Message);
             }
             return pilots;
+        }
+
+        public List<DateTime> GetPilotWorkEndTimeThisWeek(int idPilot, DateTime monday, DateTime sunday)
+        {
+            List<DateTime> endTime = new List<DateTime>();
+            try
+            {
+                this.connection.Close();
+                //ouverture de la connexion SQL
+                this.connection.Open();
+
+                //Création d'une commande SQL en fonction de l'object connection
+                MySqlCommand cmd = this.connection.CreateCommand();
+
+                //Requête SQL
+                cmd.CommandText = "SELECT departureDate from flight_has_pilot inner join flight on idFlight = fkFlight where fkPilot =\"" + idPilot + "\" and arrivalDate >= \"" + monday + "\" and arrivalDate <= \"" + sunday + "\" order by idFLight";
+
+
+                //Exécution de la commande SQL
+                cmd.ExecuteNonQuery();
+
+
+
+                var cmdReader = cmd.ExecuteReader();
+                while (cmdReader.Read())
+                {
+                    endTime.Add(DateTime.Parse(cmdReader[0].ToString()));
+                }
+
+
+                this.connection.Close();
+            }
+            catch (MySqlException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            return endTime;
+        }
+
+
+        public List<DateTime> GetPilotWorkStartTimeThisWeek(int idPilot, DateTime monday, DateTime sunday)
+        {
+            List<DateTime> startTime = new List<DateTime>();
+            try
+            {
+                this.connection.Close();
+                //ouverture de la connexion SQL
+                this.connection.Open();
+
+                //Création d'une commande SQL en fonction de l'object connection
+                MySqlCommand cmd = this.connection.CreateCommand();
+
+                //Requête SQL
+                cmd.CommandText = "SELECT departureDate from flight_has_pilot inner join flight on idFlight = fkFlight where fkPilot =\"" + idPilot + "\" and departureDate >= \"" + monday + "\" and departureDate <= \"" + sunday +"\" order by idFLight";
+
+
+                //Exécution de la commande SQL
+                cmd.ExecuteNonQuery();
+
+
+
+                var cmdReader = cmd.ExecuteReader();
+                while (cmdReader.Read())
+                {
+                    startTime.Add(DateTime.Parse(cmdReader[0].ToString()));
+                }
+
+
+                this.connection.Close();
+            }
+            catch (MySqlException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            return startTime;
         }
 
         public DateTime GetPilotLastArrivalTime(int idPilot, DateTime departureDate)

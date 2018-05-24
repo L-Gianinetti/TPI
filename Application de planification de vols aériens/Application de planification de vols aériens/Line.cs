@@ -112,6 +112,5 @@ namespace Application_de_planification_de_vols_aériens
             this.distance = distance;
             this.idLine = idLine;
         }
-
     }
 }
