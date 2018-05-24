@@ -55,6 +55,7 @@ namespace Application_de_planification_de_vols_aériens
                 string[] infoPilot = infosPilot.Split(':');
                 int idPilot = int.Parse(infoPilot[0]);
                 dbConnection.AddPilotToFlight(idPilot, idFlight);
+                int idArrivalAirport = flight.getArrivalAirportId();              
             }
         }
 
@@ -96,15 +97,14 @@ namespace Application_de_planification_de_vols_aériens
                 string infosPilot = lstPilotesDisponibles.Items[i].ToString();
                 string[] infoPilot = infosPilot.Split(':');
                 int idPilot = int.Parse(infoPilot[0]);
-                DateTime lastArrivalDate = dbConnection.GetPilotLastArrivalTime(idPilot);
-
-                double hours = (DateTime.Now - lastArrivalDate).TotalHours;
+                DateTime currentFlightDepartureDate = DateTime.Parse(flight.SDepartureDate);
+                DateTime lastArrivalDate = dbConnection.GetPilotLastArrivalTime(idPilot,currentFlightDepartureDate);
+                
+                double hours = (currentFlightDepartureDate - lastArrivalDate).TotalHours;
                 if(hours < 12)
                 {
-                    lstPilotesAffectes.Items.Remove(lstPilotesDisponibles.Items[i]);
+                    lstPilotesDisponibles.Items.Remove(lstPilotesDisponibles.Items[i]);
                 }
-
-
             }
         }
     }

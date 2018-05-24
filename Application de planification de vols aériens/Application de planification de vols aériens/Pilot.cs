@@ -8,6 +8,7 @@ namespace Application_de_planification_de_vols_aériens
 {
     public class Pilot
     {
+        DBConnection dbConnection = new DBConnection();
         private string name;
         private string firstName;
         private int id;
@@ -119,6 +120,18 @@ namespace Application_de_planification_de_vols_aériens
             this.flightTime = flightTime;
             this.AssignmentAirportName = assignmentAirportName;
             this.id = id;
+        }
+
+        public void updatePilotsCurrentLocation()
+        {
+            List<string> pilotsId = new List<string>();
+            pilotsId = dbConnection.GetPilotsId();
+            for (int i = 0; i < pilotsId.Count; i++)
+            {
+                int idPilot = int.Parse(pilotsId[i]);
+                int idAirport = dbConnection.GetPilotCurrentLocation(idPilot, DateTime.Now);
+                dbConnection.UpdatePilotCurrentLocation(idPilot, idAirport);
+            }
         }
     }
 }

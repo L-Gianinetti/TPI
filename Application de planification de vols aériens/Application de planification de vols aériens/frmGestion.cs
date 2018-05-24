@@ -18,7 +18,7 @@ namespace Application_de_planification_de_vols_aériens
         Line line;
         Flight flight;
         Airport airport;
-        DBConnection dbConnexion = new DBConnection();
+        DBConnection dbConnection = new DBConnection();
         public frmGestion()
         {
             InitializeComponent();
@@ -39,9 +39,9 @@ namespace Application_de_planification_de_vols_aériens
                 if (ArePilotFieldsFilled() && DoesStringContainsOnlyLetters(txtNom.Text) && DoesStringContainsOnlyLetters(txtPrenom.Text) && DoesStringContainsOnlyNumbers(txtHeuresVol.Text) && ArePilotNameLengthOrPilotFirstNameLengthCorrect(txtNom.Text) && ArePilotNameLengthOrPilotFirstNameLengthCorrect(txtPrenom.Text) && !DoesFlightTimeBeginWith0(txtHeuresVol.Text))
                 {
                     airport = new Airport(cboAeroportAffectation.SelectedItem.ToString());
-                    int idAirport = dbConnexion.GetAirportId(airport);
+                    int idAirport = dbConnection.GetAirportId(airport);
                     newPilot = new Pilot(txtNom.Text, txtPrenom.Text, int.Parse(txtHeuresVol.Text), airport);
-                    dbConnexion.AddPilot(newPilot, idAirport);
+                    dbConnection.AddPilot(newPilot, idAirport);
                     MessageBox.Show("Le pilote a bien été ajouté");
                 }
             }
@@ -57,10 +57,10 @@ namespace Application_de_planification_de_vols_aériens
             string[] airportsNames = cboLigne.SelectedItem.ToString().Split('/');
             Airport departureAirport = new Airport(airportsNames[0]);
             Airport arrivalAirport = new Airport(airportsNames[1].Substring(1, airportsNames[1].Length - 1));
-            int idDepartureAirport = dbConnexion.GetAirportId(departureAirport);
-            int idArrivalAirport = dbConnexion.GetAirportId(arrivalAirport);
-            int idLine = dbConnexion.GetLineId(idDepartureAirport, idArrivalAirport);
-            dbConnexion.AddFlight(flight, idLine);
+            int idDepartureAirport = dbConnection.GetAirportId(departureAirport);
+            int idArrivalAirport = dbConnection.GetAirportId(arrivalAirport);
+            int idLine = dbConnection.GetLineId(idDepartureAirport, idArrivalAirport);
+            dbConnection.AddFlight(flight, idLine);
             MessageBox.Show("Le vol a bien été ajouté");
         }
 
@@ -74,12 +74,12 @@ namespace Application_de_planification_de_vols_aériens
                 {
                     Airport departureAirport = new Airport(cboLieuDepart.SelectedItem.ToString());
                     Airport arrivalAirport = new Airport(cboLieuArrivee.SelectedItem.ToString());
-                    int idDepartureAirport = dbConnexion.GetAirportId(departureAirport);
-                    int idArrivalAirport = dbConnexion.GetAirportId(arrivalAirport);
+                    int idDepartureAirport = dbConnection.GetAirportId(departureAirport);
+                    int idArrivalAirport = dbConnection.GetAirportId(arrivalAirport);
                     line = new Line(idDepartureAirport, idArrivalAirport, int.Parse(txtDistance.Text));
                     Line line1 = new Line(idArrivalAirport, idDepartureAirport, int.Parse(txtDistance.Text));
-                    dbConnexion.AddLine(line);
-                    dbConnexion.AddLine(line1);
+                    dbConnection.AddLine(line);
+                    dbConnection.AddLine(line1);
                     MessageBox.Show("La ligne a bien été ajoutée, une ligne retour a aussi été ajoutée");
                 }
 
@@ -92,16 +92,18 @@ namespace Application_de_planification_de_vols_aériens
 
         private void frmGestion_Load(object sender, EventArgs e)
         {
+            newPilot = new Pilot();
+            newPilot.updatePilotsCurrentLocation();
             cmdAjouterVol.Enabled = false;
             //Add airportsNames in comboboxes
-            airportList = dbConnexion.GetAirportsNames();
+            airportList = dbConnection.GetAirportsNames();
             airportList.ForEach(delegate (String airport)
                 {
                     cboAeroportAffectation.Items.Add(airport);
                     cboLieuArrivee.Items.Add(airport);
                     cboLieuDepart.Items.Add(airport);
                 });
-            List<string> lineList = dbConnexion.GetLinesNames();
+            List<string> lineList = dbConnection.GetLinesNames();
             lineList.ForEach(delegate (string line)
             {
                 cboLigne.Items.Add(line);
@@ -378,15 +380,15 @@ namespace Application_de_planification_de_vols_aériens
                     string[] airportsNames = cboLigne.SelectedItem.ToString().Split('/');
                     Airport departureAirport = new Airport(airportsNames[0]);
                     Airport arrivalAirport = new Airport(airportsNames[1].Substring(1, airportsNames[1].Length - 1));
-                    string departureAirportAcronym = dbConnexion.GetAirportAcronym(departureAirport);
-                    string arrivalAirportAcronym = dbConnexion.GetAirportAcronym(arrivalAirport);
+                    string departureAirportAcronym = dbConnection.GetAirportAcronym(departureAirport);
+                    string arrivalAirportAcronym = dbConnection.GetAirportAcronym(arrivalAirport);
 
-                    int idDepartureAirport = dbConnexion.GetAirportId(departureAirport);
-                    int idArrivalAirport = dbConnexion.GetAirportId(arrivalAirport);
+                    int idDepartureAirport = dbConnection.GetAirportId(departureAirport);
+                    int idArrivalAirport = dbConnection.GetAirportId(arrivalAirport);
 
-                    int lineDistance = dbConnexion.GetLineDistance(idDepartureAirport, idArrivalAirport);
+                    int lineDistance = dbConnection.GetLineDistance(idDepartureAirport, idArrivalAirport);
                     line = new Line(idDepartureAirport, idArrivalAirport, lineDistance);
-                    int idLine = dbConnexion.GetLineId(idDepartureAirport, idArrivalAirport);
+                    int idLine = dbConnection.GetLineId(idDepartureAirport, idArrivalAirport);
                     int departureYear = dtpDateDepart.Value.Year;
                     int departureMonth = dtpDateDepart.Value.Month;
                     string sDepartureMonth = departureMonth.ToString();
@@ -455,5 +457,8 @@ namespace Application_de_planification_de_vols_aériens
             }
             return output;
         }
+
+
+
     }
 }

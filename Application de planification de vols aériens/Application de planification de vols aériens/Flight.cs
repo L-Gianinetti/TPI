@@ -201,5 +201,11 @@ namespace Application_de_planification_de_vols_aériens
             int airportId = dbConnection.GetAirportId(acronym);
             return airportId;
         }
+        public int getArrivalAirportId()
+        {
+            string acronym = name.Substring(3, 3);
+            int airportId = dbConnection.GetAirportId(acronym);
+            return airportId;
+        }
     }
 }

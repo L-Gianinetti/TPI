@@ -12,6 +12,7 @@ namespace Application_de_planification_de_vols_aériens
 {
     public partial class Affichage : Form
     {
+        Pilot pilot = new Pilot();
         DBConnection dbConnection = new DBConnection();
         public Affichage()
         {
@@ -98,6 +99,7 @@ namespace Application_de_planification_de_vols_aériens
 
         private void cmdPlanifier_Click(object sender, EventArgs e)
         {
+            pilot.updatePilotsCurrentLocation();
             if (dgvVols.SelectedRows.Count > 0)
             {
 
@@ -161,8 +163,8 @@ namespace Application_de_planification_de_vols_aériens
             flights = dbConnection.GetFlights();
             flights.ForEach(delegate (Flight flight)
             {
-                string pilotName1 = string.Empty;
-                string pilotName2 = string.Empty;
+                string[] pilotFullName = new string[2];
+                
                 if(flight.IdFlight > 0)
                 {
                     List<string> idPilots = dbConnection.GetPilotsFromFlight(flight.IdFlight);
@@ -170,14 +172,16 @@ namespace Application_de_planification_de_vols_aériens
                     {
                         for(int i = 0; i < idPilots.Count; i++)
                         {
-                            pilotName1 = dbConnection.GetPilotFullName(int.Parse(idPilots[i].ToString()));
+                            string pilotFirstName = dbConnection.GetPilotFirstName(int.Parse(idPilots[i]));
+                            string pilotName = dbConnection.GetPilotName(int.Parse(idPilots[i]));
+                            pilotFullName[i] = idPilots[i] + ": " + pilotName + " " + pilotFirstName;
                         }
                     }
                 }
                 
                 
 
-                string[] row = new string[] { flight.Name, flight.IdLine.ToString(), flight.SDepartureDate, flight.SArrivalDate, pilotName1, pilotName2};
+                string[] row = new string[] { flight.Name, flight.IdLine.ToString(), flight.SDepartureDate, flight.SArrivalDate, pilotFullName[0], pilotFullName[1]};
                 dgvVols.Rows.Add(row);
             });
         }
