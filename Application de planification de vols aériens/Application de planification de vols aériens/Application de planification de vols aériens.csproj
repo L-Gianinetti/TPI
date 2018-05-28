@@ -59,39 +59,39 @@
     <Compile Include="DBConnection.cs" />
     <Compile Include="Flight.cs" />
     <Compile Include="FlightSchedule.cs" />
-    <Compile Include="frmAffectationVol.cs">
+    <Compile Include="frmFlightAssignment.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAffectationVol.Designer.cs">
-      <DependentUpon>frmAffectationVol.cs</DependentUpon>
+    <Compile Include="frmFlightAssignment.Designer.cs">
+      <DependentUpon>frmFlightAssignment.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAffichage.cs">
+    <Compile Include="frmDisplay.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAffichage.Designer.cs">
-      <DependentUpon>frmAffichage.cs</DependentUpon>
+    <Compile Include="frmDisplay.Designer.cs">
+      <DependentUpon>frmDisplay.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmGestion.cs">
+    <Compile Include="frmManagement.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmGestion.Designer.cs">
-      <DependentUpon>frmGestion.cs</DependentUpon>
+    <Compile Include="frmManagement.Designer.cs">
+      <DependentUpon>frmManagement.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmVacancesAffichage.cs">
+    <Compile Include="frmVacationDisplay.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmVacancesAffichage.Designer.cs">
-      <DependentUpon>frmVacancesAffichage.cs</DependentUpon>
+    <Compile Include="frmVacationDisplay.Designer.cs">
+      <DependentUpon>frmVacationDisplay.cs</DependentUpon>
     </Compile>
     <Compile Include="Line.cs" />
     <Compile Include="Pilot.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="frmVacances.cs">
+    <Compile Include="frmVacation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmVacances.Designer.cs">
-      <DependentUpon>frmVacances.cs</DependentUpon>
+    <Compile Include="frmVacation.Designer.cs">
+      <DependentUpon>frmVacation.cs</DependentUpon>
     </Compile>
     <Compile Include="Vacation.cs" />
   </ItemGroup>
@@ -99,20 +99,20 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="frmAffectationVol.resx">
-      <DependentUpon>frmAffectationVol.cs</DependentUpon>
+    <EmbeddedResource Include="frmFlightAssignment.resx">
+      <DependentUpon>frmFlightAssignment.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAffichage.resx">
-      <DependentUpon>frmAffichage.cs</DependentUpon>
+    <EmbeddedResource Include="frmDisplay.resx">
+      <DependentUpon>frmDisplay.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmGestion.resx">
-      <DependentUpon>frmGestion.cs</DependentUpon>
+    <EmbeddedResource Include="frmManagement.resx">
+      <DependentUpon>frmManagement.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmVacances.resx">
-      <DependentUpon>frmVacances.cs</DependentUpon>
+    <EmbeddedResource Include="frmVacation.resx">
+      <DependentUpon>frmVacation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmVacancesAffichage.resx">
-      <DependentUpon>frmVacancesAffichage.cs</DependentUpon>
+    <EmbeddedResource Include="frmVacationDisplay.resx">
+      <DependentUpon>frmVacationDisplay.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -12,7 +12,7 @@ namespace Application_de_planification_de_vols_aériens.Tests
     public class PilotTests
     {
         [TestMethod()]
-        public void updatePilotsCurrentLocationTest()
+        public void UpdatePilotsCurrentLocationTest()
         {
             int idPilot = 9;
             int idActualAirport = 10;

@@ -10,36 +10,46 @@ using System.Windows.Forms;
 
 namespace Application_de_planification_de_vols_aériens
 {
-    public partial class Affichage : Form
+    public partial class frmDisplay : Form
     {
         Pilot pilot = new Pilot();
         DBConnection dbConnection = new DBConnection();
-        public Affichage()
+        public frmDisplay()
         {
             InitializeComponent();
         }
 
-        private void cmdGestion_Click(object sender, EventArgs e)
+        private void frmDisplay_Load(object sender, EventArgs e)
+        {
+            displayPilots();
+            displayFlights();
+            displayLines();
+        }
+
+        private void cmdManagement_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void cmdAfficherVacances_Click(object sender, EventArgs e)
+        private void cmdDisplayVacation_Click(object sender, EventArgs e)
         {
-            if (dgvPilotes.SelectedRows.Count > 0)
+            //if a pilot is selected in the data grid view
+            if (dgvPilots.SelectedRows.Count > 0)
             {
-                int selectedrowindex = dgvPilotes.SelectedCells[0].RowIndex;
-                DataGridViewRow selectedRow = dgvPilotes.Rows[selectedrowindex];
+                //Get the id of the selected pilot
+                int selectedrowindex = dgvPilots.SelectedCells[0].RowIndex;
+                DataGridViewRow selectedRow = dgvPilots.Rows[selectedrowindex];
                 int idPilot = Convert.ToInt32(selectedRow.Cells["colIdPilot"].Value);
-                MessageBox.Show(idPilot.ToString());
-                if(idPilot == 0)
+
+                if (idPilot == 0)
                 {
                     MessageBox.Show("Veuillez sélectionner une seule ligne et non la totalité du tableau !");
                     return;
                 }
                 else
                 {
-                    frmVacancesAffichage frmVacancesAffichage = new frmVacancesAffichage(idPilot);
+                    //show form frmVacancesAffichage
+                    frmVacationDisplay frmVacancesAffichage = new frmVacationDisplay(idPilot);
                     frmVacancesAffichage.Show();
                     DialogResult res = frmVacancesAffichage.DialogResult;
                     if (res == DialogResult.OK)
@@ -47,7 +57,6 @@ namespace Application_de_planification_de_vols_aériens
                         frmVacancesAffichage.Close();
                     }
                 }
-
             }
             else
             {
@@ -56,17 +65,17 @@ namespace Application_de_planification_de_vols_aériens
 
         }
 
-        private void cmdPlanifierVacances_Click(object sender, EventArgs e)
+        private void cmdPlanVacation_Click(object sender, EventArgs e)
         {
-
-            if (dgvPilotes.SelectedRows.Count > 0)
+            //if a pilot is selected
+            if (dgvPilots.SelectedRows.Count > 0)
             {
-                
-                int selectedrowindex = dgvPilotes.SelectedCells[0].RowIndex;
-                DataGridViewRow selectedRow = dgvPilotes.Rows[selectedrowindex];
-
+                //Get the id of the selected pilot
+                int selectedrowindex = dgvPilots.SelectedCells[0].RowIndex;
+                DataGridViewRow selectedRow = dgvPilots.Rows[selectedrowindex];
                 int idPilot = Convert.ToInt32(selectedRow.Cells["colIdPilot"].Value);
-                frmVacances frmVacances = new frmVacances(idPilot);
+
+                frmVacation frmVacances = new frmVacation(idPilot);
                 if (idPilot == 0)
                 {
                     MessageBox.Show("Veuillez sélectionner une seule ligne et non la totalité du tableau !");
@@ -78,6 +87,7 @@ namespace Application_de_planification_de_vols_aériens
                 }
                 else
                 {
+                    //show form frmVacances
                     frmVacances.Show();
                     DialogResult res = frmVacances.DialogResult;
                     if (res == DialogResult.OK)
@@ -92,22 +102,25 @@ namespace Application_de_planification_de_vols_aériens
             }
         }
 
-        private void cmdGenererPlanning_Click(object sender, EventArgs e)
+        private void cmdGeneratePlaning_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void cmdPlanifier_Click(object sender, EventArgs e)
+        private void cmdPlan_Click(object sender, EventArgs e)
         {
-            pilot.updatePilotsCurrentLocation();
-            if (dgvVols.SelectedRows.Count > 0)
+            //update Pilots current location
+            pilot.UpdatePilotsCurrentLocation();
+
+            //if a flight is selected
+            if (dgvFlights.SelectedRows.Count > 0)
             {
-
-                int selectedrowindex = dgvVols.SelectedCells[0].RowIndex;
-                DataGridViewRow selectedRow = dgvVols.Rows[selectedrowindex];
-
+                //Get the flightName
+                int selectedrowindex = dgvFlights.SelectedCells[0].RowIndex;
+                DataGridViewRow selectedRow = dgvFlights.Rows[selectedrowindex];
                 string flightName = Convert.ToString(selectedRow.Cells["colName"].Value);
-                frmAffectationVol frmAffectationVol = new frmAffectationVol(flightName);
+
+                frmFlightAssignment frmAffectationVol = new frmFlightAssignment(flightName);
                 if (flightName == "0")
                 {
                     MessageBox.Show("Veuillez sélectionner une seule ligne et non la totalité du tableau !");
@@ -115,7 +128,7 @@ namespace Application_de_planification_de_vols_aériens
                 }
                 else
                 {
-                    MessageBox.Show(flightName);
+                    //Show form frmAffectationVol
                     frmAffectationVol.Show();
                     DialogResult res = frmAffectationVol.DialogResult;
                     if (res == DialogResult.OK)
@@ -130,72 +143,74 @@ namespace Application_de_planification_de_vols_aériens
             }
         }
 
-        private void Affichage_Load(object sender, EventArgs e)
-        {
-            displayPilots();
-            displayFlights();
-            displayLines();
-        }
 
-        private void grbAffichage_Enter(object sender, EventArgs e)
-        {
 
-        }
 
-        private void dgvPilotes_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
 
-        }
+
 
         private void displayPilots()
         {
+            //List<Pilot> to store existing pilots
             List<Pilot> pilots = new List<Pilot>();
             pilots = dbConnection.GetPilots();
+
+            //ForEach pilot display his id,name,firstname,assignmentAirportName and flightTime in the DataGridView
             pilots.ForEach(delegate (Pilot pilot)
             {
                 string[] row = new string[] { pilot.Id.ToString(), pilot.Name, pilot.FirstName, pilot.AssignmentAirportName, pilot.FlightTime.ToString() };
-                dgvPilotes.Rows.Add(row);
+                dgvPilots.Rows.Add(row);
             });
         }
+
         private void displayFlights()
         {
+            //List<Flight> to store existing flights
             List<Flight> flights = new List<Flight>();
             flights = dbConnection.GetFlights();
+
+
             flights.ForEach(delegate (Flight flight)
             {
+                //T store Pilot n°1 and Pilot n°2 names
                 string[] pilotFullName = new string[2];
-                
-                if(flight.IdFlight > 0)
+
+                if (flight.IdFlight > 0)
                 {
-                    List<string> idPilots = dbConnection.GetPilotsFromFlight(flight.IdFlight);
+                    //List<string> to store Pilots' id from a specific flgiht
+                    List<string> idPilots = dbConnection.GetIdPilotsFromFlight(flight.IdFlight);
+                    //If the flight is assigned to a pilot
                     if (idPilots.Any())
                     {
-                        for(int i = 0; i < idPilots.Count; i++)
+                        for (int i = 0; i < idPilots.Count; i++)
                         {
+                            //Build pilotFullName
                             string pilotFirstName = dbConnection.GetPilotFirstName(int.Parse(idPilots[i]));
                             string pilotName = dbConnection.GetPilotName(int.Parse(idPilots[i]));
                             pilotFullName[i] = idPilots[i] + ": " + pilotName + " " + pilotFirstName;
                         }
                     }
                 }
-                
-                
 
-                string[] row = new string[] { flight.Name, flight.IdLine.ToString(), flight.SDepartureDate, flight.SArrivalDate, pilotFullName[0], pilotFullName[1]};
-                dgvVols.Rows.Add(row);
+
+                //Display flightName, idLine, departureDate, arrivalDate, pilot n°1 full name, pilot n°2 full name in DataGridView
+                string[] row = new string[] { flight.Name, flight.IdLine.ToString(), flight.SDepartureDate, flight.SArrivalDate, pilotFullName[0], pilotFullName[1] };
+                dgvFlights.Rows.Add(row);
             });
         }
 
         private void displayLines()
         {
+            //List<Line> to store existing lines
             List<Line> lines = new List<Line>();
             lines = dbConnection.GetLines();
             lines.ForEach(delegate (Line line)
             {
                 string departureAirportName = dbConnection.GetAirportName(line.IdDepartureAirport);
                 string arrivalAirportName = dbConnection.GetAirportName(line.IdArrivalAirport);
+                //For each line display its id, departureAirportName, arrivalAirportName, distance in the DataGridView
                 string[] row = new string[] { line.IdLine.ToString(), departureAirportName, arrivalAirportName, line.Distance.ToString() };
-                dgvLignes.Rows.Add(row);
+                dgvLines.Rows.Add(row);
             });
         }
     }

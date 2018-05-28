@@ -16,11 +16,12 @@ namespace Application_de_planification_de_vols_aériens
         private DateTime departureDate;
         private DateTime arrivalDate;
         private Line flightLine;
-        private double flightTimeM;
         private double flightTimeH;
         private int idLine;
+        //Average speed for an airplane
         private int airplaneSpeed = 900;
         private string lineName = string.Empty;
+
         #region accessors
         public string Name
         {
@@ -74,18 +75,7 @@ namespace Application_de_planification_de_vols_aériens
             }
         }
 
-        public double FlightTimeM
-        {
-            get
-            {
-                return flightTimeM;
-            }
 
-            set
-            {
-                flightTimeM = value;
-            }
-        }
 
         public double FlightTimeH
         {
@@ -171,24 +161,25 @@ namespace Application_de_planification_de_vols_aériens
 
         }
 
-        public Flight(string name, DateTime departureDate,Line flightLine)
+        public Flight(string name, DateTime departureDate, Line flightLine)
         {
             this.name = name;
             this.departureDate = departureDate;
             this.flightLine = flightLine;
-            flightTimeH = calculateFlightTime(this.flightLine.Distance);        
+            flightTimeH = calculateFlightTime(this.flightLine.Distance);
             arrivalDate = departureDate.AddHours(flightTimeH);
         }
 
-        public Flight(int idFlight,string name, string departureDate, string arrivalDate, int idLine)
+        public Flight(int idFlight, string name, string departureDate, string arrivalDate, int idLine)
         {
             this.idFlight = idFlight;
             this.name = name;
-            this.SDepartureDate = departureDate;
-            this.SArrivalDate = arrivalDate;
+            this.sDepartureDate = departureDate;
+            this.sArrivalDate = arrivalDate;
             this.idLine = idLine;
         }
 
+        //Return the flightTime in hours
         public double calculateFlightTime(int distance)
         {
             flightTimeH = distance / airplaneSpeed;
@@ -201,6 +192,7 @@ namespace Application_de_planification_de_vols_aériens
             int airportId = dbConnection.GetAirportId(acronym);
             return airportId;
         }
+
         public int getArrivalAirportId()
         {
             string acronym = name.Substring(3, 3);

@@ -1,6 +1,6 @@
 ﻿namespace Application_de_planification_de_vols_aériens
 {
-    partial class frmVacancesAffichage
+    partial class frmVacationDisplay
     {
         /// <summary>
         /// Required designer variable.
@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.dgvVacation = new System.Windows.Forms.DataGridView();
-            this.cmdOK = new System.Windows.Forms.Button();
             this.colDebut = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colFin = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cmdOK = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVacation)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,17 +46,6 @@
             this.dgvVacation.Size = new System.Drawing.Size(442, 111);
             this.dgvVacation.TabIndex = 0;
             // 
-            // cmdOK
-            // 
-            this.cmdOK.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.cmdOK.Location = new System.Drawing.Point(191, 194);
-            this.cmdOK.Name = "cmdOK";
-            this.cmdOK.Size = new System.Drawing.Size(75, 23);
-            this.cmdOK.TabIndex = 1;
-            this.cmdOK.Text = "OK";
-            this.cmdOK.UseVisualStyleBackColor = true;
-            this.cmdOK.Click += new System.EventHandler(this.cmdOK_Click);
-            // 
             // colDebut
             // 
             this.colDebut.HeaderText = "Date début";
@@ -69,16 +58,26 @@
             this.colFin.Name = "colFin";
             this.colFin.Width = 200;
             // 
-            // frmVacancesAffichage
+            // cmdOK
+            // 
+            this.cmdOK.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.cmdOK.Location = new System.Drawing.Point(191, 194);
+            this.cmdOK.Name = "cmdOK";
+            this.cmdOK.Size = new System.Drawing.Size(75, 23);
+            this.cmdOK.TabIndex = 1;
+            this.cmdOK.Text = "OK";
+            this.cmdOK.UseVisualStyleBackColor = true;
+            this.cmdOK.Click += new System.EventHandler(this.cmdOK_Click);
+            // 
+            // frmVacationDisplay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(554, 247);
             this.Controls.Add(this.cmdOK);
             this.Controls.Add(this.dgvVacation);
-            this.Name = "frmVacancesAffichage";
-            this.Text = "VacancesAffichage";
-            this.Load += new System.EventHandler(this.frmVacancesAffichage_Load);
+            this.Name = "frmVacationDisplay";
+            this.Text = "Vacances";
             ((System.ComponentModel.ISupportInitialize)(this.dgvVacation)).EndInit();
             this.ResumeLayout(false);
 

@@ -53,17 +53,6 @@ namespace Application_de_planification_de_vols_aériens
         }
         #endregion
 
-        public Pilot Pilot1
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-
-            set
-            {
-            }
-        }
 
         public Vacation(DateTime startDate, DateTime endDate, Pilot pilot)
         {
