@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBConnectionTests", "DBConn
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pilot", "Pilot\Pilot.csproj", "{8B1DB449-1294-4001-B779-76A2B095964B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddPilotToFligth", "AddPilotToFligth\AddPilotToFligth.csproj", "{178B3E2D-D8E0-493B-BFE7-A8FB5B5456E2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{8B1DB449-1294-4001-B779-76A2B095964B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B1DB449-1294-4001-B779-76A2B095964B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B1DB449-1294-4001-B779-76A2B095964B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{178B3E2D-D8E0-493B-BFE7-A8FB5B5456E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{178B3E2D-D8E0-493B-BFE7-A8FB5B5456E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{178B3E2D-D8E0-493B-BFE7-A8FB5B5456E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{178B3E2D-D8E0-493B-BFE7-A8FB5B5456E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

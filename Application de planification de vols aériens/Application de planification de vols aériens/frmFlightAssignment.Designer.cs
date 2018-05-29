@@ -103,7 +103,7 @@
             this.Controls.Add(this.lblAvailablePilots);
             this.Name = "frmFlightAssignment";
             this.Text = "Affectation d\'un vol ";
-            this.Load += new System.EventHandler(this.frmAffectationVol_Load);
+            this.Load += new System.EventHandler(this.frmFlightAssignment_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

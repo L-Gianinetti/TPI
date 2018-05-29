@@ -78,6 +78,7 @@
             this.Controls.Add(this.dgvVacation);
             this.Name = "frmVacationDisplay";
             this.Text = "Vacances";
+            this.Load += new System.EventHandler(this.frmVacationDisplay_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvVacation)).EndInit();
             this.ResumeLayout(false);
 

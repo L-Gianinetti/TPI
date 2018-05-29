@@ -38,11 +38,6 @@ namespace Application_de_planification_de_vols_aériens
             this.Close();
         }
 
-        private void frmVacancesAffichage_Load(object sender, EventArgs e)
-        {
-            DisplayVacation();
-        }
-
         private void DisplayVacation()
         {
             //List<string> to store vacationsStartDates and VacationsEndDate for a specific pilot
@@ -67,6 +62,11 @@ namespace Application_de_planification_de_vols_aériens
                 string[] row = new string[] { startDate.ToShortDateString(), endDate.ToShortDateString() };
                 dgvVacation.Rows.Add(row);
             };
+        }
+
+        private void frmVacationDisplay_Load(object sender, EventArgs e)
+        {
+            DisplayVacation();
         }
     }
 }

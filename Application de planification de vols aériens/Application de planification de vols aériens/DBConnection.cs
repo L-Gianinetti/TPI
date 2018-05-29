@@ -86,12 +86,14 @@ namespace Application_de_planification_de_vols_aériens
             catch (MySqlException ex)
             {
                 Console.WriteLine(ex.Message);
+                throw new MySQLException("Erreur lors de l'ajout du pilote");
             }
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
+                throw new MySQLException("Erreur lors de l'ajout du pilote");
             }
-
+            
 
         }
 
@@ -117,16 +119,20 @@ namespace Application_de_planification_de_vols_aériens
                 {
                     throw new Exception("SQL syntax is correct, 0 row inserted");
                 }
-                this.connection.Close();
+                
             }
             catch (MySqlException ex)
             {
                 Console.WriteLine(ex.Message);
+                throw new  MySQLException("Erreur lors de l'ajout d'un vol");
+               
             }
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
+                throw new MySQLException("Erreur lors de l'ajout d'un vol");              
             }
+            this.connection.Close();
         }
 
         /// <summary>
@@ -154,10 +160,12 @@ namespace Application_de_planification_de_vols_aériens
             catch (MySqlException ex)
             {
                 Console.WriteLine(ex.Message);
+                throw new MySQLException("Erreur lors de l'ajout d'un pilote a un vol");
             }
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
+                throw new MySQLException("Erreur lors de l'ajout d'un pilote a un vol");
             }
         }
 
@@ -186,10 +194,12 @@ namespace Application_de_planification_de_vols_aériens
             catch (MySqlException ex)
             {
                 Console.WriteLine(ex.Message);
+                throw new MySQLException("Erreur lors de l'ajout d'une ligne");
             }
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
+                throw new MySQLException("Erreur lors de l'ajout d'une ligne");
             }
         }
 
@@ -220,12 +230,287 @@ namespace Application_de_planification_de_vols_aériens
             this.connection.Close();
         }
 
+        public void UpdatePilotFlightTime(int idPilot, double flightTime)
+        {
+            this.connection.Close();
+            //open SQL connection
+            this.connection.Open();
+
+            //Create SQL command
+            MySqlCommand cmd = this.connection.CreateCommand();
+
+            //SQL Query
+            cmd.CommandText = "UPDATE pilot SET flightTime =\"" + flightTime + "\" where idPilot =\"" + idPilot + "\"";
+
+            //Execute SQL Query
+            cmd.ExecuteNonQuery();
+            //close SQL connection
+            this.connection.Close();
+        }
         #endregion
 
 
         #region select
 
         #region pilot
+
+        public List<string> GetIdVacationIfPilotIsInVacation(int idPilot, string day)
+        {
+            List<string> idVacation = new List<string>();
+            try
+            {
+                //open SQL connection
+                this.connection.Open();
+
+                //Create SQL command
+                MySqlCommand cmd = this.connection.CreateCommand();
+
+                //SQL Query
+                cmd.CommandText = "SELECT idVacation from vacation  where fkPilot =\"" + idPilot + "\" and startDate like \"" + day + "\" or fkPilot =\"" + idPilot + "\" and endDate like \"" + day + "\"";
+
+
+                //Execute SQL Query
+                cmd.ExecuteNonQuery();
+
+
+                var cmdReader = cmd.ExecuteReader();
+                while (cmdReader.Read())
+                {
+                    idVacation.Add(string.Format("{0}", cmdReader[0]));
+                }
+
+                //close SQL connection
+                this.connection.Close();
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            return idVacation;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="idPilot"></param>
+        /// <param name="day"></param>
+        /// <returns></returns>
+        public List<string> GetFlightNameIfPilotWorks(int idPilot, string day)
+        {
+            List<string> flightName = new List<string>();
+            try
+            {
+                //open SQL connection
+                this.connection.Open();
+
+                //Create SQL command
+                MySqlCommand cmd = this.connection.CreateCommand();
+
+                //SQL Query
+                cmd.CommandText = "SELECT flightName from flight inner join flight_has_pilot on fkFlight = idFlight where fkPilot =\"" + idPilot + "\" and departureDate like \"" + day +"\" or fkPilot =\"" + idPilot + "\" and arrivalDate like \"" + day +"\"";
+
+
+                //Execute SQL Query
+                cmd.ExecuteNonQuery();
+
+
+                var cmdReader = cmd.ExecuteReader();
+                while (cmdReader.Read())
+                {
+                    flightName.Add(string.Format("{0}", cmdReader[0]));
+                }
+
+                //close SQL connection
+                this.connection.Close();
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            return flightName;
+        }
+
+        /// <summary>
+        /// Test method :Return idFlight if pilot is assigned to flight
+        /// </summary>
+        /// <param name="idPilot"> pilot's id</param>
+        /// <param name="idFlight">flight's id</param>
+        /// <returns>return flight's id</returns>
+        public int GetIdFlightFlightHasPilot(int idPilot, int idFlight)
+        {
+            string reponse = string.Empty;
+            int output = 0;
+            try
+            {
+                //open SQL connection
+                this.connection.Open();
+
+                //Create SQL command
+                MySqlCommand cmd = this.connection.CreateCommand();
+
+                //SQL Query
+                cmd.CommandText = "SELECT fkFlight from flight_has_pilot where fkPilot =\"" + idPilot + "\" and fkFlight =\"" + idFlight + "\"";
+
+
+                //Execute SQL Query
+                cmd.ExecuteNonQuery();
+
+
+
+                var cmdReader = cmd.ExecuteReader();
+                while (cmdReader.Read())
+                {
+                    reponse = String.Format("{0}", cmdReader[0]);
+                }
+
+                //close SQL connection
+                this.connection.Close();
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            if (reponse != "0")
+            {
+                output = int.Parse(reponse);
+            }
+            return output;
+        }
+
+        /// <summary>
+        /// Test method :Return idPilot if pilot is assigned to flight
+        /// </summary>
+        /// <param name="idPilot"> pilot's id</param>
+        /// <param name="idFlight">flight's id</param>
+        /// <returns>id of the pilot</returns>
+        public int GetIdPilotFlightHasPilot(int idPilot, int idFlight)
+        {
+            string reponse = string.Empty;
+            int output = 0;
+            try
+            {
+                //open SQL connection
+                this.connection.Open();
+
+                //Create SQL command
+                MySqlCommand cmd = this.connection.CreateCommand();
+
+                //SQL Query
+                cmd.CommandText = "SELECT fkPilot from flight_has_pilot where fkPilot =\"" + idPilot + "\" and fkFlight =\"" + idFlight +"\"";
+
+
+                //Execute SQL Query
+                cmd.ExecuteNonQuery();
+
+
+
+                var cmdReader = cmd.ExecuteReader();
+                while (cmdReader.Read())
+                {
+                    reponse = String.Format("{0}", cmdReader[0]);
+                }
+
+                //close SQL connection
+                this.connection.Close();
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            if (reponse != "0")
+            {
+                output = int.Parse(reponse);
+            }
+            return output;
+        }
+
+        /// <summary>
+        /// Test method :Return idPilot from pilot's firstname and pilot's lastname
+        /// </summary>
+        /// <param name="firstname">pilot's firstname</param>
+        /// <param name="name">pilot's lastname</param>
+        /// <returns>pilot's id</returns>
+        public int GetIdPilot(string firstname, string name)
+        {
+            string reponse = string.Empty;
+            int output = 0;
+            try
+            {
+                //open SQL connection
+                this.connection.Open();
+
+                //Create SQL command
+                MySqlCommand cmd = this.connection.CreateCommand();
+
+                //SQL Query
+                cmd.CommandText = "SELECT idPilot from pilot where pilotName =\"" + name + "\" and pilotFirstName =\"" + firstname +"\"";
+
+
+                //Execute SQL Query
+                cmd.ExecuteNonQuery();
+
+
+
+                var cmdReader = cmd.ExecuteReader();
+                while (cmdReader.Read())
+                {
+                    reponse = String.Format("{0}", cmdReader[0]);
+                }
+
+                //close SQL connection
+                this.connection.Close();
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            if (reponse != "0")
+            {
+                output = int.Parse(reponse);
+            }
+            return output;
+        }
+
+        public int GetPilotFlightTime(int idPilot)
+        {
+            string reponse = string.Empty;
+            int output = 0;
+            try
+            {
+                //open SQL connection
+                this.connection.Open();
+
+                //Create SQL command
+                MySqlCommand cmd = this.connection.CreateCommand();
+
+                //SQL Query
+                cmd.CommandText = "SELECT flightTime from pilot where idPilot =\"" + idPilot + "\"";
+
+
+                //Execute SQL Query
+                cmd.ExecuteNonQuery();
+
+
+
+                var cmdReader = cmd.ExecuteReader();
+                while (cmdReader.Read())
+                {
+                    reponse = String.Format("{0}", cmdReader[0]);
+                }
+
+                //close SQL connection
+                this.connection.Close();
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            if (reponse != "0")
+            {
+                output = int.Parse(reponse);
+            }
+            return output;
+        }
 
         public int GetIdPilotIfPilotIsWorking(DateTime departureDate, DateTime arrivalDate, int idPilot)
         {
@@ -969,7 +1254,80 @@ namespace Application_de_planification_de_vols_aériens
             catch (MySqlException ex)
             {
                 Console.WriteLine(ex.Message);
+
             }
+
+            return reponse;
+        }
+
+        public string GetAirportType(string airportName)
+        {
+            string reponse = string.Empty;
+            try
+            {
+                //open SQL connection
+                this.connection.Open();
+
+                //Create SQL command
+                MySqlCommand cmd = this.connection.CreateCommand();
+
+                //SQL Query
+                cmd.CommandText = "SELECT type from airportType inner join airport on fkAirportType = idAirportType where airportName =\"" + airportName + "\"";
+
+
+                //Execute SQL Query
+                cmd.ExecuteNonQuery();
+
+
+
+                var cmdReader = cmd.ExecuteReader();
+                while (cmdReader.Read())
+                {
+                    reponse = String.Format("{0}", cmdReader[0]);
+                }
+
+                //close SQL connection
+                this.connection.Close();
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+            return reponse;
+        }
+
+        public List<string> GetAirportsTypes()
+        {
+            List<string> reponse = new List<string>();
+            try
+            {
+                //open SQL connection
+                this.connection.Open();
+
+                //Create SQL command
+                MySqlCommand cmd = this.connection.CreateCommand();
+
+                //SQL Query
+                cmd.CommandText = "SELECT type from airport inner join airportType on fkAirportType = idAirportType order by idAirport";
+
+
+                //Execute SQL Query
+                cmd.ExecuteNonQuery();
+
+                var cmdReader = cmd.ExecuteReader();
+                while (cmdReader.Read())
+                {
+                    reponse.Add(string.Format("{0}", cmdReader[0]));
+                }
+                //close SQL connection
+                this.connection.Close();
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
 
             return reponse;
         }
@@ -990,7 +1348,7 @@ namespace Application_de_planification_de_vols_aériens
                 MySqlCommand cmd = this.connection.CreateCommand();
 
                 //SQL Query
-                cmd.CommandText = "SELECT airportName from airport";
+                cmd.CommandText = "SELECT airportName from airport order by idAirport";
 
 
                 //Execute SQL Query
@@ -999,7 +1357,7 @@ namespace Application_de_planification_de_vols_aériens
                 var cmdReader = cmd.ExecuteReader();
                 while (cmdReader.Read())
                 {
-                    reponse.Add(string.Format("{0}", cmdReader[0]));
+                    reponse.Add(string.Format("{0}",cmdReader[0]));
                 }
                 //close SQL connection
                 this.connection.Close();
@@ -1282,7 +1640,7 @@ namespace Application_de_planification_de_vols_aériens
                 var cmdReader = cmd.ExecuteReader();
                 while (cmdReader.Read())
                 {
-                    reponse.Add(string.Format("{0} / {1}", cmdReader[0], cmdReader[1]));
+                    reponse.Add(string.Format("{0}/{1}", cmdReader[0], cmdReader[1]));
                 }
                 //close SQL connection
                 this.connection.Close();
@@ -1388,6 +1746,7 @@ namespace Application_de_planification_de_vols_aériens
         /// <returns></returns>
         public int GetLineDistance(int idDepartureAirport, int idArrivalAirport)
         {
+            int output = 0;
             string reponse = string.Empty;
             try
             {
@@ -1421,7 +1780,11 @@ namespace Application_de_planification_de_vols_aériens
             {
                 Console.WriteLine(ex.Message);
             }
-            return Int32.Parse(reponse);
+            if(reponse != string.Empty)
+            {
+                output = int.Parse(reponse);
+            }
+            return output;
         }
 
         /// <summary>

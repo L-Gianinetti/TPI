@@ -26,75 +26,90 @@ namespace Application_de_planification_de_vols_aériens
             flight = dbConnection.GetFlight(flightName);
         }
 
-        public string FlightName
-        {
-            get
-            {
-                return flightName;
-            }
-
-            set
-            {
-                flightName = value;
-            }
-        }
-
-        public double FlightTime
-        {
-            get
-            {
-                return flightTime;
-            }
-
-            set
-            {
-                flightTime = value;
-            }
-        }
 
         private void cmdAdd_Click(object sender, EventArgs e)
         {
+            int distance = dbConnection.GetLineDistance(flight.IdLine);
+            flightTime = flight.calculateFlightTime(distance);
             //add the selectedPilot in lstPilotesDisponibles to lstPilotesAffectes
             if (lstAvailablePilots.SelectedIndex > -1)
             {
                 lstAssignedPilots.Items.Add(lstAvailablePilots.SelectedItem);
                 lstAvailablePilots.Items.Remove(lstAvailablePilots.SelectedItem);
             }
-        }
-
-
-        private void cmdPlan_Click(object sender, EventArgs e)
-        {
-            //For each assigned Pilots
-            for (int i = 0; i < lstAssignedPilots.Items.Count; i++)
+            if(flightTime <= 10 && lstAssignedPilots.Items.Count == 1)
             {
-                //Get pilot's id
-                string infosPilot = lstAssignedPilots.Items[i].ToString();
-                string[] infoPilot = infosPilot.Split(':');
-                int idPilot = int.Parse(infoPilot[0]);
-
-                //Add pilot to flight
-                dbConnection.AddPilotToFlight(idPilot, idFlight);
-
-                int idArrivalAirport = flight.getArrivalAirportId();
+                cmdAdd.Enabled = false;
+            }
+            if(flightTime > 10 && lstAssignedPilots.Items.Count == 2)
+            {
+                cmdAdd.Enabled = false;
             }
         }
 
-        private void frmAffectationVol_Load(object sender, EventArgs e)
+
+        public void cmdPlan_Click(object sender, EventArgs e)
+        {
+            int distance = dbConnection.GetLineDistance(flight.IdLine);
+            flightTime = flight.calculateFlightTime(distance);
+            if (flightTime > 10 && lstAssignedPilots.Items.Count != 2)
+            {
+                MessageBox.Show("Le vol dure plus de 10h, il faut assigner un second pilote à ce vol");
+            }
+            else
+            {
+                //For each assigned Pilots
+                for (int i = 0; i < lstAssignedPilots.Items.Count; i++)
+                {
+                    //Get pilot's id
+                    string infosPilot = lstAssignedPilots.Items[i].ToString();
+                    string[] infoPilot = infosPilot.Split(':');
+                    int idPilot = int.Parse(infoPilot[0]);
+
+                    //Add pilot to flight
+                    dbConnection.AddPilotToFlight(idPilot, idFlight);
+
+
+
+                    //int idArrivalAirport = flight.getArrivalAirportId();
+
+                    int currentPilotFlightTime = dbConnection.GetPilotFlightTime(idPilot);
+                    if(flightTime > 10)
+                    {
+                        if(i == 0)
+                        {
+                            double totalPilotFlightTime = 10 + currentPilotFlightTime;
+                            dbConnection.UpdatePilotFlightTime(idPilot, totalPilotFlightTime);
+                        }
+                        else
+                        {
+                            double totalPilotFlightTime = currentPilotFlightTime + (flightTime - 10);
+                            dbConnection.UpdatePilotFlightTime(idPilot, totalPilotFlightTime);
+                        }
+                    }
+                    else
+                    {
+                        double totalPilotFlightTime = flight.FlightTimeH + currentPilotFlightTime;
+                        dbConnection.UpdatePilotFlightTime(idPilot, totalPilotFlightTime);
+                    }
+
+                }
+            }
+
+        }
+
+        private void frmFlightAssignment_Load(object sender, EventArgs e)
         {
             //Get the flight distance to calculate flightTime
             int distance = dbConnection.GetLineDistance(flight.IdLine);
-            FlightTime = flight.calculateFlightTime(distance);
+            flightTime = flight.calculateFlightTime(distance);
 
             LoadAllPilotsInCurrentAirport();
             RemovePilotsNoRestAfterFlight();
             RemovePilotsInVacation();
             RemovePilotsWorking();
             RemovePilotsNoRestThisWeek();
-            /*if(flightTime > 10)
-            {
 
-            }*/
         }
 
      
@@ -195,6 +210,7 @@ namespace Application_de_planification_de_vols_aériens
 
             }
         }
+
 
         private void RemovePilotsNoRestThisWeek()
         {
@@ -308,6 +324,11 @@ namespace Application_de_planification_de_vols_aériens
             }
         }
 
+        /// <summary>
+        /// Build a date into MySQLDate format
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
         private string BuildMySQLDate(DateTime input)
         {
             int year = input.Year;

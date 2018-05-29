@@ -84,6 +84,7 @@
       <DependentUpon>frmVacationDisplay.cs</DependentUpon>
     </Compile>
     <Compile Include="Line.cs" />
+    <Compile Include="MySQLException.cs" />
     <Compile Include="Pilot.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

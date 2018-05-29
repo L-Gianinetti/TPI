@@ -5,13 +5,14 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.IO;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Application_de_planification_de_vols_aériens
 {
     public partial class frmDisplay : Form
-    {
+    { 
         Pilot pilot = new Pilot();
         DBConnection dbConnection = new DBConnection();
         public frmDisplay()
@@ -24,6 +25,10 @@ namespace Application_de_planification_de_vols_aériens
             displayPilots();
             displayFlights();
             displayLines();
+
+            //add actual month and next month to cboMonth
+            cboMonth.Items.Add("Mois actuel");
+            cboMonth.Items.Add("Mois prochain");
         }
 
         private void cmdManagement_Click(object sender, EventArgs e)
@@ -104,6 +109,94 @@ namespace Application_de_planification_de_vols_aériens
 
         private void cmdGeneratePlaning_Click(object sender, EventArgs e)
         {
+            StringBuilder csv = new StringBuilder();
+            string filePath = "C:\\Users\\Lucas.GIANINETTI\\Desktop\\VolsAeriens\\VolsAeriens.csv";
+            //if a flight is selected
+            if (dgvPilots.SelectedRows.Count > 0)
+            {
+                if(cboMonth.SelectedIndex > -1)
+                {
+                    //Get the flightName
+                    int selectedrowindex = dgvPilots.SelectedCells[0].RowIndex;
+                    DataGridViewRow selectedRow = dgvPilots.Rows[selectedrowindex];
+                    string idPilot = Convert.ToString(selectedRow.Cells["colIdPilot"].Value);
+
+
+                    if (int.Parse(idPilot) == 0)
+                    {
+                        MessageBox.Show("Veuillez sélectionner une seule ligne et non la totalité du tableau !");
+                        return;
+                    }
+                    else
+                    {
+                        if(cboMonth.SelectedItem.ToString() == "Mois actuel")
+                        {
+                            int days = DateTime.DaysInMonth(DateTime.Now.Year, DateTime.Now.Month);
+                            string yearMonthHeader = "Année; Mois;";
+                            int month = DateTime.Now.Month;
+                            string sMonth = month.ToString(); 
+                            string yearMonth = DateTime.Now.Year.ToString() + ";" + DateTime.Now.Month.ToString() +";";
+                            string monthDays = string.Empty;
+                            string activityName = string.Empty;
+                            if(month < 10)
+                            {
+                                sMonth = "0" + sMonth;
+                            }
+
+                            for (int i = 0; i < days; i++)
+                            {
+                                string y = (i +1).ToString();
+                                if(i < 9)
+                                {
+                                    y = "0" + y;                                    
+                                }
+                                monthDays +=  y + ";";
+                                
+                                string day = DateTime.Now.Year + "-" + sMonth + "-" + y + "%";
+                                List<string> flightNames = dbConnection.GetFlightNameIfPilotWorks(int.Parse(idPilot), day);
+                                List<string> vacationDays = dbConnection.GetIdVacationIfPilotIsInVacation(int.Parse(idPilot), day);
+                                if(flightNames.Count != 0)
+                                {  
+                                    for(int z=0; z < flightNames.Count; z++)
+                                    {
+                                        activityName += flightNames[z] + "  ";
+                                    }
+                                    activityName = activityName + ";";
+                                }
+                                else if(vacationDays.Count != 0)
+                                {
+                                    for(int z = 0; z < vacationDays.Count; z++)
+                                    {
+                                        activityName += "Vacation" + ";";
+                                    }
+                                }
+                                else
+                                {
+                                    activityName += "Free day" + ";";
+                                }
+                            }
+                            yearMonthHeader = yearMonthHeader + monthDays;
+                            activityName =  yearMonth + activityName;
+                            csv.AppendLine(yearMonthHeader);
+                            csv.AppendLine(activityName);
+                            File.WriteAllText(filePath, csv.ToString());
+                            
+                        }
+                        else
+                        {
+
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Veuillez indiquer le mois pour lequel générer le planing");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Veuillez sélectionner une ligne dans le tableau. Vous pouvez sélectionner la ligne grâce à la colonne située tout à gauche du tableau.");
+            }
 
         }
 
@@ -120,7 +213,7 @@ namespace Application_de_planification_de_vols_aériens
                 DataGridViewRow selectedRow = dgvFlights.Rows[selectedrowindex];
                 string flightName = Convert.ToString(selectedRow.Cells["colName"].Value);
 
-                frmFlightAssignment frmAffectationVol = new frmFlightAssignment(flightName);
+                frmFlightAssignment frmFlightAssignment = new frmFlightAssignment(flightName);
                 if (flightName == "0")
                 {
                     MessageBox.Show("Veuillez sélectionner une seule ligne et non la totalité du tableau !");
@@ -128,12 +221,12 @@ namespace Application_de_planification_de_vols_aériens
                 }
                 else
                 {
-                    //Show form frmAffectationVol
-                    frmAffectationVol.Show();
-                    DialogResult res = frmAffectationVol.DialogResult;
+                    //Show form frmFlightAssignment
+                    frmFlightAssignment.Show();
+                    DialogResult res = frmFlightAssignment.DialogResult;
                     if (res == DialogResult.OK)
                     {
-                        frmAffectationVol.Close();
+                        frmFlightAssignment.Close();
                     }
                 }
             }

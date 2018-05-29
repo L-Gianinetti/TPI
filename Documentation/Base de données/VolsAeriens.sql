@@ -25,7 +25,12 @@ CREATE TABLE IF NOT EXISTS `PlanificationVolsAeriens`.`Airport` (
   `airportName` VARCHAR(100) NOT NULL,
   `airportAcronym` VARCHAR(3) NOT NULL,
   `airportCountry` VARCHAR(30) NOT NULL,
-  PRIMARY KEY (`idAirport`))
+  `fkAirportType` INT NOT NULL,
+  PRIMARY KEY (`idAirport`),
+  FOREIGN KEY (`fkAirportType`)
+  REFERENCES `PlanificationVolsAeriens`.`AirportType` (`idAirportType`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
@@ -137,26 +142,28 @@ CREATE TABLE IF NOT EXISTS `PlanificationVolsAeriens`.`Vacation` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
+CREATE TABLE IF NOT EXISTS `PlanificationVolsAeriens`.`AirportType` (
+	`idAirportType` INT NOT NULL AUTO_INCREMENT,
+    `type` VARCHAR(30) NOT NULL,
+    PRIMARY KEY (`idAirportType`))
+ENGINE = InnoDB;
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
+insert into AirportType(idAirportType, type) values (1, 'Aeroport international');
+
+insert into Airport (idAirport, airportName, airportAcronym, airportCountry, fkAirportType) values (1, 'Saint-Gall-Altenrhein', 'ACH', 'Suisse',1);
+insert into Airport (idAirport, airportName, airportAcronym, airportCountry, fkAirportType) values (2, 'd\'Al-Ain', 'AAN','Emirats arabes unis',1);
+insert into Airport (idAirport, airportName, airportAcronym, airportCountry, fkAirportType) values (3, 'd\'Abakan', 'ABA','Russie',1);
+insert into Airport (idAirport, airportName, airportAcronym, airportCountry, fkAirportType) values (4, 'd\'Asaba', 'ABB','Nigeria',1);
+insert into Airport (idAirport, airportName, airportAcronym, airportCountry, fkAirportType) values (5, 'Felix-Houphouet-Boigny', 'ABJ','Cote d\'Ivoire',1);
+insert into Airport (idAirport, airportName, airportAcronym, airportCountry, fkAirportType) values (6, 'd\'Albuquerque', 'ABQ','Etats-Unis',1);
+insert into Airport (idAirport, airportName, airportAcronym, airportCountry, fkAirportType) values (7, 'general Juan N. Alvarez', 'ACA', 'Mexique',1);
+insert into Airport (idAirport, airportName, airportAcronym, airportCountry, fkAirportType) values (8, 'de Kotoka', 'ACC','Ghana',1);
+insert into Airport (idAirport, airportName, airportAcronym, airportCountry, fkAirportType) values (9, 'd\'Atlantic City', 'ACY', 'Etats-Unis',1);
+insert into Airport (idAirport, airportName, airportAcronym, airportCountry, fkAirportType) values (10, 'd\'Adana-Sakirpasa', 'ADA','Turquie',1);
 
 
-insert into Airport (idAirport, airportName, airportAcronym, airportCountry) values (1, 'Aeroport international Saint-Gall-Altenrhein', 'ACH', 'Suisse');
-insert into Airport (idAirport, airportName, airportAcronym, airportCountry) values (2, 'Aeroport international d\'Al-Ain', 'AAN','Emirats arabes unis');
-insert into Airport (idAirport, airportName, airportAcronym, airportCountry) values (3, 'Aeroport international d\'Abakan', 'ABA','Russie');
-insert into Airport (idAirport, airportName, airportAcronym, airportCountry) values (4, 'Aeroport international d\'Asaba', 'ABB','Nigeria');
-insert into Airport (idAirport, airportName, airportAcronym, airportCountry) values (5, 'Aeroport international Felix-Houphouet-Boigny', 'ABJ','Cote d\'Ivoire');
-insert into Airport (idAirport, airportName, airportAcronym, airportCountry) values (6, 'Aeroport international d\'Albuquerque', 'ABQ','Etats-Unis');
-insert into Airport (idAirport, airportName, airportAcronym, airportCountry) values (7, 'Aeroport international general Juan N. Alvarez', 'ACA', 'Mexique');
-insert into Airport (idAirport, airportName, airportAcronym, airportCountry) values (8, 'Aeroport international de Kotoka', 'ACC','Ghana');
-insert into Airport (idAirport, airportName, airportAcronym, airportCountry) values (9, 'Aeroport international d\'Atlantic City', 'ACH', 'Etats-Unis');
-insert into Airport (idAirport, airportName, airportAcronym, airportCountry) values (10, 'Aeroport international d\'Adana-Sakirpasa', 'ADA','Turquie');
 
-
-insert into Pilot(idPilot, pilotFirstName, pilotName, flightTime, fkAirport, fkAirportCurrentLocation) values (999, "Ben","Gianinetti", 250, 1,1);
-insert into Line(idLine,distance, fkDepartureAirport, fkArrivalAirport) values (999,900,1,6);
-insert into Flight(idFlight,flightName, departureDate, arrivalDate, fkLine) values(999, "ACHABQ201805241200","2018-05-24 12:00:00","2018-05-24 13:00:00",999);
-insert into flight_has_pilot(fkFlight, fkPilot) values (999,999);

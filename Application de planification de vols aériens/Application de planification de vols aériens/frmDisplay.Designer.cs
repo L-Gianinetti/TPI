@@ -52,7 +52,7 @@
             this.cmdDisplayVacation = new System.Windows.Forms.Button();
             this.cmdGeneratePlanning = new System.Windows.Forms.Button();
             this.lblMois = new System.Windows.Forms.Label();
-            this.cboMois = new System.Windows.Forms.ComboBox();
+            this.cboMonth = new System.Windows.Forms.ComboBox();
             this.dgvPilots = new System.Windows.Forms.DataGridView();
             this.colIdPilot = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNom = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -104,7 +104,7 @@
             this.grbDisplay.Controls.Add(this.grbPilots);
             this.grbDisplay.Location = new System.Drawing.Point(12, 96);
             this.grbDisplay.Name = "grbDisplay";
-            this.grbDisplay.Size = new System.Drawing.Size(940, 710);
+            this.grbDisplay.Size = new System.Drawing.Size(940, 810);
             this.grbDisplay.TabIndex = 0;
             this.grbDisplay.TabStop = false;
             this.grbDisplay.Text = "Display";
@@ -114,7 +114,7 @@
             this.grbLines.Controls.Add(this.dgvLines);
             this.grbLines.Location = new System.Drawing.Point(7, 576);
             this.grbLines.Name = "grbLines";
-            this.grbLines.Size = new System.Drawing.Size(851, 128);
+            this.grbLines.Size = new System.Drawing.Size(851, 228);
             this.grbLines.TabIndex = 2;
             this.grbLines.TabStop = false;
             this.grbLines.Text = "Lignes";
@@ -130,7 +130,7 @@
             this.colDistance});
             this.dgvLines.Location = new System.Drawing.Point(7, 20);
             this.dgvLines.Name = "dgvLines";
-            this.dgvLines.Size = new System.Drawing.Size(569, 85);
+            this.dgvLines.Size = new System.Drawing.Size(569, 202);
             this.dgvLines.TabIndex = 0;
             // 
             // colIdLigne
@@ -232,7 +232,7 @@
             this.grbPilots.Controls.Add(this.cmdDisplayVacation);
             this.grbPilots.Controls.Add(this.cmdGeneratePlanning);
             this.grbPilots.Controls.Add(this.lblMois);
-            this.grbPilots.Controls.Add(this.cboMois);
+            this.grbPilots.Controls.Add(this.cboMonth);
             this.grbPilots.Controls.Add(this.dgvPilots);
             this.grbPilots.Location = new System.Drawing.Point(7, 20);
             this.grbPilots.Name = "grbPilots";
@@ -280,13 +280,13 @@
             this.lblMois.TabIndex = 3;
             this.lblMois.Text = "Mois de l\'horaire :";
             // 
-            // cboMois
+            // cboMonth
             // 
-            this.cboMois.FormattingEnabled = true;
-            this.cboMois.Location = new System.Drawing.Point(122, 302);
-            this.cboMois.Name = "cboMois";
-            this.cboMois.Size = new System.Drawing.Size(121, 21);
-            this.cboMois.TabIndex = 2;
+            this.cboMonth.FormattingEnabled = true;
+            this.cboMonth.Location = new System.Drawing.Point(122, 302);
+            this.cboMonth.Name = "cboMonth";
+            this.cboMonth.Size = new System.Drawing.Size(121, 21);
+            this.cboMonth.TabIndex = 2;
             // 
             // dgvPilots
             // 
@@ -336,7 +336,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(964, 818);
+            this.ClientSize = new System.Drawing.Size(1046, 918);
             this.Controls.Add(this.grbDisplay);
             this.Controls.Add(this.pnlEntete);
             this.Name = "frmDisplay";
@@ -371,7 +371,7 @@
         private System.Windows.Forms.Button cmdDisplayVacation;
         private System.Windows.Forms.Button cmdGeneratePlanning;
         private System.Windows.Forms.Label lblMois;
-        private System.Windows.Forms.ComboBox cboMois;
+        private System.Windows.Forms.ComboBox cboMonth;
         private System.Windows.Forms.DataGridView dgvPilots;
         private System.Windows.Forms.DataGridViewTextBoxColumn colIdLigne;
         private System.Windows.Forms.DataGridViewTextBoxColumn colLieuDepart;

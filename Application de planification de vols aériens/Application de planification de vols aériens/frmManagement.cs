@@ -24,6 +24,47 @@ namespace Application_de_planification_de_vols_aériens
             InitializeComponent();
         }
 
+        private void frmManagement_Load(object sender, EventArgs e)
+        {
+            //Update piltos current location
+            newPilot = new Pilot();
+            newPilot.UpdatePilotsCurrentLocation();
+
+
+            cmdAddFlight.Enabled = false;
+
+
+            //Add airportsNames in comboboxes
+            List<string> airportType = new List<string>();
+            airportType = dbConnection.GetAirportsTypes();
+            airportList = dbConnection.GetAirportsNames();
+            for(int i = 0; i < airportList.Count; i++)
+            {
+                string airportName = airportType[i] + " / " + airportList[i];
+                cboAssignmentAirport.Items.Add(airportName);
+                cboArrivalPlace.Items.Add(airportName);
+                cboDeparturePlace.Items.Add(airportName);
+            }
+                
+
+     
+
+            //Add linesNames in combobox
+            List<string> lineList = dbConnection.GetLinesNames();
+            for(int y =0; y < lineList.Count; y++)
+            {
+                string[] fullLineName = lineList[y].Split('/');
+                string airportType1 = dbConnection.GetAirportType(fullLineName[0]);
+                string airportType2 = dbConnection.GetAirportType(fullLineName[1]);
+                string lineName = airportType1 + " " + fullLineName[0] + " / " + airportType2 + " " + fullLineName[1];
+                cboLine.Items.Add(lineName); 
+            }
+
+                
+           
+        }
+
+
         private void cmdDisplay_Click(object sender, EventArgs e)
         {
             //Show form frmAffichage
@@ -39,9 +80,11 @@ namespace Application_de_planification_de_vols_aériens
                 if (ArePilotFieldsFilled() && DoesStringContainsOnlyLetters(txtName.Text) && DoesStringContainsOnlyLetters(txtFirstName.Text) && DoesStringContainsOnlyNumbers(txtFlightHours.Text) && ArePilotNameLengthOrPilotFirstNameLengthCorrect(txtName.Text) && ArePilotNameLengthOrPilotFirstNameLengthCorrect(txtFirstName.Text) && !DoesFlightTimeBeginWith0(txtFlightHours.Text))
                 {
                     //Get pilot's assignmentAirport Id
-                    airport = new Airport(cboAssignmentAirport.SelectedItem.ToString());
+                    string[] airportFullName = cboAssignmentAirport.SelectedItem.ToString().Split('/');
+                    string airportName = airportFullName[1].Substring(1, airportFullName[1].Length - 1);
+                    airport = new Airport(airportName);
                     int idAirport = dbConnection.GetAirportId(airport);
-
+                    
                     //Add pilot
                     newPilot = new Pilot(txtName.Text, txtFirstName.Text, int.Parse(txtFlightHours.Text), airport);
                     dbConnection.AddPilot(newPilot, idAirport);
@@ -56,21 +99,31 @@ namespace Application_de_planification_de_vols_aériens
 
         private void cmdAddVol_Click(object sender, EventArgs e)
         {
-            //Create airports
-            string[] airportsNames = cboLine.SelectedItem.ToString().Split('/');
-            Airport departureAirport = new Airport(airportsNames[0]);
-            Airport arrivalAirport = new Airport(airportsNames[1].Substring(1, airportsNames[1].Length - 1));
+            try
+            {
+                //Create arrival and departure airports
+                string[] airportsNames = cboLine.SelectedItem.ToString().Split('/');
+                airportsNames[0] = airportsNames[0].Replace("Aeroport international ", "");
+                airportsNames[1] = airportsNames[1].Replace("Aeroport international ", "");
+                Airport departureAirport = new Airport(airportsNames[0]);
+                Airport arrivalAirport = new Airport(airportsNames[1].Substring(1, airportsNames[1].Length - 1));
 
-            //Get airports id
-            int idDepartureAirport = dbConnection.GetAirportId(departureAirport);
-            int idArrivalAirport = dbConnection.GetAirportId(arrivalAirport);
+                //Get airports id
+                int idDepartureAirport = dbConnection.GetAirportId(departureAirport);
+                int idArrivalAirport = dbConnection.GetAirportId(arrivalAirport);
 
-            //Get line id
-            int idLine = dbConnection.GetLineId(idDepartureAirport, idArrivalAirport);
+                //Get line id
+                int idLine = dbConnection.GetLineId(idDepartureAirport, idArrivalAirport);
 
-            //Add flight
-            dbConnection.AddFlight(flight, idLine);
-            MessageBox.Show("Le vol a bien été ajouté");
+                //Add flight
+                dbConnection.AddFlight(flight, idLine);
+                MessageBox.Show("Le vol a bien été ajouté");
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
 
         private void cmdAddLine_Click(object sender, EventArgs e)
@@ -78,11 +131,16 @@ namespace Application_de_planification_de_vols_aériens
             try
             {
                 //If all conditions are satisfied add a line
-                if (!DoesDistanceBeginWith0(txtDistance.Text) && DoesDistanceContainsOnlyNumbers(txtDistance.Text) && AreLineFieldsFilled() && !AreDepartureAirportAndArrivalAirportEqual())
+                if (AreLineFieldsFilled() && !DoesDistanceBeginWith0(txtDistance.Text) && DoesDistanceContainsOnlyNumbers(txtDistance.Text) &&   !AreDepartureAirportAndArrivalAirportEqual())
                 {
                     //Create airports
-                    Airport departureAirport = new Airport(cboDeparturePlace.SelectedItem.ToString());
-                    Airport arrivalAirport = new Airport(cboArrivalPlace.SelectedItem.ToString());
+                    //Create airports
+                    string[] departureAirportFullName = cboDeparturePlace.SelectedItem.ToString().Split('/');
+                    string departureAirportName = departureAirportFullName[1].Substring(1, departureAirportFullName[1].Length - 1);
+                    string[] arrivalAirportFullName = cboArrivalPlace.SelectedItem.ToString().Split('/');
+                    string arrivalAirportName = arrivalAirportFullName[1].Substring(1, arrivalAirportFullName[1].Length - 1);
+                    Airport departureAirport = new Airport(departureAirportName);
+                    Airport arrivalAirport = new Airport(arrivalAirportName);
 
                     //Get airports id
                     int idDepartureAirport = dbConnection.GetAirportId(departureAirport);
@@ -105,32 +163,7 @@ namespace Application_de_planification_de_vols_aériens
             }
         }
 
-        private void frmGestion_Load(object sender, EventArgs e)
-        {
-            //Update piltos current location
-            newPilot = new Pilot();
-            //newPilot.UpdatePilotsCurrentLocation();
 
-
-            cmdAddFlight.Enabled = false;
-
-
-            //Add airportsNames in comboboxes
-            airportList = dbConnection.GetAirportsNames();
-            airportList.ForEach(delegate (String airport)
-            {
-                cboAssignmentAirport.Items.Add(airport);
-                cboArrivalPlace.Items.Add(airport);
-                cboDeparturePlace.Items.Add(airport);
-            });
-
-            //Add linesNames in combobox
-            List<string> lineList = dbConnection.GetLinesNames();
-            lineList.ForEach(delegate (string line)
-            {
-                cboLine.Items.Add(line);
-            });
-        }
 
         #region checkPilotFiedls
         /// <summary>
@@ -140,7 +173,7 @@ namespace Application_de_planification_de_vols_aériens
         /// <returns></returns>
         private bool DoesStringContainsOnlyLetters(string input)
         {
-            bool output = Regex.IsMatch(input, @"^[a-zA-Zéèàïî]+$");
+            bool output = Regex.IsMatch(input, @"^[a-zA-Zéèëêàïîç]+$");
             if (!output)
             {
                 Exception exception = new Exception("Le prénom/nom ne contient pas uniquement des lettres");
@@ -275,7 +308,7 @@ namespace Application_de_planification_de_vols_aériens
         private bool AreLineFieldsFilled()
         {
             bool output = false;
-            if (cboArrivalPlace.SelectedIndex > -1 && cboDeparturePlace.SelectedIndex > -1 && txtDistance.Text != string.Empty)
+            if (cboArrivalPlace.SelectedIndex > -1 && cboDeparturePlace.SelectedIndex > -1 && txtDistance.Text != string.Empty && int.Parse(txtDistance.Text) <= 18000)
             {
                 output = true;
             }
@@ -289,6 +322,12 @@ namespace Application_de_planification_de_vols_aériens
             {
                 output = false;
                 Exception exception = new Exception("Veuillez indiquer une distance");
+                throw exception;
+            }
+            else if(int.Parse(txtDistance.Text) > 18000)
+            {
+                output = false;
+                Exception exception = new Exception("La distance ne peut dépasser les 18000km");
                 throw exception;
             }
             return output;
@@ -347,89 +386,102 @@ namespace Application_de_planification_de_vols_aériens
             {
                 if (AreFlightFieldsFilled())
                 {
-                    //if departureDate is equal to today's date, ask user if it is intentional
-                    if (dtpDepartureDate.Value.Year == DateTime.Now.Year && dtpDepartureDate.Value.Month == DateTime.Now.Month && dtpDepartureDate.Value.Day == DateTime.Now.Day)
+                    if (dtpDepartureDate.Value.Year < DateTime.Now.Year || dtpDepartureDate.Value.Year == DateTime.Now.Year && dtpDepartureDate.Value.Month < DateTime.Now.Month || dtpDepartureDate.Value.Year == DateTime.Now.Year && dtpDepartureDate.Value.Month == DateTime.Now.Month && dtpDepartureDate.Value.Day < DateTime.Now.Day)
                     {
-                        if (MessageBox.Show("La date du vol n'a pas été modifiée cela vous convient-il ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                        MessageBox.Show("La date du vol ne peut être dans le passé.");
+                    }
+                    else if (dtpDepartureDate.Value.Year == DateTime.Now.Year && dtpDepartureDate.Value.Month == DateTime.Now.Month && dtpDepartureDate.Value.Day == DateTime.Now.Day && nudHDeparture.Value < DateTime.Now.Hour || dtpDepartureDate.Value.Year == DateTime.Now.Year && dtpDepartureDate.Value.Month == DateTime.Now.Month && dtpDepartureDate.Value.Day == DateTime.Now.Day && nudHDeparture.Value == DateTime.Now.Hour && nudMDeparture.Value < DateTime.Now.Minute)
+                    {
+                        MessageBox.Show("L'heure de vol ne peut être dans le passé.");
+                    }
+                    else { 
+                        //if departureDate is equal to today's date, ask user if it is intentional
+                        if (dtpDepartureDate.Value.Year == DateTime.Now.Year && dtpDepartureDate.Value.Month == DateTime.Now.Month && dtpDepartureDate.Value.Day == DateTime.Now.Day)
                         {
-                            return;
+                            if (MessageBox.Show("La date du vol n'a pas été modifiée cela vous convient-il ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                            {
+                                return;
+                            }
                         }
-                    }
-                    //if departureHour is equal to 00:00, ask user if it is intentional
-                    if (nudHDeparture.Value == 0 && nudHArrival.Value == 0)
-                    {
-                        if (MessageBox.Show("L'heure du vol n'a pas été modifiée cela vous convient-il ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                        //if departureHour is equal to 00:00, ask user if it is intentional
+                        if (nudHDeparture.Value == 0 && nudHArrival.Value == 0)
                         {
-                            return;
+                            if (MessageBox.Show("L'heure du vol n'a pas été modifiée cela vous convient-il ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                            {
+                                return;
+                            }
                         }
+
+                        //Store departureHours and departureMinutes in correct format
+                        int departureH = (int)nudHDeparture.Value;
+                        string sDepartureH = departureH.ToString();
+                        int departureM = (int)nudMDeparture.Value;
+                        string sDepartureM = departureM.ToString();
+                        int arrivalH = (int)nudHArrival.Value;
+                        int arrivalM = (int)nudHArrival.Value;
+                        if (departureH < 10)
+                        {
+                            sDepartureH = "0" + departureH;
+                        }
+                        if (departureM < 10)
+                        {
+                            sDepartureM = "0" + departureM;
+                        }
+
+                        //Create arrival and departure airports
+                        string[] airportsNames = cboLine.SelectedItem.ToString().Split('/');
+                        airportsNames[0] = airportsNames[0].Replace("Aeroport international ", "");
+                        airportsNames[1] = airportsNames[1].Replace("Aeroport international ", "");
+                        Airport departureAirport = new Airport(airportsNames[0]);
+                        Airport arrivalAirport = new Airport(airportsNames[1].Substring(1, airportsNames[1].Length - 1));
+
+                        //Get departure and arrival airport acronyms to build flightName
+                        string departureAirportAcronym = dbConnection.GetAirportAcronym(departureAirport);
+                        string arrivalAirportAcronym = dbConnection.GetAirportAcronym(arrivalAirport);
+
+                        //Get departure and arrival airports id
+                        int idDepartureAirport = dbConnection.GetAirportId(departureAirport);
+                        int idArrivalAirport = dbConnection.GetAirportId(arrivalAirport);
+
+                        //Create line
+                        int lineDistance = dbConnection.GetLineDistance(idDepartureAirport, idArrivalAirport);
+                        line = new Line(idDepartureAirport, idArrivalAirport, lineDistance);
+
+                        //Get line id
+                        int idLine = dbConnection.GetLineId(idDepartureAirport, idArrivalAirport);
+
+                        //Store departureYear, departureMonth and departureDay in correct format
+                        int departureYear = dtpDepartureDate.Value.Year;
+                        int departureMonth = dtpDepartureDate.Value.Month;
+                        string sDepartureMonth = departureMonth.ToString();
+                        int departureDay = dtpDepartureDate.Value.Day;
+                        string sDepartureDay = departureDay.ToString();
+                        if (departureMonth < 10)
+                        {
+                            sDepartureMonth = "0" + departureMonth;
+                        }
+                        if (departureDay < 10)
+                        {
+                            sDepartureDay = "0" + departureDay;
+                        }
+
+                        //build flightName
+                        string flightName = departureAirportAcronym + arrivalAirportAcronym + dtpDepartureDate.Value.Year + sDepartureMonth + sDepartureDay + sDepartureH + sDepartureM;
+
+                        DateTime departureDate = new DateTime(dtpDepartureDate.Value.Year, dtpDepartureDate.Value.Month, dtpDepartureDate.Value.Day, departureH, departureM, 0, 0);
+
+                        //Create flight
+                        flight = new Flight(flightName, departureDate, line);
+
+                        //Calculate arrivalDate
+                        nudHArrival.Value = flight.ArrivalDate.Hour;
+                        nudMArrival.Value = flight.ArrivalDate.Minute;
+                        dtpArrivalDate.Value = flight.ArrivalDate;
+
+
+                        cmdAddFlight.Enabled = true;
                     }
 
-                    //Store departureHours and departureMinutes in correct format
-                    int departureH = (int)nudHDeparture.Value;
-                    string sDepartureH = departureH.ToString();
-                    int departureM = (int)nudMDeparture.Value;
-                    string sDepartureM = departureM.ToString();
-                    int arrivalH = (int)nudHArrival.Value;
-                    int arrivalM = (int)nudHArrival.Value;
-                    if (departureH < 10)
-                    {
-                        sDepartureH = "0" + departureH;
-                    }
-                    if (departureM < 10)
-                    {
-                        sDepartureM = "0" + departureM;
-                    }
-
-                    //Create arrival and departure airports
-                    string[] airportsNames = cboLine.SelectedItem.ToString().Split('/');
-                    Airport departureAirport = new Airport(airportsNames[0]);
-                    Airport arrivalAirport = new Airport(airportsNames[1].Substring(1, airportsNames[1].Length - 1));
-
-                    //Get departure and arrival airport acronyms to build flightName
-                    string departureAirportAcronym = dbConnection.GetAirportAcronym(departureAirport);
-                    string arrivalAirportAcronym = dbConnection.GetAirportAcronym(arrivalAirport);
-
-                    //Get departure and arrival airports id
-                    int idDepartureAirport = dbConnection.GetAirportId(departureAirport);
-                    int idArrivalAirport = dbConnection.GetAirportId(arrivalAirport);
-
-                    //Create line
-                    int lineDistance = dbConnection.GetLineDistance(idDepartureAirport, idArrivalAirport);
-                    line = new Line(idDepartureAirport, idArrivalAirport, lineDistance);
-
-                    //Get line id
-                    int idLine = dbConnection.GetLineId(idDepartureAirport, idArrivalAirport);
-
-                    //Store departureYear, departureMonth and departureDay in correct format
-                    int departureYear = dtpDepartureDate.Value.Year;
-                    int departureMonth = dtpDepartureDate.Value.Month;
-                    string sDepartureMonth = departureMonth.ToString();
-                    int departureDay = dtpDepartureDate.Value.Day;
-                    string sDepartureDay = departureDay.ToString();
-                    if (departureMonth < 10)
-                    {
-                        sDepartureMonth = "0" + departureMonth;
-                    }
-                    if (departureDay < 10)
-                    {
-                        sDepartureDay = "0" + departureDay;
-                    }
-
-                    //build flightName
-                    string flightName = departureAirportAcronym + arrivalAirportAcronym + dtpDepartureDate.Value.Year + sDepartureMonth + sDepartureDay + sDepartureH + sDepartureM;
-
-                    DateTime departureDate = new DateTime(dtpDepartureDate.Value.Year, dtpDepartureDate.Value.Month, dtpDepartureDate.Value.Day, departureH, departureM, 0, 0);
-
-                    //Create flight
-                    flight = new Flight(flightName, departureDate, line);
-
-                    //Calculate arrivalDate
-                    nudHArrival.Value = flight.ArrivalDate.Hour;
-                    nudMArrival.Value = flight.ArrivalDate.Minute;
-                    dtpArrivalDate.Value = flight.ArrivalDate;
-
-
-                    cmdAddFlight.Enabled = true;
                 }
             }
             catch (Exception ex)
