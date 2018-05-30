@@ -459,6 +459,7 @@
             this.Controls.Add(this.Entete);
             this.Name = "frmManagement";
             this.Text = "frmGestion";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmManagement_FormClosing);
             this.Load += new System.EventHandler(this.frmManagement_Load);
             this.Entete.ResumeLayout(false);
             this.grbManagement.ResumeLayout(false);

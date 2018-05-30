@@ -80,6 +80,10 @@ namespace Application_de_planification_de_vols_aériens
             {
                 MessageBox.Show("Le pilote est deja en vacances pendant cette periode");
             }
+            else if (IsPilotWorking(begin, end))
+            {
+                MessageBox.Show("Le pilote a un horaire de travail pendant cette periode");
+            }
             else
             {
                 //add vacation 
@@ -137,12 +141,12 @@ namespace Application_de_planification_de_vols_aériens
             return output;
         }
 
-        //Return true if pilot is already in vacation in the startDate and endDate selected
+        //Return true if pilot is already in vacation between the startDate and endDate selected
         public bool IsPilotInVacationYet(DateTime start, DateTime end)
         {
             bool output = false;
 
-            //List<string> to store vacationsStartDates and VacationsEndDate for a specific pilot
+            //List<string> to store vacationsStartDates and VacationsEndDates for a specific pilot
             List<string> vacationsStartDates = new List<string>();
             List<string> vacationsEndDates = new List<string>();
             vacationsStartDates = dbConnection.GetVacationStartDates(idPilot);
@@ -161,6 +165,43 @@ namespace Application_de_planification_de_vols_aériens
                 DateTime startDate = new DateTime(startYear, startMonth, startDay, 0, 0, 0);
 
                 //Check if pilot is already in vacation 
+                if ((startDate.Ticks >= start.Ticks && startDate.Ticks <= end.Ticks) || (endDate.Ticks >= start.Ticks && endDate.Ticks <= end.Ticks))
+                {
+                    output = true;
+                    return output;
+                }
+                else
+                {
+                    output = false;
+                }
+            }
+            return output;
+        }
+
+        //Return true if pilot is working between startDate and endDate 
+        public bool IsPilotWorking(DateTime start, DateTime end)
+        {
+            bool output = false;
+
+            //List to store workDaysStartDates and workDaysEndDates for a specific pilot
+            List<string> workDaysStartDates = new List<string>();
+            List<string> workDaysEndDates = new List<string>();
+            workDaysEndDates = dbConnection.GetPilotEndWorkDates(idPilot);
+            workDaysStartDates = dbConnection.GetPilotStartWorkDates(idPilot);
+
+            for(int i = 0; i < workDaysStartDates.Count; i++)
+            {
+                //Build endDate and startDate
+                int startYear = int.Parse(workDaysStartDates[i].Substring(6, 4));
+                int startMonth = int.Parse(workDaysStartDates[i].Substring(3, 2));
+                int startDay = int.Parse(workDaysStartDates[i].Substring(0, 2));
+                int endYear = int.Parse(workDaysEndDates[i].Substring(6, 4));
+                int endMonth = int.Parse(workDaysEndDates[i].Substring(3, 2));
+                int endDay = int.Parse(workDaysEndDates[i].Substring(0, 2));
+                DateTime endDate = new DateTime(endYear, endMonth, endDay, 0, 0, 0);
+                DateTime startDate = new DateTime(startYear, startMonth, startDay, 0, 0, 0);
+
+                //Check if pilot is working
                 if ((startDate.Ticks >= start.Ticks && startDate.Ticks <= end.Ticks) || (endDate.Ticks >= start.Ticks && endDate.Ticks <= end.Ticks))
                 {
                     output = true;

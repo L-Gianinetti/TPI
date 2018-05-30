@@ -16,10 +16,10 @@ namespace Application_de_planification_de_vols_aériens
         private DateTime departureDate;
         private DateTime arrivalDate;
         private Line flightLine;
-        private double flightTimeH;
+        private float flightTimeH;
         private int idLine;
         //Average speed for an airplane
-        private int airplaneSpeed = 900;
+        private float airplaneSpeed = 900;
         private string lineName = string.Empty;
 
         #region accessors
@@ -77,7 +77,7 @@ namespace Application_de_planification_de_vols_aériens
 
 
 
-        public double FlightTimeH
+        public float FlightTimeH
         {
             get
             {
@@ -167,7 +167,10 @@ namespace Application_de_planification_de_vols_aériens
             this.departureDate = departureDate;
             this.flightLine = flightLine;
             flightTimeH = calculateFlightTime(this.flightLine.Distance);
-            arrivalDate = departureDate.AddHours(flightTimeH);
+
+            double flightTimeM = flightTimeH * 60;
+
+            arrivalDate = departureDate.AddMinutes(flightTimeM);
         }
 
         public Flight(int idFlight, string name, string departureDate, string arrivalDate, int idLine)
@@ -180,7 +183,7 @@ namespace Application_de_planification_de_vols_aériens
         }
 
         //Return the flightTime in hours
-        public double calculateFlightTime(int distance)
+        public float calculateFlightTime(float distance)
         {
             flightTimeH = distance / airplaneSpeed;
             return flightTimeH;

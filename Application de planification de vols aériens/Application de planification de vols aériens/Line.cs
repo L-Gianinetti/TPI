@@ -11,14 +11,14 @@ namespace Application_de_planification_de_vols_aériens
         DBConnection dbConnection = new DBConnection();
         private int idDepartureAirport;
         private int idArrivalAirport;
-        private int distance;
+        private float distance;
         private string arrivalAirportName;
         private string departureAirportName;
         private int idLine;
         #region accessors
 
 
-        public int Distance
+        public float Distance
         {
             get
             {
@@ -98,7 +98,7 @@ namespace Application_de_planification_de_vols_aériens
         #endregion
 
 
-        public Line(int idDepartureAirport, int idArrivalAirport, int distance)
+        public Line(int idDepartureAirport, int idArrivalAirport, float distance)
         {
             this.idArrivalAirport = idArrivalAirport;
             this.idDepartureAirport = idDepartureAirport;

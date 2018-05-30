@@ -109,42 +109,86 @@ namespace Application_de_planification_de_vols_aériens
 
         private void cmdGeneratePlaning_Click(object sender, EventArgs e)
         {
+            //Path of the main Folder
+            string mainDirectoryPath = "C:\\Program Files (x86)\\PlanificationVolsAeriens";
+            //Create folder if not exist
+            System.IO.Directory.CreateDirectory(mainDirectoryPath);
+            //Path of the folder inside the main folder
+            string secondDirectoryPath = "C:\\Program Files (x86)\\PlanificationVolsAeriens\\Plannings\\";
+            //Create folder if not exist
+            System.IO.Directory.CreateDirectory(secondDirectoryPath);
+
+            //StringBuilder for the readMe.txt and the Pilot's data
             StringBuilder csv = new StringBuilder();
-            string filePath = "C:\\Users\\Lucas.GIANINETTI\\Desktop\\VolsAeriens\\VolsAeriens.csv";
-            //if a flight is selected
+            StringBuilder infosTxt = new StringBuilder();
+            //Create ReadMe.txt, it explains how data are stored in pilot's planning
+            string infosPath = "C:\\Program Files (x86)\\PlanificationVolsAeriens\\Plannings\\ReadMe.txt";
+            infosTxt.AppendLine("Les jours ou le pilote ne travaille pas contiennent FreeDay");
+            infosTxt.AppendLine("Les jours ou le pilote est en vacance contiennent Vacation");
+            infosTxt.AppendLine("Les jours ou le pilote travaille contiennent le nom du vol - l'heure d'arrivée du vol");
+            File.WriteAllText(infosPath, infosTxt.ToString());
+
+            //if a pilot is selected
             if (dgvPilots.SelectedRows.Count > 0)
             {
+                //if a month is selected
                 if(cboMonth.SelectedIndex > -1)
                 {
-                    //Get the flightName
+                    //Get the pilot'id, pilot's name and pilot's firstName from dgvPilots
                     int selectedrowindex = dgvPilots.SelectedCells[0].RowIndex;
                     DataGridViewRow selectedRow = dgvPilots.Rows[selectedrowindex];
                     string idPilot = Convert.ToString(selectedRow.Cells["colIdPilot"].Value);
+                    string pilotName = Convert.ToString(selectedRow.Cells["colPilotName"].Value);
+                    string pilotFirstName = Convert.ToString(selectedRow.Cells["colPilotFirstName"].Value);
 
-
+                    //if all the datagridview is selected
                     if (int.Parse(idPilot) == 0)
                     {
                         MessageBox.Show("Veuillez sélectionner une seule ligne et non la totalité du tableau !");
                         return;
                     }
                     else
-                    {
+                    {   //if selected month = current month
                         if(cboMonth.SelectedItem.ToString() == "Mois actuel")
                         {
+
+
+                            //numvers of days in current month
                             int days = DateTime.DaysInMonth(DateTime.Now.Year, DateTime.Now.Month);
+
+                            //Header of the 2 first Data
                             string yearMonthHeader = "Année; Mois;";
-                            int month = DateTime.Now.Month;
-                            string sMonth = month.ToString(); 
-                            string yearMonth = DateTime.Now.Year.ToString() + ";" + DateTime.Now.Month.ToString() +";";
+                            //First two datas
+                            string yearMonth = DateTime.Now.Year.ToString() + ";" + DateTime.Now.Month.ToString() + ";";
+
+
+
+         
                             string monthDays = string.Empty;
+
+                            //String to store CSVdata for each day of the month
                             string activityName = string.Empty;
-                            if(month < 10)
+
+                            //Build a string that contains number of the month
+                            int month = DateTime.Now.Month;
+                            string sMonth = month.ToString();
+                            if (month < 10)
                             {
                                 sMonth = "0" + sMonth;
                             }
 
+                            //Create a folder for the current year to store planing in it
+                            string pilotFolderPath = idPilot + pilotName + pilotFirstName + "\\" + DateTime.Now.Year.ToString() + "\\";
+                            System.IO.Directory.CreateDirectory(secondDirectoryPath + pilotFolderPath);
+
+                            //path of the csv file
+                            string pilotPath = DateTime.Now.Year.ToString() + sMonth + ".csv";
+                            string filePathCompleted = secondDirectoryPath + pilotFolderPath + pilotPath;
+
+                            //For each day of the month
                             for (int i = 0; i < days; i++)
                             {
+                                //build a string that contains the day of the month
                                 string y = (i +1).ToString();
                                 if(i < 9)
                                 {
@@ -152,20 +196,97 @@ namespace Application_de_planification_de_vols_aériens
                                 }
                                 monthDays +=  y + ";";
                                 
+                                //Build a string that contains Date in MySQL format
                                 string day = DateTime.Now.Year + "-" + sMonth + "-" + y + "%";
+                                //List that contains the flightname - arrivalDate for each flight of current day if there is a flight this day
+                                List<string> flightNames = dbConnection.GetFlightNameIfPilotWorks(int.Parse(idPilot), day);
+                                //List that contains IdVacation if the pilot is in vacation this day
+                                List<string> vacationDays = dbConnection.GetIdVacationIfPilotIsInVacation(int.Parse(idPilot), day);
+                                //If there is at least 1 flight this day
+                                if (flightNames.Count != 0)
+                                {  
+                                    //Add differentsFlight to the CSVData string
+                                    for(int z=0; z < flightNames.Count; z++)
+                                    {
+                                        activityName += flightNames[z] + " / ";
+                                    }
+                                    activityName = activityName + ";";
+                                }
+                                //If the pilot is in vacation this day
+                                else if(vacationDays.Count != 0)
+                                {
+                                    //Add vacation to the CSVData string
+                                    for(int z = 0; z < vacationDays.Count; z++)
+                                    {
+                                        activityName += "Vacation" + ";";
+                                    }
+                                }
+                                //If pilot is on a "free day"
+                                else
+                                {
+                                    //Add Free day to the CSVData string
+                                    activityName += "Free day" + ";";
+                                }
+                            }
+                            //string that contains Année;Mois;01;02;03;04;...;30;...
+                            yearMonthHeader = yearMonthHeader + monthDays;
+                            //string that contains the currentYear;currentMonth;activityForDay1;...;activityForDay30;...
+                            activityName =  yearMonth + activityName;
+                            
+                            csv.AppendLine(yearMonthHeader);
+                            csv.AppendLine(activityName);
+                            //Write the csvText in the file
+                            File.WriteAllText(filePathCompleted, csv.ToString());
+                            
+                        }
+                        //if selected month = nextMonth
+                        else
+                        {
+                            DateTime currentDate = DateTime.Now;
+                            currentDate = currentDate.AddMonths(1);
+
+                            int days = DateTime.DaysInMonth(currentDate.Year, currentDate.Month);
+                            string yearMonthHeader = "Année; Mois;";
+                            int month = currentDate.Month;
+                            string sMonth = month.ToString();
+                            string yearMonth = currentDate.Year.ToString() + ";" + currentDate.Month.ToString() + ";";
+                            string monthDays = string.Empty;
+                            string activityName = string.Empty;
+                            if (month < 10)
+                            {
+                                sMonth = "0" + sMonth;
+                            }
+
+                            string pilotFolderPath = idPilot + pilotName + pilotFirstName + "\\" + currentDate.Year.ToString()+"\\";
+                            System.IO.Directory.CreateDirectory(secondDirectoryPath + pilotFolderPath);
+                            
+                            string pilotPath = currentDate.Year.ToString() + sMonth + ".csv";
+                            string filePathCompleted = secondDirectoryPath + pilotFolderPath + pilotPath;
+
+
+                            for (int i = 0; i < days; i++)
+                            {
+                                string y = (i + 1).ToString();
+                                if (i < 9)
+                                {
+                                    y = "0" + y;
+                                }
+                                monthDays += y + ";";
+
+                                string day = currentDate.Year.ToString() + "-" + sMonth + "-" + y + "%";
                                 List<string> flightNames = dbConnection.GetFlightNameIfPilotWorks(int.Parse(idPilot), day);
                                 List<string> vacationDays = dbConnection.GetIdVacationIfPilotIsInVacation(int.Parse(idPilot), day);
-                                if(flightNames.Count != 0)
-                                {  
-                                    for(int z=0; z < flightNames.Count; z++)
+                                if (flightNames.Count != 0)
+                                {
+                                    for (int z = 0; z < flightNames.Count; z++)
                                     {
                                         activityName += flightNames[z] + "  ";
                                     }
                                     activityName = activityName + ";";
                                 }
-                                else if(vacationDays.Count != 0)
+                                else if (vacationDays.Count != 0)
                                 {
-                                    for(int z = 0; z < vacationDays.Count; z++)
+                                    for (int z = 0; z < vacationDays.Count; z++)
                                     {
                                         activityName += "Vacation" + ";";
                                     }
@@ -176,15 +297,10 @@ namespace Application_de_planification_de_vols_aériens
                                 }
                             }
                             yearMonthHeader = yearMonthHeader + monthDays;
-                            activityName =  yearMonth + activityName;
+                            activityName = yearMonth + activityName;
                             csv.AppendLine(yearMonthHeader);
                             csv.AppendLine(activityName);
-                            File.WriteAllText(filePath, csv.ToString());
-                            
-                        }
-                        else
-                        {
-
+                            File.WriteAllText(filePathCompleted, csv.ToString());
                         }
                     }
                 }
@@ -203,7 +319,7 @@ namespace Application_de_planification_de_vols_aériens
         private void cmdPlan_Click(object sender, EventArgs e)
         {
             //update Pilots current location
-            pilot.UpdatePilotsCurrentLocation();
+            //pilot.UpdatePilotsCurrentLocation();
 
             //if a flight is selected
             if (dgvFlights.SelectedRows.Count > 0)
@@ -214,7 +330,7 @@ namespace Application_de_planification_de_vols_aériens
                 string flightName = Convert.ToString(selectedRow.Cells["colName"].Value);
 
                 frmFlightAssignment frmFlightAssignment = new frmFlightAssignment(flightName);
-                if (flightName == "0")
+                if (flightName == "")
                 {
                     MessageBox.Show("Veuillez sélectionner une seule ligne et non la totalité du tableau !");
                     return;

@@ -19,8 +19,8 @@ namespace Application_de_planification_de_vols_aériens.Tests
 
             int idAirport = 1;
             Airport airport = new Airport("Saint-Gall-Altenrhein");
-            //Create a uniq
-            Pilot pilot = new Pilot("GianinettiTest", "LucasTest", 250, airport);
+            //Create a unique Name with numbers for the test
+            Pilot pilot = new Pilot("GianinettiTest0", "LucasTest0", 250, airport);
             DateTime departureDate = new DateTime(2018, 05, 29, 0, 0, 0);
             Line line = new Line(1, 2, 900);
             Flight flight = new Flight("ACHAN201805290000", departureDate, line);

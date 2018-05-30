@@ -254,6 +254,8 @@ namespace Application_de_planification_de_vols_aériens
 
         #region pilot
 
+        
+
         public List<string> GetIdVacationIfPilotIsInVacation(int idPilot, string day)
         {
             List<string> idVacation = new List<string>();
@@ -307,7 +309,7 @@ namespace Application_de_planification_de_vols_aériens
                 MySqlCommand cmd = this.connection.CreateCommand();
 
                 //SQL Query
-                cmd.CommandText = "SELECT flightName from flight inner join flight_has_pilot on fkFlight = idFlight where fkPilot =\"" + idPilot + "\" and departureDate like \"" + day +"\" or fkPilot =\"" + idPilot + "\" and arrivalDate like \"" + day +"\"";
+                cmd.CommandText = "SELECT flightName, arrivalDate from flight inner join flight_has_pilot on fkFlight = idFlight where fkPilot =\"" + idPilot + "\" and departureDate like \"" + day +"\" or fkPilot =\"" + idPilot + "\" and arrivalDate like \"" + day +"\"";
 
 
                 //Execute SQL Query
@@ -317,7 +319,8 @@ namespace Application_de_planification_de_vols_aériens
                 var cmdReader = cmd.ExecuteReader();
                 while (cmdReader.Read())
                 {
-                    flightName.Add(string.Format("{0}", cmdReader[0]));
+                    string test = cmdReader["flightName"].ToString() + " - " + cmdReader["arrivalDate"].ToString();
+                    flightName.Add(string.Format(test));
                 }
 
                 //close SQL connection
@@ -546,11 +549,84 @@ namespace Application_de_planification_de_vols_aériens
             {
                 Console.WriteLine(ex.Message);
             }
-            if(reponse != "0")
+            if(reponse != string.Empty)
             {
                 output = int.Parse(reponse);
             }
             return output;
+        }
+
+
+        public List<string> GetPilotEndWorkDates(int idPilot)
+        {
+            List<string> workDates = new List<string>();
+            try
+            {
+                //TODO A VERIFIER
+                this.connection.Close();
+                //open SQL connection
+                this.connection.Open();
+
+                //Create SQL command
+                MySqlCommand cmd = this.connection.CreateCommand();
+
+                //SQL Query
+                cmd.CommandText = "SELECT arrivalDate from flight inner join flight_has_pilot on idFlight = fkFlight  where fkPilot =\"" + idPilot + "\" ";
+
+
+                //Execute SQL Query
+                cmd.ExecuteNonQuery();
+
+                var cmdReader = cmd.ExecuteReader();
+                while (cmdReader.Read())
+                {
+                    workDates.Add(string.Format("{0}", cmdReader[0]));
+                }
+
+                //close SQL connection
+                this.connection.Close();
+            }
+            catch (MySqlException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            return workDates;
+        }
+
+        public List<string> GetPilotStartWorkDates(int idPilot)
+        {
+            List<string> workDates = new List<string>();
+            try
+            {
+                //TODO A VERIFIER
+                this.connection.Close();
+                //open SQL connection
+                this.connection.Open();
+
+                //Create SQL command
+                MySqlCommand cmd = this.connection.CreateCommand();
+
+                //SQL Query
+                cmd.CommandText = "SELECT departureDate from flight inner join flight_has_pilot on idFlight = fkFlight  where fkPilot =\"" + idPilot + "\" ";
+
+
+                //Execute SQL Query
+                cmd.ExecuteNonQuery();
+
+                var cmdReader = cmd.ExecuteReader();
+                while (cmdReader.Read())
+                {
+                    workDates.Add(string.Format("{0}", cmdReader[0]));
+                }
+
+                //close SQL connection
+                this.connection.Close();
+            }
+            catch (MySqlException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            return workDates;
         }
 
         public List<DateTime> GetPilotEndWorkDatesThisWeek(string monday, string sunday)
@@ -831,7 +907,7 @@ namespace Application_de_planification_de_vols_aériens
         /// <param name="idPilot"></param>
         /// <param name="currentDate"></param>
         /// <returns></returns>
-        public int GetPilotCurrentLocation(int idPilot, DateTime currentDate)
+        public int GetPilotCurrentLocation(int idPilot, string currentDate)
         {
             string idAirport = string.Empty;
             int reponse = 0;
@@ -871,6 +947,8 @@ namespace Application_de_planification_de_vols_aériens
             }
             return reponse;
         }
+
+        
 
         /// <summary>
         /// Return pilots' id from all existing pilots in a List string
@@ -954,6 +1032,9 @@ namespace Application_de_planification_de_vols_aériens
             }
             return pilots;
         }
+
+
+
 
         /// <summary>
         /// Return pilotFirstName from a specific airportId in List string
@@ -1216,6 +1297,82 @@ namespace Application_de_planification_de_vols_aériens
         #endregion
 
         #region airport
+
+        public string GetArrivalAirportName(int idLine)
+        {
+            string reponse = string.Empty;
+            try
+            {
+                //open SQL connection
+                this.connection.Open();
+
+                //Create SQL command
+                MySqlCommand cmd = this.connection.CreateCommand();
+
+                //SQL Query
+                cmd.CommandText = "SELECT airportName from airport inner join line on fkArrivalAirport = idAirport where idLine =\"" + idLine + "\"";
+
+
+                //Execute SQL Query
+                cmd.ExecuteNonQuery();
+
+
+
+                var cmdReader = cmd.ExecuteReader();
+                while (cmdReader.Read())
+                {
+                    reponse = String.Format("{0}", cmdReader[0]);
+                }
+
+                //close SQL connection
+                this.connection.Close();
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine(ex.Message);
+
+            }
+
+            return reponse;
+        }
+
+        public string GetDepartureAirportName(int idLine)
+        {
+            string reponse = string.Empty;
+            try
+            {
+                //open SQL connection
+                this.connection.Open();
+
+                //Create SQL command
+                MySqlCommand cmd = this.connection.CreateCommand();
+
+                //SQL Query
+                cmd.CommandText = "SELECT airportName from airport inner join line on fkDepartureAirport = idAirport where idLine =\"" + idLine + "\"";
+
+
+                //Execute SQL Query
+                cmd.ExecuteNonQuery();
+
+
+
+                var cmdReader = cmd.ExecuteReader();
+                while (cmdReader.Read())
+                {
+                    reponse = String.Format("{0}", cmdReader[0]);
+                }
+
+                //close SQL connection
+                this.connection.Close();
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine(ex.Message);
+
+            }
+
+            return reponse;
+        }
 
         /// <summary>
         /// Return airportName from an idAirport
@@ -1492,6 +1649,39 @@ namespace Application_de_planification_de_vols_aériens
 
         #region flight
 
+        public List<string> GetDistanceFromFlight(int idPilot, string lastClosedDate, string currentDate)
+        {
+            List<string> reponse = new List<string>();
+            try
+            {
+                //open SQL connection
+                this.connection.Open();
+
+                //Create SQL command
+                MySqlCommand cmd = this.connection.CreateCommand();
+
+                //SQL Query
+                cmd.CommandText = "select distance from line inner join flight on fkLine = idLine inner join flight_has_pilot on fkFlight = idFlight where fkPilot =\"" + idPilot +"\" and arrivalDate >\"" + lastClosedDate +"\" and arrivalDate <\"" + currentDate +"\"";
+
+
+                //Execute SQL Query
+                cmd.ExecuteNonQuery();
+
+                var cmdReader = cmd.ExecuteReader();
+                while (cmdReader.Read())
+                {
+                    reponse.Add(string.Format("{0}/{1}", cmdReader[0], cmdReader[1]));
+                }
+                //close SQL connection
+                this.connection.Close();
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            return reponse;
+        }
+
         /// <summary>
         /// Return Flight from flightName
         /// </summary>
@@ -1578,6 +1768,7 @@ namespace Application_de_planification_de_vols_aériens
         /// <returns></returns>
         public int GetFlightId(string name)
         {
+            int output = 0;
             string reponse = string.Empty;
             try
             {
@@ -1608,7 +1799,11 @@ namespace Application_de_planification_de_vols_aériens
             {
                 Console.WriteLine(ex.Message);
             }
-            return int.Parse(reponse);
+            if(reponse != string.Empty)
+            {
+                output = int.Parse(reponse);
+            }
+            return output;
         }
 
         #endregion
@@ -1795,6 +1990,7 @@ namespace Application_de_planification_de_vols_aériens
         /// <returns></returns>
         public int GetLineId(int idDepartureAirport, int idArrivalAirport)
         {
+            int output = 0;
             string reponse = string.Empty;
             try
             {
@@ -1828,8 +2024,13 @@ namespace Application_de_planification_de_vols_aériens
             {
                 Console.WriteLine(ex.Message);
             }
-            return Int32.Parse(reponse);
+            if(reponse != string.Empty)
+            {
+                output = int.Parse(reponse);
+            }
+            return output;
         }
+
         #endregion
 
         #endregion

@@ -55,10 +55,10 @@
             this.cboMonth = new System.Windows.Forms.ComboBox();
             this.dgvPilots = new System.Windows.Forms.DataGridView();
             this.colIdPilot = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPrenom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colAeroportAffectation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colHeuresVol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPilotName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPilotFirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colAssignmentAirport = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colFlightHours = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlEntete.SuspendLayout();
             this.grbDisplay.SuspendLayout();
             this.grbLines.SuspendLayout();
@@ -294,10 +294,10 @@
             this.dgvPilots.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPilots.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colIdPilot,
-            this.colNom,
-            this.colPrenom,
-            this.colAeroportAffectation,
-            this.colHeuresVol});
+            this.colPilotName,
+            this.colPilotFirstName,
+            this.colAssignmentAirport,
+            this.colFlightHours});
             this.dgvPilots.Location = new System.Drawing.Point(30, 19);
             this.dgvPilots.Name = "dgvPilots";
             this.dgvPilots.Size = new System.Drawing.Size(593, 277);
@@ -309,28 +309,28 @@
             this.colIdPilot.Name = "colIdPilot";
             this.colIdPilot.Width = 25;
             // 
-            // colNom
+            // colPilotName
             // 
-            this.colNom.HeaderText = "Nom";
-            this.colNom.Name = "colNom";
-            this.colNom.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colPilotName.HeaderText = "Nom";
+            this.colPilotName.Name = "colPilotName";
+            this.colPilotName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
-            // colPrenom
+            // colPilotFirstName
             // 
-            this.colPrenom.HeaderText = "Prénom";
-            this.colPrenom.Name = "colPrenom";
+            this.colPilotFirstName.HeaderText = "Prénom";
+            this.colPilotFirstName.Name = "colPilotFirstName";
             // 
-            // colAeroportAffectation
+            // colAssignmentAirport
             // 
-            this.colAeroportAffectation.HeaderText = "Aéroport d\'affectation";
-            this.colAeroportAffectation.Name = "colAeroportAffectation";
-            this.colAeroportAffectation.Width = 250;
+            this.colAssignmentAirport.HeaderText = "Aéroport d\'affectation";
+            this.colAssignmentAirport.Name = "colAssignmentAirport";
+            this.colAssignmentAirport.Width = 250;
             // 
-            // colHeuresVol
+            // colFlightHours
             // 
-            this.colHeuresVol.HeaderText = "Heures de vol à son actif";
-            this.colHeuresVol.Name = "colHeuresVol";
-            this.colHeuresVol.Width = 75;
+            this.colFlightHours.HeaderText = "Heures de vol à son actif";
+            this.colFlightHours.Name = "colFlightHours";
+            this.colFlightHours.Width = 75;
             // 
             // frmDisplay
             // 
@@ -384,9 +384,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colPilote1;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPilote2;
         private System.Windows.Forms.DataGridViewTextBoxColumn colIdPilot;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colNom;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colPrenom;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colAeroportAffectation;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colHeuresVol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPilotName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPilotFirstName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colAssignmentAirport;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colFlightHours;
     }
 }

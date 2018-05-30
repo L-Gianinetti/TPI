@@ -9,6 +9,7 @@ namespace Application_de_planification_de_vols_aériens
     public class Pilot
     {
         DBConnection dbConnection = new DBConnection();
+        BuildMySQLDate buildMySQLDate = new BuildMySQLDate();
         private string name;
         private string firstName;
         private int id;
@@ -122,8 +123,27 @@ namespace Application_de_planification_de_vols_aériens
             this.id = id;
         }
 
+        public void UpdatePilotsFlightTime(DateTime lastClosedDate)
+        {
+            //TODO FINIR CA SI POSSIBLE MAIS PAS TROP PERDRE DE TEMPS
+            //List<string> to store all pilots' id
+            List<string> pilotsId = new List<string>();
+            pilotsId = dbConnection.GetPilotsId();
+            //Foreach pilot
+            for(int i = 0; i < pilotsId.Count; i++)
+            {
+                int currentPilotFlightTime = dbConnection.GetPilotFlightTime(int.Parse(pilotsId[i]));
+                string closedDate = buildMySQLDate.BuildDate(lastClosedDate);
+                string currentDate = buildMySQLDate.BuildDate(DateTime.Now);
+                List<string> distances = dbConnection.GetDistanceFromFlight(int.Parse(pilotsId[i]), closedDate, currentDate);
 
-        public void UpdatePilotsCurrentLocation()
+            }
+            
+
+        }
+
+        /*
+        public void UpdatePilotsCurrentLocation(DateTime date)
         {
             //List<string> to store all pilots' id
             List<string> pilotsId = new List<string>();
@@ -133,7 +153,7 @@ namespace Application_de_planification_de_vols_aériens
             {
                 int idPilot = int.Parse(pilotsId[i]);
                 //Get idAirport from pilot last location
-                int idAirport = dbConnection.GetPilotCurrentLocation(idPilot, DateTime.Now);
+                int idAirport = dbConnection.GetPilotCurrentLocation(idPilot, date);
 
                 if(idAirport == 0)
                 {
@@ -142,7 +162,7 @@ namespace Application_de_planification_de_vols_aériens
                 //Update pilot current location
                 dbConnection.UpdatePilotCurrentLocation(idPilot, idAirport);
             }
-        }
+        }*/
 
         
     }

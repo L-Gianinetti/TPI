@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
-
+using System.IO;
 namespace Application_de_planification_de_vols_aériens
 {
     public partial class frmManagement : Form
@@ -28,8 +28,20 @@ namespace Application_de_planification_de_vols_aériens
         {
             //Update piltos current location
             newPilot = new Pilot();
-            newPilot.UpdatePilotsCurrentLocation();
+            //newPilot.UpdatePilotsCurrentLocation();
+            if(File.Exists("C:\\Program Files (x86)\\PlanificationVolsAeriens\\LastClosingFormDate\\date.txt"))
+            {
+                string fileContent = System.IO.File.ReadAllText("C:\\Program Files (x86)\\PlanificationVolsAeriens\\LastClosingFormDate\\date.txt");
+                int year = int.Parse(fileContent.Substring(6, 4));
+                int month = int.Parse(fileContent.Substring(3, 2));
+                int day = int.Parse(fileContent.Substring(0, 2));
+                int hour = int.Parse(fileContent.Substring(11, 2));
+                int min = int.Parse(fileContent.Substring(14, 2));
+                DateTime lastClosedDate = new DateTime(year, month, day, hour, min, 0);
 
+
+            }
+            
 
             cmdAddFlight.Enabled = false;
 
@@ -56,7 +68,7 @@ namespace Application_de_planification_de_vols_aériens
                 string[] fullLineName = lineList[y].Split('/');
                 string airportType1 = dbConnection.GetAirportType(fullLineName[0]);
                 string airportType2 = dbConnection.GetAirportType(fullLineName[1]);
-                string lineName = airportType1 + " " + fullLineName[0] + " / " + airportType2 + " " + fullLineName[1];
+                string lineName = airportType2 + " " + fullLineName[1] + " / " +  airportType1 + " " + fullLineName[0] ;
                 cboLine.Items.Add(lineName); 
             }
 
@@ -101,23 +113,33 @@ namespace Application_de_planification_de_vols_aériens
         {
             try
             {
-                //Create arrival and departure airports
-                string[] airportsNames = cboLine.SelectedItem.ToString().Split('/');
-                airportsNames[0] = airportsNames[0].Replace("Aeroport international ", "");
-                airportsNames[1] = airportsNames[1].Replace("Aeroport international ", "");
-                Airport departureAirport = new Airport(airportsNames[0]);
-                Airport arrivalAirport = new Airport(airportsNames[1].Substring(1, airportsNames[1].Length - 1));
+                //Create string with departureAirport and arrivalAirport names
+                string airportsName = cboLine.SelectedItem.ToString();
+                int idLine = cboLine.SelectedIndex + 1;
+                string departureAirportName = dbConnection.GetDepartureAirportName(idLine);
+                string arrivalAirportName = dbConnection.GetArrivalAirportName(idLine);
+
+                //Create arrivalAirport and departureAirprot
+                Airport departureAirport = new Airport(departureAirportName);
+                Airport arrivalAirport = new Airport(arrivalAirportName);
 
                 //Get airports id
                 int idDepartureAirport = dbConnection.GetAirportId(departureAirport);
                 int idArrivalAirport = dbConnection.GetAirportId(arrivalAirport);
 
-                //Get line id
-                int idLine = dbConnection.GetLineId(idDepartureAirport, idArrivalAirport);
+                //Check if flight already exists
+                int idFlight = dbConnection.GetFlightId(flight.Name);
+                if(idFlight == 0)
+                {
+                    //Add flight
+                    dbConnection.AddFlight(flight, idLine);
+                    MessageBox.Show("Le vol a bien été ajouté");
+                }
+                else
+                {
+                    MessageBox.Show("Le vol que vous voulez créer existe deja");
+                }
 
-                //Add flight
-                dbConnection.AddFlight(flight, idLine);
-                MessageBox.Show("Le vol a bien été ajouté");
             }
             catch(Exception ex)
             {
@@ -134,7 +156,6 @@ namespace Application_de_planification_de_vols_aériens
                 if (AreLineFieldsFilled() && !DoesDistanceBeginWith0(txtDistance.Text) && DoesDistanceContainsOnlyNumbers(txtDistance.Text) &&   !AreDepartureAirportAndArrivalAirportEqual())
                 {
                     //Create airports
-                    //Create airports
                     string[] departureAirportFullName = cboDeparturePlace.SelectedItem.ToString().Split('/');
                     string departureAirportName = departureAirportFullName[1].Substring(1, departureAirportFullName[1].Length - 1);
                     string[] arrivalAirportFullName = cboArrivalPlace.SelectedItem.ToString().Split('/');
@@ -150,10 +171,21 @@ namespace Application_de_planification_de_vols_aériens
                     line = new Line(idDepartureAirport, idArrivalAirport, int.Parse(txtDistance.Text));
                     Line line1 = new Line(idArrivalAirport, idDepartureAirport, int.Parse(txtDistance.Text));
 
-                    //Add departureAirport to arrivalAirport line and arrivalAirport to departureAirport line
-                    dbConnection.AddLine(line);
-                    dbConnection.AddLine(line1);
-                    MessageBox.Show("La ligne a bien été ajoutée, une ligne retour a aussi été ajoutée");
+                    //Check if the line already Exist
+                    int idLine = dbConnection.GetLineId(idDepartureAirport, idArrivalAirport);
+                    if(idLine == 0)
+                    {
+                        //Add departureAirport to arrivalAirport line and arrivalAirport to departureAirport line
+                        dbConnection.AddLine(line);
+                        dbConnection.AddLine(line1);
+                        MessageBox.Show("La ligne a bien été ajoutée, une ligne retour a aussi été ajoutée");
+                    }
+                    else
+                    {
+                        MessageBox.Show("La ligne que vous voulez créer existe deja");
+                    }
+
+
                 }
 
             }
@@ -173,7 +205,7 @@ namespace Application_de_planification_de_vols_aériens
         /// <returns></returns>
         private bool DoesStringContainsOnlyLetters(string input)
         {
-            bool output = Regex.IsMatch(input, @"^[a-zA-Zéèëêàïîç]+$");
+            bool output = Regex.IsMatch(input, @"^[a-zA-Zéèëêàäïîçß]+$");
             if (!output)
             {
                 Exception exception = new Exception("Le prénom/nom ne contient pas uniquement des lettres");
@@ -428,12 +460,17 @@ namespace Application_de_planification_de_vols_aériens
                             sDepartureM = "0" + departureM;
                         }
 
+                        //Create string with departureAirport and arrivalAirport names
+                        string airportsName = cboLine.SelectedItem.ToString();
+                        int idLine = cboLine.SelectedIndex + 1;
+                        string departureAirportName = dbConnection.GetDepartureAirportName(idLine);
+                        string arrivalAirportName = dbConnection.GetArrivalAirportName(idLine);
+
                         //Create arrival and departure airports
-                        string[] airportsNames = cboLine.SelectedItem.ToString().Split('/');
-                        airportsNames[0] = airportsNames[0].Replace("Aeroport international ", "");
-                        airportsNames[1] = airportsNames[1].Replace("Aeroport international ", "");
-                        Airport departureAirport = new Airport(airportsNames[0]);
-                        Airport arrivalAirport = new Airport(airportsNames[1].Substring(1, airportsNames[1].Length - 1));
+                        Airport departureAirport = new Airport(departureAirportName);
+                        Airport arrivalAirport = new Airport(arrivalAirportName);
+
+
 
                         //Get departure and arrival airport acronyms to build flightName
                         string departureAirportAcronym = dbConnection.GetAirportAcronym(departureAirport);
@@ -444,11 +481,8 @@ namespace Application_de_planification_de_vols_aériens
                         int idArrivalAirport = dbConnection.GetAirportId(arrivalAirport);
 
                         //Create line
-                        int lineDistance = dbConnection.GetLineDistance(idDepartureAirport, idArrivalAirport);
+                        float lineDistance = dbConnection.GetLineDistance(idDepartureAirport, idArrivalAirport);
                         line = new Line(idDepartureAirport, idArrivalAirport, lineDistance);
-
-                        //Get line id
-                        int idLine = dbConnection.GetLineId(idDepartureAirport, idArrivalAirport);
 
                         //Store departureYear, departureMonth and departureDay in correct format
                         int departureYear = dtpDepartureDate.Value.Year;
@@ -464,6 +498,8 @@ namespace Application_de_planification_de_vols_aériens
                         {
                             sDepartureDay = "0" + departureDay;
                         }
+                        
+                       
 
                         //build flightName
                         string flightName = departureAirportAcronym + arrivalAirportAcronym + dtpDepartureDate.Value.Year + sDepartureMonth + sDepartureDay + sDepartureH + sDepartureM;
@@ -490,6 +526,7 @@ namespace Application_de_planification_de_vols_aériens
             }
         }
 
+        #region disable cmdAddFlight if input Data changed
         private void cboLigne_SelectedIndexChanged(object sender, EventArgs e)
         {
             cmdAddFlight.Enabled = false;
@@ -509,6 +546,17 @@ namespace Application_de_planification_de_vols_aériens
         {
             cmdAddFlight.Enabled = false;
         }
+        #endregion
 
+        private void frmManagement_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DateTime currentDate = DateTime.Now;
+            System.IO.Directory.CreateDirectory("C:\\Program Files (x86)\\PlanificationVolsAeriens\\LastClosingFormDate");
+            StringBuilder date = new StringBuilder();
+            date.AppendLine(currentDate.ToString());
+            File.WriteAllText("C:\\Program Files (x86)\\PlanificationVolsAeriens\\LastClosingFormDate\\date.txt", date.ToString());
+
+
+        }
     }
 }

@@ -13,8 +13,10 @@ namespace Application_de_planification_de_vols_aériens
     public partial class frmFlightAssignment : Form
     {
         DBConnection dbConnection = new DBConnection();
+        BuildMySQLDate buildMySQLDate = new BuildMySQLDate();
         private string flightName;
         private double flightTime;
+        Pilot pilot = new Pilot();
         private int idFlight;
         Flight flight = new Flight();
 
@@ -26,6 +28,20 @@ namespace Application_de_planification_de_vols_aériens
             flight = dbConnection.GetFlight(flightName);
         }
 
+
+        private void frmFlightAssignment_Load(object sender, EventArgs e)
+        {
+            //Get the flight distance to calculate flightTime
+            int distance = dbConnection.GetLineDistance(flight.IdLine);
+            flightTime = flight.calculateFlightTime(distance);
+
+            LoadAllPilotsInCurrentAirport();
+            RemovePilotsNoRestAfterFlight();
+            RemovePilotsInVacation();
+            RemovePilotsWorking();
+            RemovePilotsNoRestThisWeek();
+
+        }
 
         private void cmdAdd_Click(object sender, EventArgs e)
         {
@@ -98,19 +114,6 @@ namespace Application_de_planification_de_vols_aériens
 
         }
 
-        private void frmFlightAssignment_Load(object sender, EventArgs e)
-        {
-            //Get the flight distance to calculate flightTime
-            int distance = dbConnection.GetLineDistance(flight.IdLine);
-            flightTime = flight.calculateFlightTime(distance);
-
-            LoadAllPilotsInCurrentAirport();
-            RemovePilotsNoRestAfterFlight();
-            RemovePilotsInVacation();
-            RemovePilotsWorking();
-            RemovePilotsNoRestThisWeek();
-
-        }
 
      
 
@@ -128,14 +131,34 @@ namespace Application_de_planification_de_vols_aériens
             List<string> pilotsFirstName = new List<string>();
             pilotsFirstName = dbConnection.GetPilotsFirstName(departureAirportId);
             List<string> pilotsId = new List<string>();
-            pilotsId = dbConnection.GetPilotsId(departureAirportId);
-
+            pilotsId = dbConnection.GetPilotsId();
+            string sDepartureDate = flight.SDepartureDate;
+            int year = int.Parse(sDepartureDate.Substring(6, 4));
+            int month = int.Parse(sDepartureDate.Substring(3,2));
+            int day = int.Parse(sDepartureDate.Substring(0,2));
+            int hour= int.Parse(sDepartureDate.Substring(11,2));
+            int min = int.Parse(sDepartureDate.Substring(14,2));
+            DateTime departureDate = new DateTime(year, month, day, hour, min, 0);
+            string inputDepartureDate = buildMySQLDate.BuildDate(departureDate);
             //ForEach pilot, build his display name 
-            for (int i = 0; i < pilotsName.Count; i++)
+            for (int i = 0; i < pilotsId.Count; i++)
             {
-                string fullname = pilotsId[i] + ":" + pilotsName[i] + " " + pilotsFirstName[i];
-                //add fullname to lstPilotesDisponibles
-                lstAvailablePilots.Items.Add(fullname);
+                int idCurrentAirport = dbConnection.GetPilotCurrentLocation(int.Parse(pilotsId[i]), inputDepartureDate);
+                
+
+                if(idCurrentAirport == 0)
+                {
+                    idCurrentAirport = dbConnection.GetPilotAssignmentAirportId(int.Parse(pilotsId[i]));
+                }
+                if(idCurrentAirport == departureAirportId)
+                {
+                    string pilotName = dbConnection.GetPilotName(int.Parse(pilotsId[i]));
+                    string pilotFirstName = dbConnection.GetPilotFirstName(int.Parse(pilotsId[i]));
+                    string fullname = pilotsId[i] + ":" + pilotName+ " " + pilotFirstName;
+                    //add fullname to lstPilotesDisponibles
+                    lstAvailablePilots.Items.Add(fullname);
+                }
+
             }
         }
 
@@ -196,8 +219,8 @@ namespace Application_de_planification_de_vols_aériens
                 //Build date in string for sql query
                 DateTime currentFlightDepartureDate = DateTime.Parse(flight.SDepartureDate);
                 DateTime currentFlightArrivalDate = DateTime.Parse(flight.SArrivalDate);
-                string departureDate = BuildMySQLDate(currentFlightDepartureDate);
-                string arrivalDate = BuildMySQLDate(currentFlightArrivalDate);
+                string departureDate = buildMySQLDate.BuildDate(currentFlightDepartureDate);
+                string arrivalDate = buildMySQLDate.BuildDate(currentFlightArrivalDate);
 
                 //Get idPilot if pilot is in vacation
                 int idPilotInVacation = dbConnection.GetIdPilotInVacationDuringFlight(departureDate, arrivalDate);
@@ -231,8 +254,8 @@ namespace Application_de_planification_de_vols_aériens
                 {
                     sunday = sunday.AddDays(7);
                 }
-                string sMonday = BuildMySQLDate(monday);
-                string sSunday = BuildMySQLDate(sunday);
+                string sMonday = buildMySQLDate.BuildDate(monday);
+                string sSunday = buildMySQLDate.BuildDate(sunday);
 
                 List<DateTime> startWork = new List<DateTime>();
                 List<DateTime> endWork = new List<DateTime>();
@@ -250,7 +273,7 @@ namespace Application_de_planification_de_vols_aériens
 
 
 
-                double workDays = 0;
+                //double workDays = 0;
 
                 for(int y = 0; y < startWork.Count; y++)
                 {
@@ -324,30 +347,6 @@ namespace Application_de_planification_de_vols_aériens
             }
         }
 
-        /// <summary>
-        /// Build a date into MySQLDate format
-        /// </summary>
-        /// <param name="input"></param>
-        /// <returns></returns>
-        private string BuildMySQLDate(DateTime input)
-        {
-            int year = input.Year;
-            int month = input.Month;
-            int day = input.Day;
-            string sMonth = month.ToString();
-            string sDay = day.ToString();
-            if(month < 10)
-            {
-                sMonth = "0" + sMonth;
-            }
-            if(day < 10)
-            {
-                sDay = "0" + sDay;
-            }
-
-            string output = year + "-" + sMonth + "-" + sDay;
-            return output;
-        }
 
         /// <summary>
         /// Si il le pilote n'a pas eu d'activité pendant 2 jours consécutif retourne true
