@@ -1,0 +1,3 @@
+On peut ajouter des lignes de distances 0;
+On peut affecter des pilotes à un vol qui est dans le passé;
+On peut affecter des pilotes a un vol ayant deja un pilote;

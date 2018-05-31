@@ -13,7 +13,7 @@ namespace Application_de_planification_de_vols_aériens
         private string name;
         private string firstName;
         private int id;
-        private int flightTime;
+        private float flightTime;
         private Airport assignmentAirport;
         string assignmentAirportName;
 
@@ -44,7 +44,7 @@ namespace Application_de_planification_de_vols_aériens
             }
         }
 
-        public int FlightTime
+        public float FlightTime
         {
             get
             {
@@ -101,7 +101,7 @@ namespace Application_de_planification_de_vols_aériens
         #endregion
 
 
-        public Pilot(string name, string firstName, int flightTime, Airport assignmentAirport)
+        public Pilot(string name, string firstName, float flightTime, Airport assignmentAirport)
         {
             this.name = name;
             this.firstName = firstName;
@@ -114,7 +114,7 @@ namespace Application_de_planification_de_vols_aériens
         }
 
         //Test pour l'affichage pilotes
-        public Pilot(int id, string name, string firstName, int flightTime, string assignmentAirportName)
+        public Pilot(int id, string name, string firstName, float flightTime, string assignmentAirportName)
         {
             this.name = name;
             this.firstName = firstName;
@@ -123,7 +123,7 @@ namespace Application_de_planification_de_vols_aériens
             this.id = id;
         }
 
-        public void UpdatePilotsFlightTime(DateTime lastClosedDate)
+        public void UpdatePilotsFlightTime(DateTime lastOpenedDate)
         {
             //TODO FINIR CA SI POSSIBLE MAIS PAS TROP PERDRE DE TEMPS
             //List<string> to store all pilots' id
@@ -132,19 +132,30 @@ namespace Application_de_planification_de_vols_aériens
             //Foreach pilot
             for(int i = 0; i < pilotsId.Count; i++)
             {
-                int currentPilotFlightTime = dbConnection.GetPilotFlightTime(int.Parse(pilotsId[i]));
-                string closedDate = buildMySQLDate.BuildDate(lastClosedDate);
+                float currentPilotFlightTime = dbConnection.GetPilotFlightTime(int.Parse(pilotsId[i]));
+                string closedDate = buildMySQLDate.BuildDate(lastOpenedDate);
+                
                 string currentDate = buildMySQLDate.BuildDate(DateTime.Now);
+                
+                
                 List<string> distances = dbConnection.GetDistanceFromFlight(int.Parse(pilotsId[i]), closedDate, currentDate);
-
+                for(int y = 0; y < distances.Count; y++)
+                {
+                    float distance = float.Parse(distances[y]);
+                    float flightSpeed = 900;
+                    currentPilotFlightTime += (distance / flightSpeed);
+                }
+                dbConnection.UpdatePilotFlightTime(int.Parse(pilotsId[i]), currentPilotFlightTime);
             }
             
 
         }
 
-        /*
-        public void UpdatePilotsCurrentLocation(DateTime date)
+        
+        public void UpdatePilotsCurrentLocation()
         {
+            DateTime date = DateTime.Now;
+            string sDate = buildMySQLDate.BuildDate(date);
             //List<string> to store all pilots' id
             List<string> pilotsId = new List<string>();
             pilotsId = dbConnection.GetPilotsId();
@@ -153,7 +164,7 @@ namespace Application_de_planification_de_vols_aériens
             {
                 int idPilot = int.Parse(pilotsId[i]);
                 //Get idAirport from pilot last location
-                int idAirport = dbConnection.GetPilotCurrentLocation(idPilot, date);
+                int idAirport = dbConnection.GetPilotCurrentLocation(idPilot, sDate);
 
                 if(idAirport == 0)
                 {
@@ -162,7 +173,7 @@ namespace Application_de_planification_de_vols_aériens
                 //Update pilot current location
                 dbConnection.UpdatePilotCurrentLocation(idPilot, idAirport);
             }
-        }*/
+        }
 
         
     }

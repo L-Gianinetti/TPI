@@ -30,7 +30,6 @@
         {
             this.Entete = new System.Windows.Forms.Panel();
             this.cmdDisplay = new System.Windows.Forms.Button();
-            this.cmdGestion = new System.Windows.Forms.Button();
             this.grbManagement = new System.Windows.Forms.GroupBox();
             this.grbLine = new System.Windows.Forms.GroupBox();
             this.cboArrivalPlace = new System.Windows.Forms.ComboBox();
@@ -79,7 +78,6 @@
             // Entete
             // 
             this.Entete.Controls.Add(this.cmdDisplay);
-            this.Entete.Controls.Add(this.cmdGestion);
             this.Entete.Location = new System.Drawing.Point(28, 12);
             this.Entete.Name = "Entete";
             this.Entete.Size = new System.Drawing.Size(869, 54);
@@ -87,22 +85,13 @@
             // 
             // cmdDisplay
             // 
-            this.cmdDisplay.Location = new System.Drawing.Point(312, 21);
+            this.cmdDisplay.Location = new System.Drawing.Point(33, 16);
             this.cmdDisplay.Name = "cmdDisplay";
             this.cmdDisplay.Size = new System.Drawing.Size(75, 23);
             this.cmdDisplay.TabIndex = 1;
-            this.cmdDisplay.Text = "Display";
+            this.cmdDisplay.Text = "Affichage";
             this.cmdDisplay.UseVisualStyleBackColor = true;
             this.cmdDisplay.Click += new System.EventHandler(this.cmdDisplay_Click);
-            // 
-            // cmdGestion
-            // 
-            this.cmdGestion.Location = new System.Drawing.Point(53, 21);
-            this.cmdGestion.Name = "cmdGestion";
-            this.cmdGestion.Size = new System.Drawing.Size(75, 23);
-            this.cmdGestion.TabIndex = 0;
-            this.cmdGestion.Text = "Gestion";
-            this.cmdGestion.UseVisualStyleBackColor = true;
             // 
             // grbManagement
             // 
@@ -481,7 +470,6 @@
 
         private System.Windows.Forms.Panel Entete;
         private System.Windows.Forms.Button cmdDisplay;
-        private System.Windows.Forms.Button cmdGestion;
         private System.Windows.Forms.GroupBox grbManagement;
         private System.Windows.Forms.GroupBox grbLine;
         private System.Windows.Forms.GroupBox grbFlight;

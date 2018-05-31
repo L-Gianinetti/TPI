@@ -8,11 +8,14 @@ using System.Text;
 using System.IO;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
+
 
 namespace Application_de_planification_de_vols_aériens
 {
     public partial class frmDisplay : Form
-    { 
+    {
+        Thread thread;
         Pilot pilot = new Pilot();
         DBConnection dbConnection = new DBConnection();
         public frmDisplay()
@@ -33,7 +36,15 @@ namespace Application_de_planification_de_vols_aériens
 
         private void cmdManagement_Click(object sender, EventArgs e)
         {
+            this.Close();
+            thread = new Thread(OpenNewForm);
+            thread.SetApartmentState(ApartmentState.STA);
+            thread.Start();
+        }
 
+        private void OpenNewForm(object obj)
+        {
+            Application.Run(new frmManagement());
         }
 
         private void cmdDisplayVacation_Click(object sender, EventArgs e)
@@ -110,7 +121,7 @@ namespace Application_de_planification_de_vols_aériens
         private void cmdGeneratePlaning_Click(object sender, EventArgs e)
         {
             //Path of the main Folder
-            string mainDirectoryPath = "C:\\Program Files (x86)\\PlanificationVolsAeriens";
+            string mainDirectoryPath = "C:\\Program Files (x86)\\PlanificationVolsAeriens\\";
             //Create folder if not exist
             System.IO.Directory.CreateDirectory(mainDirectoryPath);
             //Path of the folder inside the main folder
@@ -302,6 +313,8 @@ namespace Application_de_planification_de_vols_aériens
                             csv.AppendLine(activityName);
                             File.WriteAllText(filePathCompleted, csv.ToString());
                         }
+
+                        MessageBox.Show("Le planning a été généré dans ce dossier : " + secondDirectoryPath);
                     }
                 }
                 else
@@ -314,13 +327,11 @@ namespace Application_de_planification_de_vols_aériens
                 MessageBox.Show("Veuillez sélectionner une ligne dans le tableau. Vous pouvez sélectionner la ligne grâce à la colonne située tout à gauche du tableau.");
             }
 
+
         }
 
         private void cmdPlan_Click(object sender, EventArgs e)
         {
-            //update Pilots current location
-            //pilot.UpdatePilotsCurrentLocation();
-
             //if a flight is selected
             if (dgvFlights.SelectedRows.Count > 0)
             {
@@ -328,21 +339,39 @@ namespace Application_de_planification_de_vols_aériens
                 int selectedrowindex = dgvFlights.SelectedCells[0].RowIndex;
                 DataGridViewRow selectedRow = dgvFlights.Rows[selectedrowindex];
                 string flightName = Convert.ToString(selectedRow.Cells["colName"].Value);
-
+                string pilot1 = Convert.ToString(selectedRow.Cells["colPilote1"].Value);
                 frmFlightAssignment frmFlightAssignment = new frmFlightAssignment(flightName);
+                string departureDate = Convert.ToString(selectedRow.Cells["colDateDepart"].Value);
+
+                int year = int.Parse(departureDate.Substring(6, 4));
+                int month = int.Parse(departureDate.Substring(3, 2));
+                int day = int.Parse(departureDate.Substring(0, 2));
+                int hour = int.Parse(departureDate.Substring(11, 2));
+                int min = int.Parse(departureDate.Substring(14, 2));
+
+                DateTime date = new DateTime(year, month, day, hour, min, 0);                             
+
                 if (flightName == "")
                 {
                     MessageBox.Show("Veuillez sélectionner une seule ligne et non la totalité du tableau !");
                     return;
                 }
-                else
+                else if(pilot1 != string.Empty)
                 {
-                    //Show form frmFlightAssignment
+                    MessageBox.Show("Le vol que vous avez sélectionné est deja affecté à un/des pilote(s)");
+                }
+                else if (date < DateTime.Now)
+                {
+                    MessageBox.Show("La date de départ du vol est dépassée, il n'est pas possible d'affecter un pilote à ce vol");
+                }
+                else
+                {//Show form frmFlightAssignment
                     frmFlightAssignment.Show();
                     DialogResult res = frmFlightAssignment.DialogResult;
                     if (res == DialogResult.OK)
                     {
                         frmFlightAssignment.Close();
+                        
                     }
                 }
             }
@@ -350,6 +379,7 @@ namespace Application_de_planification_de_vols_aériens
             {
                 MessageBox.Show("Veuillez sélectionner une ligne dans le tableau. Vous pouvez sélectionner la ligne grâce à la colonne située tout à gauche du tableau.");
             }
+            
         }
 
 
@@ -377,7 +407,6 @@ namespace Application_de_planification_de_vols_aériens
             //List<Flight> to store existing flights
             List<Flight> flights = new List<Flight>();
             flights = dbConnection.GetFlights();
-
 
             flights.ForEach(delegate (Flight flight)
             {

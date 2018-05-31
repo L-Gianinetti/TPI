@@ -230,7 +230,7 @@ namespace Application_de_planification_de_vols_aériens
             this.connection.Close();
         }
 
-        public void UpdatePilotFlightTime(int idPilot, double flightTime)
+        public void UpdatePilotFlightTime(int idPilot, float flightTime)
         {
             this.connection.Close();
             //open SQL connection
@@ -474,10 +474,10 @@ namespace Application_de_planification_de_vols_aériens
             return output;
         }
 
-        public int GetPilotFlightTime(int idPilot)
+        public float GetPilotFlightTime(int idPilot)
         {
             string reponse = string.Empty;
-            int output = 0;
+            float output = 0;
             try
             {
                 //open SQL connection
@@ -510,7 +510,7 @@ namespace Application_de_planification_de_vols_aériens
             }
             if (reponse != "0")
             {
-                output = int.Parse(reponse);
+                output = float.Parse(reponse);
             }
             return output;
         }
@@ -767,7 +767,7 @@ namespace Application_de_planification_de_vols_aériens
                 var cmdReader = cmd.ExecuteReader();
                 while (cmdReader.Read())
                 {
-                    pilots.Add(new Pilot(int.Parse(cmdReader[0].ToString()), cmdReader[1].ToString(), cmdReader[2].ToString(), int.Parse(cmdReader[3].ToString()), cmdReader[4].ToString()));
+                    pilots.Add(new Pilot(int.Parse(cmdReader[0].ToString()), cmdReader[1].ToString(), cmdReader[2].ToString(), float.Parse(cmdReader[3].ToString()), cmdReader[4].ToString()));
                 }
 
                 //close SQL connection
@@ -1670,7 +1670,7 @@ namespace Application_de_planification_de_vols_aériens
                 var cmdReader = cmd.ExecuteReader();
                 while (cmdReader.Read())
                 {
-                    reponse.Add(string.Format("{0}/{1}", cmdReader[0], cmdReader[1]));
+                    reponse.Add(string.Format("{0}", cmdReader[0]));
                 }
                 //close SQL connection
                 this.connection.Close();

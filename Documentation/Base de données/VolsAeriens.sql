@@ -41,7 +41,7 @@ CREATE TABLE IF NOT EXISTS `PlanificationVolsAeriens`.`Pilot` (
   `idPilot` INT NOT NULL AUTO_INCREMENT,
   `pilotName` VARCHAR(45) NOT NULL,
   `pilotFirstName` VARCHAR(45) NOT NULL,
-  `flightTime` INT NOT NULL,
+  `flightTime` FLOAT NOT NULL,
   `fkAirport` INT NOT NULL,
   `fkAirportCurrentLocation` INT NOT NULL,
   PRIMARY KEY (`idPilot`, `fkAirport`, `fkAirportCurrentLocation`),

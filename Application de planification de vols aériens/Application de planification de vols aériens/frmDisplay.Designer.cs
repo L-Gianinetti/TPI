@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.cmdDisplay = new System.Windows.Forms.Button();
             this.cmdManagement = new System.Windows.Forms.Button();
             this.pnlEntete = new System.Windows.Forms.Panel();
             this.grbDisplay = new System.Windows.Forms.GroupBox();
@@ -69,28 +68,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvPilots)).BeginInit();
             this.SuspendLayout();
             // 
-            // cmdDisplay
-            // 
-            this.cmdDisplay.Location = new System.Drawing.Point(312, 21);
-            this.cmdDisplay.Name = "cmdDisplay";
-            this.cmdDisplay.Size = new System.Drawing.Size(75, 23);
-            this.cmdDisplay.TabIndex = 1;
-            this.cmdDisplay.Text = "Display";
-            this.cmdDisplay.UseVisualStyleBackColor = true;
-            // 
             // cmdManagement
             // 
+            this.cmdManagement.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.cmdManagement.Location = new System.Drawing.Point(53, 21);
             this.cmdManagement.Name = "cmdManagement";
             this.cmdManagement.Size = new System.Drawing.Size(81, 23);
             this.cmdManagement.TabIndex = 0;
-            this.cmdManagement.Text = "Management";
+            this.cmdManagement.Text = "Gestion";
             this.cmdManagement.UseVisualStyleBackColor = true;
             this.cmdManagement.Click += new System.EventHandler(this.cmdManagement_Click);
             // 
             // pnlEntete
             // 
-            this.pnlEntete.Controls.Add(this.cmdDisplay);
             this.pnlEntete.Controls.Add(this.cmdManagement);
             this.pnlEntete.Location = new System.Drawing.Point(12, 12);
             this.pnlEntete.Name = "pnlEntete";
@@ -356,8 +346,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button cmdDisplay;
         private System.Windows.Forms.Button cmdManagement;
         private System.Windows.Forms.Panel pnlEntete;
         private System.Windows.Forms.GroupBox grbDisplay;

@@ -14,6 +14,7 @@ namespace Application_de_planification_de_vols_aériens
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmManagement());
+            
         }
     }
 }

@@ -15,7 +15,7 @@ namespace Application_de_planification_de_vols_aériens
         DBConnection dbConnection = new DBConnection();
         BuildMySQLDate buildMySQLDate = new BuildMySQLDate();
         private string flightName;
-        private double flightTime;
+        private float flightTime;
         Pilot pilot = new Pilot();
         private int idFlight;
         Flight flight = new Flight();
@@ -85,33 +85,14 @@ namespace Application_de_planification_de_vols_aériens
                     //Add pilot to flight
                     dbConnection.AddPilotToFlight(idPilot, idFlight);
 
-
-
-                    //int idArrivalAirport = flight.getArrivalAirportId();
-
-                    int currentPilotFlightTime = dbConnection.GetPilotFlightTime(idPilot);
-                    if(flightTime > 10)
-                    {
-                        if(i == 0)
-                        {
-                            double totalPilotFlightTime = 10 + currentPilotFlightTime;
-                            dbConnection.UpdatePilotFlightTime(idPilot, totalPilotFlightTime);
-                        }
-                        else
-                        {
-                            double totalPilotFlightTime = currentPilotFlightTime + (flightTime - 10);
-                            dbConnection.UpdatePilotFlightTime(idPilot, totalPilotFlightTime);
-                        }
-                    }
-                    else
-                    {
-                        double totalPilotFlightTime = flight.FlightTimeH + currentPilotFlightTime;
-                        dbConnection.UpdatePilotFlightTime(idPilot, totalPilotFlightTime);
-                    }
-
                 }
-            }
+                DialogResult res = MessageBox.Show("Le(s) pilote(s) a/ont bien été affecté(s) au vol", "", MessageBoxButtons.OK);
+                if (res == DialogResult.OK)
+                {
+                    this.Close();
+                }
 
+            }
         }
 
 
@@ -126,10 +107,6 @@ namespace Application_de_planification_de_vols_aériens
             int departureAirportId = flight.getDepartureAirportId();
 
             //Get pilots' id, name  firstname who are in departureAirport
-            List<string> pilotsName = new List<string>();
-            pilotsName = dbConnection.GetPilotsName(departureAirportId);
-            List<string> pilotsFirstName = new List<string>();
-            pilotsFirstName = dbConnection.GetPilotsFirstName(departureAirportId);
             List<string> pilotsId = new List<string>();
             pilotsId = dbConnection.GetPilotsId();
             string sDepartureDate = flight.SDepartureDate;

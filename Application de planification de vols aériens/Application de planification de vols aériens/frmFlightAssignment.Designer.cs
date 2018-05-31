@@ -82,6 +82,7 @@
             // 
             // cmdPlan
             // 
+            this.cmdPlan.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.cmdPlan.Location = new System.Drawing.Point(207, 318);
             this.cmdPlan.Name = "cmdPlan";
             this.cmdPlan.Size = new System.Drawing.Size(75, 23);

@@ -9,10 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using System.IO;
+using System.Threading;
+
 namespace Application_de_planification_de_vols_aériens
 {
     public partial class frmManagement : Form
     {
+        Thread thread;
         List<string> airportList = new List<string>();
         Pilot newPilot;
         Line line;
@@ -28,49 +31,36 @@ namespace Application_de_planification_de_vols_aériens
         {
             //Update piltos current location
             newPilot = new Pilot();
+            DateTime lastOpenedDate = new DateTime();
+            //SaveOpenFormDate();
             //newPilot.UpdatePilotsCurrentLocation();
-            if(File.Exists("C:\\Program Files (x86)\\PlanificationVolsAeriens\\LastClosingFormDate\\date.txt"))
+
+            //Get the date of the last time this form was opened
+            if(File.Exists("C:\\Program Files (x86)\\PlanificationVolsAeriens\\LastOpenFormDate\\date.txt"))
             {
-                string fileContent = System.IO.File.ReadAllText("C:\\Program Files (x86)\\PlanificationVolsAeriens\\LastClosingFormDate\\date.txt");
+                string fileContent = System.IO.File.ReadAllText("C:\\Program Files (x86)\\PlanificationVolsAeriens\\LastOpenFormDate\\date.txt");
                 int year = int.Parse(fileContent.Substring(6, 4));
                 int month = int.Parse(fileContent.Substring(3, 2));
                 int day = int.Parse(fileContent.Substring(0, 2));
                 int hour = int.Parse(fileContent.Substring(11, 2));
                 int min = int.Parse(fileContent.Substring(14, 2));
-                DateTime lastClosedDate = new DateTime(year, month, day, hour, min, 0);
-
-
+               
+                lastOpenedDate = new DateTime(year, month, day, hour, min, 0);
             }
-            
+            newPilot.UpdatePilotsFlightTime(lastOpenedDate);
+
+            newPilot.UpdatePilotsCurrentLocation();
 
             cmdAddFlight.Enabled = false;
 
+            AddLines();
+            AddAirports();
 
-            //Add airportsNames in comboboxes
-            List<string> airportType = new List<string>();
-            airportType = dbConnection.GetAirportsTypes();
-            airportList = dbConnection.GetAirportsNames();
-            for(int i = 0; i < airportList.Count; i++)
-            {
-                string airportName = airportType[i] + " / " + airportList[i];
-                cboAssignmentAirport.Items.Add(airportName);
-                cboArrivalPlace.Items.Add(airportName);
-                cboDeparturePlace.Items.Add(airportName);
-            }
                 
 
      
 
-            //Add linesNames in combobox
-            List<string> lineList = dbConnection.GetLinesNames();
-            for(int y =0; y < lineList.Count; y++)
-            {
-                string[] fullLineName = lineList[y].Split('/');
-                string airportType1 = dbConnection.GetAirportType(fullLineName[0]);
-                string airportType2 = dbConnection.GetAirportType(fullLineName[1]);
-                string lineName = airportType2 + " " + fullLineName[1] + " / " +  airportType1 + " " + fullLineName[0] ;
-                cboLine.Items.Add(lineName); 
-            }
+
 
                 
            
@@ -79,9 +69,27 @@ namespace Application_de_planification_de_vols_aériens
 
         private void cmdDisplay_Click(object sender, EventArgs e)
         {
+            this.Close();
+            thread = new Thread(OpenNewForm);
+            thread.SetApartmentState(ApartmentState.STA);
+            thread.Start();
+            /*
+            this.Dispose();
+            this.Close();
             //Show form frmAffichage
             frmDisplay frmDisplay = new frmDisplay();
             frmDisplay.Show();
+            DialogResult res = new DialogResult();
+            if(res == DialogResult.OK)
+            {
+                frmDisplay.Dispose();
+                frmDisplay.Close();
+            }*/
+        }
+
+        private void OpenNewForm(object obj)
+        {
+            Application.Run(new frmDisplay());
         }
 
         public void cmdAddPilote_Click(object sender, EventArgs e)
@@ -179,6 +187,8 @@ namespace Application_de_planification_de_vols_aériens
                         dbConnection.AddLine(line);
                         dbConnection.AddLine(line1);
                         MessageBox.Show("La ligne a bien été ajoutée, une ligne retour a aussi été ajoutée");
+                        cboLine.Items.Clear();
+                        AddLines();
                     }
                     else
                     {
@@ -526,6 +536,15 @@ namespace Application_de_planification_de_vols_aériens
             }
         }
 
+        private void SaveOpenFormDate()
+        {
+            DateTime currentDate = DateTime.Now;
+            System.IO.Directory.CreateDirectory("C:\\Program Files (x86)\\PlanificationVolsAeriens\\LastOpenFormDate");
+            StringBuilder date = new StringBuilder();
+            date.AppendLine(currentDate.ToString());
+            File.WriteAllText("C:\\Program Files (x86)\\PlanificationVolsAeriens\\LastOpenFormDate\\date.txt", date.ToString());
+        }
+
         #region disable cmdAddFlight if input Data changed
         private void cboLigne_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -546,17 +565,45 @@ namespace Application_de_planification_de_vols_aériens
         {
             cmdAddFlight.Enabled = false;
         }
+
         #endregion
 
         private void frmManagement_FormClosing(object sender, FormClosingEventArgs e)
         {
             DateTime currentDate = DateTime.Now;
-            System.IO.Directory.CreateDirectory("C:\\Program Files (x86)\\PlanificationVolsAeriens\\LastClosingFormDate");
+            System.IO.Directory.CreateDirectory("C:\\Program Files (x86)\\PlanificationVolsAeriens\\LastOpenFormDate");
             StringBuilder date = new StringBuilder();
             date.AppendLine(currentDate.ToString());
-            File.WriteAllText("C:\\Program Files (x86)\\PlanificationVolsAeriens\\LastClosingFormDate\\date.txt", date.ToString());
+            File.WriteAllText("C:\\Program Files (x86)\\PlanificationVolsAeriens\\LastOpenFormDate\\date.txt", date.ToString());
+        }
 
+        private void AddAirports()
+        {
+            //Add airportsNames in comboboxes
+            List<string> airportType = new List<string>();
+            airportType = dbConnection.GetAirportsTypes();
+            airportList = dbConnection.GetAirportsNames();
+            for (int i = 0; i < airportList.Count; i++)
+            {
+                string airportName = airportType[i] + " / " + airportList[i];
+                cboAssignmentAirport.Items.Add(airportName);
+                cboArrivalPlace.Items.Add(airportName);
+                cboDeparturePlace.Items.Add(airportName);
+            }
+        }
 
+        private void AddLines()
+        {
+            //Add linesNames in combobox
+            List<string> lineList = dbConnection.GetLinesNames();
+            for (int y = 0; y < lineList.Count; y++)
+            {
+                string[] fullLineName = lineList[y].Split('/');
+                string airportType1 = dbConnection.GetAirportType(fullLineName[0]);
+                string airportType2 = dbConnection.GetAirportType(fullLineName[1]);
+                string lineName = airportType2 + " " + fullLineName[1] + " / " + airportType1 + " " + fullLineName[0];
+                cboLine.Items.Add(lineName);
+            }
         }
     }
 }
