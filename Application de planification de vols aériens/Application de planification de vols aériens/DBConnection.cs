@@ -14,6 +14,7 @@ namespace Application_de_planification_de_vols_aériens
         {
             this.InitConnection();
         }
+        //Initialize database connection
         private void InitConnection()
         {
             string connectionString = "SERVER=127.0.0.1;DATABASE=planificationvolsaeriens;UID=root;PASSWORD=";
@@ -25,9 +26,9 @@ namespace Application_de_planification_de_vols_aériens
         /// <summary>
         /// Add a vacation for a Pilot in db
         /// </summary>
-        /// <param name="idPilot"></param>
-        /// <param name="startDate"></param>
-        /// <param name="endDate"></param>
+        /// <param name="idPilot"> pilot'sid</param>
+        /// <param name="startDate">vacation's startDate</param>
+        /// <param name="endDate">vacation's endDate</param>
         public void addVacation(int idPilot, DateTime startDate, DateTime endDate)
         {
             try
@@ -52,10 +53,12 @@ namespace Application_de_planification_de_vols_aériens
             catch (MySqlException ex)
             {
                 Console.WriteLine(ex.Message);
+                throw new Exception("Erreur lors de l'ajout de vacances");
             }
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
+                throw new Exception("Erreur lors de l'ajout de vacances");
             }
         }
 
@@ -63,7 +66,8 @@ namespace Application_de_planification_de_vols_aériens
         /// Add a pilot in db
         /// </summary>
         /// Pilot contains pilotName, pilotFirstName, flightTime
-        /// <param name="pilot"></param>
+        /// <param name="pilot">pilot object</param>
+        /// <param name="idAirport">airport's id</param>
         public void AddPilot(Pilot pilot, int idAirport)
         {
             try
@@ -100,7 +104,9 @@ namespace Application_de_planification_de_vols_aériens
         /// <summary>
         /// Add a flight in db
         /// </summary>
-        /// <param name="flight"></param>
+        /// flight contains flightName, departureDate, arrivalDate
+        /// <param name="flight">flight object</param>
+        /// <param name="idLine">line's id</param>
         /// Flight contains flightName, departureDate, arrivalDate
         public void AddFlight(Flight flight, int idLine)
         {
@@ -138,8 +144,8 @@ namespace Application_de_planification_de_vols_aériens
         /// <summary>
         /// Add a pilot to a flight
         /// </summary>
-        /// <param name="idPilot"></param>
-        /// <param name="idFlight"></param>
+        /// <param name="idPilot">pilot's id</param>
+        /// <param name="idFlight">flight's id</param>
         public void AddPilotToFlight(int idPilot, int idFlight)
         {
             try
@@ -210,42 +216,64 @@ namespace Application_de_planification_de_vols_aériens
         /// <summary>
         /// Update pilot fkAirportCurrentLocation from idPilot and idAirport
         /// </summary>
-        /// <param name="idPilot"></param>
-        /// <param name="idArrivalAirport"></param>
+        /// <param name="idPilot">pilot's id</param>
+        /// <param name="idArrivalAirport">arrivalAirport's id</param>
         public void UpdatePilotCurrentLocation(int idPilot, int idArrivalAirport)
         {
-            this.connection.Close();
-            //open SQL connection
-            this.connection.Open();
+            try
+            {
+                this.connection.Close();
+                //open SQL connection
+                this.connection.Open();
 
-            //Create SQL command
-            MySqlCommand cmd = this.connection.CreateCommand();
+                //Create SQL command
+                MySqlCommand cmd = this.connection.CreateCommand();
 
-            //SQL Query
-            cmd.CommandText = "UPDATE pilot SET fkAirportCurrentLocation =\"" + idArrivalAirport + "\" where idPilot =\"" + idPilot + "\"";
+                //SQL Query
+                cmd.CommandText = "UPDATE pilot SET fkAirportCurrentLocation =\"" + idArrivalAirport + "\" where idPilot =\"" + idPilot + "\"";
 
-            //Execute SQL Query
-            cmd.ExecuteNonQuery();
-            //close SQL connection
-            this.connection.Close();
+                //Execute SQL Query
+                cmd.ExecuteNonQuery();
+                //close SQL connection
+                this.connection.Close();
+            }
+            catch(MySqlException ex)
+            {
+                Console.WriteLine(ex.Message);
+                throw new Exception("Erreur lors de la mise à jour de la localisation actuelle du pilote");
+            }
+
         }
 
+        /// <summary>
+        /// Update the flightTime of the pilot
+        /// </summary>
+        /// <param name="idPilot">pilot's id</param>
+        /// <param name="flightTime">flight time to add to pilot's flightTime</param>
         public void UpdatePilotFlightTime(int idPilot, float flightTime)
         {
-            this.connection.Close();
-            //open SQL connection
-            this.connection.Open();
+            try
+            {
+                this.connection.Close();
+                //open SQL connection
+                this.connection.Open();
 
-            //Create SQL command
-            MySqlCommand cmd = this.connection.CreateCommand();
+                //Create SQL command
+                MySqlCommand cmd = this.connection.CreateCommand();
 
-            //SQL Query
-            cmd.CommandText = "UPDATE pilot SET flightTime =\"" + flightTime + "\" where idPilot =\"" + idPilot + "\"";
+                //SQL Query
+                cmd.CommandText = "UPDATE pilot SET flightTime =\"" + flightTime + "\" where idPilot =\"" + idPilot + "\"";
 
-            //Execute SQL Query
-            cmd.ExecuteNonQuery();
-            //close SQL connection
-            this.connection.Close();
+                //Execute SQL Query
+                cmd.ExecuteNonQuery();
+                //close SQL connection
+                this.connection.Close();
+            }
+            catch(MySqlException ex)
+            {
+                Console.WriteLine(ex.Message);
+                throw new Exception("Erreur lors de la mise à jour du temps de vol du pilote");
+            }
         }
         #endregion
 
@@ -255,7 +283,12 @@ namespace Application_de_planification_de_vols_aériens
         #region pilot
 
         
-
+        /// <summary>
+        /// Get idVacation if pilots are in vacation a specifc day
+        /// </summary>
+        /// <param name="idPilot">pilot's id</param>
+        /// <param name="day">string that contains DateOfTheDay in MySQLDate format</param>
+        /// <returns>Return List that contains idVacation</returns>
         public List<string> GetIdVacationIfPilotIsInVacation(int idPilot, string day)
         {
             List<string> idVacation = new List<string>();
@@ -287,16 +320,17 @@ namespace Application_de_planification_de_vols_aériens
             catch (MySqlException ex)
             {
                 Console.WriteLine(ex.Message);
+                throw new MySQLGetDataException("");
             }
             return idVacation;
         }
 
         /// <summary>
-        /// 
+        /// Get flightName if pilots are working a specific day
         /// </summary>
-        /// <param name="idPilot"></param>
-        /// <param name="day"></param>
-        /// <returns></returns>
+        /// <param name="idPilot">pilot's id</param>
+        /// <param name="day">string that contains DateOfTheDay in MySQLDate format</param>
+        /// <returns>Return List that contains flightnames</returns>
         public List<string> GetFlightNameIfPilotWorks(int idPilot, string day)
         {
             List<string> flightName = new List<string>();
@@ -329,6 +363,7 @@ namespace Application_de_planification_de_vols_aériens
             catch (MySqlException ex)
             {
                 Console.WriteLine(ex.Message);
+                throw new MySQLGetDataException("");
             }
             return flightName;
         }
@@ -372,6 +407,7 @@ namespace Application_de_planification_de_vols_aériens
             catch (MySqlException ex)
             {
                 Console.WriteLine(ex.Message);
+                throw new MySQLGetDataException("");
             }
             if (reponse != "0")
             {
@@ -419,6 +455,7 @@ namespace Application_de_planification_de_vols_aériens
             catch (MySqlException ex)
             {
                 Console.WriteLine(ex.Message);
+                throw new MySQLGetDataException("");
             }
             if (reponse != "0")
             {
@@ -466,6 +503,7 @@ namespace Application_de_planification_de_vols_aériens
             catch (MySqlException ex)
             {
                 Console.WriteLine(ex.Message);
+                throw new MySQLGetDataException("");
             }
             if (reponse != "0")
             {
@@ -474,6 +512,11 @@ namespace Application_de_planification_de_vols_aériens
             return output;
         }
 
+        /// <summary>
+        /// Get pilot's flightTime
+        /// </summary>
+        /// <param name="idPilot">pilot's id</param>
+        /// <returns>flightTime</returns>
         public float GetPilotFlightTime(int idPilot)
         {
             string reponse = string.Empty;
@@ -507,6 +550,7 @@ namespace Application_de_planification_de_vols_aériens
             catch (MySqlException ex)
             {
                 Console.WriteLine(ex.Message);
+                throw new MySQLGetDataException("");
             }
             if (reponse != "0")
             {
@@ -515,6 +559,13 @@ namespace Application_de_planification_de_vols_aériens
             return output;
         }
 
+        /// <summary>
+        /// Get pilot's id if the pilot is working in a period
+        /// </summary>
+        /// <param name="departureDate">flight's departureDate</param>
+        /// <param name="arrivalDate">flight's arrivalDate</param>
+        /// <param name="idPilot">pilot's id</param>
+        /// <returns>pilot's id</returns>
         public int GetIdPilotIfPilotIsWorking(DateTime departureDate, DateTime arrivalDate, int idPilot)
         {
             string reponse = string.Empty;
@@ -548,6 +599,7 @@ namespace Application_de_planification_de_vols_aériens
             catch (MySqlException ex)
             {
                 Console.WriteLine(ex.Message);
+                throw new MySQLGetDataException("");
             }
             if(reponse != string.Empty)
             {
@@ -556,7 +608,11 @@ namespace Application_de_planification_de_vols_aériens
             return output;
         }
 
-
+        /// <summary>
+        /// Get pilot's flightsArrivalDates
+        /// </summary>
+        /// <param name="idPilot">pilot's id</param>
+        /// <returns>List that contains dates</returns>
         public List<string> GetPilotEndWorkDates(int idPilot)
         {
             List<string> workDates = new List<string>();
@@ -589,10 +645,16 @@ namespace Application_de_planification_de_vols_aériens
             catch (MySqlException e)
             {
                 Console.WriteLine(e.Message);
+                throw new MySQLGetDataException("");
             }
             return workDates;
         }
 
+        /// <summary>
+        /// Get pilot's flightsDepartureDates
+        /// </summary>
+        /// <param name="idPilot">pilot's id</param>
+        /// <returns>List that contains dates</returns>
         public List<string> GetPilotStartWorkDates(int idPilot)
         {
             List<string> workDates = new List<string>();
@@ -625,10 +687,17 @@ namespace Application_de_planification_de_vols_aériens
             catch (MySqlException e)
             {
                 Console.WriteLine(e.Message);
+                throw new MySQLGetDataException("");
             }
             return workDates;
         }
 
+        /// <summary>
+        /// Get pilot's flightsArrivalDates in a specific week
+        /// </summary>
+        /// <param name="monday">monday's date of a specific week</param>
+        /// <param name="sunday">sunday's date of a specific week</param>
+        /// <returns>flightsArrivalDates</returns>
         public List<DateTime> GetPilotEndWorkDatesThisWeek(string monday, string sunday)
         {
             List<DateTime> endWork = new List<DateTime>();
@@ -661,10 +730,17 @@ namespace Application_de_planification_de_vols_aériens
             catch (MySqlException ex)
             {
                 Console.WriteLine(ex.Message);
+                throw new MySQLGetDataException("");
             }
             return endWork;
         }
 
+        /// <summary>
+        /// Get pilot's flightsDepartureDates ina specific week
+        /// </summary>
+        /// <param name="monday">monday's date of a specific week</param>
+        /// <param name="sunday">sunday's date of a specific week</param>
+        /// <returns>flightsDepartureDates</returns>
         public List<DateTime> GetPilotStartWorkDatesThisWeek(string monday, string sunday)
         {
             List<DateTime> startWork = new List<DateTime>();
@@ -697,6 +773,7 @@ namespace Application_de_planification_de_vols_aériens
             catch (MySqlException ex)
             {
                 Console.WriteLine(ex.Message);
+                throw new MySQLGetDataException("");
             }
             return startWork;
         }
@@ -704,7 +781,7 @@ namespace Application_de_planification_de_vols_aériens
         /// <summary>
         /// Return pilots assigned to a specific flight in a List string
         /// </summary>
-        /// <param name="idFlight"></param>
+        /// <param name="idFlight">flight's id</param>
         /// <returns></returns>
         public List<string> GetIdPilotsFromFlight(int idFlight)
         {
@@ -735,6 +812,7 @@ namespace Application_de_planification_de_vols_aériens
             catch (MySqlException ex)
             {
                 Console.WriteLine(ex.Message);
+                throw new MySQLGetDataException("");
             }
             return pilotsFromFlight;
 
@@ -743,7 +821,7 @@ namespace Application_de_planification_de_vols_aériens
         /// <summary>
         /// Return all the existing pilots in a List Pilot
         /// </summary>
-        /// <returns></returns>
+        /// <returns>list that contains all existing pilots</returns>
         public List<Pilot> GetPilots()
         {
             List<Pilot> pilots = new List<Pilot>();
@@ -776,6 +854,7 @@ namespace Application_de_planification_de_vols_aériens
             catch (MySqlException ex)
             {
                 Console.WriteLine(ex.Message);
+                throw new MySQLGetDataException("");
             }
             return pilots;
         }
@@ -783,8 +862,8 @@ namespace Application_de_planification_de_vols_aériens
         /// <summary>
         /// Return pilotFirstName from idPilot
         /// </summary>
-        /// <param name="idPilot"></param>
-        /// <returns></returns>
+        /// <param name="idPilot">pilot's id</param>
+        /// <returns>pilotFirstName</returns>
         public string GetPilotFirstName(int idPilot)
         {
             string reponse = string.Empty;
@@ -816,6 +895,7 @@ namespace Application_de_planification_de_vols_aériens
             catch (MySqlException ex)
             {
                 Console.WriteLine(ex.Message);
+                throw new MySQLGetDataException("");
             }
             return reponse;
         }
@@ -823,8 +903,8 @@ namespace Application_de_planification_de_vols_aériens
         /// <summary>
         /// Return pilotName from idPilot
         /// </summary>
-        /// <param name="idPilot"></param>
-        /// <returns></returns>
+        /// <param name="idPilot">pilot's id</param>
+        /// <returns>pilotName</returns>
         public string GetPilotName(int idPilot)
         {
             string reponse = string.Empty;
@@ -856,6 +936,7 @@ namespace Application_de_planification_de_vols_aériens
             catch (MySqlException ex)
             {
                 Console.WriteLine(ex.Message);
+                throw new MySQLGetDataException("");
             }
             return reponse;
         }
@@ -864,8 +945,8 @@ namespace Application_de_planification_de_vols_aériens
         /// <summary>
         /// Return idAssignmentAirport from idPilot
         /// </summary>
-        /// <param name="idPilot"></param>
-        /// <returns></returns>
+        /// <param name="idPilot">pilot's id</param>
+        /// <returns>idAssignmentAirport</returns>
         public int GetPilotAssignmentAirportId(int idPilot)
         {
             string reponse = string.Empty;
@@ -897,16 +978,17 @@ namespace Application_de_planification_de_vols_aériens
             catch (MySqlException ex)
             {
                 Console.WriteLine(ex.Message);
+                throw new MySQLGetDataException("");
             }
             return int.Parse(reponse);
         }
 
         /// <summary>
-        /// Return idAirport of a pilot's current airport location from idPilot
+        /// Return idAirport of a pilot's current airport location
         /// </summary>
-        /// <param name="idPilot"></param>
-        /// <param name="currentDate"></param>
-        /// <returns></returns>
+        /// <param name="idPilot">pilot's id</param>
+        /// <param name="currentDate">Date in MySQLDate format</param>
+        /// <returns>airport's id</returns>
         public int GetPilotCurrentLocation(int idPilot, string currentDate)
         {
             string idAirport = string.Empty;
@@ -940,6 +1022,7 @@ namespace Application_de_planification_de_vols_aériens
             catch (MySqlException ex)
             {
                 Console.WriteLine(ex.Message);
+                throw new MySQLGetDataException("");
             }
             if(idAirport != string.Empty)
             {
@@ -948,12 +1031,10 @@ namespace Application_de_planification_de_vols_aériens
             return reponse;
         }
 
-        
-
         /// <summary>
         /// Return pilots' id from all existing pilots in a List string
         /// </summary>
-        /// <returns></returns>
+        /// <returns>pilots' id</returns>
         public List<string> GetPilotsId()
         {
             List<string> pilots = new List<string>();
@@ -987,135 +1068,7 @@ namespace Application_de_planification_de_vols_aériens
             catch (MySqlException e)
             {
                 Console.WriteLine(e.Message);
-            }
-            return pilots;
-        }
-
-        /// <summary>
-        /// Return pilots' id from a sepcific airportId in List string
-        /// </summary>
-        /// <param name="airportId"></param>
-        /// <returns></returns>
-        public List<string> GetPilotsId(int airportId)
-        {
-            List<string> pilots = new List<string>();
-            try
-            {
-                this.connection.Close();
-                //open SQL connection
-                this.connection.Open();
-
-                //Create SQL command
-                MySqlCommand cmd = this.connection.CreateCommand();
-
-                //SQL Query
-                cmd.CommandText = "SELECT idPilot from pilot where fkAirportCurrentLocation =\"" + airportId + "\" order by idPilot";
-
-
-                //Execute SQL Query
-                cmd.ExecuteNonQuery();
-
-
-
-                var cmdReader = cmd.ExecuteReader();
-                while (cmdReader.Read())
-                {
-                    pilots.Add(string.Format("{0}", cmdReader[0]));
-                }
-
-                //close SQL connection
-                this.connection.Close();
-            }
-            catch (MySqlException e)
-            {
-                Console.WriteLine(e.Message);
-            }
-            return pilots;
-        }
-
-
-
-
-        /// <summary>
-        /// Return pilotFirstName from a specific airportId in List string
-        /// </summary>
-        /// <param name="airportId"></param>
-        /// <returns></returns>
-        public List<string> GetPilotsFirstName(int airportId)
-        {
-            List<string> pilots = new List<string>();
-            try
-            {
-                this.connection.Close();
-                //open SQL connection
-                this.connection.Open();
-
-                //Create SQL command
-                MySqlCommand cmd = this.connection.CreateCommand();
-
-                //SQL Query
-                cmd.CommandText = "SELECT pilotFirstName from pilot where fkAirportCurrentLocation =\"" + airportId + "\" order by idPilot";
-
-
-                //Execute SQL Query
-                cmd.ExecuteNonQuery();
-
-
-
-                var cmdReader = cmd.ExecuteReader();
-                while (cmdReader.Read())
-                {
-                    pilots.Add(string.Format("{0}", cmdReader[0]));
-                }
-
-                //close SQL connection
-                this.connection.Close();
-            }
-            catch (MySqlException e)
-            {
-                Console.WriteLine(e.Message);
-            }
-            return pilots;
-        }
-
-        /// <summary>
-        /// Return pilotName from a specific airportId in List string
-        /// </summary>
-        /// <param name="airportId"></param>
-        /// <returns></returns>
-        public List<string> GetPilotsName(int airportId)
-        {
-            List<string> pilots = new List<string>();
-            try
-            {
-                this.connection.Close();
-                //open SQL connection
-                this.connection.Open();
-
-                //Create SQL command
-                MySqlCommand cmd = this.connection.CreateCommand();
-
-                //SQL Query
-                cmd.CommandText = "SELECT pilotName from pilot where fkAirportCurrentLocation =\"" + airportId + "\" order by idPilot";
-
-
-                //Execute SQL Query
-                cmd.ExecuteNonQuery();
-
-
-
-                var cmdReader = cmd.ExecuteReader();
-                while (cmdReader.Read())
-                {
-                    pilots.Add(string.Format("{0}", cmdReader[0]));
-                }
-
-                //close SQL connection
-                this.connection.Close();
-            }
-            catch (MySqlException e)
-            {
-                Console.WriteLine(e.Message);
+                throw new MySQLGetDataException("");
             }
             return pilots;
         }
@@ -1123,9 +1076,9 @@ namespace Application_de_planification_de_vols_aériens
         /// <summary>
         /// Return idPilot if pilot is in vacation between departureDate and arrivalDate
         /// </summary>
-        /// <param name="departureDate"></param>
-        /// <param name="arrivalDate"></param>
-        /// <returns></returns>
+        /// <param name="departureDate"> flight's departureDate</param>
+        /// <param name="arrivalDate">flight's arrivalDAte</param>
+        /// <returns>pilot's id</returns>
         public int GetIdPilotInVacationDuringFlight(string departureDate, string arrivalDate )
         {
             int reponse = 0;
@@ -1160,6 +1113,7 @@ namespace Application_de_planification_de_vols_aériens
             catch (MySqlException e)
             {
                 Console.WriteLine(e.Message);
+                throw new MySQLGetDataException("");
             }
 
             if(idPilot != string.Empty)
@@ -1173,9 +1127,9 @@ namespace Application_de_planification_de_vols_aériens
         /// <summary>
         /// Return Pilot last arrival time from idPilot
         /// </summary>
-        /// <param name="idPilot"></param>
-        /// <param name="departureDate"></param>
-        /// <returns></returns>
+        /// <param name="idPilot">pilot's id</param>
+        /// <param name="departureDate">flight's departureDate</param>
+        /// <returns>date</returns>
         public DateTime GetPilotLastArrivalTime(int idPilot, DateTime departureDate)
         {
             DateTime lastArrivalTime = new DateTime();
@@ -1209,6 +1163,7 @@ namespace Application_de_planification_de_vols_aériens
             catch (MySqlException e)
             {
                 Console.WriteLine(e.Message);
+                throw new MySQLGetDataException("");
             }
             return lastArrivalTime;
         }
@@ -1216,8 +1171,8 @@ namespace Application_de_planification_de_vols_aériens
         /// <summary>
         /// Return vacationEndDates for a specific pilot in a List string
         /// </summary>
-        /// <param name="idPilot"></param>
-        /// <returns></returns>
+        /// <param name="idPilot">pilot's id</param>
+        /// <returns>vacations's endDates</returns>
         public List<string> GetVacationEndDates(int idPilot)
         {
             List<string> vacations = new List<string>();
@@ -1248,6 +1203,7 @@ namespace Application_de_planification_de_vols_aériens
             catch (MySqlException e)
             {
                 Console.WriteLine(e.Message);
+                throw new MySQLGetDataException("");
             }
 
             return vacations;
@@ -1257,8 +1213,8 @@ namespace Application_de_planification_de_vols_aériens
         /// <summary>
         /// Return vacationStartDates for a specific pilot in a List string
         /// </summary>
-        /// <param name="idPilot"></param>
-        /// <returns></returns>
+        /// <param name="idPilot">pilot's id</param>
+        /// <returns>vacations's startDate</returns>
         public List<string> GetVacationStartDates(int idPilot)
         {
             List<string> vacations = new List<string>();
@@ -1291,6 +1247,7 @@ namespace Application_de_planification_de_vols_aériens
             catch (MySqlException e)
             {
                 Console.WriteLine(e.Message);
+                throw new MySQLGetDataException("");
             }
             return vacations;
         }
@@ -1298,6 +1255,11 @@ namespace Application_de_planification_de_vols_aériens
 
         #region airport
 
+        /// <summary>
+        /// Get arrivalAirportName of a line
+        /// </summary>
+        /// <param name="idLine">line's id</param>
+        /// <returns>airport's name</returns>
         public string GetArrivalAirportName(int idLine)
         {
             string reponse = string.Empty;
@@ -1330,12 +1292,17 @@ namespace Application_de_planification_de_vols_aériens
             catch (MySqlException ex)
             {
                 Console.WriteLine(ex.Message);
-
+                throw new MySQLGetDataException("");
             }
 
             return reponse;
         }
 
+        /// <summary>
+        /// Get departureAirportName of a line
+        /// </summary>
+        /// <param name="idLine">line's id</param>
+        /// <returns>airport's name</returns>
         public string GetDepartureAirportName(int idLine)
         {
             string reponse = string.Empty;
@@ -1368,7 +1335,7 @@ namespace Application_de_planification_de_vols_aériens
             catch (MySqlException ex)
             {
                 Console.WriteLine(ex.Message);
-
+                throw new MySQLGetDataException("");
             }
 
             return reponse;
@@ -1377,8 +1344,8 @@ namespace Application_de_planification_de_vols_aériens
         /// <summary>
         /// Return airportName from an idAirport
         /// </summary>
-        /// <param name="idAirport"></param>
-        /// <returns></returns>
+        /// <param name="idAirport">airport's id</param>
+        /// <returns>airport's name</returns>
         public string GetAirportName(int idAirport)
         {
             string reponse = string.Empty;
@@ -1411,12 +1378,17 @@ namespace Application_de_planification_de_vols_aériens
             catch (MySqlException ex)
             {
                 Console.WriteLine(ex.Message);
-
+                throw new MySQLGetDataException("");
             }
 
             return reponse;
         }
 
+        /// <summary>
+        /// Get airportType
+        /// </summary>
+        /// <param name="airportName">airport's name</param>
+        /// <returns>airport's type</returns>
         public string GetAirportType(string airportName)
         {
             string reponse = string.Empty;
@@ -1449,11 +1421,16 @@ namespace Application_de_planification_de_vols_aériens
             catch (MySqlException ex)
             {
                 Console.WriteLine(ex.Message);
+                throw new MySQLGetDataException("");
             }
 
             return reponse;
         }
 
+        /// <summary>
+        /// Get all airports' types
+        /// </summary>
+        /// <returns>list that contains airports'types</returns>
         public List<string> GetAirportsTypes()
         {
             List<string> reponse = new List<string>();
@@ -1483,6 +1460,7 @@ namespace Application_de_planification_de_vols_aériens
             catch (MySqlException ex)
             {
                 Console.WriteLine(ex.Message);
+                throw new MySQLGetDataException("");
             }
 
 
@@ -1492,7 +1470,7 @@ namespace Application_de_planification_de_vols_aériens
         /// <summary>
         /// Return all the airportNames in a List string
         /// </summary>
-        /// <returns></returns>
+        /// <returns>list that contains airport's names</returns>
         public List<string> GetAirportsNames()
         {
             List<string> reponse = new List<string>();
@@ -1522,6 +1500,7 @@ namespace Application_de_planification_de_vols_aériens
             catch (MySqlException ex)
             {
                 Console.WriteLine(ex.Message);
+                throw new MySQLGetDataException("");
             }
 
 
@@ -1531,8 +1510,8 @@ namespace Application_de_planification_de_vols_aériens
         /// <summary>
         /// Return airportAcronym from an airportName
         /// </summary>
-        /// <param name="airport"></param>
-        /// <returns></returns>
+        /// <param name="airport">Airport object that contains airprot's name</param>
+        /// <returns>airport's acronym</returns>
         public string GetAirportAcronym(Airport airport)
         {
             string reponse = string.Empty;
@@ -1562,6 +1541,7 @@ namespace Application_de_planification_de_vols_aériens
             catch (MySqlException ex)
             {
                 Console.WriteLine(ex.Message);
+                throw new MySQLGetDataException("");
             }
 
             return reponse;
@@ -1570,8 +1550,8 @@ namespace Application_de_planification_de_vols_aériens
         /// <summary>
         /// Return airportId from an airportAcronym
         /// </summary>
-        /// <param name="acronym"></param>
-        /// <returns></returns>
+        /// <param name="acronym">airprot's acronym</param>
+        /// <returns>arirpot's id</returns>
         public int GetAirportId(string acronym)
         {
             string reponse = string.Empty;
@@ -1602,6 +1582,7 @@ namespace Application_de_planification_de_vols_aériens
             catch (MySqlException ex)
             {
                 Console.WriteLine(ex.Message);
+                throw new MySQLGetDataException("");
             }
             return Int32.Parse(reponse);
         }
@@ -1609,8 +1590,8 @@ namespace Application_de_planification_de_vols_aériens
         /// <summary>
         /// Return airportId from an airportName
         /// </summary>
-        /// <param name="airport"></param>
-        /// <returns></returns>
+        /// <param name="airport">airport object that contains airport's name</param>
+        /// <returns>airport's id</returns>
         public int GetAirportId(Airport airport)
         {
             string reponse = string.Empty;
@@ -1641,6 +1622,7 @@ namespace Application_de_planification_de_vols_aériens
             catch (MySqlException ex)
             {
                 Console.WriteLine(ex.Message);
+                throw new MySQLGetDataException("");
             }
             return Int32.Parse(reponse);
         }
@@ -1649,6 +1631,13 @@ namespace Application_de_planification_de_vols_aériens
 
         #region flight
 
+        /// <summary>
+        /// Get flight's distance of the pilot's flight between last application's closed date and datetime.now
+        /// </summary>
+        /// <param name="idPilot">pilot's id</param>
+        /// <param name="lastClosedDate">last application's closed date</param>
+        /// <param name="currentDate">datetime.now</param>
+        /// <returns>list that contains distances of flights</returns>
         public List<string> GetDistanceFromFlight(int idPilot, string lastClosedDate, string currentDate)
         {
             List<string> reponse = new List<string>();
@@ -1678,6 +1667,7 @@ namespace Application_de_planification_de_vols_aériens
             catch (MySqlException ex)
             {
                 Console.WriteLine(ex.Message);
+                throw new MySQLGetDataException("");
             }
             return reponse;
         }
@@ -1685,8 +1675,8 @@ namespace Application_de_planification_de_vols_aériens
         /// <summary>
         /// Return Flight from flightName
         /// </summary>
-        /// <param name="name"></param>
-        /// <returns></returns>
+        /// <param name="name">flight's name</param>
+        /// <returns>flight object</returns>
         public Flight GetFlight(string name)
         {
             Flight flight = new Flight();
@@ -1719,6 +1709,7 @@ namespace Application_de_planification_de_vols_aériens
             catch (MySqlException ex)
             {
                 Console.WriteLine(ex.Message);
+                throw new MySQLGetDataException("");
             }
             return flight;
         }
@@ -1726,7 +1717,7 @@ namespace Application_de_planification_de_vols_aériens
         /// <summary>
         /// Return all existing flights in a List Flight
         /// </summary>
-        /// <returns></returns>
+        /// <returns>list that contains flight objects</returns>
         public List<Flight> GetFlights()
         {
             List<Flight> flights = new List<Flight>();
@@ -1757,6 +1748,7 @@ namespace Application_de_planification_de_vols_aériens
             catch (MySqlException ex)
             {
                 Console.WriteLine(ex.Message);
+                throw new MySQLGetDataException("");
             }
             return flights;
         }
@@ -1764,8 +1756,8 @@ namespace Application_de_planification_de_vols_aériens
         /// <summary>
         /// Return idFlight from flightName
         /// </summary>
-        /// <param name="name"></param>
-        /// <returns></returns>
+        /// <param name="name">flight's name</param>
+        /// <returns>flight's id</returns>
         public int GetFlightId(string name)
         {
             int output = 0;
@@ -1798,6 +1790,7 @@ namespace Application_de_planification_de_vols_aériens
             catch (MySqlException ex)
             {
                 Console.WriteLine(ex.Message);
+                throw new MySQLGetDataException("");
             }
             if(reponse != string.Empty)
             {
@@ -1813,7 +1806,7 @@ namespace Application_de_planification_de_vols_aériens
         /// <summary>
         /// Return all "lines names" (departureAirportName / arrivalAirportName) in a List string
         /// </summary>
-        /// <returns></returns>
+        /// <returns>list that contains lines' names</returns>
         public List<string> GetLinesNames()
         {
             List<string> reponse = new List<string>();
@@ -1843,6 +1836,7 @@ namespace Application_de_planification_de_vols_aériens
             catch (MySqlException ex)
             {
                 Console.WriteLine(ex.Message);
+                throw new MySQLGetDataException("");
             }
             return reponse;
         }
@@ -1850,7 +1844,7 @@ namespace Application_de_planification_de_vols_aériens
         /// <summary>
         /// Return all existing lines
         /// </summary>
-        /// <returns></returns>
+        /// <returns>list that contains line objects</returns>
         public List<Line> GetLines()
         {
             List<Line> lines = new List<Line>();
@@ -1886,6 +1880,7 @@ namespace Application_de_planification_de_vols_aériens
             catch (MySqlException ex)
             {
                 Console.WriteLine(ex.Message);
+                throw new MySQLGetDataException("");
             }
             return lines;
         }
@@ -1893,8 +1888,8 @@ namespace Application_de_planification_de_vols_aériens
         /// <summary>
         /// Return line's distance from idLine
         /// </summary>
-        /// <param name="idLine"></param>
-        /// <returns></returns>
+        /// <param name="idLine">line's id</param>
+        /// <returns>line's distance</returns>
         public int GetLineDistance(int idLine)
         {
             string reponse = string.Empty;
@@ -1929,6 +1924,7 @@ namespace Application_de_planification_de_vols_aériens
             catch (MySqlException ex)
             {
                 Console.WriteLine(ex.Message);
+                throw new MySQLGetDataException("");
             }
             return Int32.Parse(reponse);
         }
@@ -1936,9 +1932,9 @@ namespace Application_de_planification_de_vols_aériens
         /// <summary>
         /// Return line's distance from fkDepartureAirport and fkArrivalAirport
         /// </summary>
-        /// <param name="idDepartureAirport"></param>
-        /// <param name="idArrivalAirport"></param>
-        /// <returns></returns>
+        /// <param name="idDepartureAirport">departureAirport's id</param>
+        /// <param name="idArrivalAirport">arrivalAirport's id</param>
+        /// <returns>line's distance</returns>
         public int GetLineDistance(int idDepartureAirport, int idArrivalAirport)
         {
             int output = 0;
@@ -1974,6 +1970,7 @@ namespace Application_de_planification_de_vols_aériens
             catch (MySqlException ex)
             {
                 Console.WriteLine(ex.Message);
+                throw new MySQLGetDataException("");
             }
             if(reponse != string.Empty)
             {
@@ -1985,9 +1982,9 @@ namespace Application_de_planification_de_vols_aériens
         /// <summary>
         /// Return line's id from fkDepartureAirport, fkArrivalAirport
         /// </summary>
-        /// <param name="idDepartureAirport"></param>
-        /// <param name="idArrivalAirport"></param>
-        /// <returns></returns>
+        /// <param name="idDepartureAirport">departureAirport's id</param>
+        /// <param name="idArrivalAirport">arrivalAirport's id</param>
+        /// <returns>line's id</returns>
         public int GetLineId(int idDepartureAirport, int idArrivalAirport)
         {
             int output = 0;
@@ -2007,8 +2004,6 @@ namespace Application_de_planification_de_vols_aériens
                 //Execute SQL Query
                 cmd.ExecuteNonQuery();
 
-
-
                 var cmdReader = cmd.ExecuteReader();
                 if (cmdReader.Read())
                 {
@@ -2018,11 +2013,11 @@ namespace Application_de_planification_de_vols_aériens
 
                 //close SQL connection
                 this.connection.Close();
-
             }
             catch (MySqlException ex)
             {
                 Console.WriteLine(ex.Message);
+                throw new MySQLGetDataException("");
             }
             if(reponse != string.Empty)
             {
@@ -2037,86 +2032,6 @@ namespace Application_de_planification_de_vols_aériens
 
 
 
-
-
-        /*
-        public string GetLineName(int idLine)
-        {
-            string lineName = string.Empty;
-            try
-            {
-                //ouverture de la connexion SQL
-                this.connection.Open();
-
-                //Création d'une commande SQL en fonction de l'object connection
-                MySqlCommand cmd = this.connection.CreateCommand();
-
-                //SQL Query
-                cmd.CommandText = "SELECT b.airportName as ArrivalAirport, c.airportName as DepartureAirport from  line a inner join airport c on fkDepartureAirport = c.idAirport inner join airport b on fkArrivalAirport = b.idAirport where idLine =\"" + idLine + " order by idLine";
-
-
-                //Execute SQL Query
-                cmd.ExecuteNonQuery();
-
-
-
-                var cmdReader = cmd.ExecuteReader();
-                if (cmdReader.Read())
-                {
-                    lineName = String.Format("{0} / {1}", cmdReader[0], cmdReader[1]);
-
-                }
-
-
-                this.connection.Close();
-            }
-            catch
-            {
-
-            }
-            return lineName;
-        }*/
-
-
-
-
-
-        /*
-        public List<DateTime> GetVacation(int idPilot)
-        {
-            List<DateTime> vacation = new List<DateTime>();
-
-            try
-            {
-                //ouverture de la connexion SQL
-                this.connection.Open();
-
-                //Création d'une commande SQL en fonction de l'object connection
-                MySqlCommand cmd = this.connection.CreateCommand();
-
-                //SQL Query
-                cmd.CommandText = "SELECT startDate, endDate from vacation where fkPilot =\"" + idFlight + "";
-
-
-                //Execute SQL Query
-                cmd.ExecuteNonQuery();
-
-
-                var cmdReader = cmd.ExecuteReader();
-
-                while (cmdReader.Read())
-                {
-                    pilotsFromFlight.Add(string.Format("{0}", cmdReader[0]));
-                }
-
-                this.connection.Close();
-            }
-            catch
-            {
-
-            }
-            return pilotsFromFlight;
-        }*/
 
 
 

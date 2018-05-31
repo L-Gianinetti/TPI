@@ -11,16 +11,18 @@ namespace Application_de_planification_de_vols_aériens
         DBConnection dbConnection = new DBConnection();
         private string name;
         private int idFlight;
+        //String to store departureDate in MySQLDate format
         private string sDepartureDate;
+        //String to store arrivalDate in MySQLDate format
         private string sArrivalDate;
         private DateTime departureDate;
         private DateTime arrivalDate;
         private Line flightLine;
+        //flightTime in hours
         private float flightTimeH;
         private int idLine;
         //Average speed for an airplane
         private float airplaneSpeed = 900;
-        private string lineName = string.Empty;
 
         #region accessors
         public string Name
@@ -62,33 +64,6 @@ namespace Application_de_planification_de_vols_aériens
             }
         }
 
-        public Line FlightLine
-        {
-            get
-            {
-                return flightLine;
-            }
-
-            set
-            {
-                flightLine = value;
-            }
-        }
-
-
-
-        public float FlightTimeH
-        {
-            get
-            {
-                return flightTimeH;
-            }
-
-            set
-            {
-                flightTimeH = value;
-            }
-        }
 
         public int IdLine
         {
@@ -100,19 +75,6 @@ namespace Application_de_planification_de_vols_aériens
             set
             {
                 idLine = value;
-            }
-        }
-
-        public string LineName
-        {
-            get
-            {
-                return lineName;
-            }
-
-            set
-            {
-                lineName = value;
             }
         }
 
@@ -167,9 +129,9 @@ namespace Application_de_planification_de_vols_aériens
             this.departureDate = departureDate;
             this.flightLine = flightLine;
             flightTimeH = calculateFlightTime(this.flightLine.Distance);
-
+            //flightTimeinMinutes
             double flightTimeM = flightTimeH * 60;
-
+            //Add flightTimeMinutes to departureDate to get arrivalDate
             arrivalDate = departureDate.AddMinutes(flightTimeM);
         }
 
@@ -182,20 +144,33 @@ namespace Application_de_planification_de_vols_aériens
             this.idLine = idLine;
         }
 
-        //Return the flightTime in hours
+        /// <summary>
+        /// Return the flightTime in hours
+        /// </summary>
+        /// <param name="distance">flight's distance</param>
+        /// <returns></returns>
         public float calculateFlightTime(float distance)
         {
             flightTimeH = distance / airplaneSpeed;
             return flightTimeH;
         }
 
+        /// <summary>
+        /// Return departureAirport's id
+        /// </summary>
+        /// <returns></returns>
         public int getDepartureAirportId()
         {
+            //Get the airport's acronym from airport's name
             string acronym = name.Substring(0, 3);
             int airportId = dbConnection.GetAirportId(acronym);
             return airportId;
         }
 
+        /// <summary>
+        /// Return arrivalAirport's id
+        /// </summary>
+        /// <returns></returns>
         public int getArrivalAirportId()
         {
             string acronym = name.Substring(3, 3);

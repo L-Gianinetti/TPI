@@ -8,12 +8,14 @@ namespace Application_de_planification_de_vols_aériens
 {
     public static class DateTimeExtensions
     {
+        //Used to create a DateTime with a specific day of the current week
         public static DateTime StartOfWeek(this DateTime dt, DayOfWeek startOfWeek)
         {
             int diff = (7 + (dt.DayOfWeek - startOfWeek)) % 7;
             return dt.AddDays(-1 * diff).Date;
         }
 
+        //Get the numbers of days left in current week
         public  static int GetDaysLeftInCurrentWeek()
         {
             int i = 0;

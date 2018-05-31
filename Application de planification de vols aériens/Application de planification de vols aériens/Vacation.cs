@@ -12,48 +12,6 @@ namespace Application_de_planification_de_vols_aériens
         private DateTime endDate;
         private Pilot pilot;
 
-        #region accessors
-        public DateTime StartDate
-        {
-            get
-            {
-                return startDate;
-            }
-
-            set
-            {
-                startDate = value;
-            }
-        }
-
-        public DateTime EndDate
-        {
-            get
-            {
-                return endDate;
-            }
-
-            set
-            {
-                endDate = value;
-            }
-        }
-
-        public Pilot Pilot
-        {
-            get
-            {
-                return pilot;
-            }
-
-            set
-            {
-                pilot = value;
-            }
-        }
-        #endregion
-
-
         public Vacation(DateTime startDate, DateTime endDate, Pilot pilot)
         {
             this.startDate = startDate;

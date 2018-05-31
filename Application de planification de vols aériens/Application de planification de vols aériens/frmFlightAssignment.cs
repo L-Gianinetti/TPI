@@ -16,10 +16,13 @@ namespace Application_de_planification_de_vols_aériens
         BuildMySQLDate buildMySQLDate = new BuildMySQLDate();
         private string flightName;
         private float flightTime;
-        Pilot pilot = new Pilot();
         private int idFlight;
         Flight flight = new Flight();
 
+        /// <summary>
+        /// Constructor that create a flight object with the selected flight's name
+        /// </summary>
+        /// <param name="name"></param>
         public frmFlightAssignment(string name)
         {
             InitializeComponent();
@@ -27,7 +30,6 @@ namespace Application_de_planification_de_vols_aériens
             this.idFlight = dbConnection.GetFlightId(this.flightName);
             flight = dbConnection.GetFlight(flightName);
         }
-
 
         private void frmFlightAssignment_Load(object sender, EventArgs e)
         {
@@ -39,12 +41,11 @@ namespace Application_de_planification_de_vols_aériens
             RemovePilotsNoRestAfterFlight();
             RemovePilotsInVacation();
             RemovePilotsWorking();
-            RemovePilotsNoRestThisWeek();
-
         }
 
         private void cmdAdd_Click(object sender, EventArgs e)
         {
+            //Get the distance of the flight
             int distance = dbConnection.GetLineDistance(flight.IdLine);
             flightTime = flight.calculateFlightTime(distance);
             //add the selectedPilot in lstPilotesDisponibles to lstPilotesAffectes
@@ -53,10 +54,12 @@ namespace Application_de_planification_de_vols_aériens
                 lstAssignedPilots.Items.Add(lstAvailablePilots.SelectedItem);
                 lstAvailablePilots.Items.Remove(lstAvailablePilots.SelectedItem);
             }
+            //if flightTime <=10 only 1 pilot can be assigned
             if(flightTime <= 10 && lstAssignedPilots.Items.Count == 1)
             {
                 cmdAdd.Enabled = false;
             }
+            //if flightTime > 10 only 2 pilots can be assigned
             if(flightTime > 10 && lstAssignedPilots.Items.Count == 2)
             {
                 cmdAdd.Enabled = false;
@@ -66,8 +69,10 @@ namespace Application_de_planification_de_vols_aériens
 
         public void cmdPlan_Click(object sender, EventArgs e)
         {
+            //Get flight's distance to calculate flightTIme
             int distance = dbConnection.GetLineDistance(flight.IdLine);
             flightTime = flight.calculateFlightTime(distance);
+            // flightTime > 10, 2 pilots have to be assigned
             if (flightTime > 10 && lstAssignedPilots.Items.Count != 2)
             {
                 MessageBox.Show("Le vol dure plus de 10h, il faut assigner un second pilote à ce vol");
@@ -81,22 +86,16 @@ namespace Application_de_planification_de_vols_aériens
                     string infosPilot = lstAssignedPilots.Items[i].ToString();
                     string[] infoPilot = infosPilot.Split(':');
                     int idPilot = int.Parse(infoPilot[0]);
-
                     //Add pilot to flight
                     dbConnection.AddPilotToFlight(idPilot, idFlight);
-
                 }
                 DialogResult res = MessageBox.Show("Le(s) pilote(s) a/ont bien été affecté(s) au vol", "", MessageBoxButtons.OK);
                 if (res == DialogResult.OK)
                 {
                     this.Close();
                 }
-
             }
-        }
-
-
-     
+        }     
 
         /// <summary>
         /// Add pilots to lstPilotesDisponibles if their currentAirportLocation equals departureAirport
@@ -109,6 +108,8 @@ namespace Application_de_planification_de_vols_aériens
             //Get pilots' id, name  firstname who are in departureAirport
             List<string> pilotsId = new List<string>();
             pilotsId = dbConnection.GetPilotsId();
+
+            //Build a string that contain flight's departureDate in MySQLDate format
             string sDepartureDate = flight.SDepartureDate;
             int year = int.Parse(sDepartureDate.Substring(6, 4));
             int month = int.Parse(sDepartureDate.Substring(3,2));
@@ -117,25 +118,27 @@ namespace Application_de_planification_de_vols_aériens
             int min = int.Parse(sDepartureDate.Substring(14,2));
             DateTime departureDate = new DateTime(year, month, day, hour, min, 0);
             string inputDepartureDate = buildMySQLDate.BuildDate(departureDate);
+
             //ForEach pilot, build his display name 
             for (int i = 0; i < pilotsId.Count; i++)
             {
-                int idCurrentAirport = dbConnection.GetPilotCurrentLocation(int.Parse(pilotsId[i]), inputDepartureDate);
-                
-
+                //Get pilot's location
+                int idCurrentAirport = dbConnection.GetPilotCurrentLocation(int.Parse(pilotsId[i]), inputDepartureDate);     
+                //if idCurrentAirport == 0, that means pilot's hasn't flight yet so his idCurrentAirport = idAssignmentAirport           
                 if(idCurrentAirport == 0)
                 {
                     idCurrentAirport = dbConnection.GetPilotAssignmentAirportId(int.Parse(pilotsId[i]));
                 }
+                //If the pilot is in the same airport than the plane
                 if(idCurrentAirport == departureAirportId)
                 {
+                    //build pilot's fullname
                     string pilotName = dbConnection.GetPilotName(int.Parse(pilotsId[i]));
                     string pilotFirstName = dbConnection.GetPilotFirstName(int.Parse(pilotsId[i]));
                     string fullname = pilotsId[i] + ":" + pilotName+ " " + pilotFirstName;
                     //add fullname to lstPilotesDisponibles
                     lstAvailablePilots.Items.Add(fullname);
                 }
-
             }
         }
 
@@ -145,15 +148,20 @@ namespace Application_de_planification_de_vols_aériens
         /// </summary>
         private void RemovePilotsNoRestAfterFlight()
         {
+            //foreach pilot in lstAvailablePilots
             for (int i = 0; i < lstAvailablePilots.Items.Count; i++)
             {
+                //Get pilot's id
                 string infosPilot = lstAvailablePilots.Items[i].ToString();
                 string[] infoPilot = infosPilot.Split(':');
                 int idPilot = int.Parse(infoPilot[0]);
 
+                //Date that contains flight's departureDate
                 DateTime currentFlightDepartureDate = DateTime.Parse(flight.SDepartureDate);
+                //Date that contains pilot's flightLastArrivalDate befor flight's departureDate
                 DateTime lastArrivalDate = dbConnection.GetPilotLastArrivalTime(idPilot, currentFlightDepartureDate);
 
+                //Calculate numbers of hours between 2 dates
                 double hours = (currentFlightDepartureDate - lastArrivalDate).TotalHours;
                 //If pilot hasn't rest 12 hours since his last flight, remove pilot form lstPilotesDisponibles
                 if (hours < 12)
@@ -163,10 +171,15 @@ namespace Application_de_planification_de_vols_aériens
             }
         }
 
+        /// <summary>
+        /// Remove pilots who are working during flight's date
+        /// </summary>
         private void RemovePilotsWorking()
         {
+            //foreach pilot in lstAvailablePilots
             for (int i = 0; i < lstAvailablePilots.Items.Count; i++)
             {
+                //Get pilot's id
                 string infosPilot = lstAvailablePilots.Items[i].ToString();
                 string[] infoPilot = infosPilot.Split(':');
                 int idPilot = int.Parse(infoPilot[0]);
@@ -174,6 +187,7 @@ namespace Application_de_planification_de_vols_aériens
                 DateTime currentFlightDepartureDate = DateTime.Parse(flight.SDepartureDate);
                 DateTime currentFlightArrivalDate = DateTime.Parse(flight.SArrivalDate);
 
+                //If the pilot is working between currentFLightDepartureDate and currentFlightArrivalDate, pilot is removed from lstAvailablePilots
                 if (idPilot == dbConnection.GetIdPilotIfPilotIsWorking(currentFlightDepartureDate, currentFlightArrivalDate, idPilot))
                 {
                     lstAvailablePilots.Items.Remove(lstAvailablePilots.Items[i]);
@@ -186,6 +200,7 @@ namespace Application_de_planification_de_vols_aériens
         /// </summary>
         private void RemovePilotsInVacation()
         {
+            //foreach pilots in lstAvailablePilots
             for(int i = 0; i < lstAvailablePilots.Items.Count; i++)
             {
                 //Get idPilot
@@ -207,11 +222,15 @@ namespace Application_de_planification_de_vols_aériens
                 {
                     lstAvailablePilots.Items.Remove(lstAvailablePilots.Items[i]);
                 }
-
             }
         }
+  
+        #region unfinished Methods
 
-
+        /*
+        /// <summary>
+        /// Remove pilots from lstAvailablePilots if pilot hasn't rest this week
+        /// </summary>
         private void RemovePilotsNoRestThisWeek()
         {
             for(int i = 0; i < lstAvailablePilots.Items.Count; i++)
@@ -344,7 +363,7 @@ namespace Application_de_planification_de_vols_aériens
                 output = true;
             }
             return output;
-        }
-
+        }*/
+        #endregion
     }
 }

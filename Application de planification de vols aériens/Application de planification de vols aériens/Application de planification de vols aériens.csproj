@@ -62,7 +62,6 @@
     <Compile Include="DateTimeExtensions.cs" />
     <Compile Include="DBConnection.cs" />
     <Compile Include="Flight.cs" />
-    <Compile Include="FlightSchedule.cs" />
     <Compile Include="frmFlightAssignment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +88,7 @@
     </Compile>
     <Compile Include="Line.cs" />
     <Compile Include="MySQLException.cs" />
+    <Compile Include="MySQLGetDataException.cs" />
     <Compile Include="Pilot.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

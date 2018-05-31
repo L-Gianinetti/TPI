@@ -12,12 +12,9 @@ namespace Application_de_planification_de_vols_aériens
         private int idDepartureAirport;
         private int idArrivalAirport;
         private float distance;
-        private string arrivalAirportName;
-        private string departureAirportName;
         private int idLine;
+
         #region accessors
-
-
         public float Distance
         {
             get
@@ -67,32 +64,6 @@ namespace Application_de_planification_de_vols_aériens
             set
             {
                 idLine = value;
-            }
-        }
-
-        public string ArrivalAirportName
-        {
-            get
-            {
-                return arrivalAirportName;
-            }
-
-            set
-            {
-                arrivalAirportName = value;
-            }
-        }
-
-        public string DepartureAirportName
-        {
-            get
-            {
-                return departureAirportName;
-            }
-
-            set
-            {
-                departureAirportName = value;
             }
         }
         #endregion

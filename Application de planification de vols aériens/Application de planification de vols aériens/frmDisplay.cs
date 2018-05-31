@@ -15,8 +15,8 @@ namespace Application_de_planification_de_vols_aériens
 {
     public partial class frmDisplay : Form
     {
+        //Thread used to open frmManagement
         Thread thread;
-        Pilot pilot = new Pilot();
         DBConnection dbConnection = new DBConnection();
         public frmDisplay()
         {
@@ -34,6 +34,11 @@ namespace Application_de_planification_de_vols_aériens
             cboMonth.Items.Add("Mois prochain");
         }
 
+        /// <summary>
+        /// Close this form and open frmManagement
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cmdManagement_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -42,6 +47,10 @@ namespace Application_de_planification_de_vols_aériens
             thread.Start();
         }
 
+        /// <summary>
+        /// Open frmManagement
+        /// </summary>
+        /// <param name="obj"></param>
         private void OpenNewForm(object obj)
         {
             Application.Run(new frmManagement());
@@ -132,6 +141,7 @@ namespace Application_de_planification_de_vols_aériens
             //StringBuilder for the readMe.txt and the Pilot's data
             StringBuilder csv = new StringBuilder();
             StringBuilder infosTxt = new StringBuilder();
+
             //Create ReadMe.txt, it explains how data are stored in pilot's planning
             string infosPath = "C:\\Program Files (x86)\\PlanificationVolsAeriens\\Plannings\\ReadMe.txt";
             infosTxt.AppendLine("Les jours ou le pilote ne travaille pas contiennent FreeDay");
@@ -339,16 +349,18 @@ namespace Application_de_planification_de_vols_aériens
                 int selectedrowindex = dgvFlights.SelectedCells[0].RowIndex;
                 DataGridViewRow selectedRow = dgvFlights.Rows[selectedrowindex];
                 string flightName = Convert.ToString(selectedRow.Cells["colName"].Value);
+                //Get the colPilote1 content
                 string pilot1 = Convert.ToString(selectedRow.Cells["colPilote1"].Value);
                 frmFlightAssignment frmFlightAssignment = new frmFlightAssignment(flightName);
+                //Get the flight's departureDate
                 string departureDate = Convert.ToString(selectedRow.Cells["colDateDepart"].Value);
 
+                //Build departureDate in DateTime format
                 int year = int.Parse(departureDate.Substring(6, 4));
                 int month = int.Parse(departureDate.Substring(3, 2));
                 int day = int.Parse(departureDate.Substring(0, 2));
                 int hour = int.Parse(departureDate.Substring(11, 2));
                 int min = int.Parse(departureDate.Substring(14, 2));
-
                 DateTime date = new DateTime(year, month, day, hour, min, 0);                             
 
                 if (flightName == "")
@@ -371,23 +383,18 @@ namespace Application_de_planification_de_vols_aériens
                     if (res == DialogResult.OK)
                     {
                         frmFlightAssignment.Close();
-                        
                     }
                 }
             }
             else
             {
                 MessageBox.Show("Veuillez sélectionner une ligne dans le tableau. Vous pouvez sélectionner la ligne grâce à la colonne située tout à gauche du tableau.");
-            }
-            
+            }         
         }
 
-
-
-
-
-
-
+        /// <summary>
+        /// Add pilots' infomrations in dgvPilots
+        /// </summary>
         private void displayPilots()
         {
             //List<Pilot> to store existing pilots
@@ -402,6 +409,9 @@ namespace Application_de_planification_de_vols_aériens
             });
         }
 
+        /// <summary>
+        /// Add flight's informations in dgvFlights
+        /// </summary>
         private void displayFlights()
         {
             //List<Flight> to store existing flights
@@ -437,6 +447,9 @@ namespace Application_de_planification_de_vols_aériens
             });
         }
 
+        /// <summary>
+        /// Add lines'informations in dgvLines
+        /// </summary>
         private void displayLines()
         {
             //List<Line> to store existing lines
