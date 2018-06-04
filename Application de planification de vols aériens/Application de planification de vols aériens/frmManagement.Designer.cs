@@ -85,7 +85,7 @@
             // 
             // cmdDisplay
             // 
-            this.cmdDisplay.Location = new System.Drawing.Point(33, 16);
+            this.cmdDisplay.Location = new System.Drawing.Point(357, 13);
             this.cmdDisplay.Name = "cmdDisplay";
             this.cmdDisplay.Size = new System.Drawing.Size(75, 23);
             this.cmdDisplay.TabIndex = 1;
@@ -100,10 +100,10 @@
             this.grbManagement.Controls.Add(this.grbPilot);
             this.grbManagement.Location = new System.Drawing.Point(28, 84);
             this.grbManagement.Name = "grbManagement";
-            this.grbManagement.Size = new System.Drawing.Size(869, 644);
+            this.grbManagement.Size = new System.Drawing.Size(869, 533);
             this.grbManagement.TabIndex = 3;
             this.grbManagement.TabStop = false;
-            this.grbManagement.Text = "Gestion";
+            this.grbManagement.Text = "Gestion/Ajout";
             // 
             // grbLine
             // 
@@ -114,17 +114,17 @@
             this.grbLine.Controls.Add(this.lblDistance);
             this.grbLine.Controls.Add(this.lblArrivalPlace);
             this.grbLine.Controls.Add(this.txtDistance);
-            this.grbLine.Location = new System.Drawing.Point(7, 386);
+            this.grbLine.Location = new System.Drawing.Point(6, 206);
             this.grbLine.Name = "grbLine";
-            this.grbLine.Size = new System.Drawing.Size(851, 210);
+            this.grbLine.Size = new System.Drawing.Size(851, 128);
             this.grbLine.TabIndex = 2;
             this.grbLine.TabStop = false;
-            this.grbLine.Text = "Ligne";
+            this.grbLine.Text = "Ajout d\'une ligne";
             // 
             // cboArrivalPlace
             // 
             this.cboArrivalPlace.FormattingEnabled = true;
-            this.cboArrivalPlace.Location = new System.Drawing.Point(535, 34);
+            this.cboArrivalPlace.Location = new System.Drawing.Point(554, 34);
             this.cboArrivalPlace.Name = "cboArrivalPlace";
             this.cboArrivalPlace.Size = new System.Drawing.Size(291, 21);
             this.cboArrivalPlace.TabIndex = 19;
@@ -139,7 +139,7 @@
             // 
             // cmdAddLine
             // 
-            this.cmdAddLine.Location = new System.Drawing.Point(710, 181);
+            this.cmdAddLine.Location = new System.Drawing.Point(758, 81);
             this.cmdAddLine.Name = "cmdAddLine";
             this.cmdAddLine.Size = new System.Drawing.Size(75, 23);
             this.cmdAddLine.TabIndex = 17;
@@ -150,7 +150,7 @@
             // lblDeparturePlace
             // 
             this.lblDeparturePlace.AutoSize = true;
-            this.lblDeparturePlace.Location = new System.Drawing.Point(23, 34);
+            this.lblDeparturePlace.Location = new System.Drawing.Point(24, 34);
             this.lblDeparturePlace.Name = "lblDeparturePlace";
             this.lblDeparturePlace.Size = new System.Drawing.Size(81, 13);
             this.lblDeparturePlace.TabIndex = 2;
@@ -159,7 +159,7 @@
             // lblDistance
             // 
             this.lblDistance.AutoSize = true;
-            this.lblDistance.Location = new System.Drawing.Point(23, 166);
+            this.lblDistance.Location = new System.Drawing.Point(24, 81);
             this.lblDistance.Name = "lblDistance";
             this.lblDistance.Size = new System.Drawing.Size(188, 13);
             this.lblDistance.TabIndex = 7;
@@ -168,7 +168,7 @@
             // lblArrivalPlace
             // 
             this.lblArrivalPlace.AutoSize = true;
-            this.lblArrivalPlace.Location = new System.Drawing.Point(453, 34);
+            this.lblArrivalPlace.Location = new System.Drawing.Point(472, 34);
             this.lblArrivalPlace.Name = "lblArrivalPlace";
             this.lblArrivalPlace.Size = new System.Drawing.Size(76, 13);
             this.lblArrivalPlace.TabIndex = 5;
@@ -176,7 +176,7 @@
             // 
             // txtDistance
             // 
-            this.txtDistance.Location = new System.Drawing.Point(234, 166);
+            this.txtDistance.Location = new System.Drawing.Point(234, 84);
             this.txtDistance.Name = "txtDistance";
             this.txtDistance.Size = new System.Drawing.Size(100, 20);
             this.txtDistance.TabIndex = 11;
@@ -197,12 +197,12 @@
             this.grbFlight.Controls.Add(this.lblDepartureDate);
             this.grbFlight.Controls.Add(this.lblArrivalDate);
             this.grbFlight.Controls.Add(this.lblLine);
-            this.grbFlight.Location = new System.Drawing.Point(7, 200);
+            this.grbFlight.Location = new System.Drawing.Point(6, 347);
             this.grbFlight.Name = "grbFlight";
             this.grbFlight.Size = new System.Drawing.Size(851, 180);
             this.grbFlight.TabIndex = 1;
             this.grbFlight.TabStop = false;
-            this.grbFlight.Text = "Vol";
+            this.grbFlight.Text = "Ajout d\'un vol";
             // 
             // cmdArrivalDate
             // 
@@ -217,7 +217,7 @@
             // nudMArrival
             // 
             this.nudMArrival.Enabled = false;
-            this.nudMArrival.Location = new System.Drawing.Point(539, 68);
+            this.nudMArrival.Location = new System.Drawing.Point(619, 68);
             this.nudMArrival.Maximum = new decimal(new int[] {
             59,
             0,
@@ -230,7 +230,7 @@
             // nudHArrival
             // 
             this.nudHArrival.Enabled = false;
-            this.nudHArrival.Location = new System.Drawing.Point(493, 68);
+            this.nudHArrival.Location = new System.Drawing.Point(563, 68);
             this.nudHArrival.Maximum = new decimal(new int[] {
             23,
             0,
@@ -269,7 +269,7 @@
             // lblArrivalHour
             // 
             this.lblArrivalHour.AutoSize = true;
-            this.lblArrivalHour.Location = new System.Drawing.Point(408, 68);
+            this.lblArrivalHour.Location = new System.Drawing.Point(472, 68);
             this.lblArrivalHour.Name = "lblArrivalHour";
             this.lblArrivalHour.Size = new System.Drawing.Size(85, 13);
             this.lblArrivalHour.TabIndex = 19;
@@ -278,7 +278,7 @@
             // lblDepartureHour
             // 
             this.lblDepartureHour.AutoSize = true;
-            this.lblDepartureHour.Location = new System.Drawing.Point(26, 68);
+            this.lblDepartureHour.Location = new System.Drawing.Point(24, 68);
             this.lblDepartureHour.Name = "lblDepartureHour";
             this.lblDepartureHour.Size = new System.Drawing.Size(90, 13);
             this.lblDepartureHour.TabIndex = 18;
@@ -287,7 +287,7 @@
             // cboLine
             // 
             this.cboLine.FormattingEnabled = true;
-            this.cboLine.Location = new System.Drawing.Point(113, 103);
+            this.cboLine.Location = new System.Drawing.Point(123, 103);
             this.cboLine.Name = "cboLine";
             this.cboLine.Size = new System.Drawing.Size(586, 21);
             this.cboLine.TabIndex = 17;
@@ -295,7 +295,7 @@
             // 
             // cmdAddFlight
             // 
-            this.cmdAddFlight.Location = new System.Drawing.Point(710, 138);
+            this.cmdAddFlight.Location = new System.Drawing.Point(758, 138);
             this.cmdAddFlight.Name = "cmdAddFlight";
             this.cmdAddFlight.Size = new System.Drawing.Size(75, 23);
             this.cmdAddFlight.TabIndex = 16;
@@ -306,14 +306,14 @@
             // dtpArrivalDate
             // 
             this.dtpArrivalDate.Enabled = false;
-            this.dtpArrivalDate.Location = new System.Drawing.Point(493, 34);
+            this.dtpArrivalDate.Location = new System.Drawing.Point(554, 34);
             this.dtpArrivalDate.Name = "dtpArrivalDate";
             this.dtpArrivalDate.Size = new System.Drawing.Size(200, 20);
             this.dtpArrivalDate.TabIndex = 11;
             // 
             // dtpDepartureDate
             // 
-            this.dtpDepartureDate.Location = new System.Drawing.Point(113, 34);
+            this.dtpDepartureDate.Location = new System.Drawing.Point(123, 34);
             this.dtpDepartureDate.Name = "dtpDepartureDate";
             this.dtpDepartureDate.Size = new System.Drawing.Size(200, 20);
             this.dtpDepartureDate.TabIndex = 10;
@@ -322,7 +322,7 @@
             // lblDepartureDate
             // 
             this.lblDepartureDate.AutoSize = true;
-            this.lblDepartureDate.Location = new System.Drawing.Point(23, 34);
+            this.lblDepartureDate.Location = new System.Drawing.Point(24, 34);
             this.lblDepartureDate.Name = "lblDepartureDate";
             this.lblDepartureDate.Size = new System.Drawing.Size(84, 13);
             this.lblDepartureDate.TabIndex = 6;
@@ -331,7 +331,7 @@
             // lblArrivalDate
             // 
             this.lblArrivalDate.AutoSize = true;
-            this.lblArrivalDate.Location = new System.Drawing.Point(408, 34);
+            this.lblArrivalDate.Location = new System.Drawing.Point(472, 34);
             this.lblArrivalDate.Name = "lblArrivalDate";
             this.lblArrivalDate.Size = new System.Drawing.Size(79, 13);
             this.lblArrivalDate.TabIndex = 8;
@@ -340,7 +340,7 @@
             // lblLine
             // 
             this.lblLine.AutoSize = true;
-            this.lblLine.Location = new System.Drawing.Point(19, 103);
+            this.lblLine.Location = new System.Drawing.Point(24, 103);
             this.lblLine.Name = "lblLine";
             this.lblLine.Size = new System.Drawing.Size(39, 13);
             this.lblLine.TabIndex = 4;
@@ -362,7 +362,7 @@
             this.grbPilot.Size = new System.Drawing.Size(845, 170);
             this.grbPilot.TabIndex = 0;
             this.grbPilot.TabStop = false;
-            this.grbPilot.Text = "Pilote";
+            this.grbPilot.Text = "Ajout d\'un pilote";
             // 
             // cboAssignmentAirport
             // 
@@ -374,7 +374,7 @@
             // 
             // cmdAddPilot
             // 
-            this.cmdAddPilot.Location = new System.Drawing.Point(710, 121);
+            this.cmdAddPilot.Location = new System.Drawing.Point(757, 121);
             this.cmdAddPilot.Name = "cmdAddPilot";
             this.cmdAddPilot.Size = new System.Drawing.Size(75, 23);
             this.cmdAddPilot.TabIndex = 15;
@@ -443,11 +443,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(932, 772);
+            this.ClientSize = new System.Drawing.Size(909, 628);
             this.Controls.Add(this.grbManagement);
             this.Controls.Add(this.Entete);
             this.Name = "frmManagement";
-            this.Text = "frmGestion";
+            this.Text = "Gestion";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmManagement_FormClosing);
             this.Load += new System.EventHandler(this.frmManagement_Load);
             this.Entete.ResumeLayout(false);

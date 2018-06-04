@@ -3,35 +3,49 @@
   <compounddef id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_line" kind="class" language="C#" prot="public">
     <compoundname>Application_de_planification_de_vols_aériens::Line</compoundname>
       <sectiondef kind="private-attrib">
-      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_line_1a6a11143555feb2cd4fc2e77edd23e065" prot="private" static="no" mutable="no">
-        <type><ref refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_airport" kindref="compound">Airport</ref></type>
-        <definition>Airport Application_de_planification_de_vols_aériens.Line.departureAirport</definition>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_line_1ab754f922cdb8f213493e73568ee916ef" prot="private" static="no" mutable="no">
+        <type><ref refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection" kindref="compound">DBConnection</ref></type>
+        <definition>DBConnection Application_de_planification_de_vols_aériens.Line.dbConnection</definition>
         <argsstring></argsstring>
-        <name>departureAirport</name>
+        <name>dbConnection</name>
+        <initializer>= new <ref refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection" kindref="compound">DBConnection</ref>()</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Line.cs" line="11" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Line.cs" bodystart="11" bodyend="-1"/>
+        <location file="Application de planification de vols aériens/Line.cs" line="11" column="1" bodyfile="Application de planification de vols aériens/Line.cs" bodystart="11" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_line_1ad1c0bf3915c6b41bd1445a01c6b15ca0" prot="private" static="no" mutable="no">
-        <type><ref refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_airport" kindref="compound">Airport</ref></type>
-        <definition>Airport Application_de_planification_de_vols_aériens.Line.arrivalAirport</definition>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_line_1adb3460678c4e16325355aeb955e78351" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Application_de_planification_de_vols_aériens.Line.idDepartureAirport</definition>
         <argsstring></argsstring>
-        <name>arrivalAirport</name>
+        <name>idDepartureAirport</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Line.cs" line="12" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Line.cs" bodystart="12" bodyend="-1"/>
+        <location file="Application de planification de vols aériens/Line.cs" line="12" column="1" bodyfile="Application de planification de vols aériens/Line.cs" bodystart="12" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_line_1a5a71e6cd7cbbaf2f7b57a0981f2bc0be" prot="private" static="no" mutable="no">
-        <type>string</type>
-        <definition>string Application_de_planification_de_vols_aériens.Line.distance</definition>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_line_1ad514143010af57ec976e25f31d0aebd5" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Application_de_planification_de_vols_aériens.Line.idArrivalAirport</definition>
+        <argsstring></argsstring>
+        <name>idArrivalAirport</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/Line.cs" line="13" column="1" bodyfile="Application de planification de vols aériens/Line.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_line_1a2ba6b52293de64c13169cee95e20c26f" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Application_de_planification_de_vols_aériens.Line.distance</definition>
         <argsstring></argsstring>
         <name>distance</name>
         <briefdescription>
@@ -40,39 +54,26 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Line.cs" line="13" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Line.cs" bodystart="13" bodyend="-1"/>
+        <location file="Application de planification de vols aériens/Line.cs" line="14" column="1" bodyfile="Application de planification de vols aériens/Line.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_line_1ac44a06e9b4c7887d5076577e1d81796d" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Application_de_planification_de_vols_aériens.Line.idLine</definition>
+        <argsstring></argsstring>
+        <name>idLine</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/Line.cs" line="15" column="1" bodyfile="Application de planification de vols aériens/Line.cs" bodystart="15" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="property">
-      <memberdef kind="property" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_line_1a8da050ad85dd315c9f6b4bf425cc9a1f" prot="package" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
-        <type><ref refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_airport" kindref="compound">Airport</ref></type>
-        <definition>Airport Application_de_planification_de_vols_aériens.Line.DepartureAirport</definition>
-        <argsstring></argsstring>
-        <name>DepartureAirport</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Line.cs" line="16" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Line.cs" bodystart="17" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="property" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_line_1ac2b2c210ab39b7ed78bf15696de9f50b" prot="package" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
-        <type><ref refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_airport" kindref="compound">Airport</ref></type>
-        <definition>Airport Application_de_planification_de_vols_aériens.Line.ArrivalAirport</definition>
-        <argsstring></argsstring>
-        <name>ArrivalAirport</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Line.cs" line="29" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Line.cs" bodystart="30" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="property" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_line_1ab20aa426dca4af775b0029f44c9b607d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
-        <type>string</type>
-        <definition>string Application_de_planification_de_vols_aériens.Line.Distance</definition>
+      <memberdef kind="property" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_line_1a42e1df06bab20f7938e89fcf4e51c3d3" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>float</type>
+        <definition>float Application_de_planification_de_vols_aériens.Line.Distance</definition>
         <argsstring></argsstring>
         <name>Distance</name>
         <briefdescription>
@@ -81,38 +82,64 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Line.cs" line="42" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Line.cs" bodystart="43" bodyend="-1"/>
+        <location file="Application de planification de vols aériens/Line.cs" line="18" column="1" bodyfile="Application de planification de vols aériens/Line.cs" bodystart="19" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="property" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_line_1ac7556c8f4a05e81107a2b3f296c41521" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
-        <type><ref refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_airport" kindref="compound">Airport</ref></type>
-        <definition>Airport Application_de_planification_de_vols_aériens.Line.Airport</definition>
+      <memberdef kind="property" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_line_1a1710085d5740c1aaa3c35ee7855ee110" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Application_de_planification_de_vols_aériens.Line.IdDepartureAirport</definition>
         <argsstring></argsstring>
-        <name>Airport</name>
+        <name>IdDepartureAirport</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Line.cs" line="56" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Line.cs" bodystart="57" bodyend="-1"/>
+        <location file="Application de planification de vols aériens/Line.cs" line="31" column="1" bodyfile="Application de planification de vols aériens/Line.cs" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_line_1af561d25ae39b9829ed5a0c78c1747db4" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Application_de_planification_de_vols_aériens.Line.IdArrivalAirport</definition>
+        <argsstring></argsstring>
+        <name>IdArrivalAirport</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/Line.cs" line="44" column="1" bodyfile="Application de planification de vols aériens/Line.cs" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_line_1a303bd0ff69424e6e78a742dd0450c27f" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Application_de_planification_de_vols_aériens.Line.IdLine</definition>
+        <argsstring></argsstring>
+        <name>IdLine</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/Line.cs" line="57" column="1" bodyfile="Application de planification de vols aériens/Line.cs" bodystart="58" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
-      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_line_1ac5938e9893f26cf7224e4bc65e919bb7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_line_1aa1dbd63174ad8389c66e689d96e80f3f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
         <definition>Application_de_planification_de_vols_aériens.Line.Line</definition>
-        <argsstring>(Airport departureAirport, Airport arrivalAirport, string distance)</argsstring>
+        <argsstring>(int idDepartureAirport, int idArrivalAirport, float distance)</argsstring>
         <name>Line</name>
         <param>
-          <type><ref refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_airport" kindref="compound">Airport</ref></type>
-          <declname>departureAirport</declname>
+          <type>int</type>
+          <declname>idDepartureAirport</declname>
         </param>
         <param>
-          <type><ref refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_airport" kindref="compound">Airport</ref></type>
-          <declname>arrivalAirport</declname>
+          <type>int</type>
+          <declname>idArrivalAirport</declname>
         </param>
         <param>
-          <type>string</type>
+          <type>float</type>
           <declname>distance</declname>
         </param>
         <briefdescription>
@@ -121,23 +148,55 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Line.cs" line="68" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Line.cs" bodystart="68" bodyend="71"/>
+        <location file="Application de planification de vols aériens/Line.cs" line="72" column="1" bodyfile="Application de planification de vols aériens/Line.cs" bodystart="72" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_line_1a54bc91837d35e45e736c65416b19e7b3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Application_de_planification_de_vols_aériens.Line.Line</definition>
+        <argsstring>(int idLine, int distance, int idDepartureAirport, int idArrivalAirport)</argsstring>
+        <name>Line</name>
+        <param>
+          <type>int</type>
+          <declname>idLine</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>distance</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>idDepartureAirport</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>idArrivalAirport</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/Line.cs" line="79" column="1" bodyfile="Application de planification de vols aériens/Line.cs" bodystart="79" bodyend="85"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Line.cs" line="10" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Line.cs" bodystart="9" bodyend="72"/>
+    <location file="Application de planification de vols aériens/Line.cs" line="10" column="1" bodyfile="Application de planification de vols aériens/Line.cs" bodystart="9" bodyend="86"/>
     <listofallmembers>
-      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_line_1ac7556c8f4a05e81107a2b3f296c41521" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Line</scope><name>Airport</name></member>
-      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_line_1ac2b2c210ab39b7ed78bf15696de9f50b" prot="package" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Line</scope><name>ArrivalAirport</name></member>
-      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_line_1ad1c0bf3915c6b41bd1445a01c6b15ca0" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Line</scope><name>arrivalAirport</name></member>
-      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_line_1a8da050ad85dd315c9f6b4bf425cc9a1f" prot="package" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Line</scope><name>DepartureAirport</name></member>
-      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_line_1a6a11143555feb2cd4fc2e77edd23e065" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Line</scope><name>departureAirport</name></member>
-      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_line_1ab20aa426dca4af775b0029f44c9b607d" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Line</scope><name>Distance</name></member>
-      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_line_1a5a71e6cd7cbbaf2f7b57a0981f2bc0be" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Line</scope><name>distance</name></member>
-      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_line_1ac5938e9893f26cf7224e4bc65e919bb7" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Line</scope><name>Line</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_line_1ab754f922cdb8f213493e73568ee916ef" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Line</scope><name>dbConnection</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_line_1a2ba6b52293de64c13169cee95e20c26f" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Line</scope><name>distance</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_line_1a42e1df06bab20f7938e89fcf4e51c3d3" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Line</scope><name>Distance</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_line_1af561d25ae39b9829ed5a0c78c1747db4" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Line</scope><name>IdArrivalAirport</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_line_1ad514143010af57ec976e25f31d0aebd5" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Line</scope><name>idArrivalAirport</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_line_1adb3460678c4e16325355aeb955e78351" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Line</scope><name>idDepartureAirport</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_line_1a1710085d5740c1aaa3c35ee7855ee110" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Line</scope><name>IdDepartureAirport</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_line_1a303bd0ff69424e6e78a742dd0450c27f" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Line</scope><name>IdLine</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_line_1ac44a06e9b4c7887d5076577e1d81796d" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Line</scope><name>idLine</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_line_1aa1dbd63174ad8389c66e689d96e80f3f" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Line</scope><name>Line</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_line_1a54bc91837d35e45e736c65416b19e7b3" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Line</scope><name>Line</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

@@ -1384,6 +1384,7 @@ namespace Application_de_planification_de_vols_aériens
             return reponse;
         }
 
+        ///
         /// <summary>
         /// Get airportType
         /// </summary>
@@ -1428,49 +1429,9 @@ namespace Application_de_planification_de_vols_aériens
         }
 
         /// <summary>
-        /// Get all airports' types
-        /// </summary>
-        /// <returns>list that contains airports'types</returns>
-        public List<string> GetAirportsTypes()
-        {
-            List<string> reponse = new List<string>();
-            try
-            {
-                //open SQL connection
-                this.connection.Open();
-
-                //Create SQL command
-                MySqlCommand cmd = this.connection.CreateCommand();
-
-                //SQL Query
-                cmd.CommandText = "SELECT type from airport inner join airportType on fkAirportType = idAirportType order by idAirport";
-
-
-                //Execute SQL Query
-                cmd.ExecuteNonQuery();
-
-                var cmdReader = cmd.ExecuteReader();
-                while (cmdReader.Read())
-                {
-                    reponse.Add(string.Format("{0}", cmdReader[0]));
-                }
-                //close SQL connection
-                this.connection.Close();
-            }
-            catch (MySqlException ex)
-            {
-                Console.WriteLine(ex.Message);
-                throw new MySQLGetDataException("");
-            }
-
-
-            return reponse;
-        }
-
-        /// <summary>
         /// Return all the airportNames in a List string
         /// </summary>
-        /// <returns>list that contains airport's names</returns>
+        /// <returns>list that contains airport's names in alphabetic order</returns>
         public List<string> GetAirportsNames()
         {
             List<string> reponse = new List<string>();
@@ -1483,7 +1444,7 @@ namespace Application_de_planification_de_vols_aériens
                 MySqlCommand cmd = this.connection.CreateCommand();
 
                 //SQL Query
-                cmd.CommandText = "SELECT airportName from airport order by idAirport";
+                cmd.CommandText = "SELECT airportName from airport order by airportName";
 
 
                 //Execute SQL Query
@@ -1730,7 +1691,7 @@ namespace Application_de_planification_de_vols_aériens
                 MySqlCommand cmd = this.connection.CreateCommand();
 
                 //SQL Query
-                cmd.CommandText = "SELECT idFlight, flightName,departureDate, arrivalDate, fkLine from flight inner join line on fkLine = idLine";
+                cmd.CommandText = "SELECT idFlight, flightName,departureDate, arrivalDate, fkLine from flight inner join line on fkLine = idLine order by departureDate asc";
 
 
                 //Execute SQL Query

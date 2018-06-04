@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_my_s_q_l_exception" kind="class" language="C#" prot="public">
+    <compoundname>Application_de_planification_de_vols_aériens::MySQLException</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Exception</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_my_s_q_l_exception_1aa9d3be9e502d7f7587d0a077c68705bf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Application_de_planification_de_vols_aériens.MySQLException.MySQLException</definition>
+        <argsstring>(string message)</argsstring>
+        <name>MySQLException</name>
+        <param>
+          <type>string</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+<para>Exceptions when inserting or updating data in DB </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/MySQLException.cs" line="15" column="1" bodyfile="Application de planification de vols aériens/MySQLException.cs" bodystart="15" bodyend="18"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="36">
+        <label>Application_de_planification_de_vols_aériens.MySQLException</label>
+        <link refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_my_s_q_l_exception"/>
+        <childnode refid="37" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>Exception</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="38">
+        <label>Application_de_planification_de_vols_aériens.MySQLException</label>
+        <link refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_my_s_q_l_exception"/>
+        <childnode refid="39" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>Exception</label>
+      </node>
+    </collaborationgraph>
+    <location file="Application de planification de vols aériens/MySQLException.cs" line="10" column="1" bodyfile="Application de planification de vols aériens/MySQLException.cs" bodystart="9" bodyend="19"/>
+    <listofallmembers>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_my_s_q_l_exception_1aa9d3be9e502d7f7587d0a077c68705bf" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::MySQLException</scope><name>MySQLException</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -14,7 +14,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Airport.cs" line="11" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Airport.cs" bodystart="11" bodyend="-1"/>
+        <location file="Application de planification de vols aériens/Airport.cs" line="11" column="1" bodyfile="Application de planification de vols aériens/Airport.cs" bodystart="11" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="property">
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Airport.cs" line="15" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Airport.cs" bodystart="16" bodyend="-1"/>
+        <location file="Application de planification de vols aériens/Airport.cs" line="15" column="1" bodyfile="Application de planification de vols aériens/Airport.cs" bodystart="16" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -48,14 +48,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Airport.cs" line="29" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Airport.cs" bodystart="29" bodyend="32"/>
+        <location file="Application de planification de vols aériens/Airport.cs" line="29" column="1" bodyfile="Application de planification de vols aériens/Airport.cs" bodystart="29" bodyend="32"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Airport.cs" line="10" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Airport.cs" bodystart="9" bodyend="33"/>
+    <location file="Application de planification de vols aériens/Airport.cs" line="10" column="1" bodyfile="Application de planification de vols aériens/Airport.cs" bodystart="9" bodyend="33"/>
     <listofallmembers>
       <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_airport_1a5507521a7e89a1cef679eff2a043f89c" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Airport</scope><name>Airport</name></member>
       <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_airport_1ae98996e1a993b287cf123bbed957f9f1" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Airport</scope><name>name</name></member>

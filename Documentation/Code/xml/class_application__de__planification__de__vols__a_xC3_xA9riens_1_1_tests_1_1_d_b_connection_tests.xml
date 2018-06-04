@@ -1,0 +1,438 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests" kind="class" language="C#" prot="public">
+    <compoundname>Application_de_planification_de_vols_aériens::Tests::DBConnectionTests</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1a64b4d0c2ea334d7ca97d1efda84b7522" prot="private" static="no" mutable="no">
+        <type><ref refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection" kindref="compound">DBConnection</ref></type>
+        <definition>DBConnection Application_de_planification_de_vols_aériens.Tests.DBConnectionTests.dbConnection</definition>
+        <argsstring></argsstring>
+        <name>dbConnection</name>
+        <initializer>= new <ref refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection" kindref="compound">DBConnection</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DBConnectionTests/DBConnectionTests.cs" line="14" column="1" bodyfile="DBConnectionTests/DBConnectionTests.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1aa8fff2974833b7896177aec94576134b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.Tests.DBConnectionTests.DBConnectionTest</definition>
+        <argsstring>()</argsstring>
+        <name>DBConnectionTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DBConnectionTests/DBConnectionTests.cs" line="17" column="1" bodyfile="DBConnectionTests/DBConnectionTests.cs" bodystart="17" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1ad81ed261c2171b32f7e04d1fc6976f60" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.Tests.DBConnectionTests.AddPilotTest</definition>
+        <argsstring>()</argsstring>
+        <name>AddPilotTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DBConnectionTests/DBConnectionTests.cs" line="23" column="1" bodyfile="DBConnectionTests/DBConnectionTests.cs" bodystart="23" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1afe0e1bab9c5465974ceadfb802d91ee5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.Tests.DBConnectionTests.AddFlightTest</definition>
+        <argsstring>()</argsstring>
+        <name>AddFlightTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DBConnectionTests/DBConnectionTests.cs" line="32" column="1" bodyfile="DBConnectionTests/DBConnectionTests.cs" bodystart="32" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1ac678fd89ad7b663d4d7edcf1d36975ec" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.Tests.DBConnectionTests.AddLineTest</definition>
+        <argsstring>()</argsstring>
+        <name>AddLineTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DBConnectionTests/DBConnectionTests.cs" line="38" column="1" bodyfile="DBConnectionTests/DBConnectionTests.cs" bodystart="38" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1a9b537ca344f2cbbb1f984d90711cae2e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.Tests.DBConnectionTests.AddVacationTest</definition>
+        <argsstring>()</argsstring>
+        <name>AddVacationTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DBConnectionTests/DBConnectionTests.cs" line="44" column="1" bodyfile="DBConnectionTests/DBConnectionTests.cs" bodystart="44" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1a7b7a2aa88ad3243ca50965622cef7383" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.Tests.DBConnectionTests.GetAirportNameTest</definition>
+        <argsstring>()</argsstring>
+        <name>GetAirportNameTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DBConnectionTests/DBConnectionTests.cs" line="50" column="1" bodyfile="DBConnectionTests/DBConnectionTests.cs" bodystart="50" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1a2d931941a0dd00e89444fd369567b213" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.Tests.DBConnectionTests.GetAirportIdTest</definition>
+        <argsstring>()</argsstring>
+        <name>GetAirportIdTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DBConnectionTests/DBConnectionTests.cs" line="56" column="1" bodyfile="DBConnectionTests/DBConnectionTests.cs" bodystart="56" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1aa9df59da54f9fa7d9b93a477d5d61d14" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.Tests.DBConnectionTests.GetLineNameTest</definition>
+        <argsstring>()</argsstring>
+        <name>GetLineNameTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DBConnectionTests/DBConnectionTests.cs" line="71" column="1" bodyfile="DBConnectionTests/DBConnectionTests.cs" bodystart="71" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1a2f65466b172c739b877408361ffdfd8e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.Tests.DBConnectionTests.GetPilotNameTest</definition>
+        <argsstring>()</argsstring>
+        <name>GetPilotNameTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DBConnectionTests/DBConnectionTests.cs" line="77" column="1" bodyfile="DBConnectionTests/DBConnectionTests.cs" bodystart="77" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1a4fb54cb3ff291bf0f07b1ee6c24eadf1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.Tests.DBConnectionTests.GetPilotFirstNameTest</definition>
+        <argsstring>()</argsstring>
+        <name>GetPilotFirstNameTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DBConnectionTests/DBConnectionTests.cs" line="83" column="1" bodyfile="DBConnectionTests/DBConnectionTests.cs" bodystart="83" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1a0992ec5928d037d1e7d8811715a8742f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.Tests.DBConnectionTests.GetPilotAssignmentAirportTest</definition>
+        <argsstring>()</argsstring>
+        <name>GetPilotAssignmentAirportTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DBConnectionTests/DBConnectionTests.cs" line="89" column="1" bodyfile="DBConnectionTests/DBConnectionTests.cs" bodystart="89" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1a27b1560af4f6faa75b279078b06359d6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.Tests.DBConnectionTests.GetPilotFlightTimeTest</definition>
+        <argsstring>()</argsstring>
+        <name>GetPilotFlightTimeTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DBConnectionTests/DBConnectionTests.cs" line="95" column="1" bodyfile="DBConnectionTests/DBConnectionTests.cs" bodystart="95" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1a2ba36f2d91e8636856276d874415c390" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.Tests.DBConnectionTests.GetPilotCurrentLocationTest</definition>
+        <argsstring>()</argsstring>
+        <name>GetPilotCurrentLocationTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DBConnectionTests/DBConnectionTests.cs" line="101" column="1" bodyfile="DBConnectionTests/DBConnectionTests.cs" bodystart="101" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1a586b681dc02d5d1dc14e332ab73dd619" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.Tests.DBConnectionTests.GetPilotLastFlightDateTest</definition>
+        <argsstring>()</argsstring>
+        <name>GetPilotLastFlightDateTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DBConnectionTests/DBConnectionTests.cs" line="107" column="1" bodyfile="DBConnectionTests/DBConnectionTests.cs" bodystart="107" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1a209226db4b4f0a91c634c3b07ef3f32d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.Tests.DBConnectionTests.GetPilotFlightsDepartureDatesTest</definition>
+        <argsstring>()</argsstring>
+        <name>GetPilotFlightsDepartureDatesTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DBConnectionTests/DBConnectionTests.cs" line="113" column="1" bodyfile="DBConnectionTests/DBConnectionTests.cs" bodystart="113" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1ac87143d6e720c7d950a4e490cb6fc5c2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.Tests.DBConnectionTests.GetPilotFlightsArrivalDatesTest</definition>
+        <argsstring>()</argsstring>
+        <name>GetPilotFlightsArrivalDatesTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DBConnectionTests/DBConnectionTests.cs" line="119" column="1" bodyfile="DBConnectionTests/DBConnectionTests.cs" bodystart="119" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1acac076d21207c96de78ff12c90a087ef" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.Tests.DBConnectionTests.GetPilotIdTest</definition>
+        <argsstring>()</argsstring>
+        <name>GetPilotIdTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DBConnectionTests/DBConnectionTests.cs" line="125" column="1" bodyfile="DBConnectionTests/DBConnectionTests.cs" bodystart="125" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1ae581c3f0cefeb0040328aa671d1081b8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.Tests.DBConnectionTests.GetFlightNameTest</definition>
+        <argsstring>()</argsstring>
+        <name>GetFlightNameTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DBConnectionTests/DBConnectionTests.cs" line="131" column="1" bodyfile="DBConnectionTests/DBConnectionTests.cs" bodystart="131" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1a4daaaa200bed9dc846c0e38aeb057b5d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.Tests.DBConnectionTests.GetFlightLineTest</definition>
+        <argsstring>()</argsstring>
+        <name>GetFlightLineTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DBConnectionTests/DBConnectionTests.cs" line="137" column="1" bodyfile="DBConnectionTests/DBConnectionTests.cs" bodystart="137" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1a08c7fee5c26c90d2daaa99c7d471c56b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.Tests.DBConnectionTests.GetDepartureDateTest</definition>
+        <argsstring>()</argsstring>
+        <name>GetDepartureDateTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DBConnectionTests/DBConnectionTests.cs" line="143" column="1" bodyfile="DBConnectionTests/DBConnectionTests.cs" bodystart="143" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1aaf11b989611b0ea592f7681bd58554e0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.Tests.DBConnectionTests.GetArrivalDateTest</definition>
+        <argsstring>()</argsstring>
+        <name>GetArrivalDateTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DBConnectionTests/DBConnectionTests.cs" line="149" column="1" bodyfile="DBConnectionTests/DBConnectionTests.cs" bodystart="149" bodyend="152"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1a3acc992e00cc0c58a16eebf34d45c06e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.Tests.DBConnectionTests.GetFlightPilotsTest</definition>
+        <argsstring>()</argsstring>
+        <name>GetFlightPilotsTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DBConnectionTests/DBConnectionTests.cs" line="155" column="1" bodyfile="DBConnectionTests/DBConnectionTests.cs" bodystart="155" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1a768e15fba325a1b10c1a60a4bb802568" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.Tests.DBConnectionTests.GetLineDepartureAirportTest</definition>
+        <argsstring>()</argsstring>
+        <name>GetLineDepartureAirportTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DBConnectionTests/DBConnectionTests.cs" line="161" column="1" bodyfile="DBConnectionTests/DBConnectionTests.cs" bodystart="161" bodyend="164"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1ab2bd7f36e8627d746273b92c1c95c550" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.Tests.DBConnectionTests.GetLineArrivalAirportTest</definition>
+        <argsstring>()</argsstring>
+        <name>GetLineArrivalAirportTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DBConnectionTests/DBConnectionTests.cs" line="167" column="1" bodyfile="DBConnectionTests/DBConnectionTests.cs" bodystart="167" bodyend="170"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1aa229800debacc28d33e1ac5f157b6212" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.Tests.DBConnectionTests.GetPilotVacationStartDateTest</definition>
+        <argsstring>()</argsstring>
+        <name>GetPilotVacationStartDateTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DBConnectionTests/DBConnectionTests.cs" line="173" column="1" bodyfile="DBConnectionTests/DBConnectionTests.cs" bodystart="173" bodyend="176"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1a49f2a41f1f5930406d374caa517ae4de" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.Tests.DBConnectionTests.GetPilotVacationEndDateTest</definition>
+        <argsstring>()</argsstring>
+        <name>GetPilotVacationEndDateTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DBConnectionTests/DBConnectionTests.cs" line="179" column="1" bodyfile="DBConnectionTests/DBConnectionTests.cs" bodystart="179" bodyend="182"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1ace9243f8e8377f71153fc6c0c0a411b5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.Tests.DBConnectionTests.UpdatePilotCurrentLocationTest</definition>
+        <argsstring>()</argsstring>
+        <name>UpdatePilotCurrentLocationTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DBConnectionTests/DBConnectionTests.cs" line="185" column="1" bodyfile="DBConnectionTests/DBConnectionTests.cs" bodystart="185" bodyend="188"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1ae1bfe546983bc1f32758c9e9a991a9bf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.Tests.DBConnectionTests.UpdatePilotVacationTest</definition>
+        <argsstring>()</argsstring>
+        <name>UpdatePilotVacationTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DBConnectionTests/DBConnectionTests.cs" line="191" column="1" bodyfile="DBConnectionTests/DBConnectionTests.cs" bodystart="191" bodyend="194"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1a0d571f1528375a56cfb4b07dec2d3594" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.Tests.DBConnectionTests.DeletePilotVacationTest</definition>
+        <argsstring>()</argsstring>
+        <name>DeletePilotVacationTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DBConnectionTests/DBConnectionTests.cs" line="197" column="1" bodyfile="DBConnectionTests/DBConnectionTests.cs" bodystart="197" bodyend="200"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="DBConnectionTests/DBConnectionTests.cs" line="13" column="1" bodyfile="DBConnectionTests/DBConnectionTests.cs" bodystart="12" bodyend="201"/>
+    <listofallmembers>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1afe0e1bab9c5465974ceadfb802d91ee5" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Tests::DBConnectionTests</scope><name>AddFlightTest</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1ac678fd89ad7b663d4d7edcf1d36975ec" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Tests::DBConnectionTests</scope><name>AddLineTest</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1ad81ed261c2171b32f7e04d1fc6976f60" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Tests::DBConnectionTests</scope><name>AddPilotTest</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1a9b537ca344f2cbbb1f984d90711cae2e" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Tests::DBConnectionTests</scope><name>AddVacationTest</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1a64b4d0c2ea334d7ca97d1efda84b7522" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Tests::DBConnectionTests</scope><name>dbConnection</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1aa8fff2974833b7896177aec94576134b" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Tests::DBConnectionTests</scope><name>DBConnectionTest</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1a0d571f1528375a56cfb4b07dec2d3594" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Tests::DBConnectionTests</scope><name>DeletePilotVacationTest</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1a2d931941a0dd00e89444fd369567b213" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Tests::DBConnectionTests</scope><name>GetAirportIdTest</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1a7b7a2aa88ad3243ca50965622cef7383" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Tests::DBConnectionTests</scope><name>GetAirportNameTest</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1aaf11b989611b0ea592f7681bd58554e0" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Tests::DBConnectionTests</scope><name>GetArrivalDateTest</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1a08c7fee5c26c90d2daaa99c7d471c56b" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Tests::DBConnectionTests</scope><name>GetDepartureDateTest</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1a4daaaa200bed9dc846c0e38aeb057b5d" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Tests::DBConnectionTests</scope><name>GetFlightLineTest</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1ae581c3f0cefeb0040328aa671d1081b8" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Tests::DBConnectionTests</scope><name>GetFlightNameTest</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1a3acc992e00cc0c58a16eebf34d45c06e" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Tests::DBConnectionTests</scope><name>GetFlightPilotsTest</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1ab2bd7f36e8627d746273b92c1c95c550" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Tests::DBConnectionTests</scope><name>GetLineArrivalAirportTest</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1a768e15fba325a1b10c1a60a4bb802568" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Tests::DBConnectionTests</scope><name>GetLineDepartureAirportTest</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1aa9df59da54f9fa7d9b93a477d5d61d14" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Tests::DBConnectionTests</scope><name>GetLineNameTest</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1a0992ec5928d037d1e7d8811715a8742f" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Tests::DBConnectionTests</scope><name>GetPilotAssignmentAirportTest</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1a2ba36f2d91e8636856276d874415c390" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Tests::DBConnectionTests</scope><name>GetPilotCurrentLocationTest</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1a4fb54cb3ff291bf0f07b1ee6c24eadf1" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Tests::DBConnectionTests</scope><name>GetPilotFirstNameTest</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1ac87143d6e720c7d950a4e490cb6fc5c2" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Tests::DBConnectionTests</scope><name>GetPilotFlightsArrivalDatesTest</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1a209226db4b4f0a91c634c3b07ef3f32d" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Tests::DBConnectionTests</scope><name>GetPilotFlightsDepartureDatesTest</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1a27b1560af4f6faa75b279078b06359d6" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Tests::DBConnectionTests</scope><name>GetPilotFlightTimeTest</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1acac076d21207c96de78ff12c90a087ef" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Tests::DBConnectionTests</scope><name>GetPilotIdTest</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1a586b681dc02d5d1dc14e332ab73dd619" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Tests::DBConnectionTests</scope><name>GetPilotLastFlightDateTest</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1a2f65466b172c739b877408361ffdfd8e" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Tests::DBConnectionTests</scope><name>GetPilotNameTest</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1a49f2a41f1f5930406d374caa517ae4de" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Tests::DBConnectionTests</scope><name>GetPilotVacationEndDateTest</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1aa229800debacc28d33e1ac5f157b6212" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Tests::DBConnectionTests</scope><name>GetPilotVacationStartDateTest</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1ace9243f8e8377f71153fc6c0c0a411b5" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Tests::DBConnectionTests</scope><name>UpdatePilotCurrentLocationTest</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1ae1bfe546983bc1f32758c9e9a991a9bf" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Tests::DBConnectionTests</scope><name>UpdatePilotVacationTest</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

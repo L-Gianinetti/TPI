@@ -61,6 +61,7 @@
             this.lstAvailablePilots.Name = "lstAvailablePilots";
             this.lstAvailablePilots.Size = new System.Drawing.Size(120, 95);
             this.lstAvailablePilots.TabIndex = 2;
+            this.lstAvailablePilots.SelectedIndexChanged += new System.EventHandler(this.lstAvailablePilots_SelectedIndexChanged);
             // 
             // lstAssignedPilots
             // 
@@ -69,6 +70,7 @@
             this.lstAssignedPilots.Name = "lstAssignedPilots";
             this.lstAssignedPilots.Size = new System.Drawing.Size(120, 95);
             this.lstAssignedPilots.TabIndex = 3;
+            this.lstAssignedPilots.SelectedIndexChanged += new System.EventHandler(this.lstAssignedPilots_SelectedIndexChanged);
             // 
             // cmdAdd
             // 

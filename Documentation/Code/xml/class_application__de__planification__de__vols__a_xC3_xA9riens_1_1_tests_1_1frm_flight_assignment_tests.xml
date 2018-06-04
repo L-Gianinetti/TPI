@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1frm_flight_assignment_tests" kind="class" language="C#" prot="public">
+    <compoundname>Application_de_planification_de_vols_aériens::Tests::frmFlightAssignmentTests</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1frm_flight_assignment_tests_1a994202d6ca518315b268d985c0f1f8f6" prot="private" static="no" mutable="no">
+        <type><ref refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection" kindref="compound">DBConnection</ref></type>
+        <definition>DBConnection Application_de_planification_de_vols_aériens.Tests.frmFlightAssignmentTests.dbConnection</definition>
+        <argsstring></argsstring>
+        <name>dbConnection</name>
+        <initializer>= new <ref refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection" kindref="compound">DBConnection</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="AddPilotToFligth/frmFlightAssignmentTests.cs" line="14" column="1" bodyfile="AddPilotToFligth/frmFlightAssignmentTests.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1frm_flight_assignment_tests_1ae70383da6a80c6eee9fcfd668905146d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.Tests.frmFlightAssignmentTests.addPilotToFlightTest</definition>
+        <argsstring>()</argsstring>
+        <name>addPilotToFlightTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="AddPilotToFligth/frmFlightAssignmentTests.cs" line="16" column="1" bodyfile="AddPilotToFligth/frmFlightAssignmentTests.cs" bodystart="16" bodyend="44"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="AddPilotToFligth/frmFlightAssignmentTests.cs" line="13" column="1" bodyfile="AddPilotToFligth/frmFlightAssignmentTests.cs" bodystart="12" bodyend="45"/>
+    <listofallmembers>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1frm_flight_assignment_tests_1ae70383da6a80c6eee9fcfd668905146d" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Tests::frmFlightAssignmentTests</scope><name>addPilotToFlightTest</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1frm_flight_assignment_tests_1a994202d6ca518315b268d985c0f1f8f6" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Tests::frmFlightAssignmentTests</scope><name>dbConnection</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

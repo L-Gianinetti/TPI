@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_2ebcb7234d1ba56a686fa32610180ee2" kind="dir">
+    <compoundname>AddPilotToFligth/obj</compoundname>
+    <innerdir refid="dir_d087fc2038132f2e29809c28c9146d15">AddPilotToFligth/obj/Debug</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="AddPilotToFligth/obj/"/>
+  </compounddef>
+</doxygen>

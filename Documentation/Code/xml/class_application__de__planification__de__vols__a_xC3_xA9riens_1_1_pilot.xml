@@ -3,6 +3,34 @@
   <compounddef id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot" kind="class" language="C#" prot="public">
     <compoundname>Application_de_planification_de_vols_aériens::Pilot</compoundname>
       <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot_1aae8eca8d700654f1cf0567353d6d3314" prot="private" static="no" mutable="no">
+        <type><ref refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection" kindref="compound">DBConnection</ref></type>
+        <definition>DBConnection Application_de_planification_de_vols_aériens.Pilot.dbConnection</definition>
+        <argsstring></argsstring>
+        <name>dbConnection</name>
+        <initializer>= new <ref refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection" kindref="compound">DBConnection</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/Pilot.cs" line="11" column="1" bodyfile="Application de planification de vols aériens/Pilot.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot_1aff9526504d8d2623ae90911b9a70994c" prot="private" static="no" mutable="no">
+        <type><ref refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_build_my_s_q_l_date" kindref="compound">BuildMySQLDate</ref></type>
+        <definition>BuildMySQLDate Application_de_planification_de_vols_aériens.Pilot.buildMySQLDate</definition>
+        <argsstring></argsstring>
+        <name>buildMySQLDate</name>
+        <initializer>= new <ref refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_build_my_s_q_l_date" kindref="compound">BuildMySQLDate</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/Pilot.cs" line="13" column="1" bodyfile="Application de planification de vols aériens/Pilot.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
       <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot_1a1d55d0c126a0b1b994a6e2e9fffb1b85" prot="private" static="no" mutable="no">
         <type>string</type>
         <definition>string Application_de_planification_de_vols_aériens.Pilot.name</definition>
@@ -14,7 +42,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Pilot.cs" line="11" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Pilot.cs" bodystart="11" bodyend="-1"/>
+        <location file="Application de planification de vols aériens/Pilot.cs" line="14" column="1" bodyfile="Application de planification de vols aériens/Pilot.cs" bodystart="14" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot_1ad8141ddc24789e3152091ebef91b0f11" prot="private" static="no" mutable="no">
         <type>string</type>
@@ -27,11 +55,24 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Pilot.cs" line="12" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Pilot.cs" bodystart="12" bodyend="-1"/>
+        <location file="Application de planification de vols aériens/Pilot.cs" line="15" column="1" bodyfile="Application de planification de vols aériens/Pilot.cs" bodystart="15" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot_1ae5a4ea2354578f7cf69fe30762d74a3c" prot="private" static="no" mutable="no">
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot_1af10bd5bd8e6b97df4a8216cf22770d75" prot="private" static="no" mutable="no">
         <type>int</type>
-        <definition>int Application_de_planification_de_vols_aériens.Pilot.flightTime</definition>
+        <definition>int Application_de_planification_de_vols_aériens.Pilot.id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/Pilot.cs" line="16" column="1" bodyfile="Application de planification de vols aériens/Pilot.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot_1a52f174679d710c9ca8c115da13788e48" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Application_de_planification_de_vols_aériens.Pilot.flightTime</definition>
         <argsstring></argsstring>
         <name>flightTime</name>
         <briefdescription>
@@ -40,7 +81,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Pilot.cs" line="13" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Pilot.cs" bodystart="13" bodyend="-1"/>
+        <location file="Application de planification de vols aériens/Pilot.cs" line="17" column="1" bodyfile="Application de planification de vols aériens/Pilot.cs" bodystart="17" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot_1a32222a01bd02c237649320fc56e5245e" prot="private" static="no" mutable="no">
         <type><ref refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_airport" kindref="compound">Airport</ref></type>
@@ -53,7 +94,20 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Pilot.cs" line="14" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Pilot.cs" bodystart="14" bodyend="-1"/>
+        <location file="Application de planification de vols aériens/Pilot.cs" line="18" column="1" bodyfile="Application de planification de vols aériens/Pilot.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot_1a4c2150c89e84dadefc0096c8ee8e1e94" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string Application_de_planification_de_vols_aériens.Pilot.assignmentAirportName</definition>
+        <argsstring></argsstring>
+        <name>assignmentAirportName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/Pilot.cs" line="19" column="1" bodyfile="Application de planification de vols aériens/Pilot.cs" bodystart="19" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="property">
@@ -68,7 +122,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Pilot.cs" line="17" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Pilot.cs" bodystart="18" bodyend="-1"/>
+        <location file="Application de planification de vols aériens/Pilot.cs" line="22" column="1" bodyfile="Application de planification de vols aériens/Pilot.cs" bodystart="23" bodyend="-1"/>
       </memberdef>
       <memberdef kind="property" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot_1ab3e8006344beff2d6f8c0c83e20aeaa1" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -81,11 +135,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Pilot.cs" line="30" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Pilot.cs" bodystart="31" bodyend="-1"/>
+        <location file="Application de planification de vols aériens/Pilot.cs" line="35" column="1" bodyfile="Application de planification de vols aériens/Pilot.cs" bodystart="36" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="property" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot_1a04a6b4cd1e16d07382bef7536c5cf31e" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
-        <type>int</type>
-        <definition>int Application_de_planification_de_vols_aériens.Pilot.FlightTime</definition>
+      <memberdef kind="property" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot_1aaf8a3337b9cdcba6790188836c180a4c" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>float</type>
+        <definition>float Application_de_planification_de_vols_aériens.Pilot.FlightTime</definition>
         <argsstring></argsstring>
         <name>FlightTime</name>
         <briefdescription>
@@ -94,27 +148,40 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Pilot.cs" line="43" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Pilot.cs" bodystart="44" bodyend="-1"/>
+        <location file="Application de planification de vols aériens/Pilot.cs" line="48" column="1" bodyfile="Application de planification de vols aériens/Pilot.cs" bodystart="49" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="property" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot_1a451a7371cde9b8ddbae1a2119b0a4061" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
-        <type><ref refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_airport" kindref="compound">Airport</ref></type>
-        <definition>Airport Application_de_planification_de_vols_aériens.Pilot.AssignmentAirport</definition>
+      <memberdef kind="property" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot_1a74a4c13e74423fb879bc23a33a17dbab" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string Application_de_planification_de_vols_aériens.Pilot.AssignmentAirportName</definition>
         <argsstring></argsstring>
-        <name>AssignmentAirport</name>
+        <name>AssignmentAirportName</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Pilot.cs" line="56" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Pilot.cs" bodystart="57" bodyend="-1"/>
+        <location file="Application de planification de vols aériens/Pilot.cs" line="61" column="1" bodyfile="Application de planification de vols aériens/Pilot.cs" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot_1acb3092acba51aaf62e618ac19d7667fe" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Application_de_planification_de_vols_aériens.Pilot.Id</definition>
+        <argsstring></argsstring>
+        <name>Id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/Pilot.cs" line="74" column="1" bodyfile="Application de planification de vols aériens/Pilot.cs" bodystart="75" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
-      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot_1a7275b993fad3162863a8f8418c9e721b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot_1ab77898a6e3637b9145b78f6784c8303a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
         <definition>Application_de_planification_de_vols_aériens.Pilot.Pilot</definition>
-        <argsstring>(string name, string firstName, int flightTime, Airport assignmentAirport)</argsstring>
+        <argsstring>(string name, string firstName, float flightTime, Airport assignmentAirport)</argsstring>
         <name>Pilot</name>
         <param>
           <type>string</type>
@@ -125,7 +192,7 @@
           <declname>firstName</declname>
         </param>
         <param>
-          <type>int</type>
+          <type>float</type>
           <declname>flightTime</declname>
         </param>
         <param>
@@ -138,7 +205,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Pilot.cs" line="73" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Pilot.cs" bodystart="73" bodyend="79"/>
+        <location file="Application de planification de vols aériens/Pilot.cs" line="90" column="1" bodyfile="Application de planification de vols aériens/Pilot.cs" bodystart="90" bodyend="96"/>
       </memberdef>
       <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot_1a797c687880bc62747aacdf30c2d6d24e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -151,25 +218,104 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Pilot.cs" line="80" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Pilot.cs" bodystart="80" bodyend="83"/>
+        <location file="Application de planification de vols aériens/Pilot.cs" line="97" column="1" bodyfile="Application de planification de vols aériens/Pilot.cs" bodystart="97" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot_1aafa2bd3d82d3d6cbe3dbc43aae3292d2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Application_de_planification_de_vols_aériens.Pilot.Pilot</definition>
+        <argsstring>(int id, string name, string firstName, float flightTime, string assignmentAirportName)</argsstring>
+        <name>Pilot</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>firstName</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>flightTime</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>assignmentAirportName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/Pilot.cs" line="103" column="1" bodyfile="Application de planification de vols aériens/Pilot.cs" bodystart="103" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot_1aa6fe1b84098077f1bd604c69ac01ef28" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.Pilot.UpdatePilotsFlightTime</definition>
+        <argsstring>(DateTime lastClosedDate)</argsstring>
+        <name>UpdatePilotsFlightTime</name>
+        <param>
+          <type>DateTime</type>
+          <declname>lastClosedDate</declname>
+        </param>
+        <briefdescription>
+<para>Add flights&apos; time to pilot&apos;s flightTime for the flights he did between application&apos;s last closed date and now </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lastOpenedDate</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/Pilot.cs" line="116" column="1" bodyfile="Application de planification de vols aériens/Pilot.cs" bodystart="116" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot_1abe2e9757973f9f17d1551eed42a4adb4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.Pilot.UpdatePilotsCurrentLocation</definition>
+        <argsstring>()</argsstring>
+        <name>UpdatePilotsCurrentLocation</name>
+        <briefdescription>
+<para>Update pilots current location in db </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/Pilot.cs" line="152" column="1" bodyfile="Application de planification de vols aériens/Pilot.cs" bodystart="152" bodyend="175"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Pilot.cs" line="10" column="1" bodyfile="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Pilot.cs" bodystart="9" bodyend="85"/>
+    <location file="Application de planification de vols aériens/Pilot.cs" line="10" column="1" bodyfile="Application de planification de vols aériens/Pilot.cs" bodystart="9" bodyend="178"/>
     <listofallmembers>
       <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot_1a32222a01bd02c237649320fc56e5245e" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Pilot</scope><name>assignmentAirport</name></member>
-      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot_1a451a7371cde9b8ddbae1a2119b0a4061" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Pilot</scope><name>AssignmentAirport</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot_1a4c2150c89e84dadefc0096c8ee8e1e94" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Pilot</scope><name>assignmentAirportName</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot_1a74a4c13e74423fb879bc23a33a17dbab" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Pilot</scope><name>AssignmentAirportName</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot_1aff9526504d8d2623ae90911b9a70994c" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Pilot</scope><name>buildMySQLDate</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot_1aae8eca8d700654f1cf0567353d6d3314" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Pilot</scope><name>dbConnection</name></member>
       <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot_1ad8141ddc24789e3152091ebef91b0f11" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Pilot</scope><name>firstName</name></member>
       <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot_1ab3e8006344beff2d6f8c0c83e20aeaa1" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Pilot</scope><name>FirstName</name></member>
-      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot_1ae5a4ea2354578f7cf69fe30762d74a3c" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Pilot</scope><name>flightTime</name></member>
-      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot_1a04a6b4cd1e16d07382bef7536c5cf31e" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Pilot</scope><name>FlightTime</name></member>
-      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot_1a1d55d0c126a0b1b994a6e2e9fffb1b85" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Pilot</scope><name>name</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot_1aaf8a3337b9cdcba6790188836c180a4c" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Pilot</scope><name>FlightTime</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot_1a52f174679d710c9ca8c115da13788e48" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Pilot</scope><name>flightTime</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot_1af10bd5bd8e6b97df4a8216cf22770d75" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Pilot</scope><name>id</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot_1acb3092acba51aaf62e618ac19d7667fe" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Pilot</scope><name>Id</name></member>
       <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot_1a397bc161362554d9b1d76cf134255b14" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Pilot</scope><name>Name</name></member>
-      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot_1a7275b993fad3162863a8f8418c9e721b" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Pilot</scope><name>Pilot</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot_1a1d55d0c126a0b1b994a6e2e9fffb1b85" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Pilot</scope><name>name</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot_1ab77898a6e3637b9145b78f6784c8303a" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Pilot</scope><name>Pilot</name></member>
       <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot_1a797c687880bc62747aacdf30c2d6d24e" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Pilot</scope><name>Pilot</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot_1aafa2bd3d82d3d6cbe3dbc43aae3292d2" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Pilot</scope><name>Pilot</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot_1abe2e9757973f9f17d1551eed42a4adb4" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Pilot</scope><name>UpdatePilotsCurrentLocation</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot_1aa6fe1b84098077f1bd604c69ac01ef28" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Pilot</scope><name>UpdatePilotsFlightTime</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

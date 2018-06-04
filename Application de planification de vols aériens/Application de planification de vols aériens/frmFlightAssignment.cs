@@ -33,6 +33,8 @@ namespace Application_de_planification_de_vols_aériens
 
         private void frmFlightAssignment_Load(object sender, EventArgs e)
         {
+            cmdAdd.Enabled = false;
+            cmdPlan.Enabled = false;
             //Get the flight distance to calculate flightTime
             int distance = dbConnection.GetLineDistance(flight.IdLine);
             flightTime = flight.calculateFlightTime(distance);
@@ -224,7 +226,7 @@ namespace Application_de_planification_de_vols_aériens
                 }
             }
         }
-  
+
         #region unfinished Methods
 
         /*
@@ -365,5 +367,29 @@ namespace Application_de_planification_de_vols_aériens
             return output;
         }*/
         #endregion
+
+        private void lstAvailablePilots_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(lstAvailablePilots.SelectedIndex != -1)
+            {
+                cmdAdd.Enabled = true;
+            }
+            else
+            {
+                cmdAdd.Enabled = false;
+            }
+        }
+
+        private void lstAssignedPilots_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(lstAssignedPilots.Items.Count >= 1)
+            {
+                cmdPlan.Enabled = true;
+            }
+            else
+            {
+                cmdPlan.Enabled = false;
+            }
+        }
     }
 }

@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_my_s_q_l_get_data_exception" kind="class" language="C#" prot="public">
+    <compoundname>Application_de_planification_de_vols_aériens::MySQLGetDataException</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Exception</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_my_s_q_l_get_data_exception_1a7391ea922f8c6fb308fc778048746cb1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Application_de_planification_de_vols_aériens.MySQLGetDataException.MySQLGetDataException</definition>
+        <argsstring>(string message)</argsstring>
+        <name>MySQLGetDataException</name>
+        <param>
+          <type>string</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+<para>Exceptions when selecting data in DB </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/MySQLGetDataException.cs" line="15" column="1" bodyfile="Application de planification de vols aériens/MySQLGetDataException.cs" bodystart="15" bodyend="18"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="41">
+        <label>Exception</label>
+      </node>
+      <node id="40">
+        <label>Application_de_planification_de_vols_aériens.MySQLGetDataException</label>
+        <link refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_my_s_q_l_get_data_exception"/>
+        <childnode refid="41" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="43">
+        <label>Exception</label>
+      </node>
+      <node id="42">
+        <label>Application_de_planification_de_vols_aériens.MySQLGetDataException</label>
+        <link refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_my_s_q_l_get_data_exception"/>
+        <childnode refid="43" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Application de planification de vols aériens/MySQLGetDataException.cs" line="10" column="1" bodyfile="Application de planification de vols aériens/MySQLGetDataException.cs" bodystart="9" bodyend="19"/>
+    <listofallmembers>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_my_s_q_l_get_data_exception_1a7391ea922f8c6fb308fc778048746cb1" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::MySQLGetDataException</scope><name>MySQLGetDataException</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

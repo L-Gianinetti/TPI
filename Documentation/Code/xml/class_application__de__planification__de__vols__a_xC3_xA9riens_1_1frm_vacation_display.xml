@@ -1,0 +1,276 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_display" kind="class" language="C#" prot="public">
+    <compoundname>Application_de_planification_de_vols_aériens::frmVacationDisplay</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Form</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_display_1a92341f8be632fd4955fe84a49bdbee81" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Application_de_planification_de_vols_aériens.frmVacationDisplay.idPilot</definition>
+        <argsstring></argsstring>
+        <name>idPilot</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmVacationDisplay.cs" line="15" column="1" bodyfile="Application de planification de vols aériens/frmVacationDisplay.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_display_1ae52c71113e70c1e53da83bcb21363665" prot="private" static="no" mutable="no">
+        <type><ref refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection" kindref="compound">DBConnection</ref></type>
+        <definition>DBConnection Application_de_planification_de_vols_aériens.frmVacationDisplay.dbConnection</definition>
+        <argsstring></argsstring>
+        <name>dbConnection</name>
+        <initializer>= new <ref refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection" kindref="compound">DBConnection</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmVacationDisplay.cs" line="16" column="1" bodyfile="Application de planification de vols aériens/frmVacationDisplay.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_display_1abb0d15d34ce8df58ea150890b7978de4" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer Application_de_planification_de_vols_aériens.frmVacationDisplay.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmVacationDisplay.Designer.cs" line="8" column="1" bodyfile="Application de planification de vols aériens/frmVacationDisplay.Designer.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_display_1a898c4803feb41d18ed163bdfa99a1145" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridView</type>
+        <definition>System.Windows.Forms.DataGridView Application_de_planification_de_vols_aériens.frmVacationDisplay.dgvVacation</definition>
+        <argsstring></argsstring>
+        <name>dgvVacation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmVacationDisplay.Designer.cs" line="89" column="1" bodyfile="Application de planification de vols aériens/frmVacationDisplay.Designer.cs" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_display_1a10131e242e1c776bd4d33d84d57fc382" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button Application_de_planification_de_vols_aériens.frmVacationDisplay.cmdOK</definition>
+        <argsstring></argsstring>
+        <name>cmdOK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmVacationDisplay.Designer.cs" line="90" column="1" bodyfile="Application de planification de vols aériens/frmVacationDisplay.Designer.cs" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_display_1a40583f0a7112e5e63787b1568fb95bd0" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridViewTextBoxColumn</type>
+        <definition>System.Windows.Forms.DataGridViewTextBoxColumn Application_de_planification_de_vols_aériens.frmVacationDisplay.colDebut</definition>
+        <argsstring></argsstring>
+        <name>colDebut</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmVacationDisplay.Designer.cs" line="91" column="1" bodyfile="Application de planification de vols aériens/frmVacationDisplay.Designer.cs" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_display_1a98bdc6cef596648b602003279d2f266d" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridViewTextBoxColumn</type>
+        <definition>System.Windows.Forms.DataGridViewTextBoxColumn Application_de_planification_de_vols_aériens.frmVacationDisplay.colFin</definition>
+        <argsstring></argsstring>
+        <name>colFin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmVacationDisplay.Designer.cs" line="92" column="1" bodyfile="Application de planification de vols aériens/frmVacationDisplay.Designer.cs" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_display_1aa63ad148e88784e53ff98f82d055bb95" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Application_de_planification_de_vols_aériens.frmVacationDisplay.IdPilot</definition>
+        <argsstring></argsstring>
+        <name>IdPilot</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmVacationDisplay.cs" line="17" column="1" bodyfile="Application de planification de vols aériens/frmVacationDisplay.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_display_1a37fd09fd51e6ef80b5dd10ed7c94c473" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Application_de_planification_de_vols_aériens.frmVacationDisplay.frmVacationDisplay</definition>
+        <argsstring>(int id)</argsstring>
+        <name>frmVacationDisplay</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmVacationDisplay.cs" line="30" column="1" bodyfile="Application de planification de vols aériens/frmVacationDisplay.cs" bodystart="30" bodyend="34"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_display_1a49b08d433ec402a571fb939ae9859f97" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.frmVacationDisplay.cmdOK_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>cmdOK_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmVacationDisplay.cs" line="36" column="1" bodyfile="Application de planification de vols aériens/frmVacationDisplay.cs" bodystart="36" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_display_1a3f73f1f6828d636de7c177362eedf206" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.frmVacationDisplay.DisplayVacation</definition>
+        <argsstring>()</argsstring>
+        <name>DisplayVacation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmVacationDisplay.cs" line="41" column="1" bodyfile="Application de planification de vols aériens/frmVacationDisplay.cs" bodystart="41" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_display_1a3d64ab32126ec2479d3debe1025e7874" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.frmVacationDisplay.frmVacationDisplay_Load</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>frmVacationDisplay_Load</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmVacationDisplay.cs" line="67" column="1" bodyfile="Application de planification de vols aériens/frmVacationDisplay.cs" bodystart="67" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_display_1a051155b6280d53334867682baa38f8a1" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.frmVacationDisplay.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmVacationDisplay.Designer.cs" line="29" column="1" bodyfile="Application de planification de vols aériens/frmVacationDisplay.Designer.cs" bodystart="29" bodyend="85"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_display_1aeca6e72f5494f1cf900883c2844fed6e" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void Application_de_planification_de_vols_aériens.frmVacationDisplay.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmVacationDisplay.Designer.cs" line="14" column="1" bodyfile="Application de planification de vols aériens/frmVacationDisplay.Designer.cs" bodystart="14" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="31">
+        <label>Form</label>
+      </node>
+      <node id="30">
+        <label>Application_de_planification_de_vols_aériens.frmVacationDisplay</label>
+        <link refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_display"/>
+        <childnode refid="31" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="33">
+        <label>Form</label>
+      </node>
+      <node id="32">
+        <label>Application_de_planification_de_vols_aériens.frmVacationDisplay</label>
+        <link refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_display"/>
+        <childnode refid="33" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Application de planification de vols aériens/frmVacationDisplay.cs" line="14" column="1" bodyfile="Application de planification de vols aériens/frmVacationDisplay.cs" bodystart="13" bodyend="71"/>
+    <listofallmembers>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_display_1a10131e242e1c776bd4d33d84d57fc382" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmVacationDisplay</scope><name>cmdOK</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_display_1a49b08d433ec402a571fb939ae9859f97" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmVacationDisplay</scope><name>cmdOK_Click</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_display_1a40583f0a7112e5e63787b1568fb95bd0" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmVacationDisplay</scope><name>colDebut</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_display_1a98bdc6cef596648b602003279d2f266d" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmVacationDisplay</scope><name>colFin</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_display_1abb0d15d34ce8df58ea150890b7978de4" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmVacationDisplay</scope><name>components</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_display_1ae52c71113e70c1e53da83bcb21363665" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmVacationDisplay</scope><name>dbConnection</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_display_1a898c4803feb41d18ed163bdfa99a1145" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmVacationDisplay</scope><name>dgvVacation</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_display_1a3f73f1f6828d636de7c177362eedf206" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmVacationDisplay</scope><name>DisplayVacation</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_display_1aeca6e72f5494f1cf900883c2844fed6e" prot="protected" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmVacationDisplay</scope><name>Dispose</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_display_1a37fd09fd51e6ef80b5dd10ed7c94c473" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmVacationDisplay</scope><name>frmVacationDisplay</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_display_1a3d64ab32126ec2479d3debe1025e7874" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmVacationDisplay</scope><name>frmVacationDisplay_Load</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_display_1aa63ad148e88784e53ff98f82d055bb95" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmVacationDisplay</scope><name>IdPilot</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_display_1a92341f8be632fd4955fe84a49bdbee81" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmVacationDisplay</scope><name>idPilot</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_display_1a051155b6280d53334867682baa38f8a1" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmVacationDisplay</scope><name>InitializeComponent</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

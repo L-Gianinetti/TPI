@@ -1,0 +1,1257 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management" kind="class" language="C#" prot="public">
+    <compoundname>Application_de_planification_de_vols_aériens::frmManagement</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Form</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1aecf031812de1dc8ffe95ccbbec2b82cb" prot="private" static="no" mutable="no">
+        <type>Thread</type>
+        <definition>Thread Application_de_planification_de_vols_aériens.frmManagement.thread</definition>
+        <argsstring></argsstring>
+        <name>thread</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmManagement.cs" line="18" column="1" bodyfile="Application de planification de vols aériens/frmManagement.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1aff46963578d393937e0ae77474e20fe9" prot="private" static="no" mutable="no">
+        <type>List&lt; string &gt;</type>
+        <definition>List&lt;string&gt; Application_de_planification_de_vols_aériens.frmManagement.airportList</definition>
+        <argsstring></argsstring>
+        <name>airportList</name>
+        <initializer>= new List&lt;string&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmManagement.cs" line="19" column="1" bodyfile="Application de planification de vols aériens/frmManagement.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1ab35cf9c15186419985dc7748536fb910" prot="private" static="no" mutable="no">
+        <type>List&lt; string &gt;</type>
+        <definition>List&lt;string&gt; Application_de_planification_de_vols_aériens.frmManagement.linesNamesOrderById</definition>
+        <argsstring></argsstring>
+        <name>linesNamesOrderById</name>
+        <initializer>= new List&lt;string&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmManagement.cs" line="20" column="1" bodyfile="Application de planification de vols aériens/frmManagement.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a6ad3f4ec507a11b006a066bc6148b399" prot="private" static="no" mutable="no">
+        <type><ref refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot" kindref="compound">Pilot</ref></type>
+        <definition>Pilot Application_de_planification_de_vols_aériens.frmManagement.newPilot</definition>
+        <argsstring></argsstring>
+        <name>newPilot</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmManagement.cs" line="21" column="1" bodyfile="Application de planification de vols aériens/frmManagement.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1aee5034b941f440a875108b697d5b14ae" prot="private" static="no" mutable="no">
+        <type><ref refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_line" kindref="compound">Line</ref></type>
+        <definition>Line Application_de_planification_de_vols_aériens.frmManagement.line</definition>
+        <argsstring></argsstring>
+        <name>line</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmManagement.cs" line="22" column="1" bodyfile="Application de planification de vols aériens/frmManagement.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a5d006a725a3630164f1f57590165cc59" prot="private" static="no" mutable="no">
+        <type><ref refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_flight" kindref="compound">Flight</ref></type>
+        <definition>Flight Application_de_planification_de_vols_aériens.frmManagement.flight</definition>
+        <argsstring></argsstring>
+        <name>flight</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmManagement.cs" line="23" column="1" bodyfile="Application de planification de vols aériens/frmManagement.cs" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a89aeead5acf440aed7f517d05e99e0f5" prot="private" static="no" mutable="no">
+        <type><ref refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_airport" kindref="compound">Airport</ref></type>
+        <definition>Airport Application_de_planification_de_vols_aériens.frmManagement.airport</definition>
+        <argsstring></argsstring>
+        <name>airport</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmManagement.cs" line="24" column="1" bodyfile="Application de planification de vols aériens/frmManagement.cs" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a810e4319e37a946951d90331d0c6ebb9" prot="private" static="no" mutable="no">
+        <type><ref refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection" kindref="compound">DBConnection</ref></type>
+        <definition>DBConnection Application_de_planification_de_vols_aériens.frmManagement.dbConnection</definition>
+        <argsstring></argsstring>
+        <name>dbConnection</name>
+        <initializer>= new <ref refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection" kindref="compound">DBConnection</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmManagement.cs" line="25" column="1" bodyfile="Application de planification de vols aériens/frmManagement.cs" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1aef04af517f5dbe8d5e29ff8cb938c4c6" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer Application_de_planification_de_vols_aériens.frmManagement.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmManagement.Designer.cs" line="8" column="1" bodyfile="Application de planification de vols aériens/frmManagement.Designer.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1ab74eafd147a4dd4a4956198caf49515e" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Panel</type>
+        <definition>System.Windows.Forms.Panel Application_de_planification_de_vols_aériens.frmManagement.Entete</definition>
+        <argsstring></argsstring>
+        <name>Entete</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmManagement.Designer.cs" line="471" column="1" bodyfile="Application de planification de vols aériens/frmManagement.Designer.cs" bodystart="471" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a8f89b7a1d9b2a73c15f19301bdd3a637" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button Application_de_planification_de_vols_aériens.frmManagement.cmdDisplay</definition>
+        <argsstring></argsstring>
+        <name>cmdDisplay</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmManagement.Designer.cs" line="472" column="1" bodyfile="Application de planification de vols aériens/frmManagement.Designer.cs" bodystart="472" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1ac695277856d62b5cef4d82bde7a71597" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.GroupBox</type>
+        <definition>System.Windows.Forms.GroupBox Application_de_planification_de_vols_aériens.frmManagement.grbManagement</definition>
+        <argsstring></argsstring>
+        <name>grbManagement</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmManagement.Designer.cs" line="473" column="1" bodyfile="Application de planification de vols aériens/frmManagement.Designer.cs" bodystart="473" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a333fd89e211c56933bd5b78a11551ca8" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.GroupBox</type>
+        <definition>System.Windows.Forms.GroupBox Application_de_planification_de_vols_aériens.frmManagement.grbLine</definition>
+        <argsstring></argsstring>
+        <name>grbLine</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmManagement.Designer.cs" line="474" column="1" bodyfile="Application de planification de vols aériens/frmManagement.Designer.cs" bodystart="474" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a8e90a1fa2d8a2e8510bcb39e45388278" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.GroupBox</type>
+        <definition>System.Windows.Forms.GroupBox Application_de_planification_de_vols_aériens.frmManagement.grbFlight</definition>
+        <argsstring></argsstring>
+        <name>grbFlight</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmManagement.Designer.cs" line="475" column="1" bodyfile="Application de planification de vols aériens/frmManagement.Designer.cs" bodystart="475" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a70b567ecee5de463b65b03c6b93675da" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.GroupBox</type>
+        <definition>System.Windows.Forms.GroupBox Application_de_planification_de_vols_aériens.frmManagement.grbPilot</definition>
+        <argsstring></argsstring>
+        <name>grbPilot</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmManagement.Designer.cs" line="476" column="1" bodyfile="Application de planification de vols aériens/frmManagement.Designer.cs" bodystart="476" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a77d05a4431471bcd4df8da7f929a3802" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label Application_de_planification_de_vols_aériens.frmManagement.lblDeparturePlace</definition>
+        <argsstring></argsstring>
+        <name>lblDeparturePlace</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmManagement.Designer.cs" line="477" column="1" bodyfile="Application de planification de vols aériens/frmManagement.Designer.cs" bodystart="477" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1aa88874e66a48dac9d63b1be62722e844" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label Application_de_planification_de_vols_aériens.frmManagement.lblDistance</definition>
+        <argsstring></argsstring>
+        <name>lblDistance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmManagement.Designer.cs" line="478" column="1" bodyfile="Application de planification de vols aériens/frmManagement.Designer.cs" bodystart="478" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a8db3296a2d3b61d9706422859db8da03" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label Application_de_planification_de_vols_aériens.frmManagement.lblArrivalPlace</definition>
+        <argsstring></argsstring>
+        <name>lblArrivalPlace</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmManagement.Designer.cs" line="479" column="1" bodyfile="Application de planification de vols aériens/frmManagement.Designer.cs" bodystart="479" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a406755d1581fca1ac41a1a039b5a523c" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TextBox</type>
+        <definition>System.Windows.Forms.TextBox Application_de_planification_de_vols_aériens.frmManagement.txtDistance</definition>
+        <argsstring></argsstring>
+        <name>txtDistance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmManagement.Designer.cs" line="480" column="1" bodyfile="Application de planification de vols aériens/frmManagement.Designer.cs" bodystart="480" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1ab6d26175d43be89c537e42a990111e28" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label Application_de_planification_de_vols_aériens.frmManagement.lblDepartureDate</definition>
+        <argsstring></argsstring>
+        <name>lblDepartureDate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmManagement.Designer.cs" line="481" column="1" bodyfile="Application de planification de vols aériens/frmManagement.Designer.cs" bodystart="481" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a06b62e2422a3c16994ff7857f7492902" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label Application_de_planification_de_vols_aériens.frmManagement.lblArrivalDate</definition>
+        <argsstring></argsstring>
+        <name>lblArrivalDate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmManagement.Designer.cs" line="482" column="1" bodyfile="Application de planification de vols aériens/frmManagement.Designer.cs" bodystart="482" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a399fdb8670d67e0611c22cf43b61fc4a" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label Application_de_planification_de_vols_aériens.frmManagement.lblLine</definition>
+        <argsstring></argsstring>
+        <name>lblLine</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmManagement.Designer.cs" line="483" column="1" bodyfile="Application de planification de vols aériens/frmManagement.Designer.cs" bodystart="483" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a481f97ab227ac9f5c77e96655e4b4624" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TextBox</type>
+        <definition>System.Windows.Forms.TextBox Application_de_planification_de_vols_aériens.frmManagement.txtFirstName</definition>
+        <argsstring></argsstring>
+        <name>txtFirstName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmManagement.Designer.cs" line="484" column="1" bodyfile="Application de planification de vols aériens/frmManagement.Designer.cs" bodystart="484" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1ab2f090a2e0bb1b2e8fe54f7b0e340029" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TextBox</type>
+        <definition>System.Windows.Forms.TextBox Application_de_planification_de_vols_aériens.frmManagement.txtName</definition>
+        <argsstring></argsstring>
+        <name>txtName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmManagement.Designer.cs" line="485" column="1" bodyfile="Application de planification de vols aériens/frmManagement.Designer.cs" bodystart="485" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a075c633074478185b6581fcb014d7bb6" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label Application_de_planification_de_vols_aériens.frmManagement.lblFirstName</definition>
+        <argsstring></argsstring>
+        <name>lblFirstName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmManagement.Designer.cs" line="486" column="1" bodyfile="Application de planification de vols aériens/frmManagement.Designer.cs" bodystart="486" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a2a1d6b72211f80e4807a0d7f306f0af1" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label Application_de_planification_de_vols_aériens.frmManagement.lblFlightHours</definition>
+        <argsstring></argsstring>
+        <name>lblFlightHours</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmManagement.Designer.cs" line="487" column="1" bodyfile="Application de planification de vols aériens/frmManagement.Designer.cs" bodystart="487" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1af988ae23e017070441002f48e695f752" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label Application_de_planification_de_vols_aériens.frmManagement.lblAssignmentAirport</definition>
+        <argsstring></argsstring>
+        <name>lblAssignmentAirport</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmManagement.Designer.cs" line="488" column="1" bodyfile="Application de planification de vols aériens/frmManagement.Designer.cs" bodystart="488" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a4583174c866ebdf98d937b6b57d79a73" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label Application_de_planification_de_vols_aériens.frmManagement.lblName</definition>
+        <argsstring></argsstring>
+        <name>lblName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmManagement.Designer.cs" line="489" column="1" bodyfile="Application de planification de vols aériens/frmManagement.Designer.cs" bodystart="489" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a73e3a5dd123a2498b70931596b3c266c" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TextBox</type>
+        <definition>System.Windows.Forms.TextBox Application_de_planification_de_vols_aériens.frmManagement.txtFlightHours</definition>
+        <argsstring></argsstring>
+        <name>txtFlightHours</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmManagement.Designer.cs" line="490" column="1" bodyfile="Application de planification de vols aériens/frmManagement.Designer.cs" bodystart="490" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a2fbd2f47f33cc0a0e233a150bdac93e2" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button Application_de_planification_de_vols_aériens.frmManagement.cmdAddLine</definition>
+        <argsstring></argsstring>
+        <name>cmdAddLine</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmManagement.Designer.cs" line="491" column="1" bodyfile="Application de planification de vols aériens/frmManagement.Designer.cs" bodystart="491" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1ae133483ffb3e666de2e11776191185e0" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button Application_de_planification_de_vols_aériens.frmManagement.cmdAddFlight</definition>
+        <argsstring></argsstring>
+        <name>cmdAddFlight</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmManagement.Designer.cs" line="492" column="1" bodyfile="Application de planification de vols aériens/frmManagement.Designer.cs" bodystart="492" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a8af5d033652e97f91826b6e4f86553e6" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DateTimePicker</type>
+        <definition>System.Windows.Forms.DateTimePicker Application_de_planification_de_vols_aériens.frmManagement.dtpArrivalDate</definition>
+        <argsstring></argsstring>
+        <name>dtpArrivalDate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmManagement.Designer.cs" line="493" column="1" bodyfile="Application de planification de vols aériens/frmManagement.Designer.cs" bodystart="493" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a59030ac8222e7707507215bd84a91d56" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DateTimePicker</type>
+        <definition>System.Windows.Forms.DateTimePicker Application_de_planification_de_vols_aériens.frmManagement.dtpDepartureDate</definition>
+        <argsstring></argsstring>
+        <name>dtpDepartureDate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmManagement.Designer.cs" line="494" column="1" bodyfile="Application de planification de vols aériens/frmManagement.Designer.cs" bodystart="494" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1afc4c5187f678d85d4e0793ee0067bca6" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button Application_de_planification_de_vols_aériens.frmManagement.cmdAddPilot</definition>
+        <argsstring></argsstring>
+        <name>cmdAddPilot</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmManagement.Designer.cs" line="495" column="1" bodyfile="Application de planification de vols aériens/frmManagement.Designer.cs" bodystart="495" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a0100e50f39e9c03f564caa554fa583dd" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ComboBox</type>
+        <definition>System.Windows.Forms.ComboBox Application_de_planification_de_vols_aériens.frmManagement.cboAssignmentAirport</definition>
+        <argsstring></argsstring>
+        <name>cboAssignmentAirport</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmManagement.Designer.cs" line="496" column="1" bodyfile="Application de planification de vols aériens/frmManagement.Designer.cs" bodystart="496" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a22237149af76708159854427e117a196" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ComboBox</type>
+        <definition>System.Windows.Forms.ComboBox Application_de_planification_de_vols_aériens.frmManagement.cboArrivalPlace</definition>
+        <argsstring></argsstring>
+        <name>cboArrivalPlace</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmManagement.Designer.cs" line="497" column="1" bodyfile="Application de planification de vols aériens/frmManagement.Designer.cs" bodystart="497" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a281308d1a62e507fa55700eaf0f1f394" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ComboBox</type>
+        <definition>System.Windows.Forms.ComboBox Application_de_planification_de_vols_aériens.frmManagement.cboDeparturePlace</definition>
+        <argsstring></argsstring>
+        <name>cboDeparturePlace</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmManagement.Designer.cs" line="498" column="1" bodyfile="Application de planification de vols aériens/frmManagement.Designer.cs" bodystart="498" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1af73c419ce6414876fa1a9021c5cf240c" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ComboBox</type>
+        <definition>System.Windows.Forms.ComboBox Application_de_planification_de_vols_aériens.frmManagement.cboLine</definition>
+        <argsstring></argsstring>
+        <name>cboLine</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmManagement.Designer.cs" line="499" column="1" bodyfile="Application de planification de vols aériens/frmManagement.Designer.cs" bodystart="499" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a6c377fb5eed4295fd558ce568dd00651" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.NumericUpDown</type>
+        <definition>System.Windows.Forms.NumericUpDown Application_de_planification_de_vols_aériens.frmManagement.nudMArrival</definition>
+        <argsstring></argsstring>
+        <name>nudMArrival</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmManagement.Designer.cs" line="500" column="1" bodyfile="Application de planification de vols aériens/frmManagement.Designer.cs" bodystart="500" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a83b7afc9fc807d0b8d3d280688c4ec9a" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.NumericUpDown</type>
+        <definition>System.Windows.Forms.NumericUpDown Application_de_planification_de_vols_aériens.frmManagement.nudHArrival</definition>
+        <argsstring></argsstring>
+        <name>nudHArrival</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmManagement.Designer.cs" line="501" column="1" bodyfile="Application de planification de vols aériens/frmManagement.Designer.cs" bodystart="501" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a6e68316c181e48c7b3872669983d0f18" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.NumericUpDown</type>
+        <definition>System.Windows.Forms.NumericUpDown Application_de_planification_de_vols_aériens.frmManagement.nudMDeparture</definition>
+        <argsstring></argsstring>
+        <name>nudMDeparture</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmManagement.Designer.cs" line="502" column="1" bodyfile="Application de planification de vols aériens/frmManagement.Designer.cs" bodystart="502" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a87fe7e98e4a49fc125c73ef907c7a42a" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.NumericUpDown</type>
+        <definition>System.Windows.Forms.NumericUpDown Application_de_planification_de_vols_aériens.frmManagement.nudHDeparture</definition>
+        <argsstring></argsstring>
+        <name>nudHDeparture</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmManagement.Designer.cs" line="503" column="1" bodyfile="Application de planification de vols aériens/frmManagement.Designer.cs" bodystart="503" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1acc007784dded046975d6babebe5f6453" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label Application_de_planification_de_vols_aériens.frmManagement.lblArrivalHour</definition>
+        <argsstring></argsstring>
+        <name>lblArrivalHour</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmManagement.Designer.cs" line="504" column="1" bodyfile="Application de planification de vols aériens/frmManagement.Designer.cs" bodystart="504" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a0f79a12a7e5934c3f9d9d74072afc98a" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label Application_de_planification_de_vols_aériens.frmManagement.lblDepartureHour</definition>
+        <argsstring></argsstring>
+        <name>lblDepartureHour</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmManagement.Designer.cs" line="505" column="1" bodyfile="Application de planification de vols aériens/frmManagement.Designer.cs" bodystart="505" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a2bf31b3b46855cf48212db1f7b34aa42" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button Application_de_planification_de_vols_aériens.frmManagement.cmdArrivalDate</definition>
+        <argsstring></argsstring>
+        <name>cmdArrivalDate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmManagement.Designer.cs" line="506" column="1" bodyfile="Application de planification de vols aériens/frmManagement.Designer.cs" bodystart="506" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1aa5081dd5fc8f53d45d54eedbd6a8978a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Application_de_planification_de_vols_aériens.frmManagement.frmManagement</definition>
+        <argsstring>()</argsstring>
+        <name>frmManagement</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmManagement.cs" line="26" column="1" bodyfile="Application de planification de vols aériens/frmManagement.cs" bodystart="26" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1ae1ecd641368b7fa70d16a566b50cb334" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.frmManagement.cmdAddPilote_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>cmdAddPilote_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmManagement.cs" line="86" column="1" bodyfile="Application de planification de vols aériens/frmManagement.cs" bodystart="86" bodyend="115"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a730a91b3fd653f9e487e50e8482b5f49" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.frmManagement.frmManagement_Load</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>frmManagement_Load</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmManagement.cs" line="31" column="1" bodyfile="Application de planification de vols aériens/frmManagement.cs" bodystart="31" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1ab4c452cd5667462ffe6fdef1d45bfe4d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.frmManagement.cmdDisplay_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>cmdDisplay_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmManagement.cs" line="72" column="1" bodyfile="Application de planification de vols aériens/frmManagement.cs" bodystart="72" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a583ed7d95c88f97c0fdc14814fe68f78" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.frmManagement.OpenNewForm</definition>
+        <argsstring>(object obj)</argsstring>
+        <name>OpenNewForm</name>
+        <param>
+          <type>object</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmManagement.cs" line="81" column="1" bodyfile="Application de planification de vols aériens/frmManagement.cs" bodystart="81" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a8263c50946b23b748a86cf0871ca0b2a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.frmManagement.cmdAddVol_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>cmdAddVol_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmManagement.cs" line="117" column="1" bodyfile="Application de planification de vols aériens/frmManagement.cs" bodystart="117" bodyend="163"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a2ffd7d2b0eb56f090782121937994221" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.frmManagement.cmdAddLine_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>cmdAddLine_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmManagement.cs" line="165" column="1" bodyfile="Application de planification de vols aériens/frmManagement.cs" bodystart="165" bodyend="212"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1ad9fde26222a156e5ebc26b2715224f62" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Application_de_planification_de_vols_aériens.frmManagement.DoesStringContainsOnlyLetters</definition>
+        <argsstring>(string input)</argsstring>
+        <name>DoesStringContainsOnlyLetters</name>
+        <param>
+          <type>string</type>
+          <declname>input</declname>
+        </param>
+        <briefdescription>
+<para>Return true if input string contains only letters </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>input</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmManagement.cs" line="222" column="1" bodyfile="Application de planification de vols aériens/frmManagement.cs" bodystart="222" bodyend="231"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a9e2c9a1fdee17d43356cebfea5f78417" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Application_de_planification_de_vols_aériens.frmManagement.DoesStringContainsOnlyNumbers</definition>
+        <argsstring>(string input)</argsstring>
+        <name>DoesStringContainsOnlyNumbers</name>
+        <param>
+          <type>string</type>
+          <declname>input</declname>
+        </param>
+        <briefdescription>
+<para>Return true if input string contains only numbers </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>input</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmManagement.cs" line="238" column="1" bodyfile="Application de planification de vols aériens/frmManagement.cs" bodystart="238" bodyend="247"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a1ee7750225cce05f5389bd3ee8a424d1" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Application_de_planification_de_vols_aériens.frmManagement.ArePilotFieldsFilled</definition>
+        <argsstring>()</argsstring>
+        <name>ArePilotFieldsFilled</name>
+        <briefdescription>
+<para>Return true if required fields to add a pilot are filled </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmManagement.cs" line="253" column="1" bodyfile="Application de planification de vols aériens/frmManagement.cs" bodystart="253" bodyend="266"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a31f86a82608583e350c30c7a9f21b6e4" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Application_de_planification_de_vols_aériens.frmManagement.ArePilotNameLengthOrPilotFirstNameLengthCorrect</definition>
+        <argsstring>(string input)</argsstring>
+        <name>ArePilotNameLengthOrPilotFirstNameLengthCorrect</name>
+        <param>
+          <type>string</type>
+          <declname>input</declname>
+        </param>
+        <briefdescription>
+<para>Return true if input string does less than 46 chars </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>input</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmManagement.cs" line="273" column="1" bodyfile="Application de planification de vols aériens/frmManagement.cs" bodystart="273" bodyend="287"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1abf841426cb1417389622fcc92e27a629" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Application_de_planification_de_vols_aériens.frmManagement.DoesFlightTimeBeginWith0</definition>
+        <argsstring>(string input)</argsstring>
+        <name>DoesFlightTimeBeginWith0</name>
+        <param>
+          <type>string</type>
+          <declname>input</declname>
+        </param>
+        <briefdescription>
+<para>Return true if input string first char equals &quot;0&quot; </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>input</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmManagement.cs" line="294" column="1" bodyfile="Application de planification de vols aériens/frmManagement.cs" bodystart="294" bodyend="309"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1abbbae4f248862b205891ead993f37ad3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Application_de_planification_de_vols_aériens.frmManagement.DoesDistanceBeginWith0</definition>
+        <argsstring>(string input)</argsstring>
+        <name>DoesDistanceBeginWith0</name>
+        <param>
+          <type>string</type>
+          <declname>input</declname>
+        </param>
+        <briefdescription>
+<para>Return true if input string first char equals &quot;0&quot; </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>input</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmManagement.cs" line="319" column="1" bodyfile="Application de planification de vols aériens/frmManagement.cs" bodystart="319" bodyend="334"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a69ae513eb5ff44c546fea559b724a197" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Application_de_planification_de_vols_aériens.frmManagement.DoesDistanceContainsOnlyNumbers</definition>
+        <argsstring>(string input)</argsstring>
+        <name>DoesDistanceContainsOnlyNumbers</name>
+        <param>
+          <type>string</type>
+          <declname>input</declname>
+        </param>
+        <briefdescription>
+<para>Return true if input string contains only numbers </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>input</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmManagement.cs" line="341" column="1" bodyfile="Application de planification de vols aériens/frmManagement.cs" bodystart="341" bodyend="350"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a319afbff51864e549f477fcb6347be1c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Application_de_planification_de_vols_aériens.frmManagement.AreLineFieldsFilled</definition>
+        <argsstring>()</argsstring>
+        <name>AreLineFieldsFilled</name>
+        <briefdescription>
+<para>Return true if every line fields are filled </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmManagement.cs" line="356" column="1" bodyfile="Application de planification de vols aériens/frmManagement.cs" bodystart="356" bodyend="382"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1aaff9a680485581f7a6ce720f6db47942" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Application_de_planification_de_vols_aériens.frmManagement.AreDepartureAirportAndArrivalAirportEqual</definition>
+        <argsstring>()</argsstring>
+        <name>AreDepartureAirportAndArrivalAirportEqual</name>
+        <briefdescription>
+<para>Return true if departureAirport and arrivalAirport are equal </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmManagement.cs" line="388" column="1" bodyfile="Application de planification de vols aériens/frmManagement.cs" bodystart="388" bodyend="402"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1aa8a9380472f2cdf2c43cf35d8e6ce89a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Application_de_planification_de_vols_aériens.frmManagement.AreFlightFieldsFilled</definition>
+        <argsstring>()</argsstring>
+        <name>AreFlightFieldsFilled</name>
+        <briefdescription>
+<para>Return true if every flight fields are filled </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmManagement.cs" line="410" column="1" bodyfile="Application de planification de vols aériens/frmManagement.cs" bodystart="410" bodyend="424"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1ad453bff098c17ff25b0ad86a42364aa2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.frmManagement.cmdDateArrivee_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>cmdDateArrivee_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Calculate and display arrivalDate </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmManagement.cs" line="431" column="1" bodyfile="Application de planification de vols aériens/frmManagement.cs" bodystart="431" bodyend="552"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a053989902811c7cd6d17b320742cf584" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.frmManagement.cboLigne_SelectedIndexChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>cboLigne_SelectedIndexChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmManagement.cs" line="555" column="1" bodyfile="Application de planification de vols aériens/frmManagement.cs" bodystart="555" bodyend="558"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a501805fe32435ee50de4d51125f41913" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.frmManagement.nudHDepart_ValueChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>nudHDepart_ValueChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmManagement.cs" line="560" column="1" bodyfile="Application de planification de vols aériens/frmManagement.cs" bodystart="560" bodyend="563"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1aa18ca46c5818ab8e4c572a1d8f901b22" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.frmManagement.nudMDepart_ValueChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>nudMDepart_ValueChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmManagement.cs" line="565" column="1" bodyfile="Application de planification de vols aériens/frmManagement.cs" bodystart="565" bodyend="568"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a290f956c127aaf88dd88dafc804cc3cb" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.frmManagement.dtpDateDepart_ValueChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>dtpDateDepart_ValueChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmManagement.cs" line="570" column="1" bodyfile="Application de planification de vols aériens/frmManagement.cs" bodystart="570" bodyend="573"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a4bfd49c611fb9e8c852ecf49ad72ac95" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.frmManagement.frmManagement_FormClosing</definition>
+        <argsstring>(object sender, FormClosingEventArgs e)</argsstring>
+        <name>frmManagement_FormClosing</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>FormClosingEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmManagement.cs" line="577" column="1" bodyfile="Application de planification de vols aériens/frmManagement.cs" bodystart="577" bodyend="585"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1aca7389d6d1c738737e78fc1eccb04b10" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.frmManagement.AddAirports</definition>
+        <argsstring>()</argsstring>
+        <name>AddAirports</name>
+        <briefdescription>
+<para>Add airports in comboboxes cboAssignmentAirportm cboArrivalPlace, cboDeparturePlace </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmManagement.cs" line="590" column="1" bodyfile="Application de planification de vols aériens/frmManagement.cs" bodystart="590" bodyend="604"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a0991a044340d1971cdc96eefb559a36c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.frmManagement.AddLines</definition>
+        <argsstring>()</argsstring>
+        <name>AddLines</name>
+        <briefdescription>
+<para>Add lines in combobox cboLine </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmManagement.cs" line="610" column="1" bodyfile="Application de planification de vols aériens/frmManagement.cs" bodystart="610" bodyend="625"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a19ea5ac574a865ea42a318c233c9fd9a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.frmManagement.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmManagement.Designer.cs" line="29" column="1" bodyfile="Application de planification de vols aériens/frmManagement.Designer.cs" bodystart="29" bodyend="467"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1ac720bd92ec43c9d840d80fe5b5b64a1d" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void Application_de_planification_de_vols_aériens.frmManagement.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmManagement.Designer.cs" line="14" column="1" bodyfile="Application de planification de vols aériens/frmManagement.Designer.cs" bodystart="14" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="22">
+        <label>Application_de_planification_de_vols_aériens.frmManagement</label>
+        <link refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management"/>
+        <childnode refid="23" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>Form</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="24">
+        <label>Application_de_planification_de_vols_aériens.frmManagement</label>
+        <link refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management"/>
+        <childnode refid="25" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>Form</label>
+      </node>
+    </collaborationgraph>
+    <location file="Application de planification de vols aériens/frmManagement.cs" line="17" column="1" bodyfile="Application de planification de vols aériens/frmManagement.cs" bodystart="16" bodyend="626"/>
+    <listofallmembers>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1aca7389d6d1c738737e78fc1eccb04b10" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmManagement</scope><name>AddAirports</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a0991a044340d1971cdc96eefb559a36c" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmManagement</scope><name>AddLines</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a89aeead5acf440aed7f517d05e99e0f5" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmManagement</scope><name>airport</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1aff46963578d393937e0ae77474e20fe9" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmManagement</scope><name>airportList</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1aaff9a680485581f7a6ce720f6db47942" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmManagement</scope><name>AreDepartureAirportAndArrivalAirportEqual</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1aa8a9380472f2cdf2c43cf35d8e6ce89a" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmManagement</scope><name>AreFlightFieldsFilled</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a319afbff51864e549f477fcb6347be1c" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmManagement</scope><name>AreLineFieldsFilled</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a1ee7750225cce05f5389bd3ee8a424d1" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmManagement</scope><name>ArePilotFieldsFilled</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a31f86a82608583e350c30c7a9f21b6e4" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmManagement</scope><name>ArePilotNameLengthOrPilotFirstNameLengthCorrect</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a22237149af76708159854427e117a196" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmManagement</scope><name>cboArrivalPlace</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a0100e50f39e9c03f564caa554fa583dd" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmManagement</scope><name>cboAssignmentAirport</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a281308d1a62e507fa55700eaf0f1f394" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmManagement</scope><name>cboDeparturePlace</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a053989902811c7cd6d17b320742cf584" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmManagement</scope><name>cboLigne_SelectedIndexChanged</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1af73c419ce6414876fa1a9021c5cf240c" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmManagement</scope><name>cboLine</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1ae133483ffb3e666de2e11776191185e0" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmManagement</scope><name>cmdAddFlight</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a2fbd2f47f33cc0a0e233a150bdac93e2" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmManagement</scope><name>cmdAddLine</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a2ffd7d2b0eb56f090782121937994221" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmManagement</scope><name>cmdAddLine_Click</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1afc4c5187f678d85d4e0793ee0067bca6" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmManagement</scope><name>cmdAddPilot</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1ae1ecd641368b7fa70d16a566b50cb334" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmManagement</scope><name>cmdAddPilote_Click</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a8263c50946b23b748a86cf0871ca0b2a" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmManagement</scope><name>cmdAddVol_Click</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a2bf31b3b46855cf48212db1f7b34aa42" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmManagement</scope><name>cmdArrivalDate</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1ad453bff098c17ff25b0ad86a42364aa2" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmManagement</scope><name>cmdDateArrivee_Click</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a8f89b7a1d9b2a73c15f19301bdd3a637" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmManagement</scope><name>cmdDisplay</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1ab4c452cd5667462ffe6fdef1d45bfe4d" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmManagement</scope><name>cmdDisplay_Click</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1aef04af517f5dbe8d5e29ff8cb938c4c6" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmManagement</scope><name>components</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a810e4319e37a946951d90331d0c6ebb9" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmManagement</scope><name>dbConnection</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1ac720bd92ec43c9d840d80fe5b5b64a1d" prot="protected" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmManagement</scope><name>Dispose</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1abbbae4f248862b205891ead993f37ad3" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmManagement</scope><name>DoesDistanceBeginWith0</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a69ae513eb5ff44c546fea559b724a197" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmManagement</scope><name>DoesDistanceContainsOnlyNumbers</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1abf841426cb1417389622fcc92e27a629" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmManagement</scope><name>DoesFlightTimeBeginWith0</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1ad9fde26222a156e5ebc26b2715224f62" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmManagement</scope><name>DoesStringContainsOnlyLetters</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a9e2c9a1fdee17d43356cebfea5f78417" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmManagement</scope><name>DoesStringContainsOnlyNumbers</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a8af5d033652e97f91826b6e4f86553e6" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmManagement</scope><name>dtpArrivalDate</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a290f956c127aaf88dd88dafc804cc3cb" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmManagement</scope><name>dtpDateDepart_ValueChanged</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a59030ac8222e7707507215bd84a91d56" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmManagement</scope><name>dtpDepartureDate</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1ab74eafd147a4dd4a4956198caf49515e" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmManagement</scope><name>Entete</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a5d006a725a3630164f1f57590165cc59" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmManagement</scope><name>flight</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1aa5081dd5fc8f53d45d54eedbd6a8978a" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmManagement</scope><name>frmManagement</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a4bfd49c611fb9e8c852ecf49ad72ac95" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmManagement</scope><name>frmManagement_FormClosing</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a730a91b3fd653f9e487e50e8482b5f49" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmManagement</scope><name>frmManagement_Load</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a8e90a1fa2d8a2e8510bcb39e45388278" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmManagement</scope><name>grbFlight</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a333fd89e211c56933bd5b78a11551ca8" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmManagement</scope><name>grbLine</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1ac695277856d62b5cef4d82bde7a71597" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmManagement</scope><name>grbManagement</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a70b567ecee5de463b65b03c6b93675da" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmManagement</scope><name>grbPilot</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a19ea5ac574a865ea42a318c233c9fd9a" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmManagement</scope><name>InitializeComponent</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a06b62e2422a3c16994ff7857f7492902" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmManagement</scope><name>lblArrivalDate</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1acc007784dded046975d6babebe5f6453" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmManagement</scope><name>lblArrivalHour</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a8db3296a2d3b61d9706422859db8da03" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmManagement</scope><name>lblArrivalPlace</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1af988ae23e017070441002f48e695f752" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmManagement</scope><name>lblAssignmentAirport</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1ab6d26175d43be89c537e42a990111e28" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmManagement</scope><name>lblDepartureDate</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a0f79a12a7e5934c3f9d9d74072afc98a" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmManagement</scope><name>lblDepartureHour</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a77d05a4431471bcd4df8da7f929a3802" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmManagement</scope><name>lblDeparturePlace</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1aa88874e66a48dac9d63b1be62722e844" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmManagement</scope><name>lblDistance</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a075c633074478185b6581fcb014d7bb6" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmManagement</scope><name>lblFirstName</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a2a1d6b72211f80e4807a0d7f306f0af1" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmManagement</scope><name>lblFlightHours</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a399fdb8670d67e0611c22cf43b61fc4a" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmManagement</scope><name>lblLine</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a4583174c866ebdf98d937b6b57d79a73" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmManagement</scope><name>lblName</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1aee5034b941f440a875108b697d5b14ae" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmManagement</scope><name>line</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1ab35cf9c15186419985dc7748536fb910" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmManagement</scope><name>linesNamesOrderById</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a6ad3f4ec507a11b006a066bc6148b399" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmManagement</scope><name>newPilot</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a83b7afc9fc807d0b8d3d280688c4ec9a" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmManagement</scope><name>nudHArrival</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a501805fe32435ee50de4d51125f41913" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmManagement</scope><name>nudHDepart_ValueChanged</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a87fe7e98e4a49fc125c73ef907c7a42a" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmManagement</scope><name>nudHDeparture</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a6c377fb5eed4295fd558ce568dd00651" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmManagement</scope><name>nudMArrival</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1aa18ca46c5818ab8e4c572a1d8f901b22" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmManagement</scope><name>nudMDepart_ValueChanged</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a6e68316c181e48c7b3872669983d0f18" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmManagement</scope><name>nudMDeparture</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a583ed7d95c88f97c0fdc14814fe68f78" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmManagement</scope><name>OpenNewForm</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1aecf031812de1dc8ffe95ccbbec2b82cb" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmManagement</scope><name>thread</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a406755d1581fca1ac41a1a039b5a523c" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmManagement</scope><name>txtDistance</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a481f97ab227ac9f5c77e96655e4b4624" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmManagement</scope><name>txtFirstName</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a73e3a5dd123a2498b70931596b3c266c" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmManagement</scope><name>txtFlightHours</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1ab2f090a2e0bb1b2e8fe54f7b0e340029" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmManagement</scope><name>txtName</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

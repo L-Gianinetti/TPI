@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_6fdbfd5bcbc301105f35f2d29352fe54" kind="dir">
+    <compoundname>DBConnectionTests</compoundname>
+    <innerdir refid="dir_6b919e147f2c9c08ad4e226ee9186fb8">DBConnectionTests/obj</innerdir>
+    <innerdir refid="dir_a8980925cd6907937e7c7c56120b11ce">DBConnectionTests/Properties</innerdir>
+    <innerfile refid="_d_b_connection_tests_8cs">DBConnectionTests.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="DBConnectionTests/"/>
+  </compounddef>
+</doxygen>

@@ -113,7 +113,7 @@ namespace Application_de_planification_de_vols_aériens
         /// Add flights' time to pilot's flightTime for the flights he did between application's last closed date and now
         /// </summary>
         /// <param name="lastOpenedDate"></param>
-        public void UpdatePilotsFlightTime(DateTime lastOpenedDate)
+        public void UpdatePilotsFlightTime(DateTime lastClosedDate)
         {
             //List<string> to store all pilots' id
             List<string> pilotsId = new List<string>();
@@ -124,7 +124,7 @@ namespace Application_de_planification_de_vols_aériens
                 //Get current pilot's flightTIme
                 float currentPilotFlightTime = dbConnection.GetPilotFlightTime(int.Parse(pilotsId[i]));
                 //Build last application's closed date in MySQLDate format
-                string closedDate = buildMySQLDate.BuildDate(lastOpenedDate);
+                string closedDate = buildMySQLDate.BuildDate(lastClosedDate);
                 
                 //Build current date in MySQLDate format
                 string currentDate = buildMySQLDate.BuildDate(DateTime.Now);

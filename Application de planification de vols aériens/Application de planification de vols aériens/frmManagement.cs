@@ -17,6 +17,7 @@ namespace Application_de_planification_de_vols_aériens
     {
         Thread thread;
         List<string> airportList = new List<string>();
+        List<string> linesNamesOrderById = new List<string>();
         Pilot newPilot;
         Line line;
         Flight flight;
@@ -31,28 +32,29 @@ namespace Application_de_planification_de_vols_aériens
         {
             //Update piltos current location
             newPilot = new Pilot();
-            DateTime lastOpenedDate = new DateTime();
-            //SaveOpenFormDate();
-            //newPilot.UpdatePilotsCurrentLocation();
+            DateTime lastClosedDate = new DateTime();
 
             //Get the date of the last time this form was opened
-            if(File.Exists("C:\\Program Files (x86)\\PlanificationVolsAeriens\\LastOpenFormDate\\date.txt"))
+            if(File.Exists("C:\\Program Files (x86)\\PlanificationVolsAeriens\\LastClosingFormDate\\date.txt"))
             {
-                string fileContent = System.IO.File.ReadAllText("C:\\Program Files (x86)\\PlanificationVolsAeriens\\LastOpenFormDate\\date.txt");
+                string fileContent = System.IO.File.ReadAllText("C:\\Program Files (x86)\\PlanificationVolsAeriens\\LastClosingFormDate\\date.txt");
                 int year = int.Parse(fileContent.Substring(6, 4));
                 int month = int.Parse(fileContent.Substring(3, 2));
                 int day = int.Parse(fileContent.Substring(0, 2));
                 int hour = int.Parse(fileContent.Substring(11, 2));
                 int min = int.Parse(fileContent.Substring(14, 2));
                
-                lastOpenedDate = new DateTime(year, month, day, hour, min, 0);
+                lastClosedDate = new DateTime(year, month, day, hour, min, 0);
             }
-            newPilot.UpdatePilotsFlightTime(lastOpenedDate);
+            //Update pilots' flightTime
+            newPilot.UpdatePilotsFlightTime(lastClosedDate);
 
+            //Update pilots' currentLocation
             newPilot.UpdatePilotsCurrentLocation();
 
             cmdAddFlight.Enabled = false;
 
+            //Add lines and airports in combobox
             AddLines();
             AddAirports();
 
@@ -69,22 +71,11 @@ namespace Application_de_planification_de_vols_aériens
 
         private void cmdDisplay_Click(object sender, EventArgs e)
         {
+            //Open frmDisplay
             this.Close();
             thread = new Thread(OpenNewForm);
             thread.SetApartmentState(ApartmentState.STA);
             thread.Start();
-            /*
-            this.Dispose();
-            this.Close();
-            //Show form frmAffichage
-            frmDisplay frmDisplay = new frmDisplay();
-            frmDisplay.Show();
-            DialogResult res = new DialogResult();
-            if(res == DialogResult.OK)
-            {
-                frmDisplay.Dispose();
-                frmDisplay.Close();
-            }*/
         }
 
         private void OpenNewForm(object obj)
@@ -109,6 +100,12 @@ namespace Application_de_planification_de_vols_aériens
                     newPilot = new Pilot(txtName.Text, txtFirstName.Text, int.Parse(txtFlightHours.Text), airport);
                     dbConnection.AddPilot(newPilot, idAirport);
                     MessageBox.Show("Le pilote a bien été ajouté");
+
+                    //Clear pilot's fields
+                    txtName.Clear();
+                    txtFirstName.Clear();
+                    txtFlightHours.Clear();
+                    cboAssignmentAirport.SelectedIndex = -1;
                 }
             }
             catch (Exception ex)
@@ -123,7 +120,16 @@ namespace Application_de_planification_de_vols_aériens
             {
                 //Create string with departureAirport and arrivalAirport names
                 string airportsName = cboLine.SelectedItem.ToString();
-                int idLine = cboLine.SelectedIndex + 1;
+                int idLine = 0;
+                //Get idLine, lines' names are stored in List<string> linesnamesOrderById
+                for(int i=0;i< linesNamesOrderById.Count; i++)
+                {
+                    if(linesNamesOrderById[i] == airportsName)
+                    {
+                        idLine = i + 1;
+                    }
+                }
+
                 string departureAirportName = dbConnection.GetDepartureAirportName(idLine);
                 string arrivalAirportName = dbConnection.GetArrivalAirportName(idLine);
 
@@ -469,10 +475,19 @@ namespace Application_de_planification_de_vols_aériens
                         {
                             sDepartureM = "0" + departureM;
                         }
+                        int idLine = 0;
+                        
+                        string lineName = cboLine.SelectedItem.ToString();
+                        //Get line's id, line's are stored in linesNamesOrderById
+                        for(int i=0; i < linesNamesOrderById.Count; i++)
+                        {
+                            if(linesNamesOrderById[i] == lineName)
+                            {
+                                idLine = i + 1;
+                            }
+                        }
 
                         //Create string with departureAirport and arrivalAirport names
-                        string airportsName = cboLine.SelectedItem.ToString();
-                        int idLine = cboLine.SelectedIndex + 1;
                         string departureAirportName = dbConnection.GetDepartureAirportName(idLine);
                         string arrivalAirportName = dbConnection.GetArrivalAirportName(idLine);
 
@@ -536,15 +551,6 @@ namespace Application_de_planification_de_vols_aériens
             }
         }
 
-        private void SaveOpenFormDate()
-        {
-            DateTime currentDate = DateTime.Now;
-            System.IO.Directory.CreateDirectory("C:\\Program Files (x86)\\PlanificationVolsAeriens\\LastOpenFormDate");
-            StringBuilder date = new StringBuilder();
-            date.AppendLine(currentDate.ToString());
-            File.WriteAllText("C:\\Program Files (x86)\\PlanificationVolsAeriens\\LastOpenFormDate\\date.txt", date.ToString());
-        }
-
         #region disable cmdAddFlight if input Data changed
         private void cboLigne_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -570,31 +576,40 @@ namespace Application_de_planification_de_vols_aériens
 
         private void frmManagement_FormClosing(object sender, FormClosingEventArgs e)
         {
+            //Create a file that contains the date when frmManagement is closed
             DateTime currentDate = DateTime.Now;
-            System.IO.Directory.CreateDirectory("C:\\Program Files (x86)\\PlanificationVolsAeriens\\LastOpenFormDate");
+            System.IO.Directory.CreateDirectory("C:\\Program Files (x86)\\PlanificationVolsAeriens\\LastClosingFormDate");
             StringBuilder date = new StringBuilder();
             date.AppendLine(currentDate.ToString());
-            File.WriteAllText("C:\\Program Files (x86)\\PlanificationVolsAeriens\\LastOpenFormDate\\date.txt", date.ToString());
+            File.WriteAllText("C:\\Program Files (x86)\\PlanificationVolsAeriens\\LastClosingFormDate\\date.txt", date.ToString());
         }
 
+        /// <summary>
+        /// Add airports in comboboxes cboAssignmentAirportm cboArrivalPlace, cboDeparturePlace
+        /// </summary>
         private void AddAirports()
         {
             //Add airportsNames in comboboxes
-            List<string> airportType = new List<string>();
-            airportType = dbConnection.GetAirportsTypes();
+            
+            
             airportList = dbConnection.GetAirportsNames();
             for (int i = 0; i < airportList.Count; i++)
             {
-                string airportName = airportType[i] + " / " + airportList[i];
+                string airportType = dbConnection.GetAirportType(airportList[i].ToString());
+                string airportName = airportType + " / " + airportList[i];
                 cboAssignmentAirport.Items.Add(airportName);
                 cboArrivalPlace.Items.Add(airportName);
                 cboDeparturePlace.Items.Add(airportName);
             }
         }
 
+
+        /// <summary>
+        /// Add lines in combobox cboLine
+        /// </summary>
         private void AddLines()
-        {
-            //Add linesNames in combobox
+        {           
+            linesNamesOrderById.Clear();
             List<string> lineList = dbConnection.GetLinesNames();
             for (int y = 0; y < lineList.Count; y++)
             {
@@ -602,7 +617,10 @@ namespace Application_de_planification_de_vols_aériens
                 string airportType1 = dbConnection.GetAirportType(fullLineName[0]);
                 string airportType2 = dbConnection.GetAirportType(fullLineName[1]);
                 string lineName = airportType2 + " " + fullLineName[1] + " / " + airportType1 + " " + fullLineName[0];
+                //Store lines by idOrder in a List<string> that will be use to add flight or lines
+                linesNamesOrderById.Add(lineName);
                 cboLine.Items.Add(lineName);
+                cboLine.Sorted = true;
             }
         }
     }

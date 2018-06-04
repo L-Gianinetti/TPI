@@ -1,0 +1,462 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment" kind="class" language="C#" prot="public">
+    <compoundname>Application_de_planification_de_vols_aériens::frmFlightAssignment</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Form</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment_1af10fe7b55057aec8ce0cf7b3893f2249" prot="private" static="no" mutable="no">
+        <type><ref refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection" kindref="compound">DBConnection</ref></type>
+        <definition>DBConnection Application_de_planification_de_vols_aériens.frmFlightAssignment.dbConnection</definition>
+        <argsstring></argsstring>
+        <name>dbConnection</name>
+        <initializer>= new <ref refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection" kindref="compound">DBConnection</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmFlightAssignment.cs" line="15" column="1" bodyfile="Application de planification de vols aériens/frmFlightAssignment.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment_1aa55cd4d0812827e9df1a6604d9a0b94e" prot="private" static="no" mutable="no">
+        <type><ref refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_build_my_s_q_l_date" kindref="compound">BuildMySQLDate</ref></type>
+        <definition>BuildMySQLDate Application_de_planification_de_vols_aériens.frmFlightAssignment.buildMySQLDate</definition>
+        <argsstring></argsstring>
+        <name>buildMySQLDate</name>
+        <initializer>= new <ref refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_build_my_s_q_l_date" kindref="compound">BuildMySQLDate</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmFlightAssignment.cs" line="16" column="1" bodyfile="Application de planification de vols aériens/frmFlightAssignment.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment_1aef8443085ce787472de70d2b5b0586da" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string Application_de_planification_de_vols_aériens.frmFlightAssignment.flightName</definition>
+        <argsstring></argsstring>
+        <name>flightName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmFlightAssignment.cs" line="17" column="1" bodyfile="Application de planification de vols aériens/frmFlightAssignment.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment_1a9cdb7b872ff2713397a9d6e8646401f3" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Application_de_planification_de_vols_aériens.frmFlightAssignment.flightTime</definition>
+        <argsstring></argsstring>
+        <name>flightTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmFlightAssignment.cs" line="18" column="1" bodyfile="Application de planification de vols aériens/frmFlightAssignment.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment_1a1cd8e978e48d9824fdb652eefcc0a4c8" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Application_de_planification_de_vols_aériens.frmFlightAssignment.idFlight</definition>
+        <argsstring></argsstring>
+        <name>idFlight</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmFlightAssignment.cs" line="19" column="1" bodyfile="Application de planification de vols aériens/frmFlightAssignment.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment_1a191dfe4009d1d4d9b145e654332bae35" prot="private" static="no" mutable="no">
+        <type><ref refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_flight" kindref="compound">Flight</ref></type>
+        <definition>Flight Application_de_planification_de_vols_aériens.frmFlightAssignment.flight</definition>
+        <argsstring></argsstring>
+        <name>flight</name>
+        <initializer>= new <ref refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_flight" kindref="compound">Flight</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmFlightAssignment.cs" line="20" column="1" bodyfile="Application de planification de vols aériens/frmFlightAssignment.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment_1aa26007e1eaf9087bdbd81572a42e9941" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer Application_de_planification_de_vols_aériens.frmFlightAssignment.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmFlightAssignment.Designer.cs" line="8" column="1" bodyfile="Application de planification de vols aériens/frmFlightAssignment.Designer.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment_1a657a47d713db7d5c388508e9ccd40170" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label Application_de_planification_de_vols_aériens.frmFlightAssignment.lblAvailablePilots</definition>
+        <argsstring></argsstring>
+        <name>lblAvailablePilots</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmFlightAssignment.Designer.cs" line="117" column="1" bodyfile="Application de planification de vols aériens/frmFlightAssignment.Designer.cs" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment_1a02d902dc60d50026a42c82e934637d1d" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label Application_de_planification_de_vols_aériens.frmFlightAssignment.lblAssignedPilots</definition>
+        <argsstring></argsstring>
+        <name>lblAssignedPilots</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmFlightAssignment.Designer.cs" line="118" column="1" bodyfile="Application de planification de vols aériens/frmFlightAssignment.Designer.cs" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment_1aaf520ff49e47b996385324ff47db087b" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ListBox</type>
+        <definition>System.Windows.Forms.ListBox Application_de_planification_de_vols_aériens.frmFlightAssignment.lstAvailablePilots</definition>
+        <argsstring></argsstring>
+        <name>lstAvailablePilots</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmFlightAssignment.Designer.cs" line="119" column="1" bodyfile="Application de planification de vols aériens/frmFlightAssignment.Designer.cs" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment_1a73609264d552f77c2a9969b41c4d434f" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ListBox</type>
+        <definition>System.Windows.Forms.ListBox Application_de_planification_de_vols_aériens.frmFlightAssignment.lstAssignedPilots</definition>
+        <argsstring></argsstring>
+        <name>lstAssignedPilots</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmFlightAssignment.Designer.cs" line="120" column="1" bodyfile="Application de planification de vols aériens/frmFlightAssignment.Designer.cs" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment_1a32c31cf5512cf2ec3fa7864b9e7f2d88" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button Application_de_planification_de_vols_aériens.frmFlightAssignment.cmdAdd</definition>
+        <argsstring></argsstring>
+        <name>cmdAdd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmFlightAssignment.Designer.cs" line="121" column="1" bodyfile="Application de planification de vols aériens/frmFlightAssignment.Designer.cs" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment_1a230c9b08ff70f511b51a08159ee17309" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button Application_de_planification_de_vols_aériens.frmFlightAssignment.cmdPlan</definition>
+        <argsstring></argsstring>
+        <name>cmdPlan</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmFlightAssignment.Designer.cs" line="122" column="1" bodyfile="Application de planification de vols aériens/frmFlightAssignment.Designer.cs" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment_1a4db5f4e2ab177ba17c2029b134f20548" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Application_de_planification_de_vols_aériens.frmFlightAssignment.frmFlightAssignment</definition>
+        <argsstring>(string name)</argsstring>
+        <name>frmFlightAssignment</name>
+        <param>
+          <type>string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Constructor that create a flight object with the selected flight&apos;s name </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmFlightAssignment.cs" line="26" column="1" bodyfile="Application de planification de vols aériens/frmFlightAssignment.cs" bodystart="26" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment_1a30cabe073f4054db02928401990b6413" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.frmFlightAssignment.cmdPlan_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>cmdPlan_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmFlightAssignment.cs" line="72" column="1" bodyfile="Application de planification de vols aériens/frmFlightAssignment.cs" bodystart="72" bodyend="100"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment_1a1eedb8c26a8c3ea565d855ae2b1a21d5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.frmFlightAssignment.frmFlightAssignment_Load</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>frmFlightAssignment_Load</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmFlightAssignment.cs" line="34" column="1" bodyfile="Application de planification de vols aériens/frmFlightAssignment.cs" bodystart="34" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment_1aee2030b22f93c37167b9b611caeb27e4" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.frmFlightAssignment.cmdAdd_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>cmdAdd_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmFlightAssignment.cs" line="48" column="1" bodyfile="Application de planification de vols aériens/frmFlightAssignment.cs" bodystart="48" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment_1ab22959995b737684f093849a72529698" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.frmFlightAssignment.LoadAllPilotsInCurrentAirport</definition>
+        <argsstring>()</argsstring>
+        <name>LoadAllPilotsInCurrentAirport</name>
+        <briefdescription>
+<para>Add pilots to lstPilotesDisponibles if their currentAirportLocation equals departureAirport </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmFlightAssignment.cs" line="105" column="1" bodyfile="Application de planification de vols aériens/frmFlightAssignment.cs" bodystart="105" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment_1a6daf6be84ec9e12ad1414c06bf567a95" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.frmFlightAssignment.RemovePilotsNoRestAfterFlight</definition>
+        <argsstring>()</argsstring>
+        <name>RemovePilotsNoRestAfterFlight</name>
+        <briefdescription>
+<para>Remove form lstPilotesDisponibles every pilot who hasn&apos;t rest from his last flight </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmFlightAssignment.cs" line="151" column="1" bodyfile="Application de planification de vols aériens/frmFlightAssignment.cs" bodystart="151" bodyend="174"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment_1a431cdca47444a02acca2745795bb100e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.frmFlightAssignment.RemovePilotsWorking</definition>
+        <argsstring>()</argsstring>
+        <name>RemovePilotsWorking</name>
+        <briefdescription>
+<para>Remove pilots who are working during flight&apos;s date </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmFlightAssignment.cs" line="179" column="1" bodyfile="Application de planification de vols aériens/frmFlightAssignment.cs" bodystart="179" bodyend="198"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment_1ad9d934b344ebda31f369781812cdb517" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.frmFlightAssignment.RemovePilotsInVacation</definition>
+        <argsstring>()</argsstring>
+        <name>RemovePilotsInVacation</name>
+        <briefdescription>
+<para>Remove pilots that are in vacation during flightDates from lstPilotsAvailable </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmFlightAssignment.cs" line="203" column="1" bodyfile="Application de planification de vols aériens/frmFlightAssignment.cs" bodystart="203" bodyend="228"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment_1a6d32b7d9a7ff6181d20a675f394b7b46" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.frmFlightAssignment.lstAvailablePilots_SelectedIndexChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>lstAvailablePilots_SelectedIndexChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmFlightAssignment.cs" line="371" column="1" bodyfile="Application de planification de vols aériens/frmFlightAssignment.cs" bodystart="371" bodyend="381"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment_1ae5f3dc7c10d3dba2dffa236cff73d208" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.frmFlightAssignment.lstAssignedPilots_SelectedIndexChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>lstAssignedPilots_SelectedIndexChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmFlightAssignment.cs" line="383" column="1" bodyfile="Application de planification de vols aériens/frmFlightAssignment.cs" bodystart="383" bodyend="393"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment_1ab39a32bb3a0c3807a9de114f02dfc03a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.frmFlightAssignment.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmFlightAssignment.Designer.cs" line="29" column="1" bodyfile="Application de planification de vols aériens/frmFlightAssignment.Designer.cs" bodystart="29" bodyend="113"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment_1ade0f4532d709ce27a0c0af5000dc495d" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void Application_de_planification_de_vols_aériens.frmFlightAssignment.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmFlightAssignment.Designer.cs" line="14" column="1" bodyfile="Application de planification de vols aériens/frmFlightAssignment.Designer.cs" bodystart="14" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="17">
+        <label>Form</label>
+      </node>
+      <node id="16">
+        <label>Application_de_planification_de_vols_aériens.frmFlightAssignment</label>
+        <link refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment"/>
+        <childnode refid="17" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="19">
+        <label>Form</label>
+      </node>
+      <node id="18">
+        <label>Application_de_planification_de_vols_aériens.frmFlightAssignment</label>
+        <link refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment"/>
+        <childnode refid="19" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Application de planification de vols aériens/frmFlightAssignment.cs" line="14" column="1" bodyfile="Application de planification de vols aériens/frmFlightAssignment.cs" bodystart="13" bodyend="394"/>
+    <listofallmembers>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment_1aa55cd4d0812827e9df1a6604d9a0b94e" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmFlightAssignment</scope><name>buildMySQLDate</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment_1a32c31cf5512cf2ec3fa7864b9e7f2d88" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmFlightAssignment</scope><name>cmdAdd</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment_1aee2030b22f93c37167b9b611caeb27e4" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmFlightAssignment</scope><name>cmdAdd_Click</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment_1a230c9b08ff70f511b51a08159ee17309" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmFlightAssignment</scope><name>cmdPlan</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment_1a30cabe073f4054db02928401990b6413" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmFlightAssignment</scope><name>cmdPlan_Click</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment_1aa26007e1eaf9087bdbd81572a42e9941" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmFlightAssignment</scope><name>components</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment_1af10fe7b55057aec8ce0cf7b3893f2249" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmFlightAssignment</scope><name>dbConnection</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment_1ade0f4532d709ce27a0c0af5000dc495d" prot="protected" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmFlightAssignment</scope><name>Dispose</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment_1a191dfe4009d1d4d9b145e654332bae35" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmFlightAssignment</scope><name>flight</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment_1aef8443085ce787472de70d2b5b0586da" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmFlightAssignment</scope><name>flightName</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment_1a9cdb7b872ff2713397a9d6e8646401f3" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmFlightAssignment</scope><name>flightTime</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment_1a4db5f4e2ab177ba17c2029b134f20548" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmFlightAssignment</scope><name>frmFlightAssignment</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment_1a1eedb8c26a8c3ea565d855ae2b1a21d5" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmFlightAssignment</scope><name>frmFlightAssignment_Load</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment_1a1cd8e978e48d9824fdb652eefcc0a4c8" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmFlightAssignment</scope><name>idFlight</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment_1ab39a32bb3a0c3807a9de114f02dfc03a" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmFlightAssignment</scope><name>InitializeComponent</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment_1a02d902dc60d50026a42c82e934637d1d" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmFlightAssignment</scope><name>lblAssignedPilots</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment_1a657a47d713db7d5c388508e9ccd40170" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmFlightAssignment</scope><name>lblAvailablePilots</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment_1ab22959995b737684f093849a72529698" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmFlightAssignment</scope><name>LoadAllPilotsInCurrentAirport</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment_1a73609264d552f77c2a9969b41c4d434f" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmFlightAssignment</scope><name>lstAssignedPilots</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment_1ae5f3dc7c10d3dba2dffa236cff73d208" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmFlightAssignment</scope><name>lstAssignedPilots_SelectedIndexChanged</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment_1aaf520ff49e47b996385324ff47db087b" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmFlightAssignment</scope><name>lstAvailablePilots</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment_1a6d32b7d9a7ff6181d20a675f394b7b46" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmFlightAssignment</scope><name>lstAvailablePilots_SelectedIndexChanged</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment_1ad9d934b344ebda31f369781812cdb517" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmFlightAssignment</scope><name>RemovePilotsInVacation</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment_1a6daf6be84ec9e12ad1414c06bf567a95" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmFlightAssignment</scope><name>RemovePilotsNoRestAfterFlight</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment_1a431cdca47444a02acca2745795bb100e" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmFlightAssignment</scope><name>RemovePilotsWorking</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

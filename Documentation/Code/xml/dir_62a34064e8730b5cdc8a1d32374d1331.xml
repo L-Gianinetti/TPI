@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_62a34064e8730b5cdc8a1d32374d1331" kind="dir">
+    <compoundname>Pilot/Properties</compoundname>
+    <innerfile refid="_pilot_2_properties_2_assembly_info_8cs">AssemblyInfo.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Pilot/Properties/"/>
+  </compounddef>
+</doxygen>

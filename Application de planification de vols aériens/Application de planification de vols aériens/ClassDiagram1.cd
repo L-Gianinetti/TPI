@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Application_de_planification_de_vols_aériens.Airport">
+    <Position X="6.5" Y="3.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Airport.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Application_de_planification_de_vols_aériens.BuildMySQLDate">
+    <Position X="3.5" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BuildMySQLDate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Application_de_planification_de_vols_aériens.DateTimeExtensions">
+    <Position X="18.75" Y="7.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAIAQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DateTimeExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Application_de_planification_de_vols_aériens.DBConnection">
+    <Position X="0.5" Y="0.5" Width="2.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>MFiAgEAACKCAwCBgUBBBQAAIBAAgokAABCwEgAMAAEU=</HashCode>
+      <FileName>DBConnection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Application_de_planification_de_vols_aériens.Flight">
+    <Position X="6.25" Y="5.75" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>IAAAAgAIAAIQAAACACAhAAQgAQCECJQAAAgQAAAAAAI=</HashCode>
+      <FileName>Flight.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Application_de_planification_de_vols_aériens.frmDisplay">
+    <Position X="3.5" Y="0.5" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>sAQQVIiggqCAAAMAIEDAAAMCAAElkgsAAYAAQIBCBAA=</HashCode>
+      <FileName>frmDisplay.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Application_de_planification_de_vols_aériens.frmFlightAssignment">
+    <Position X="12.5" Y="0.5" Width="3" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>IAAIAQkAACCAAQAQAACAAAYDAgAIEBAEAACIIAAEACA=</HashCode>
+      <FileName>frmFlightAssignment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Application_de_planification_de_vols_aériens.frmManagement">
+    <Position X="8.75" Y="0.5" Width="3.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>IxGAIIBABCCAGAmSgAiDQCICCFZLvRKIQBCECMAmiHY=</HashCode>
+      <FileName>frmManagement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Application_de_planification_de_vols_aériens.frmVacation">
+    <Position X="6" Y="0.5" Width="2.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>ICAAAAAABCAAAAAAAACoAABKAAADQSAAAUAAAQAAAAA=</HashCode>
+      <FileName>frmVacation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Application_de_planification_de_vols_aériens.frmVacationDisplay">
+    <Position X="3.5" Y="4.5" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>IEBAAAAAAiQEAAAAAACAAQBCAAAAQAAAAAAAAAgAAAA=</HashCode>
+      <FileName>frmVacationDisplay.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Application_de_planification_de_vols_aériens.Line">
+    <Position X="8.75" Y="7.25" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAgAAAAAAAAABAAAAA0AAgAJAAAAAAAAAAAA=</HashCode>
+      <FileName>Line.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Application_de_planification_de_vols_aériens.MySQLException">
+    <Position X="12.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MySQLException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Application_de_planification_de_vols_aériens.MySQLGetDataException">
+    <Position X="3.75" Y="7.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MySQLGetDataException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Application_de_planification_de_vols_aériens.Pilot">
+    <Position X="6.25" Y="8.25" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>IAACAEgAAIBAAQAAAAAAAAwAgACGAAAAAAAAAAAACgA=</HashCode>
+      <FileName>Pilot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Application_de_planification_de_vols_aériens.Vacation">
+    <Position X="8.75" Y="9" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>QAAAAAAABAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Vacation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

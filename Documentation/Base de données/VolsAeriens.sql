@@ -17,14 +17,23 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 CREATE SCHEMA IF NOT EXISTS `PlanificationVolsAeriens` DEFAULT CHARACTER SET utf8 ;
 USE `PlanificationVolsAeriens` ;
 
+
+-- -----------------------------------------------------------------
+-- Table `PlanificationVolsAeriens`.`AirportType`
+CREATE TABLE IF NOT EXISTS `PlanificationVolsAeriens`.`AirportType` (
+	`idAirportType` INT NOT NULL AUTO_INCREMENT,
+    `type` VARCHAR(22) NOT NULL,
+    PRIMARY KEY (`idAirportType`))
+ENGINE = InnoDB;
+
 -- -----------------------------------------------------
 -- Table `PlanificationVolsAeriens`.`Airport`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `PlanificationVolsAeriens`.`Airport` (
   `idAirport` INT NOT NULL AUTO_INCREMENT,
-  `airportName` VARCHAR(100) NOT NULL,
+  `airportName` VARCHAR(50) NOT NULL,
   `airportAcronym` VARCHAR(3) NOT NULL,
-  `airportCountry` VARCHAR(30) NOT NULL,
+  `airportCountry` VARCHAR(35) NOT NULL,
   `fkAirportType` INT NOT NULL,
   PRIMARY KEY (`idAirport`),
   FOREIGN KEY (`fkAirportType`)
@@ -39,8 +48,8 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `PlanificationVolsAeriens`.`Pilot` (
   `idPilot` INT NOT NULL AUTO_INCREMENT,
-  `pilotName` VARCHAR(45) NOT NULL,
-  `pilotFirstName` VARCHAR(45) NOT NULL,
+  `pilotName` VARCHAR(35) NOT NULL,
+  `pilotFirstName` VARCHAR(35) NOT NULL,
   `flightTime` FLOAT NOT NULL,
   `fkAirport` INT NOT NULL,
   `fkAirportCurrentLocation` INT NOT NULL,
@@ -89,7 +98,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `PlanificationVolsAeriens`.`Flight` (
   `idFlight` INT NOT NULL AUTO_INCREMENT,
-  `flightName` VARCHAR(30) NOT NULL,
+  `flightName` VARCHAR(18) NOT NULL,
   `departureDate` DATETIME NOT NULL,
   `arrivalDate` DATETIME NOT NULL,
   `fkLine` INT NOT NULL,
@@ -142,11 +151,7 @@ CREATE TABLE IF NOT EXISTS `PlanificationVolsAeriens`.`Vacation` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-CREATE TABLE IF NOT EXISTS `PlanificationVolsAeriens`.`AirportType` (
-	`idAirportType` INT NOT NULL AUTO_INCREMENT,
-    `type` VARCHAR(30) NOT NULL,
-    PRIMARY KEY (`idAirportType`))
-ENGINE = InnoDB;
+
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
@@ -155,15 +160,15 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 insert into AirportType(idAirportType, type) values (1, 'Aeroport international');
 
 insert into Airport (idAirport, airportName, airportAcronym, airportCountry, fkAirportType) values (1, 'Saint-Gall-Altenrhein', 'ACH', 'Suisse',1);
-insert into Airport (idAirport, airportName, airportAcronym, airportCountry, fkAirportType) values (2, 'd\'Al-Ain', 'AAN','Emirats arabes unis',1);
-insert into Airport (idAirport, airportName, airportAcronym, airportCountry, fkAirportType) values (3, 'd\'Abakan', 'ABA','Russie',1);
-insert into Airport (idAirport, airportName, airportAcronym, airportCountry, fkAirportType) values (4, 'd\'Asaba', 'ABB','Nigeria',1);
+insert into Airport (idAirport, airportName, airportAcronym, airportCountry, fkAirportType) values (2, 'Al-Ain', 'AAN','Emirats arabes unis',1);
+insert into Airport (idAirport, airportName, airportAcronym, airportCountry, fkAirportType) values (3, 'Abakan', 'ABA','Russie',1);
+insert into Airport (idAirport, airportName, airportAcronym, airportCountry, fkAirportType) values (4, 'Asaba', 'ABB','Nigeria',1);
 insert into Airport (idAirport, airportName, airportAcronym, airportCountry, fkAirportType) values (5, 'Felix-Houphouet-Boigny', 'ABJ','Cote d\'Ivoire',1);
-insert into Airport (idAirport, airportName, airportAcronym, airportCountry, fkAirportType) values (6, 'd\'Albuquerque', 'ABQ','Etats-Unis',1);
+insert into Airport (idAirport, airportName, airportAcronym, airportCountry, fkAirportType) values (6, 'Albuquerque', 'ABQ','Etats-Unis',1);
 insert into Airport (idAirport, airportName, airportAcronym, airportCountry, fkAirportType) values (7, 'general Juan N. Alvarez', 'ACA', 'Mexique',1);
-insert into Airport (idAirport, airportName, airportAcronym, airportCountry, fkAirportType) values (8, 'de Kotoka', 'ACC','Ghana',1);
-insert into Airport (idAirport, airportName, airportAcronym, airportCountry, fkAirportType) values (9, 'd\'Atlantic City', 'ACY', 'Etats-Unis',1);
-insert into Airport (idAirport, airportName, airportAcronym, airportCountry, fkAirportType) values (10, 'd\'Adana-Sakirpasa', 'ADA','Turquie',1);
+insert into Airport (idAirport, airportName, airportAcronym, airportCountry, fkAirportType) values (8, 'Kotoka', 'ACC','Ghana',1);
+insert into Airport (idAirport, airportName, airportAcronym, airportCountry, fkAirportType) values (9, 'Atlantic City', 'ACY', 'Etats-Unis',1);
+insert into Airport (idAirport, airportName, airportAcronym, airportCountry, fkAirportType) values (10, 'Adana-Sakirpasa', 'ADA','Turquie',1);
 
 
 

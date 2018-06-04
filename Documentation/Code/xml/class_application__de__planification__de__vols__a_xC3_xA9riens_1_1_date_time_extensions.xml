@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_date_time_extensions" kind="class" language="C#" prot="public">
+    <compoundname>Application_de_planification_de_vols_aériens::DateTimeExtensions</compoundname>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_date_time_extensions_1ab838d142d5f113c0dfa697cc9dbe434d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>DateTime</type>
+        <definition>static DateTime Application_de_planification_de_vols_aériens.DateTimeExtensions.StartOfWeek</definition>
+        <argsstring>(this DateTime dt, DayOfWeek startOfWeek)</argsstring>
+        <name>StartOfWeek</name>
+        <param>
+          <type>this DateTime</type>
+          <declname>dt</declname>
+        </param>
+        <param>
+          <type>DayOfWeek</type>
+          <declname>startOfWeek</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/DateTimeExtensions.cs" line="12" column="1" bodyfile="Application de planification de vols aériens/DateTimeExtensions.cs" bodystart="12" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_date_time_extensions_1a1e89bc2f06dacc55bac744081e122898" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int Application_de_planification_de_vols_aériens.DateTimeExtensions.GetDaysLeftInCurrentWeek</definition>
+        <argsstring>()</argsstring>
+        <name>GetDaysLeftInCurrentWeek</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/DateTimeExtensions.cs" line="19" column="1" bodyfile="Application de planification de vols aériens/DateTimeExtensions.cs" bodystart="19" bodyend="51"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Application de planification de vols aériens/DateTimeExtensions.cs" line="10" column="1" bodyfile="Application de planification de vols aériens/DateTimeExtensions.cs" bodystart="9" bodyend="52"/>
+    <listofallmembers>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_date_time_extensions_1a1e89bc2f06dacc55bac744081e122898" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::DateTimeExtensions</scope><name>GetDaysLeftInCurrentWeek</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_date_time_extensions_1ab838d142d5f113c0dfa697cc9dbe434d" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::DateTimeExtensions</scope><name>StartOfWeek</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -128,9 +128,9 @@ namespace Application_de_planification_de_vols_aériens
             this.name = name;
             this.departureDate = departureDate;
             this.flightLine = flightLine;
-            flightTimeH = calculateFlightTime(this.flightLine.Distance);
+            flightTimeH = calculateFlightTime(flightLine.Distance);
             //flightTimeinMinutes
-            double flightTimeM = flightTimeH * 60;
+            float flightTimeM = flightTimeH * 60;
             //Add flightTimeMinutes to departureDate to get arrivalDate
             arrivalDate = departureDate.AddMinutes(flightTimeM);
         }

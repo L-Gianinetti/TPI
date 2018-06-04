@@ -2,23 +2,27 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
   <compounddef id="namespace_application__de__planification__de__vols__a_xC3_xA9riens" kind="namespace" language="C#">
     <compoundname>Application_de_planification_de_vols_aériens</compoundname>
-    <innerclass refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_affichage" prot="public">Application_de_planification_de_vols_aériens::Affichage</innerclass>
     <innerclass refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_airport" prot="public">Application_de_planification_de_vols_aériens::Airport</innerclass>
+    <innerclass refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_build_my_s_q_l_date" prot="public">Application_de_planification_de_vols_aériens::BuildMySQLDate</innerclass>
+    <innerclass refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_date_time_extensions" prot="public">Application_de_planification_de_vols_aériens::DateTimeExtensions</innerclass>
     <innerclass refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection" prot="public">Application_de_planification_de_vols_aériens::DBConnection</innerclass>
     <innerclass refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_flight" prot="public">Application_de_planification_de_vols_aériens::Flight</innerclass>
-    <innerclass refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_flight_schedule" prot="public">Application_de_planification_de_vols_aériens::FlightSchedule</innerclass>
-    <innerclass refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_affectation_vol" prot="public">Application_de_planification_de_vols_aériens::frmAffectationVol</innerclass>
-    <innerclass refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion" prot="public">Application_de_planification_de_vols_aériens::frmGestion</innerclass>
-    <innerclass refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacances" prot="public">Application_de_planification_de_vols_aériens::frmVacances</innerclass>
-    <innerclass refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacances_affichage" prot="public">Application_de_planification_de_vols_aériens::frmVacancesAffichage</innerclass>
+    <innerclass refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_display" prot="public">Application_de_planification_de_vols_aériens::frmDisplay</innerclass>
+    <innerclass refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment" prot="public">Application_de_planification_de_vols_aériens::frmFlightAssignment</innerclass>
+    <innerclass refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management" prot="public">Application_de_planification_de_vols_aériens::frmManagement</innerclass>
+    <innerclass refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation" prot="public">Application_de_planification_de_vols_aériens::frmVacation</innerclass>
+    <innerclass refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_display" prot="public">Application_de_planification_de_vols_aériens::frmVacationDisplay</innerclass>
     <innerclass refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_line" prot="public">Application_de_planification_de_vols_aériens::Line</innerclass>
+    <innerclass refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_my_s_q_l_exception" prot="public">Application_de_planification_de_vols_aériens::MySQLException</innerclass>
+    <innerclass refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_my_s_q_l_get_data_exception" prot="public">Application_de_planification_de_vols_aériens::MySQLGetDataException</innerclass>
     <innerclass refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot" prot="public">Application_de_planification_de_vols_aériens::Pilot</innerclass>
     <innerclass refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_program" prot="public">Application_de_planification_de_vols_aériens::Program</innerclass>
     <innerclass refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_vacation" prot="public">Application_de_planification_de_vols_aériens::Vacation</innerclass>
+    <innernamespace refid="namespace_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests">Application_de_planification_de_vols_aériens::Tests</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Airport.cs" line="8" column="1"/>
+    <location file="[generated]" line="1" column="1"/>
   </compounddef>
 </doxygen>

@@ -1,213 +1,361 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.13">
-  <compound refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_affichage" kind="class"><name>Application_de_planification_de_vols_aériens::Affichage</name>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_affichage_1addc1d09c32b72ec97a848afeba4a657a" kind="variable"><name>components</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_affichage_1af690177979355efd69b47f1d9e5c02ea" kind="variable"><name>cmdAffichage</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_affichage_1a5099cfbc645bf5ba7dafc7631505f63a" kind="variable"><name>cmdGestion</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_affichage_1ad36c94326c25d25a44680b8a8a0e9439" kind="variable"><name>pnlEntete</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_affichage_1a254c6d1b1c227f000627774b58df3f88" kind="variable"><name>grbAffichage</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_affichage_1a59776279c15f8be064e0df62f0c20e45" kind="variable"><name>grbLignes</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_affichage_1a2439cba3e121c9a79f1b415b403735c0" kind="variable"><name>dgvLignes</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_affichage_1a79ca74364152d6211aa0c13803cd5d61" kind="variable"><name>colLieuDepart</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_affichage_1ad586bdd9fd7842847d7a43fd26d2762a" kind="variable"><name>colLieuArrivee</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_affichage_1aabad19eb68d043fbb35719a354fe40d7" kind="variable"><name>grbVols</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_affichage_1a1b1cfa639cce3c8cef94f7536c60920d" kind="variable"><name>cmdPlanifier</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_affichage_1af4e6ca13f399068897a5292ad4a72916" kind="variable"><name>dgvVols</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_affichage_1a20e3915cb0d6ea21e94adf53fd367fbe" kind="variable"><name>grbPilotes</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_affichage_1afdbc0d66db87dd068372fe2fdd3cf9e3" kind="variable"><name>cmdPlanifierVacances</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_affichage_1a8632177419680e8cd9e509c1c902e766" kind="variable"><name>cmdAfficherVacances</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_affichage_1ab1870cedfc418b6d99ac04e95717177b" kind="variable"><name>cmdGenererPlanning</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_affichage_1a09cf63471880e3ca18cb4da3529f0f77" kind="variable"><name>lblMois</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_affichage_1ae6675b8afef2f2bf61c472816ee86b76" kind="variable"><name>cboMois</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_affichage_1a2fcd44fbdbfecda85fa6e89cef254330" kind="variable"><name>dgvPilotes</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_affichage_1a021d883136896d2db122361402b82d60" kind="variable"><name>colNom</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_affichage_1accb57ef61a761941fbb7766582c4460e" kind="variable"><name>colPrenom</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_affichage_1a13fd5c804cfe178ada0907a7c0232ff1" kind="variable"><name>colAeroportAffectation</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_affichage_1ad1aaaafb1d6e12014348f0b11907c10d" kind="variable"><name>colHeuresVol</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_affichage_1a0d9b27c23575cd47bc3d69152c04c62e" kind="variable"><name>colDistance</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_affichage_1aea34b6b51034dce204fea344fec954fe" kind="variable"><name>colName</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_affichage_1aaf3495e5cf14a8d5c59c40945de5270c" kind="variable"><name>colLigne</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_affichage_1a27d50f5a0d42177395b2a973150750d8" kind="variable"><name>colDateDepart</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_affichage_1a249e40390e07739976647db62f26f54b" kind="variable"><name>colDateArrivee</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_affichage_1a0fc1f50ebc47bb28ddc1450a9d1c8811" kind="variable"><name>colPilote1</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_affichage_1a6ced783b262a138a4984b63212960986" kind="variable"><name>colPilote2</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_affichage_1a224f6dc223876b40e7ae776207a269b7" kind="function"><name>Affichage</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_affichage_1ae717791bcf0ae511f49a1c6351cbf20a" kind="function"><name>cmdGestion_Click</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_affichage_1afe2818c52d832b63cb22f8e68fa3be94" kind="function"><name>cmdAfficherVacances_Click</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_affichage_1a501bb0c23d362cf746c3a631daf48a1e" kind="function"><name>cmdPlanifierVacances_Click</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_affichage_1a3af6e0b884765c2d509877fea7d156fb" kind="function"><name>cmdGenererPlanning_Click</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_affichage_1a7612641d26a9552e86453071ab246343" kind="function"><name>cmdPlanifier_Click</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_affichage_1a05e41d48d2bc305abb49f20104c6a649" kind="function"><name>InitializeComponent</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_affichage_1addb34a9fdcc33294a51e6b0012ab89a7" kind="function"><name>Dispose</name></member>
-  </compound>
   <compound refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_airport" kind="class"><name>Application_de_planification_de_vols_aériens::Airport</name>
     <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_airport_1ae98996e1a993b287cf123bbed957f9f1" kind="variable"><name>name</name></member>
     <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_airport_1a25b8937bd4f555b7597bd2ac771da73d" kind="property"><name>Name</name></member>
     <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_airport_1a5507521a7e89a1cef679eff2a043f89c" kind="function"><name>Airport</name></member>
   </compound>
+  <compound refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_build_my_s_q_l_date" kind="class"><name>Application_de_planification_de_vols_aériens::BuildMySQLDate</name>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_build_my_s_q_l_date_1a97bec044bb6c3311f2dae265b160d2d1" kind="function"><name>BuildMySQLDate</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_build_my_s_q_l_date_1a5caf70a469fe9d426a72baed0388a17b" kind="function"><name>BuildDate</name></member>
+  </compound>
+  <compound refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_date_time_extensions" kind="class"><name>Application_de_planification_de_vols_aériens::DateTimeExtensions</name>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_date_time_extensions_1ab838d142d5f113c0dfa697cc9dbe434d" kind="function"><name>StartOfWeek</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_date_time_extensions_1a1e89bc2f06dacc55bac744081e122898" kind="function"><name>GetDaysLeftInCurrentWeek</name></member>
+  </compound>
   <compound refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection" kind="class"><name>Application_de_planification_de_vols_aériens::DBConnection</name>
     <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a64a62bed87ae84182a869be049fcab96" kind="variable"><name>connection</name></member>
     <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a5b77be805c5f4a9fd10d034a499aae29" kind="function"><name>DBConnection</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1ad1b6661277938316d73027d2ee37a261" kind="function"><name>addVacation</name></member>
     <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1ae72153b925013e8d443dc00182854764" kind="function"><name>AddPilot</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1aba7d640ebac4084922480a5ffceeb68b" kind="function"><name>AddFlight</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a9bdc8eae897d020c111d6b8db300ce0f" kind="function"><name>AddFlight</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1af482afd0ed3f59f2083c45159a2e3f8c" kind="function"><name>AddPilotToFlight</name></member>
     <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a8d35c0d9469e7b17c9b955d2aca1efc0" kind="function"><name>AddLine</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a17666c54ee62031392cd4ddd1a46dbf8" kind="function"><name>AddVacation</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1add4822006e003d561654b683b0d8dfee" kind="function"><name>GetAirportName</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1ac60f2ba9d827ebc4623f0b0ae9d281c0" kind="function"><name>UpdatePilotCurrentLocation</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a26e65cf076736bfa7ef1fc72c151c0a4" kind="function"><name>UpdatePilotFlightTime</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a6b136e2ce9c29f213077c9aeec8bda41" kind="function"><name>GetIdVacationIfPilotIsInVacation</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a6481f65eec5e4e48f7fd156a470181c9" kind="function"><name>GetFlightNameIfPilotWorks</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a03d4dd899726449c348d695cfa98fc7d" kind="function"><name>GetIdFlightFlightHasPilot</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1af18edfa3e3495f7ad813ed8208f21375" kind="function"><name>GetIdPilotFlightHasPilot</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a2845250f7059e6f6f93d3a17ad00d299" kind="function"><name>GetIdPilot</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1ad2f5a5c0b8c2fc2789ea607c8c6b8037" kind="function"><name>GetPilotFlightTime</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a3066730087c24f5170d1ed50a83157df" kind="function"><name>GetIdPilotIfPilotIsWorking</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a891ddf739e5e41828ee059d78f5e91c6" kind="function"><name>GetPilotEndWorkDates</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a9b77c2477d2cffc33822bb8c30e52073" kind="function"><name>GetPilotStartWorkDates</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a147260aaf0fdaef2ca61445912494f8a" kind="function"><name>GetPilotEndWorkDatesThisWeek</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1ab6337ad390b3f62320471bcd026f1d10" kind="function"><name>GetPilotStartWorkDatesThisWeek</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1aac38876aca8da2be6d3029faf91f1e66" kind="function"><name>GetIdPilotsFromFlight</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1aeb2a740b06d500ff24e0d25699c85f66" kind="function"><name>GetPilots</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a2c1860fc2f4d4694aecfa7d45128777a" kind="function"><name>GetPilotFirstName</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a87fbc3860c005d0d6276769f813f3da3" kind="function"><name>GetPilotName</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a6c0ff4e7c4e01a63ed225655708f4e7b" kind="function"><name>GetPilotAssignmentAirportId</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1adf7e52b39b39bf40b911ff1ff5ad15a0" kind="function"><name>GetPilotCurrentLocation</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a6581e554b58c1d0391c9f79d299d0de7" kind="function"><name>GetPilotsId</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a287c94716ff799633ba1641c2e57b327" kind="function"><name>GetIdPilotInVacationDuringFlight</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a2f4585c28c27a4c6123f57fba03e6c04" kind="function"><name>GetPilotLastArrivalTime</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a5456489d8cc74906e379b681deb16fa4" kind="function"><name>GetVacationEndDates</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a9e1e92a35f3615b8cb996111a5c063cd" kind="function"><name>GetVacationStartDates</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a8e1e1b274056d5ddcfa0a732e4ed5b3b" kind="function"><name>GetArrivalAirportName</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1ab89f8c3608d9d437ea5f4283e6e0fe46" kind="function"><name>GetDepartureAirportName</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a55880adc2e125b091210327d7f90d891" kind="function"><name>GetAirportName</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a8d141691919e84909795afb3cf52c829" kind="function"><name>GetAirportType</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a8eaa47125b7b2986cc3561c09b5a052b" kind="function"><name>GetAirportsNames</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1abe977e0d936b81c894f041b97399d459" kind="function"><name>GetAirportAcronym</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a2f7c1c88010a3918ff605fba598dd79b" kind="function"><name>GetAirportId</name></member>
     <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1af878298b3a50db2f4891e3b01db669db" kind="function"><name>GetAirportId</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a9073627466db67d9aba523f18ab2bc68" kind="function"><name>GetLineName</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a9ff481b893a3e1cd55394fa65297704e" kind="function"><name>GetPilotName</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1ad041e4922b70a65313b1ce52479c05c7" kind="function"><name>GetPilotFirstName</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1aaf3eb0f47d0b71ba4741d7bec63bd25f" kind="function"><name>GetPilotAssignmentAirport</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a95536a5ab1ed7649f6cc7041dd95bcff" kind="function"><name>GetPilotFlightTime</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1ac6da9b298612ab02a7090d3fa89dbe17" kind="function"><name>GetPilotCurrentLocation</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1aa15a5f671cde72dc156a9d5952c3609c" kind="function"><name>GetPilotLastFlightDate</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a8c9de18c2e255cf77edd3053a5a06c59" kind="function"><name>GetPilotFlightsDepartureDates</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a32525877ff035ce55c8abfb6fa5c24be" kind="function"><name>GetPilotFlightsArrivalDates</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1ae057fe63e5698bb502dbc1f31c2ce389" kind="function"><name>GetPilotId</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a108cdd46a86772d2cb0dfb31af46120e" kind="function"><name>GetFlightName</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a13dab08b7a87ed82777c04f4371fad48" kind="function"><name>GetFlightLine</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1ae745a66da1339032df2af3eac3866f4c" kind="function"><name>GetDepartureDate</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1afcdef17d01756ef24b3d682f2abb5622" kind="function"><name>GetArrivalDate</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1ac8d400c57f79b093ef717f092a4087a7" kind="function"><name>GetFlightPilots</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a4d666e36896247534aa7fb4ed5f8f23d" kind="function"><name>GetLineDepartureAirport</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1ad631728bffd9c822f8661cf73989281b" kind="function"><name>GetLineArrivalAirport</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a1714ac4acc0e5fbdd4d1822efc2b7f28" kind="function"><name>GetPilotVacationStartDate</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1ab79d22c8ff2a9ae813f8e067d18e4709" kind="function"><name>GetPilotVacationEndDate</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1ae4aef5a9ce1b329ff552d60ebc6213ee" kind="function"><name>UpdatePilotCurrentLocation</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a2aa12044a1cf5d02a1a46b3587c645ea" kind="function"><name>UpdatePilotVacation</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1aa8a36ce7b7f566ffcbe3a87adf53a8dc" kind="function"><name>DeletePilotVacation</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1aeb7631136ef258dbb5b07c662406936c" kind="function"><name>GetDistanceFromFlight</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a14c89de9e4bcd4a337b1f4e6340ce86a" kind="function"><name>GetFlight</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a6c0c39451a26eea1387a460266ee4885" kind="function"><name>GetFlights</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a2d53e6f1d5552503aee1bc0978b8b787" kind="function"><name>GetFlightId</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a8c1c5906d9df330ff42df902ed547882" kind="function"><name>GetLinesNames</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a72bc4239944d718a3fbfccf5878142fe" kind="function"><name>GetLines</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a1625af279cf670117691228c430d98b7" kind="function"><name>GetLineDistance</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a7adba87a996afb65e15f5f22229fd769" kind="function"><name>GetLineDistance</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a1e1dc333276091bcd7910329327d3955" kind="function"><name>GetLineId</name></member>
     <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a675822fa82f0302e9cfc5b310a69247e" kind="function"><name>InitConnection</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection_1a4a023f7f1a1ec2a308ce715e0f7565be" kind="function"><name>InitConnexion</name></member>
+  </compound>
+  <compound refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests" kind="class"><name>Application_de_planification_de_vols_aériens::Tests::DBConnectionTests</name>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1a64b4d0c2ea334d7ca97d1efda84b7522" kind="variable"><name>dbConnection</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1aa8fff2974833b7896177aec94576134b" kind="function"><name>DBConnectionTest</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1ad81ed261c2171b32f7e04d1fc6976f60" kind="function"><name>AddPilotTest</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1afe0e1bab9c5465974ceadfb802d91ee5" kind="function"><name>AddFlightTest</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1ac678fd89ad7b663d4d7edcf1d36975ec" kind="function"><name>AddLineTest</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1a9b537ca344f2cbbb1f984d90711cae2e" kind="function"><name>AddVacationTest</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1a7b7a2aa88ad3243ca50965622cef7383" kind="function"><name>GetAirportNameTest</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1a2d931941a0dd00e89444fd369567b213" kind="function"><name>GetAirportIdTest</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1aa9df59da54f9fa7d9b93a477d5d61d14" kind="function"><name>GetLineNameTest</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1a2f65466b172c739b877408361ffdfd8e" kind="function"><name>GetPilotNameTest</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1a4fb54cb3ff291bf0f07b1ee6c24eadf1" kind="function"><name>GetPilotFirstNameTest</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1a0992ec5928d037d1e7d8811715a8742f" kind="function"><name>GetPilotAssignmentAirportTest</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1a27b1560af4f6faa75b279078b06359d6" kind="function"><name>GetPilotFlightTimeTest</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1a2ba36f2d91e8636856276d874415c390" kind="function"><name>GetPilotCurrentLocationTest</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1a586b681dc02d5d1dc14e332ab73dd619" kind="function"><name>GetPilotLastFlightDateTest</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1a209226db4b4f0a91c634c3b07ef3f32d" kind="function"><name>GetPilotFlightsDepartureDatesTest</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1ac87143d6e720c7d950a4e490cb6fc5c2" kind="function"><name>GetPilotFlightsArrivalDatesTest</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1acac076d21207c96de78ff12c90a087ef" kind="function"><name>GetPilotIdTest</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1ae581c3f0cefeb0040328aa671d1081b8" kind="function"><name>GetFlightNameTest</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1a4daaaa200bed9dc846c0e38aeb057b5d" kind="function"><name>GetFlightLineTest</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1a08c7fee5c26c90d2daaa99c7d471c56b" kind="function"><name>GetDepartureDateTest</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1aaf11b989611b0ea592f7681bd58554e0" kind="function"><name>GetArrivalDateTest</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1a3acc992e00cc0c58a16eebf34d45c06e" kind="function"><name>GetFlightPilotsTest</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1a768e15fba325a1b10c1a60a4bb802568" kind="function"><name>GetLineDepartureAirportTest</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1ab2bd7f36e8627d746273b92c1c95c550" kind="function"><name>GetLineArrivalAirportTest</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1aa229800debacc28d33e1ac5f157b6212" kind="function"><name>GetPilotVacationStartDateTest</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1a49f2a41f1f5930406d374caa517ae4de" kind="function"><name>GetPilotVacationEndDateTest</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1ace9243f8e8377f71153fc6c0c0a411b5" kind="function"><name>UpdatePilotCurrentLocationTest</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1ae1bfe546983bc1f32758c9e9a991a9bf" kind="function"><name>UpdatePilotVacationTest</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_d_b_connection_tests_1a0d571f1528375a56cfb4b07dec2d3594" kind="function"><name>DeletePilotVacationTest</name></member>
   </compound>
   <compound refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_flight" kind="class"><name>Application_de_planification_de_vols_aériens::Flight</name>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_flight_1a2b96f7a2a9ecd554bb97a5124abe338d" kind="variable"><name>dbConnection</name></member>
     <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_flight_1afcc1eb95e8693cee8569241b351d219e" kind="variable"><name>name</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_flight_1a79fa51eb5cd3baeb32f91024989d7e7d" kind="variable"><name>idFlight</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_flight_1a41e4bb774af279de00d1bd49aa776bdc" kind="variable"><name>sDepartureDate</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_flight_1a1edcaa3c066f5366f6fdc8a9e3ac9cda" kind="variable"><name>sArrivalDate</name></member>
     <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_flight_1af3d742770874b9682456e05ad3bc7459" kind="variable"><name>departureDate</name></member>
     <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_flight_1a59533ea82fed3f571b9bac889becb998" kind="variable"><name>arrivalDate</name></member>
     <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_flight_1abc97f472a50a014b2b1741972dbab2fb" kind="variable"><name>flightLine</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_flight_1aac5782acb9c0982f9af8d1ef41cac64f" kind="variable"><name>flightTimeH</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_flight_1abd66b9d3e34f2be59efa803f9e674e27" kind="variable"><name>idLine</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_flight_1a140a1dcf2c93417e062f717b17071ed1" kind="variable"><name>airplaneSpeed</name></member>
     <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_flight_1aedf419ab12c95f1f7bb32cf9a81a2895" kind="property"><name>Name</name></member>
     <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_flight_1ac0c908521ca24657b072aa12515aebaf" kind="property"><name>DepartureDate</name></member>
     <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_flight_1a17ee295782eda78e93f0d55beb5ea349" kind="property"><name>ArrivalDate</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_flight_1abb84b8661cf34d546fbfd1d14e8b0a65" kind="property"><name>FlightLine</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_flight_1a1473a120f07cda15cf54a2eaa61eaf34" kind="property"><name>Airport</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_flight_1a01736ddeae2c5a2a6c1ebd13f834bfba" kind="property"><name>Line</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_flight_1a1b1ebd555859f8afe862d61a88ccc4dd" kind="property"><name>FlightSchedule</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_flight_1a015aaa508e5b822e935c76b5f57d4786" kind="function"><name>Flight</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_flight_1a38f7710bdb45e7d1c9ae9f056c5e3765" kind="property"><name>IdLine</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_flight_1ac0a3f7ec4e6beb78afb060d469eac7a3" kind="property"><name>SDepartureDate</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_flight_1a3ffb3cf6223a2c787b2f49386e0f8025" kind="property"><name>SArrivalDate</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_flight_1ae511ea092bcfa468868c2c39c1da3011" kind="property"><name>IdFlight</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_flight_1a8ff612c7898f042536b8715805006ced" kind="function"><name>Flight</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_flight_1a8a1c39969790c743ae867d0dbef4ea75" kind="function"><name>Flight</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_flight_1a9f582046f05878a6686390c835e3f7cd" kind="function"><name>Flight</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_flight_1a7bcc3d396bd861913fce01b78d5eab38" kind="function"><name>calculateFlightTime</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_flight_1a045aba5946fda42e0264099bea5b50d5" kind="function"><name>getDepartureAirportId</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_flight_1a59a013e0398820a765659d76f9554156" kind="function"><name>getArrivalAirportId</name></member>
   </compound>
-  <compound refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_flight_schedule" kind="class"><name>Application_de_planification_de_vols_aériens::FlightSchedule</name>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_flight_schedule_1a8ef6efe5d4556c6793decc03999c6692" kind="function"><name>IsPilotAtAssignmentAirport</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_flight_schedule_1a6d77a7580a5739ce096a6957151608c8" kind="function"><name>HadPilotRestAfterFlight</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_flight_schedule_1ae27d90bab7a6611c9e9dbfe9dfbb232d" kind="function"><name>HadPilotRestAtAssignmentAirport</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_flight_schedule_1a4174bcccae04883b180939a7be091d6c" kind="function"><name>IsPilotOnVacation</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_flight_schedule_1aed4503f404e7ce97ee627676ce6340e2" kind="function"><name>AvailablePilots</name></member>
+  <compound refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_display" kind="class"><name>Application_de_planification_de_vols_aériens::frmDisplay</name>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_display_1a8b37152778d4be2397c843fb6ab15202" kind="variable"><name>thread</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_display_1a5e1cefa8c41c345e9cc384d78eba332d" kind="variable"><name>dbConnection</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_display_1a6064988a99e19d511fb86215ca8e9066" kind="variable"><name>components</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_display_1a57724be571bbb0a42bded47af18f4a19" kind="variable"><name>cmdManagement</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_display_1a5c50966dbbe659b48e93cf483a97208c" kind="variable"><name>pnlEntete</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_display_1a217094f119b3cdeac3863027fa22f059" kind="variable"><name>grbDisplay</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_display_1a9151831aa83da6f0f6e2303c4886a36f" kind="variable"><name>grbLines</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_display_1af46abdcd6dc3a2f3dc7214a8a6f8282d" kind="variable"><name>dgvLines</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_display_1ac33b2d26885693dda6692e20213aa93f" kind="variable"><name>grbFlights</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_display_1a74b0076105212bdff1665e288519572f" kind="variable"><name>cmdPlan</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_display_1aa1ba6fe362ba0205f09f2064d71930ed" kind="variable"><name>dgvFlights</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_display_1ada48d72f80414820e1467db4f173f29f" kind="variable"><name>grbPilots</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_display_1a4b5645e740090466d857a849a6382780" kind="variable"><name>cmdPlanVacation</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_display_1a1f99dbe2609228c098861754115cdd45" kind="variable"><name>cmdDisplayVacation</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_display_1af70b699239ab6be0927fc7bedaa24040" kind="variable"><name>cmdGeneratePlanning</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_display_1a30cca023460706939ec8e0d019949496" kind="variable"><name>lblMois</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_display_1a41125f2c81c7d99245c6c4d4ca247851" kind="variable"><name>cboMonth</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_display_1af6bdfafa37539a3ad636b0e866a17db1" kind="variable"><name>dgvPilots</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_display_1ac35dcdcae224e543e28814a33968713f" kind="variable"><name>colIdPilot</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_display_1ac6cf9b0390ab50e43e26814f42cd1fbc" kind="variable"><name>colPilotName</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_display_1a0a0a4fedeef47fadc3aed5c05b40fdc8" kind="variable"><name>colPilotFirstName</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_display_1a1df235cb839804af40fe37071ed9f022" kind="variable"><name>colAssignmentAirport</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_display_1a226500e7daa24d30cf45681c43e23c3e" kind="variable"><name>colFlightHours</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_display_1a99c8eba05bf23d76df53ade710572e28" kind="variable"><name>colIdLigne</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_display_1a3229e2e11db9464b8198ebf1b2706f10" kind="variable"><name>colLieuDepart</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_display_1a505a63c69b30599137896a3048622db9" kind="variable"><name>colLieuArrivee</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_display_1af7f9955d41fe65be87021fc901f5b1ae" kind="variable"><name>colDistance</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_display_1a9137e85c967ee6b66c8f322ddb003908" kind="variable"><name>colName</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_display_1a6795c98ad4cd769bf531024ade1db9f9" kind="variable"><name>colLigne</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_display_1a61374f1d2e56b766cef5ffddf89b718b" kind="variable"><name>colDepartureAirport</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_display_1a4002e0c4690e7de89414108e30e1c109" kind="variable"><name>colArrivalAirport</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_display_1adea49800addabab2cd79f6aa42673aaf" kind="variable"><name>colDateDepart</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_display_1af8724f376252b4e05993c7c00ca371cd" kind="variable"><name>colDateArrivee</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_display_1a73be1f8ad71461061cf2a4a0806ee306" kind="variable"><name>colPilote1</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_display_1aec777ced35f6985e1aa5781e1a83f562" kind="variable"><name>colPilote2</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_display_1a243a5d38707539411bd292ec86c1d7ce" kind="function"><name>frmDisplay</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_display_1a53debf3502f59d0f7f196d5848c6f8b3" kind="function"><name>frmDisplay_Load</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_display_1a3767a83293060735b11138a209f7f75b" kind="function"><name>cmdManagement_Click</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_display_1a670874ff2aff3c2982dc7be080367ee3" kind="function"><name>OpenNewForm</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_display_1adedf47263ac9f558ca3b409ee04b5846" kind="function"><name>cmdDisplayVacation_Click</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_display_1a6102748c69395416b2238b2babf2b895" kind="function"><name>cmdPlanVacation_Click</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_display_1a5e2ff4c8dd37e77eb41b658a63649f34" kind="function"><name>cmdGeneratePlaning_Click</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_display_1aae8f008ba68d658b59728d68afe651fb" kind="function"><name>cmdPlan_Click</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_display_1a0591ad12aead7bcfde904e3e00fbb9ac" kind="function"><name>displayPilots</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_display_1a4c262deeaf29424380737b59793fe021" kind="function"><name>displayFlights</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_display_1a4a706c311ebac6eca4774ebd05815d1a" kind="function"><name>displayLines</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_display_1aff1c840baf298dca9bd3145ecb1fbf31" kind="function"><name>InitializeComponent</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_display_1af84d79778df07afbb69a98e60c78a819" kind="function"><name>Dispose</name></member>
   </compound>
-  <compound refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_affectation_vol" kind="class"><name>Application_de_planification_de_vols_aériens::frmAffectationVol</name>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_affectation_vol_1ab2dbde70c41813b7db3f2a24d44ab5fe" kind="variable"><name>components</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_affectation_vol_1a86b1e4e3b5cac3ef2722d14686717c40" kind="variable"><name>lblPilotesDisponbiles</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_affectation_vol_1a8752be9225a32c8aa20a3f595ff30e3d" kind="variable"><name>lblPilotesAffectes</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_affectation_vol_1a1220afb4c94093b65c9742bdd9b6e685" kind="variable"><name>lstPilotesDisponibles</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_affectation_vol_1a1e81c46acee73e6837e8391d3a307cae" kind="variable"><name>lstPilotesAffectes</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_affectation_vol_1aa3ff104dddc026959d784ac54264c84d" kind="variable"><name>cmdAjouter</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_affectation_vol_1a504e7e026ee8f055461ee292f846f099" kind="variable"><name>cmdPlanifier</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_affectation_vol_1aa24ceb68318baf83c2c5ed0661ac30dc" kind="function"><name>frmAffectationVol</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_affectation_vol_1a34fde0e927c3508f715dc2f083195a42" kind="function"><name>cmdAjouter_Click</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_affectation_vol_1ac67b0d866d38d85601438d3a1532647f" kind="function"><name>cmdPlanifier_Click</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_affectation_vol_1a5370097854bd305d26726ca30667062b" kind="function"><name>InitializeComponent</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_affectation_vol_1a6964af23542006f8b01d264529a8298d" kind="function"><name>Dispose</name></member>
+  <compound refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment" kind="class"><name>Application_de_planification_de_vols_aériens::frmFlightAssignment</name>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment_1af10fe7b55057aec8ce0cf7b3893f2249" kind="variable"><name>dbConnection</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment_1aa55cd4d0812827e9df1a6604d9a0b94e" kind="variable"><name>buildMySQLDate</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment_1aef8443085ce787472de70d2b5b0586da" kind="variable"><name>flightName</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment_1a9cdb7b872ff2713397a9d6e8646401f3" kind="variable"><name>flightTime</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment_1a1cd8e978e48d9824fdb652eefcc0a4c8" kind="variable"><name>idFlight</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment_1a191dfe4009d1d4d9b145e654332bae35" kind="variable"><name>flight</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment_1aa26007e1eaf9087bdbd81572a42e9941" kind="variable"><name>components</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment_1a657a47d713db7d5c388508e9ccd40170" kind="variable"><name>lblAvailablePilots</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment_1a02d902dc60d50026a42c82e934637d1d" kind="variable"><name>lblAssignedPilots</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment_1aaf520ff49e47b996385324ff47db087b" kind="variable"><name>lstAvailablePilots</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment_1a73609264d552f77c2a9969b41c4d434f" kind="variable"><name>lstAssignedPilots</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment_1a32c31cf5512cf2ec3fa7864b9e7f2d88" kind="variable"><name>cmdAdd</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment_1a230c9b08ff70f511b51a08159ee17309" kind="variable"><name>cmdPlan</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment_1a4db5f4e2ab177ba17c2029b134f20548" kind="function"><name>frmFlightAssignment</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment_1a30cabe073f4054db02928401990b6413" kind="function"><name>cmdPlan_Click</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment_1a1eedb8c26a8c3ea565d855ae2b1a21d5" kind="function"><name>frmFlightAssignment_Load</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment_1aee2030b22f93c37167b9b611caeb27e4" kind="function"><name>cmdAdd_Click</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment_1ab22959995b737684f093849a72529698" kind="function"><name>LoadAllPilotsInCurrentAirport</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment_1a6daf6be84ec9e12ad1414c06bf567a95" kind="function"><name>RemovePilotsNoRestAfterFlight</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment_1a431cdca47444a02acca2745795bb100e" kind="function"><name>RemovePilotsWorking</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment_1ad9d934b344ebda31f369781812cdb517" kind="function"><name>RemovePilotsInVacation</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment_1a6d32b7d9a7ff6181d20a675f394b7b46" kind="function"><name>lstAvailablePilots_SelectedIndexChanged</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment_1ae5f3dc7c10d3dba2dffa236cff73d208" kind="function"><name>lstAssignedPilots_SelectedIndexChanged</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment_1ab39a32bb3a0c3807a9de114f02dfc03a" kind="function"><name>InitializeComponent</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_flight_assignment_1ade0f4532d709ce27a0c0af5000dc495d" kind="function"><name>Dispose</name></member>
   </compound>
-  <compound refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion" kind="class"><name>Application_de_planification_de_vols_aériens::frmGestion</name>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a4a395d8a265d8df6d136be102d62cdd3" kind="variable"><name>airportList</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1aab5310d69e44c3ea92d35cd848cf6f26" kind="variable"><name>newPilot</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a532b10d8c172f8924bbb60e4e5d9c3a3" kind="variable"><name>airport</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1ad7367b7aed616bcae659f3c037f8992c" kind="variable"><name>dbConnexion</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a877cda6dfab874264645890d023d389e" kind="variable"><name>components</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a0672075e981f4769f02ce236ed755599" kind="variable"><name>Entete</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1abb866487dbab263f68d308967644d8fa" kind="variable"><name>cmdAffichage</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1affe6bc519bf3301344b99109a0722846" kind="variable"><name>cmdGestion</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a2385aa4ebb346e33c2d62715657bc5e2" kind="variable"><name>grbGestion</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a8626f211cddc7b21a02d0646012afcd5" kind="variable"><name>grbLigne</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a468caad17053e33046dc0a64d845ae37" kind="variable"><name>grbVol</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1ac1bbd6ab5753b106d051402fe63a5272" kind="variable"><name>grbPilote</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a7d0affa09fee370fec4bb44bc773bff9" kind="variable"><name>lblLieuDepart</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1ad268e55e3bb2446b784f98e0f6c577a9" kind="variable"><name>lblDistance</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a213a2d4d99ca1a7fbfc3d2f411a7588d" kind="variable"><name>lblLieuArrivee</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1af5ef661dd241d6a613ab56f877550803" kind="variable"><name>txtDistance</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1acdb061c2e6ae29384dfad38679cc23b3" kind="variable"><name>txtLieuArrivee</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a8ae4de70fde2ccb417684c515b9228c7" kind="variable"><name>lblDateDepart</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a1af54009f9634e23de5987fc3ba73ec4" kind="variable"><name>txtLieuDepart</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a0750db21bfe52022e14d074e6789c439" kind="variable"><name>lblDateArrivee</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a76f8643d734127c4008814dc45c47d35" kind="variable"><name>lblLigne</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a74b54feee48e8861cac24562304cfe24" kind="variable"><name>txtPrenom</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a795b42c8f0db20331721d4b8147c09b7" kind="variable"><name>txtNom</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1aaabb360531e840581b2ff3388697e808" kind="variable"><name>lblPrenom</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a5a8d67d5caab7fb863a4747ece7c24a8" kind="variable"><name>lblHeuresVol</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a9e4372683d7cdf6d2a1e5c6866982764" kind="variable"><name>lblAeroportAffectation</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a0a94d40889c94e06abe70b388fce5339" kind="variable"><name>lblNom</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a47480f70477c57b65610df2728ce738e" kind="variable"><name>txtHeuresVol</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a0a51cc48442402d1d4b5c21174f03c9e" kind="variable"><name>cmdAjouterLigne</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a4eb961fccbe8cecbaddf371b7bc6d473" kind="variable"><name>lstLieuDepart</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1afa521c200954a79af2cf63c156072fca" kind="variable"><name>lstLieuArrivee</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a3f1096ce601057ebe043c5240a56d086" kind="variable"><name>cmdAjouterVol</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a91d46eae359ac28552c92fc2201fa9d9" kind="variable"><name>dtpDateArrivee</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a47076d06eaeff02114b55b4ce5015fd2" kind="variable"><name>dtpDateDepart</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a1c09d4b886b845d58fb1d88887b4eb0c" kind="variable"><name>lstLigne</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a9161eff66dab2afdc8e77bd13e152796" kind="variable"><name>cmdAjouterPilote</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a940fc6b4e3b96eccd37863c5bf346f60" kind="variable"><name>cboAeroportAffectation</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1aeb18ad09492b87eab030ed2f9179af97" kind="function"><name>frmGestion</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a66121dfc77c9288ff3003e94c1a667a8" kind="function"><name>cmdAffichage_Click</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1af15e1741d262b92e0a19215a2e61123a" kind="function"><name>cmdAjouterPilote_Click</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a2934d0d67815af1bc3011bf0241528c1" kind="function"><name>cmdAjouterVol_Click</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a9badf6662403084a54817bbeae5ecb09" kind="function"><name>cmdAjouterLigne_Click</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1a475585049344d140cda88c21467041cb" kind="function"><name>frmGestion_Load</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1ab11b84bcc3fdbdc425ecb5f156a9e4d5" kind="function"><name>InitializeComponent</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_gestion_1ae67280db69c5f87a5351f8729389d995" kind="function"><name>Dispose</name></member>
+  <compound refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1frm_flight_assignment_tests" kind="class"><name>Application_de_planification_de_vols_aériens::Tests::frmFlightAssignmentTests</name>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1frm_flight_assignment_tests_1a994202d6ca518315b268d985c0f1f8f6" kind="variable"><name>dbConnection</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1frm_flight_assignment_tests_1ae70383da6a80c6eee9fcfd668905146d" kind="function"><name>addPilotToFlightTest</name></member>
   </compound>
-  <compound refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacances" kind="class"><name>Application_de_planification_de_vols_aériens::frmVacances</name>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacances_1af6e090d6dbb07f82465b2a258f33f539" kind="property"><name>Pilot</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacances_1af6b553540998435890d071f0f2ae7109" kind="variable"><name>components</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacances_1ab6ef3a19b32651938d3d7cd19aad0564" kind="variable"><name>lblSemaine1Debut</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacances_1a98067d14c94813df51dcd3f97ba3d42d" kind="variable"><name>lblSemaine1Fin</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacances_1acaa4c35e4449fca2d5feae69b74ce5a8" kind="variable"><name>dtpSemain1Debut</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacances_1a9d03a7ac5c00f49d49f90b6eb045733b" kind="variable"><name>dtpSemain1Fin</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacances_1a1c1347db6075bfd0211644f4c7619597" kind="variable"><name>cmdValider</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacances_1af6ec175b735c98e670f562feb41dc256" kind="function"><name>frmVacances</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacances_1af754dc6178c2ca5a2ea9b20a630cea0d" kind="function"><name>cmdValider_Click</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacances_1a8614a0c3b5d9ae741e7d2b7cff2d53c4" kind="function"><name>frmVacances_Load</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacances_1a032d2b057f4364e3d7fab1491bc771a2" kind="function"><name>InitializeComponent</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacances_1a618e271102d37f12ad7dad5d252e2492" kind="function"><name>Dispose</name></member>
+  <compound refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management" kind="class"><name>Application_de_planification_de_vols_aériens::frmManagement</name>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1aecf031812de1dc8ffe95ccbbec2b82cb" kind="variable"><name>thread</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1aff46963578d393937e0ae77474e20fe9" kind="variable"><name>airportList</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1ab35cf9c15186419985dc7748536fb910" kind="variable"><name>linesNamesOrderById</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a6ad3f4ec507a11b006a066bc6148b399" kind="variable"><name>newPilot</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1aee5034b941f440a875108b697d5b14ae" kind="variable"><name>line</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a5d006a725a3630164f1f57590165cc59" kind="variable"><name>flight</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a89aeead5acf440aed7f517d05e99e0f5" kind="variable"><name>airport</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a810e4319e37a946951d90331d0c6ebb9" kind="variable"><name>dbConnection</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1aef04af517f5dbe8d5e29ff8cb938c4c6" kind="variable"><name>components</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1ab74eafd147a4dd4a4956198caf49515e" kind="variable"><name>Entete</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a8f89b7a1d9b2a73c15f19301bdd3a637" kind="variable"><name>cmdDisplay</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1ac695277856d62b5cef4d82bde7a71597" kind="variable"><name>grbManagement</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a333fd89e211c56933bd5b78a11551ca8" kind="variable"><name>grbLine</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a8e90a1fa2d8a2e8510bcb39e45388278" kind="variable"><name>grbFlight</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a70b567ecee5de463b65b03c6b93675da" kind="variable"><name>grbPilot</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a77d05a4431471bcd4df8da7f929a3802" kind="variable"><name>lblDeparturePlace</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1aa88874e66a48dac9d63b1be62722e844" kind="variable"><name>lblDistance</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a8db3296a2d3b61d9706422859db8da03" kind="variable"><name>lblArrivalPlace</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a406755d1581fca1ac41a1a039b5a523c" kind="variable"><name>txtDistance</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1ab6d26175d43be89c537e42a990111e28" kind="variable"><name>lblDepartureDate</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a06b62e2422a3c16994ff7857f7492902" kind="variable"><name>lblArrivalDate</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a399fdb8670d67e0611c22cf43b61fc4a" kind="variable"><name>lblLine</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a481f97ab227ac9f5c77e96655e4b4624" kind="variable"><name>txtFirstName</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1ab2f090a2e0bb1b2e8fe54f7b0e340029" kind="variable"><name>txtName</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a075c633074478185b6581fcb014d7bb6" kind="variable"><name>lblFirstName</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a2a1d6b72211f80e4807a0d7f306f0af1" kind="variable"><name>lblFlightHours</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1af988ae23e017070441002f48e695f752" kind="variable"><name>lblAssignmentAirport</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a4583174c866ebdf98d937b6b57d79a73" kind="variable"><name>lblName</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a73e3a5dd123a2498b70931596b3c266c" kind="variable"><name>txtFlightHours</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a2fbd2f47f33cc0a0e233a150bdac93e2" kind="variable"><name>cmdAddLine</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1ae133483ffb3e666de2e11776191185e0" kind="variable"><name>cmdAddFlight</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a8af5d033652e97f91826b6e4f86553e6" kind="variable"><name>dtpArrivalDate</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a59030ac8222e7707507215bd84a91d56" kind="variable"><name>dtpDepartureDate</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1afc4c5187f678d85d4e0793ee0067bca6" kind="variable"><name>cmdAddPilot</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a0100e50f39e9c03f564caa554fa583dd" kind="variable"><name>cboAssignmentAirport</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a22237149af76708159854427e117a196" kind="variable"><name>cboArrivalPlace</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a281308d1a62e507fa55700eaf0f1f394" kind="variable"><name>cboDeparturePlace</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1af73c419ce6414876fa1a9021c5cf240c" kind="variable"><name>cboLine</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a6c377fb5eed4295fd558ce568dd00651" kind="variable"><name>nudMArrival</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a83b7afc9fc807d0b8d3d280688c4ec9a" kind="variable"><name>nudHArrival</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a6e68316c181e48c7b3872669983d0f18" kind="variable"><name>nudMDeparture</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a87fe7e98e4a49fc125c73ef907c7a42a" kind="variable"><name>nudHDeparture</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1acc007784dded046975d6babebe5f6453" kind="variable"><name>lblArrivalHour</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a0f79a12a7e5934c3f9d9d74072afc98a" kind="variable"><name>lblDepartureHour</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a2bf31b3b46855cf48212db1f7b34aa42" kind="variable"><name>cmdArrivalDate</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1aa5081dd5fc8f53d45d54eedbd6a8978a" kind="function"><name>frmManagement</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1ae1ecd641368b7fa70d16a566b50cb334" kind="function"><name>cmdAddPilote_Click</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a730a91b3fd653f9e487e50e8482b5f49" kind="function"><name>frmManagement_Load</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1ab4c452cd5667462ffe6fdef1d45bfe4d" kind="function"><name>cmdDisplay_Click</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a583ed7d95c88f97c0fdc14814fe68f78" kind="function"><name>OpenNewForm</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a8263c50946b23b748a86cf0871ca0b2a" kind="function"><name>cmdAddVol_Click</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a2ffd7d2b0eb56f090782121937994221" kind="function"><name>cmdAddLine_Click</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1ad9fde26222a156e5ebc26b2715224f62" kind="function"><name>DoesStringContainsOnlyLetters</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a9e2c9a1fdee17d43356cebfea5f78417" kind="function"><name>DoesStringContainsOnlyNumbers</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a1ee7750225cce05f5389bd3ee8a424d1" kind="function"><name>ArePilotFieldsFilled</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a31f86a82608583e350c30c7a9f21b6e4" kind="function"><name>ArePilotNameLengthOrPilotFirstNameLengthCorrect</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1abf841426cb1417389622fcc92e27a629" kind="function"><name>DoesFlightTimeBeginWith0</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1abbbae4f248862b205891ead993f37ad3" kind="function"><name>DoesDistanceBeginWith0</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a69ae513eb5ff44c546fea559b724a197" kind="function"><name>DoesDistanceContainsOnlyNumbers</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a319afbff51864e549f477fcb6347be1c" kind="function"><name>AreLineFieldsFilled</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1aaff9a680485581f7a6ce720f6db47942" kind="function"><name>AreDepartureAirportAndArrivalAirportEqual</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1aa8a9380472f2cdf2c43cf35d8e6ce89a" kind="function"><name>AreFlightFieldsFilled</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1ad453bff098c17ff25b0ad86a42364aa2" kind="function"><name>cmdDateArrivee_Click</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a053989902811c7cd6d17b320742cf584" kind="function"><name>cboLigne_SelectedIndexChanged</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a501805fe32435ee50de4d51125f41913" kind="function"><name>nudHDepart_ValueChanged</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1aa18ca46c5818ab8e4c572a1d8f901b22" kind="function"><name>nudMDepart_ValueChanged</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a290f956c127aaf88dd88dafc804cc3cb" kind="function"><name>dtpDateDepart_ValueChanged</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a4bfd49c611fb9e8c852ecf49ad72ac95" kind="function"><name>frmManagement_FormClosing</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1aca7389d6d1c738737e78fc1eccb04b10" kind="function"><name>AddAirports</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a0991a044340d1971cdc96eefb559a36c" kind="function"><name>AddLines</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1a19ea5ac574a865ea42a318c233c9fd9a" kind="function"><name>InitializeComponent</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_management_1ac720bd92ec43c9d840d80fe5b5b64a1d" kind="function"><name>Dispose</name></member>
   </compound>
-  <compound refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacances_affichage" kind="class"><name>Application_de_planification_de_vols_aériens::frmVacancesAffichage</name>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacances_affichage_1a9ffb9b2753890d931b0a5e760d4f84bf" kind="property"><name>Vacation</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacances_affichage_1a19b562333f28f577fda73985df95f423" kind="variable"><name>components</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacances_affichage_1a35479eee8eabeef85524665db30c69f0" kind="variable"><name>dataGridView1</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacances_affichage_1aae70f30d3cb2f6031a8522e3e1c63e41" kind="variable"><name>colDebut</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacances_affichage_1a9bc1893e41f7ed4eb811a35116f7deec" kind="variable"><name>colFin</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacances_affichage_1aae74e15476a78806df94e5b420847783" kind="variable"><name>cmdOK</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacances_affichage_1a57aef6187251bbd4621c83517a46a73f" kind="function"><name>frmVacancesAffichage</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacances_affichage_1a169439059b2da17e1ac2fe67202b6019" kind="function"><name>cmdOK_Click</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacances_affichage_1ac086bc9a7d3a157115418affe7bbb61d" kind="function"><name>InitializeComponent</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacances_affichage_1afc0b73ee79ce33aadb85a91c77c9ce0e" kind="function"><name>Dispose</name></member>
+  <compound refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation" kind="class"><name>Application_de_planification_de_vols_aériens::frmVacation</name>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_1a60534f09d0608fae942cf19756c77170" kind="variable"><name>dbConnection</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_1ad6994f32fdb1ac939d2a0c3b6bfa1710" kind="variable"><name>idPilot</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_1ae640f52c712784c648262ed31731dedb" kind="variable"><name>daysLeft</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_1a565bf43f81226428052dc9ff070fc398" kind="variable"><name>components</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_1a85667bc3ebb6d292619b153f8025a3a0" kind="variable"><name>lblStartDate</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_1a3471819c853aa4e0970116e89ff7ad21" kind="variable"><name>lblEndDate</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_1afe96e527f195faea5ae9d9fac864e7e4" kind="variable"><name>dtpStart</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_1a992ba71a66a2ea33aea8148a8db89663" kind="variable"><name>dtpEnd</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_1a80d6d3cf64b6ea09ef03e4253ee13424" kind="variable"><name>cmdValidate</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_1a8507b3ca296fad048a5fa603b2ca5bc6" kind="property"><name>IdPilot</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_1a0061f5e8f3202beab7a0458c25573309" kind="property"><name>DaysLeft</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_1aca84ea11aed02b7e2f79819d8e26a7df" kind="function"><name>frmVacation</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_1a6fef3fd43cf1ea9efb12c0a8ac8a1783" kind="function"><name>frmVacation</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_1a8b7402ab60b4b3d729a622a9f20021f5" kind="function"><name>VacationDaysLeft</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_1a9f4bbc18dc24ac49dc0e5d10d990c644" kind="function"><name>IsPilotInVacationYet</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_1a4774f8ebc841abecec2961fa9736122e" kind="function"><name>IsPilotWorking</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_1a477e7f288a79343b90ee48fd9dc93e52" kind="function"><name>cmdValider_Click</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_1a6bbe4bff04626cf2a8e9c69f8fef45fe" kind="function"><name>frmVacances_Load</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_1a3f6eff39ef2310a2e4c0c1fb7c5e4e37" kind="function"><name>InitializeComponent</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_1a28b48ced195658497e43b6e7636bc634" kind="function"><name>Dispose</name></member>
+  </compound>
+  <compound refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_display" kind="class"><name>Application_de_planification_de_vols_aériens::frmVacationDisplay</name>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_display_1a92341f8be632fd4955fe84a49bdbee81" kind="variable"><name>idPilot</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_display_1ae52c71113e70c1e53da83bcb21363665" kind="variable"><name>dbConnection</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_display_1abb0d15d34ce8df58ea150890b7978de4" kind="variable"><name>components</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_display_1a898c4803feb41d18ed163bdfa99a1145" kind="variable"><name>dgvVacation</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_display_1a10131e242e1c776bd4d33d84d57fc382" kind="variable"><name>cmdOK</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_display_1a40583f0a7112e5e63787b1568fb95bd0" kind="variable"><name>colDebut</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_display_1a98bdc6cef596648b602003279d2f266d" kind="variable"><name>colFin</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_display_1aa63ad148e88784e53ff98f82d055bb95" kind="property"><name>IdPilot</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_display_1a37fd09fd51e6ef80b5dd10ed7c94c473" kind="function"><name>frmVacationDisplay</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_display_1a49b08d433ec402a571fb939ae9859f97" kind="function"><name>cmdOK_Click</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_display_1a3f73f1f6828d636de7c177362eedf206" kind="function"><name>DisplayVacation</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_display_1a3d64ab32126ec2479d3debe1025e7874" kind="function"><name>frmVacationDisplay_Load</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_display_1a051155b6280d53334867682baa38f8a1" kind="function"><name>InitializeComponent</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_display_1aeca6e72f5494f1cf900883c2844fed6e" kind="function"><name>Dispose</name></member>
   </compound>
   <compound refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_line" kind="class"><name>Application_de_planification_de_vols_aériens::Line</name>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_line_1a6a11143555feb2cd4fc2e77edd23e065" kind="variable"><name>departureAirport</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_line_1ad1c0bf3915c6b41bd1445a01c6b15ca0" kind="variable"><name>arrivalAirport</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_line_1a5a71e6cd7cbbaf2f7b57a0981f2bc0be" kind="variable"><name>distance</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_line_1a8da050ad85dd315c9f6b4bf425cc9a1f" kind="property"><name>DepartureAirport</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_line_1ac2b2c210ab39b7ed78bf15696de9f50b" kind="property"><name>ArrivalAirport</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_line_1ab20aa426dca4af775b0029f44c9b607d" kind="property"><name>Distance</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_line_1ac7556c8f4a05e81107a2b3f296c41521" kind="property"><name>Airport</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_line_1ac5938e9893f26cf7224e4bc65e919bb7" kind="function"><name>Line</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_line_1ab754f922cdb8f213493e73568ee916ef" kind="variable"><name>dbConnection</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_line_1adb3460678c4e16325355aeb955e78351" kind="variable"><name>idDepartureAirport</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_line_1ad514143010af57ec976e25f31d0aebd5" kind="variable"><name>idArrivalAirport</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_line_1a2ba6b52293de64c13169cee95e20c26f" kind="variable"><name>distance</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_line_1ac44a06e9b4c7887d5076577e1d81796d" kind="variable"><name>idLine</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_line_1a42e1df06bab20f7938e89fcf4e51c3d3" kind="property"><name>Distance</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_line_1a1710085d5740c1aaa3c35ee7855ee110" kind="property"><name>IdDepartureAirport</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_line_1af561d25ae39b9829ed5a0c78c1747db4" kind="property"><name>IdArrivalAirport</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_line_1a303bd0ff69424e6e78a742dd0450c27f" kind="property"><name>IdLine</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_line_1aa1dbd63174ad8389c66e689d96e80f3f" kind="function"><name>Line</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_line_1a54bc91837d35e45e736c65416b19e7b3" kind="function"><name>Line</name></member>
+  </compound>
+  <compound refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_my_s_q_l_exception" kind="class"><name>Application_de_planification_de_vols_aériens::MySQLException</name>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_my_s_q_l_exception_1aa9d3be9e502d7f7587d0a077c68705bf" kind="function"><name>MySQLException</name></member>
+  </compound>
+  <compound refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_my_s_q_l_get_data_exception" kind="class"><name>Application_de_planification_de_vols_aériens::MySQLGetDataException</name>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_my_s_q_l_get_data_exception_1a7391ea922f8c6fb308fc778048746cb1" kind="function"><name>MySQLGetDataException</name></member>
   </compound>
   <compound refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot" kind="class"><name>Application_de_planification_de_vols_aériens::Pilot</name>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot_1aae8eca8d700654f1cf0567353d6d3314" kind="variable"><name>dbConnection</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot_1aff9526504d8d2623ae90911b9a70994c" kind="variable"><name>buildMySQLDate</name></member>
     <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot_1a1d55d0c126a0b1b994a6e2e9fffb1b85" kind="variable"><name>name</name></member>
     <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot_1ad8141ddc24789e3152091ebef91b0f11" kind="variable"><name>firstName</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot_1ae5a4ea2354578f7cf69fe30762d74a3c" kind="variable"><name>flightTime</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot_1af10bd5bd8e6b97df4a8216cf22770d75" kind="variable"><name>id</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot_1a52f174679d710c9ca8c115da13788e48" kind="variable"><name>flightTime</name></member>
     <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot_1a32222a01bd02c237649320fc56e5245e" kind="variable"><name>assignmentAirport</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot_1a4c2150c89e84dadefc0096c8ee8e1e94" kind="variable"><name>assignmentAirportName</name></member>
     <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot_1a397bc161362554d9b1d76cf134255b14" kind="property"><name>Name</name></member>
     <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot_1ab3e8006344beff2d6f8c0c83e20aeaa1" kind="property"><name>FirstName</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot_1a04a6b4cd1e16d07382bef7536c5cf31e" kind="property"><name>FlightTime</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot_1a451a7371cde9b8ddbae1a2119b0a4061" kind="property"><name>AssignmentAirport</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot_1a7275b993fad3162863a8f8418c9e721b" kind="function"><name>Pilot</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot_1aaf8a3337b9cdcba6790188836c180a4c" kind="property"><name>FlightTime</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot_1a74a4c13e74423fb879bc23a33a17dbab" kind="property"><name>AssignmentAirportName</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot_1acb3092acba51aaf62e618ac19d7667fe" kind="property"><name>Id</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot_1ab77898a6e3637b9145b78f6784c8303a" kind="function"><name>Pilot</name></member>
     <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot_1a797c687880bc62747aacdf30c2d6d24e" kind="function"><name>Pilot</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot_1aafa2bd3d82d3d6cbe3dbc43aae3292d2" kind="function"><name>Pilot</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot_1aa6fe1b84098077f1bd604c69ac01ef28" kind="function"><name>UpdatePilotsFlightTime</name></member>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_pilot_1abe2e9757973f9f17d1551eed42a4adb4" kind="function"><name>UpdatePilotsCurrentLocation</name></member>
+  </compound>
+  <compound refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_pilot_tests" kind="class"><name>Application_de_planification_de_vols_aériens::Tests::PilotTests</name>
+    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_pilot_tests_1a3caa375d856283ec74472f7e3f3095b1" kind="function"><name>UpdatePilotsCurrentLocationTest</name></member>
   </compound>
   <compound refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_program" kind="class"><name>Application_de_planification_de_vols_aériens::Program</name>
     <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_program_1a0402b3ecf0761ce8f49c5e50340e7b21" kind="function"><name>Main</name></member>
@@ -216,13 +364,13 @@
     <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_vacation_1ac4b3dcb52878e430d9de3d64972161b0" kind="variable"><name>startDate</name></member>
     <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_vacation_1a4cda35b70d8a4b33b73000ecaca0fac3" kind="variable"><name>endDate</name></member>
     <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_vacation_1a6d53f1e9d9f77cd5e174d0675becf5b1" kind="variable"><name>pilot</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_vacation_1a5ebeb112b3fffb8c5325ac0ce7000ad6" kind="property"><name>StartDate</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_vacation_1ae255a27724aa8d84aee0fa8ec23a4878" kind="property"><name>EndDate</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_vacation_1a87be5d673051905ea03c547cb55ec866" kind="property"><name>Pilot</name></member>
-    <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_vacation_1a6820353b10a0f3e779e014d751337b75" kind="property"><name>Pilot1</name></member>
     <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_vacation_1abd1900c4e75c89a0a681c8fd83d6f6fc" kind="function"><name>Vacation</name></member>
   </compound>
   <compound refid="namespace_application__de__planification__de__vols__a_xC3_xA9riens" kind="namespace"><name>Application_de_planification_de_vols_aériens</name>
+  </compound>
+  <compound refid="namespace_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests" kind="namespace"><name>Application_de_planification_de_vols_aériens::Tests</name>
+  </compound>
+  <compound refid="namespace_microsoft_1_1_visual_studio_1_1_test_tools_1_1_unit_testing" kind="namespace"><name>Microsoft::VisualStudio::TestTools::UnitTesting</name>
   </compound>
   <compound refid="namespace_my_sql_1_1_data_1_1_my_sql_client" kind="namespace"><name>MySql::Data::MySqlClient</name>
   </compound>
@@ -236,43 +384,95 @@
   </compound>
   <compound refid="namespace_system_1_1_drawing" kind="namespace"><name>System::Drawing</name>
   </compound>
+  <compound refid="namespace_system_1_1_i_o" kind="namespace"><name>System::IO</name>
+  </compound>
   <compound refid="namespace_system_1_1_linq" kind="namespace"><name>System::Linq</name>
   </compound>
+  <compound refid="namespace_system_1_1_reflection" kind="namespace"><name>System::Reflection</name>
+  </compound>
+  <compound refid="namespace_system_1_1_runtime_1_1_compiler_services" kind="namespace"><name>System::Runtime::CompilerServices</name>
+  </compound>
+  <compound refid="namespace_system_1_1_runtime_1_1_interop_services" kind="namespace"><name>System::Runtime::InteropServices</name>
+  </compound>
   <compound refid="namespace_system_1_1_text" kind="namespace"><name>System::Text</name>
+  </compound>
+  <compound refid="namespace_system_1_1_text_1_1_regular_expressions" kind="namespace"><name>System::Text::RegularExpressions</name>
+  </compound>
+  <compound refid="namespace_system_1_1_threading" kind="namespace"><name>System::Threading</name>
   </compound>
   <compound refid="namespace_system_1_1_threading_1_1_tasks" kind="namespace"><name>System::Threading::Tasks</name>
   </compound>
   <compound refid="namespace_system_1_1_windows_1_1_forms" kind="namespace"><name>System::Windows::Forms</name>
   </compound>
+  <compound refid="frm_flight_assignment_tests_8cs" kind="file"><name>frmFlightAssignmentTests.cs</name>
+  </compound>
+  <compound refid="_add_pilot_to_fligth_2obj_2_debug_2_temporary_generated_file__036_c0_b5_b-1481-4323-8_d20-8_f5_a_d_c_b23_d92_8cs" kind="file"><name>TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs</name>
+  </compound>
+  <compound refid="_application_01de_01planification_01de_01vols_01a_xC3_xA9riens_2obj_2_debug_2_temporary_generateaf95bf420dae4baec1bb9e3229a20156" kind="file"><name>TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs</name>
+  </compound>
+  <compound refid="_d_b_connection_tests_2obj_2_debug_2_temporary_generated_file__036_c0_b5_b-1481-4323-8_d20-8_f5_a_d_c_b23_d92_8cs" kind="file"><name>TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs</name>
+  </compound>
+  <compound refid="_pilot_2obj_2_debug_2_temporary_generated_file__036_c0_b5_b-1481-4323-8_d20-8_f5_a_d_c_b23_d92_8cs" kind="file"><name>TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs</name>
+  </compound>
+  <compound refid="_add_pilot_to_fligth_2obj_2_debug_2_temporary_generated_file__5937a670-0e60-4077-877b-f7221da3dda1_8cs" kind="file"><name>TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs</name>
+  </compound>
+  <compound refid="_application_01de_01planification_01de_01vols_01a_xC3_xA9riens_2obj_2_debug_2_temporary_generate930faa288b5313954470a155761fe16d" kind="file"><name>TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs</name>
+  </compound>
+  <compound refid="_d_b_connection_tests_2obj_2_debug_2_temporary_generated_file__5937a670-0e60-4077-877b-f7221da3dda1_8cs" kind="file"><name>TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs</name>
+  </compound>
+  <compound refid="_pilot_2obj_2_debug_2_temporary_generated_file__5937a670-0e60-4077-877b-f7221da3dda1_8cs" kind="file"><name>TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs</name>
+  </compound>
+  <compound refid="_add_pilot_to_fligth_2obj_2_debug_2_temporary_generated_file___e7_a71_f73-0_f8_d-4_b9_b-_b56_e-8_e70_b10_b_c5_d3_8cs" kind="file"><name>TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs</name>
+  </compound>
+  <compound refid="_application_01de_01planification_01de_01vols_01a_xC3_xA9riens_2obj_2_debug_2_temporary_generatec62f080b6c7914f73103264db9183560" kind="file"><name>TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs</name>
+  </compound>
+  <compound refid="_d_b_connection_tests_2obj_2_debug_2_temporary_generated_file___e7_a71_f73-0_f8_d-4_b9_b-_b56_e-8_e70_b10_b_c5_d3_8cs" kind="file"><name>TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs</name>
+  </compound>
+  <compound refid="_pilot_2obj_2_debug_2_temporary_generated_file___e7_a71_f73-0_f8_d-4_b9_b-_b56_e-8_e70_b10_b_c5_d3_8cs" kind="file"><name>TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs</name>
+  </compound>
+  <compound refid="_add_pilot_to_fligth_2_properties_2_assembly_info_8cs" kind="file"><name>AssemblyInfo.cs</name>
+  </compound>
+  <compound refid="_application_01de_01planification_01de_01vols_01a_xC3_xA9riens_2_properties_2_assembly_info_8cs" kind="file"><name>AssemblyInfo.cs</name>
+  </compound>
+  <compound refid="_d_b_connection_tests_2_properties_2_assembly_info_8cs" kind="file"><name>AssemblyInfo.cs</name>
+  </compound>
+  <compound refid="_pilot_2_properties_2_assembly_info_8cs" kind="file"><name>AssemblyInfo.cs</name>
+  </compound>
   <compound refid="_airport_8cs" kind="file"><name>Airport.cs</name>
+  </compound>
+  <compound refid="_build_my_s_q_l_date_8cs" kind="file"><name>BuildMySQLDate.cs</name>
+  </compound>
+  <compound refid="_date_time_extensions_8cs" kind="file"><name>DateTimeExtensions.cs</name>
   </compound>
   <compound refid="_d_b_connection_8cs" kind="file"><name>DBConnection.cs</name>
   </compound>
   <compound refid="_flight_8cs" kind="file"><name>Flight.cs</name>
   </compound>
-  <compound refid="_flight_schedule_8cs" kind="file"><name>FlightSchedule.cs</name>
+  <compound refid="frm_display_8cs" kind="file"><name>frmDisplay.cs</name>
   </compound>
-  <compound refid="frm_affectation_vol_8cs" kind="file"><name>frmAffectationVol.cs</name>
+  <compound refid="frm_display_8_designer_8cs" kind="file"><name>frmDisplay.Designer.cs</name>
   </compound>
-  <compound refid="frm_affectation_vol_8_designer_8cs" kind="file"><name>frmAffectationVol.Designer.cs</name>
+  <compound refid="frm_flight_assignment_8cs" kind="file"><name>frmFlightAssignment.cs</name>
   </compound>
-  <compound refid="frm_affichage_8cs" kind="file"><name>frmAffichage.cs</name>
+  <compound refid="frm_flight_assignment_8_designer_8cs" kind="file"><name>frmFlightAssignment.Designer.cs</name>
   </compound>
-  <compound refid="frm_affichage_8_designer_8cs" kind="file"><name>frmAffichage.Designer.cs</name>
+  <compound refid="frm_management_8cs" kind="file"><name>frmManagement.cs</name>
   </compound>
-  <compound refid="frm_gestion_8cs" kind="file"><name>frmGestion.cs</name>
+  <compound refid="frm_management_8_designer_8cs" kind="file"><name>frmManagement.Designer.cs</name>
   </compound>
-  <compound refid="frm_gestion_8_designer_8cs" kind="file"><name>frmGestion.Designer.cs</name>
+  <compound refid="frm_vacation_8cs" kind="file"><name>frmVacation.cs</name>
   </compound>
-  <compound refid="frm_vacances_8cs" kind="file"><name>frmVacances.cs</name>
+  <compound refid="frm_vacation_8_designer_8cs" kind="file"><name>frmVacation.Designer.cs</name>
   </compound>
-  <compound refid="frm_vacances_8_designer_8cs" kind="file"><name>frmVacances.Designer.cs</name>
+  <compound refid="frm_vacation_display_8cs" kind="file"><name>frmVacationDisplay.cs</name>
   </compound>
-  <compound refid="frm_vacances_affichage_8cs" kind="file"><name>frmVacancesAffichage.cs</name>
-  </compound>
-  <compound refid="frm_vacances_affichage_8_designer_8cs" kind="file"><name>frmVacancesAffichage.Designer.cs</name>
+  <compound refid="frm_vacation_display_8_designer_8cs" kind="file"><name>frmVacationDisplay.Designer.cs</name>
   </compound>
   <compound refid="_line_8cs" kind="file"><name>Line.cs</name>
+  </compound>
+  <compound refid="_my_s_q_l_exception_8cs" kind="file"><name>MySQLException.cs</name>
+  </compound>
+  <compound refid="_my_s_q_l_get_data_exception_8cs" kind="file"><name>MySQLGetDataException.cs</name>
   </compound>
   <compound refid="_pilot_8cs" kind="file"><name>Pilot.cs</name>
   </compound>
@@ -280,12 +480,40 @@
   </compound>
   <compound refid="_vacation_8cs" kind="file"><name>Vacation.cs</name>
   </compound>
-  <compound refid="dir_97d7edaaf1ab98cda07177be86033d38" kind="dir"><name>P:/TPI/Application de planification de vols aériens</name>
+  <compound refid="_d_b_connection_tests_8cs" kind="file"><name>DBConnectionTests.cs</name>
   </compound>
-  <compound refid="dir_9e571331aacef49c56235d95fddcba1f" kind="dir"><name>P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens</name>
+  <compound refid="_pilot_tests_8cs" kind="file"><name>PilotTests.cs</name>
   </compound>
-  <compound refid="dir_617804c1fb5864457089ac8352017473" kind="dir"><name>P:</name>
+  <compound refid="dir_4ffdc8867005390ff3049c3fcaf4d676" kind="dir"><name>AddPilotToFligth</name>
   </compound>
-  <compound refid="dir_602a183f22112cbf5449f95c8262b728" kind="dir"><name>P:/TPI</name>
+  <compound refid="dir_6f2e4fb9639def1e6b10034dfc11c1dd" kind="dir"><name>Application de planification de vols aériens</name>
+  </compound>
+  <compound refid="dir_6fdbfd5bcbc301105f35f2d29352fe54" kind="dir"><name>DBConnectionTests</name>
+  </compound>
+  <compound refid="dir_991f680ed160f7937fe9bfd30d21df36" kind="dir"><name>DBConnectionTests/obj/Debug</name>
+  </compound>
+  <compound refid="dir_ecbf5574f279e98574eab8e411e763eb" kind="dir"><name>Application de planification de vols aériens/obj/Debug</name>
+  </compound>
+  <compound refid="dir_d8d2be96eca5f40f9da2f2ce931458a3" kind="dir"><name>Pilot/obj/Debug</name>
+  </compound>
+  <compound refid="dir_d087fc2038132f2e29809c28c9146d15" kind="dir"><name>AddPilotToFligth/obj/Debug</name>
+  </compound>
+  <compound refid="dir_6b919e147f2c9c08ad4e226ee9186fb8" kind="dir"><name>DBConnectionTests/obj</name>
+  </compound>
+  <compound refid="dir_2ebcb7234d1ba56a686fa32610180ee2" kind="dir"><name>AddPilotToFligth/obj</name>
+  </compound>
+  <compound refid="dir_462a260969bb7a246ac86578f8460721" kind="dir"><name>Application de planification de vols aériens/obj</name>
+  </compound>
+  <compound refid="dir_0f2d97fb91faef3180a39037f41e8548" kind="dir"><name>Pilot/obj</name>
+  </compound>
+  <compound refid="dir_f703f62317aa07f72524bc7b9571c1ec" kind="dir"><name>Pilot</name>
+  </compound>
+  <compound refid="dir_df6ff7a5d95e877dc8fa45fdd7a3f7af" kind="dir"><name>Application de planification de vols aériens/Properties</name>
+  </compound>
+  <compound refid="dir_62a34064e8730b5cdc8a1d32374d1331" kind="dir"><name>Pilot/Properties</name>
+  </compound>
+  <compound refid="dir_a8980925cd6907937e7c7c56120b11ce" kind="dir"><name>DBConnectionTests/Properties</name>
+  </compound>
+  <compound refid="dir_9a9bd8816daacf7a7df093a748ccb5fe" kind="dir"><name>AddPilotToFligth/Properties</name>
   </compound>
 </doxygenindex>

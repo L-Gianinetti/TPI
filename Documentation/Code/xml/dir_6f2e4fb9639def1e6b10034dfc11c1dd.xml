@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_6f2e4fb9639def1e6b10034dfc11c1dd" kind="dir">
+    <compoundname>Application de planification de vols aériens</compoundname>
+    <innerdir refid="dir_462a260969bb7a246ac86578f8460721">Application de planification de vols aériens/obj</innerdir>
+    <innerdir refid="dir_df6ff7a5d95e877dc8fa45fdd7a3f7af">Application de planification de vols aériens/Properties</innerdir>
+    <innerfile refid="_airport_8cs">Airport.cs</innerfile>
+    <innerfile refid="_build_my_s_q_l_date_8cs">BuildMySQLDate.cs</innerfile>
+    <innerfile refid="_date_time_extensions_8cs">DateTimeExtensions.cs</innerfile>
+    <innerfile refid="_d_b_connection_8cs">DBConnection.cs</innerfile>
+    <innerfile refid="_flight_8cs">Flight.cs</innerfile>
+    <innerfile refid="frm_display_8cs">frmDisplay.cs</innerfile>
+    <innerfile refid="frm_display_8_designer_8cs">frmDisplay.Designer.cs</innerfile>
+    <innerfile refid="frm_flight_assignment_8cs">frmFlightAssignment.cs</innerfile>
+    <innerfile refid="frm_flight_assignment_8_designer_8cs">frmFlightAssignment.Designer.cs</innerfile>
+    <innerfile refid="frm_management_8cs">frmManagement.cs</innerfile>
+    <innerfile refid="frm_management_8_designer_8cs">frmManagement.Designer.cs</innerfile>
+    <innerfile refid="frm_vacation_8cs">frmVacation.cs</innerfile>
+    <innerfile refid="frm_vacation_8_designer_8cs">frmVacation.Designer.cs</innerfile>
+    <innerfile refid="frm_vacation_display_8cs">frmVacationDisplay.cs</innerfile>
+    <innerfile refid="frm_vacation_display_8_designer_8cs">frmVacationDisplay.Designer.cs</innerfile>
+    <innerfile refid="_line_8cs">Line.cs</innerfile>
+    <innerfile refid="_my_s_q_l_exception_8cs">MySQLException.cs</innerfile>
+    <innerfile refid="_my_s_q_l_get_data_exception_8cs">MySQLGetDataException.cs</innerfile>
+    <innerfile refid="_pilot_8cs">Pilot.cs</innerfile>
+    <innerfile refid="_program_8cs">Program.cs</innerfile>
+    <innerfile refid="_vacation_8cs">Vacation.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Application de planification de vols aériens/"/>
+  </compounddef>
+</doxygen>

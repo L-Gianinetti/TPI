@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_f703f62317aa07f72524bc7b9571c1ec" kind="dir">
+    <compoundname>Pilot</compoundname>
+    <innerdir refid="dir_0f2d97fb91faef3180a39037f41e8548">Pilot/obj</innerdir>
+    <innerdir refid="dir_62a34064e8730b5cdc8a1d32374d1331">Pilot/Properties</innerdir>
+    <innerfile refid="_pilot_tests_8cs">PilotTests.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Pilot/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_df6ff7a5d95e877dc8fa45fdd7a3f7af" kind="dir">
+    <compoundname>Application de planification de vols aériens/Properties</compoundname>
+    <innerfile refid="_application_01de_01planification_01de_01vols_01a_xC3_xA9riens_2_properties_2_assembly_info_8cs">AssemblyInfo.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Application de planification de vols aériens/Properties/"/>
+  </compounddef>
+</doxygen>

@@ -4,11 +4,6 @@
     <compoundname>Airport.cs</compoundname>
     <innerclass refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_airport" prot="public">Application_de_planification_de_vols_aériens::Airport</innerclass>
     <innernamespace refid="namespace_application__de__planification__de__vols__a_xC3_xA9riens">Application_de_planification_de_vols_aériens</innernamespace>
-    <innernamespace refid="namespace_system">System</innernamespace>
-    <innernamespace refid="namespace_system_1_1_collections_1_1_generic">System::Collections::Generic</innernamespace>
-    <innernamespace refid="namespace_system_1_1_linq">System::Linq</innernamespace>
-    <innernamespace refid="namespace_system_1_1_text">System::Text</innernamespace>
-    <innernamespace refid="namespace_system_1_1_threading_1_1_tasks">System::Threading::Tasks</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -20,7 +15,7 @@
 <codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="namespace_system" kindref="compound">System</ref>.Text;</highlight></codeline>
 <codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="namespace_system" kindref="compound">System</ref>.Threading.Tasks;</highlight></codeline>
 <codeline lineno="6"><highlight class="normal"></highlight></codeline>
-<codeline lineno="7" refid="namespace_application__de__planification__de__vols__a_xC3_xA9riens" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_application__de__planification__de__vols__a_xC3_xA9riens" kindref="compound">Application_de_planification_de_vols_aériens</ref></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_application__de__planification__de__vols__a_xC3_xA9riens" kindref="compound">Application_de_planification_de_vols_aériens</ref></highlight></codeline>
 <codeline lineno="8"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="9" refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_airport" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_airport" kindref="compound">Airport</ref></highlight></codeline>
 <codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
@@ -49,6 +44,6 @@
 <codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="34"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="P:/TPI/Application de planification de vols aériens/Application de planification de vols aériens/Airport.cs"/>
+    <location file="Application de planification de vols aériens/Airport.cs"/>
   </compounddef>
 </doxygen>

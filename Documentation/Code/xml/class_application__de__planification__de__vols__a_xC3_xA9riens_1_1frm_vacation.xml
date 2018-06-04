@@ -1,0 +1,376 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation" kind="class" language="C#" prot="public">
+    <compoundname>Application_de_planification_de_vols_aériens::frmVacation</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Form</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_1a60534f09d0608fae942cf19756c77170" prot="private" static="no" mutable="no">
+        <type><ref refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection" kindref="compound">DBConnection</ref></type>
+        <definition>DBConnection Application_de_planification_de_vols_aériens.frmVacation.dbConnection</definition>
+        <argsstring></argsstring>
+        <name>dbConnection</name>
+        <initializer>= new <ref refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_d_b_connection" kindref="compound">DBConnection</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmVacation.cs" line="15" column="1" bodyfile="Application de planification de vols aériens/frmVacation.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_1ad6994f32fdb1ac939d2a0c3b6bfa1710" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Application_de_planification_de_vols_aériens.frmVacation.idPilot</definition>
+        <argsstring></argsstring>
+        <name>idPilot</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmVacation.cs" line="16" column="1" bodyfile="Application de planification de vols aériens/frmVacation.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_1ae640f52c712784c648262ed31731dedb" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Application_de_planification_de_vols_aériens.frmVacation.daysLeft</definition>
+        <argsstring></argsstring>
+        <name>daysLeft</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmVacation.cs" line="17" column="1" bodyfile="Application de planification de vols aériens/frmVacation.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_1a565bf43f81226428052dc9ff070fc398" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer Application_de_planification_de_vols_aériens.frmVacation.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmVacation.Designer.cs" line="8" column="1" bodyfile="Application de planification de vols aériens/frmVacation.Designer.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_1a85667bc3ebb6d292619b153f8025a3a0" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label Application_de_planification_de_vols_aériens.frmVacation.lblStartDate</definition>
+        <argsstring></argsstring>
+        <name>lblStartDate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmVacation.Designer.cs" line="101" column="1" bodyfile="Application de planification de vols aériens/frmVacation.Designer.cs" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_1a3471819c853aa4e0970116e89ff7ad21" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label Application_de_planification_de_vols_aériens.frmVacation.lblEndDate</definition>
+        <argsstring></argsstring>
+        <name>lblEndDate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmVacation.Designer.cs" line="102" column="1" bodyfile="Application de planification de vols aériens/frmVacation.Designer.cs" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_1afe96e527f195faea5ae9d9fac864e7e4" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DateTimePicker</type>
+        <definition>System.Windows.Forms.DateTimePicker Application_de_planification_de_vols_aériens.frmVacation.dtpStart</definition>
+        <argsstring></argsstring>
+        <name>dtpStart</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmVacation.Designer.cs" line="103" column="1" bodyfile="Application de planification de vols aériens/frmVacation.Designer.cs" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_1a992ba71a66a2ea33aea8148a8db89663" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DateTimePicker</type>
+        <definition>System.Windows.Forms.DateTimePicker Application_de_planification_de_vols_aériens.frmVacation.dtpEnd</definition>
+        <argsstring></argsstring>
+        <name>dtpEnd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmVacation.Designer.cs" line="104" column="1" bodyfile="Application de planification de vols aériens/frmVacation.Designer.cs" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_1a80d6d3cf64b6ea09ef03e4253ee13424" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button Application_de_planification_de_vols_aériens.frmVacation.cmdValidate</definition>
+        <argsstring></argsstring>
+        <name>cmdValidate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmVacation.Designer.cs" line="105" column="1" bodyfile="Application de planification de vols aériens/frmVacation.Designer.cs" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_1a8507b3ca296fad048a5fa603b2ca5bc6" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Application_de_planification_de_vols_aériens.frmVacation.IdPilot</definition>
+        <argsstring></argsstring>
+        <name>IdPilot</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmVacation.cs" line="24" column="1" bodyfile="Application de planification de vols aériens/frmVacation.cs" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_1a0061f5e8f3202beab7a0458c25573309" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>double</type>
+        <definition>double Application_de_planification_de_vols_aériens.frmVacation.DaysLeft</definition>
+        <argsstring></argsstring>
+        <name>DaysLeft</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmVacation.cs" line="37" column="1" bodyfile="Application de planification de vols aériens/frmVacation.cs" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_1aca84ea11aed02b7e2f79819d8e26a7df" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Application_de_planification_de_vols_aériens.frmVacation.frmVacation</definition>
+        <argsstring>()</argsstring>
+        <name>frmVacation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmVacation.cs" line="18" column="1" bodyfile="Application de planification de vols aériens/frmVacation.cs" bodystart="18" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_1a6fef3fd43cf1ea9efb12c0a8ac8a1783" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Application_de_planification_de_vols_aériens.frmVacation.frmVacation</definition>
+        <argsstring>(int id)</argsstring>
+        <name>frmVacation</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmVacation.cs" line="51" column="1" bodyfile="Application de planification de vols aériens/frmVacation.cs" bodystart="51" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_1a8b7402ab60b4b3d729a622a9f20021f5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Application_de_planification_de_vols_aériens.frmVacation.VacationDaysLeft</definition>
+        <argsstring>()</argsstring>
+        <name>VacationDaysLeft</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmVacation.cs" line="103" column="1" bodyfile="Application de planification de vols aériens/frmVacation.cs" bodystart="103" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_1a9f4bbc18dc24ac49dc0e5d10d990c644" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Application_de_planification_de_vols_aériens.frmVacation.IsPilotInVacationYet</definition>
+        <argsstring>(DateTime start, DateTime end)</argsstring>
+        <name>IsPilotInVacationYet</name>
+        <param>
+          <type>DateTime</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>DateTime</type>
+          <declname>end</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmVacation.cs" line="145" column="1" bodyfile="Application de planification de vols aériens/frmVacation.cs" bodystart="145" bodyend="179"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_1a4774f8ebc841abecec2961fa9736122e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Application_de_planification_de_vols_aériens.frmVacation.IsPilotWorking</definition>
+        <argsstring>(DateTime start, DateTime end)</argsstring>
+        <name>IsPilotWorking</name>
+        <param>
+          <type>DateTime</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>DateTime</type>
+          <declname>end</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmVacation.cs" line="182" column="1" bodyfile="Application de planification de vols aériens/frmVacation.cs" bodystart="182" bodyend="216"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_1a477e7f288a79343b90ee48fd9dc93e52" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.frmVacation.cmdValider_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>cmdValider_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmVacation.cs" line="57" column="1" bodyfile="Application de planification de vols aériens/frmVacation.cs" bodystart="57" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_1a6bbe4bff04626cf2a8e9c69f8fef45fe" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.frmVacation.frmVacances_Load</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>frmVacances_Load</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmVacation.cs" line="97" column="1" bodyfile="Application de planification de vols aériens/frmVacation.cs" bodystart="97" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_1a3f6eff39ef2310a2e4c0c1fb7c5e4e37" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.frmVacation.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmVacation.Designer.cs" line="29" column="1" bodyfile="Application de planification de vols aériens/frmVacation.Designer.cs" bodystart="29" bodyend="97"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_1a28b48ced195658497e43b6e7636bc634" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void Application_de_planification_de_vols_aériens.frmVacation.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Application de planification de vols aériens/frmVacation.Designer.cs" line="14" column="1" bodyfile="Application de planification de vols aériens/frmVacation.Designer.cs" bodystart="14" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="27">
+        <label>Form</label>
+      </node>
+      <node id="26">
+        <label>Application_de_planification_de_vols_aériens.frmVacation</label>
+        <link refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation"/>
+        <childnode refid="27" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="29">
+        <label>Form</label>
+      </node>
+      <node id="28">
+        <label>Application_de_planification_de_vols_aériens.frmVacation</label>
+        <link refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation"/>
+        <childnode refid="29" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Application de planification de vols aériens/frmVacation.cs" line="14" column="1" bodyfile="Application de planification de vols aériens/frmVacation.cs" bodystart="13" bodyend="217"/>
+    <listofallmembers>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_1a80d6d3cf64b6ea09ef03e4253ee13424" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmVacation</scope><name>cmdValidate</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_1a477e7f288a79343b90ee48fd9dc93e52" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmVacation</scope><name>cmdValider_Click</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_1a565bf43f81226428052dc9ff070fc398" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmVacation</scope><name>components</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_1a0061f5e8f3202beab7a0458c25573309" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmVacation</scope><name>DaysLeft</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_1ae640f52c712784c648262ed31731dedb" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmVacation</scope><name>daysLeft</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_1a60534f09d0608fae942cf19756c77170" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmVacation</scope><name>dbConnection</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_1a28b48ced195658497e43b6e7636bc634" prot="protected" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmVacation</scope><name>Dispose</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_1a992ba71a66a2ea33aea8148a8db89663" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmVacation</scope><name>dtpEnd</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_1afe96e527f195faea5ae9d9fac864e7e4" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmVacation</scope><name>dtpStart</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_1a6bbe4bff04626cf2a8e9c69f8fef45fe" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmVacation</scope><name>frmVacances_Load</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_1aca84ea11aed02b7e2f79819d8e26a7df" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmVacation</scope><name>frmVacation</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_1a6fef3fd43cf1ea9efb12c0a8ac8a1783" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmVacation</scope><name>frmVacation</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_1ad6994f32fdb1ac939d2a0c3b6bfa1710" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmVacation</scope><name>idPilot</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_1a8507b3ca296fad048a5fa603b2ca5bc6" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmVacation</scope><name>IdPilot</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_1a3f6eff39ef2310a2e4c0c1fb7c5e4e37" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmVacation</scope><name>InitializeComponent</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_1a9f4bbc18dc24ac49dc0e5d10d990c644" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmVacation</scope><name>IsPilotInVacationYet</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_1a4774f8ebc841abecec2961fa9736122e" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmVacation</scope><name>IsPilotWorking</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_1a3471819c853aa4e0970116e89ff7ad21" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmVacation</scope><name>lblEndDate</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_1a85667bc3ebb6d292619b153f8025a3a0" prot="private" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmVacation</scope><name>lblStartDate</name></member>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1frm_vacation_1a8b7402ab60b4b3d729a622a9f20021f5" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::frmVacation</scope><name>VacationDaysLeft</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

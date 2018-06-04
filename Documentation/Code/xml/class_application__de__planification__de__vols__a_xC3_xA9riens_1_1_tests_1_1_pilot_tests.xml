@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_pilot_tests" kind="class" language="C#" prot="public">
+    <compoundname>Application_de_planification_de_vols_aériens::Tests::PilotTests</compoundname>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_pilot_tests_1a3caa375d856283ec74472f7e3f3095b1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application_de_planification_de_vols_aériens.Tests.PilotTests.UpdatePilotsCurrentLocationTest</definition>
+        <argsstring>()</argsstring>
+        <name>UpdatePilotsCurrentLocationTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Pilot/PilotTests.cs" line="15" column="1" bodyfile="Pilot/PilotTests.cs" bodystart="15" bodyend="77"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Pilot/PilotTests.cs" line="13" column="1" bodyfile="Pilot/PilotTests.cs" bodystart="12" bodyend="78"/>
+    <listofallmembers>
+      <member refid="class_application__de__planification__de__vols__a_xC3_xA9riens_1_1_tests_1_1_pilot_tests_1a3caa375d856283ec74472f7e3f3095b1" prot="public" virt="non-virtual"><scope>Application_de_planification_de_vols_aériens::Tests::PilotTests</scope><name>UpdatePilotsCurrentLocationTest</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

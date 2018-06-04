@@ -440,9 +440,12 @@ namespace Application_de_planification_de_vols_aériens
                     }
                 }
 
+                //Get airport's names
+                string arrivalAirportName = dbConnection.GetArrivalAirportName(flight.IdLine);
+                string departureAirportName = dbConnection.GetDepartureAirportName(flight.IdLine);
 
-                //Display flightName, idLine, departureDate, arrivalDate, pilot n°1 full name, pilot n°2 full name in DataGridView
-                string[] row = new string[] { flight.Name, flight.IdLine.ToString(), flight.SDepartureDate, flight.SArrivalDate, pilotFullName[0], pilotFullName[1] };
+                //Display flightName, idLine, departureAirportName, arrivalAirportName departureDate, arrivalDate, pilot n°1 full name, pilot n°2 full name in DataGridView
+                string[] row = new string[] { flight.Name, flight.IdLine.ToString(), departureAirportName, arrivalAirportName, flight.SDepartureDate, flight.SArrivalDate, pilotFullName[0], pilotFullName[1] };
                 dgvFlights.Rows.Add(row);
             });
         }

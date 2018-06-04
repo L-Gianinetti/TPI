@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_4ffdc8867005390ff3049c3fcaf4d676" kind="dir">
+    <compoundname>AddPilotToFligth</compoundname>
+    <innerdir refid="dir_2ebcb7234d1ba56a686fa32610180ee2">AddPilotToFligth/obj</innerdir>
+    <innerdir refid="dir_9a9bd8816daacf7a7df093a748ccb5fe">AddPilotToFligth/Properties</innerdir>
+    <innerfile refid="frm_flight_assignment_tests_8cs">frmFlightAssignmentTests.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="AddPilotToFligth/"/>
+  </compounddef>
+</doxygen>
