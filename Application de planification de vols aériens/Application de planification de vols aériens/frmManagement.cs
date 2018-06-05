@@ -33,9 +33,8 @@ namespace Application_de_planification_de_vols_aériens
             //Update piltos current location
             newPilot = new Pilot();
             DateTime lastClosedDate = new DateTime();
-
             //Get the date of the last time this form was opened
-            if(File.Exists("C:\\Program Files (x86)\\PlanificationVolsAeriens\\LastClosingFormDate\\date.txt"))
+            if (File.Exists("C:\\Program Files (x86)\\PlanificationVolsAeriens\\LastClosingFormDate\\date.txt"))
             {
                 string fileContent = System.IO.File.ReadAllText("C:\\Program Files (x86)\\PlanificationVolsAeriens\\LastClosingFormDate\\date.txt");
                 int year = int.Parse(fileContent.Substring(6, 4));

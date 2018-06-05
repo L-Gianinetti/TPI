@@ -143,9 +143,9 @@ namespace Application_de_planification_de_vols_aériens
             StringBuilder infosTxt = new StringBuilder();
 
             //Create ReadMe.txt, it explains how data are stored in pilot's planning
-            string infosPath = "C:\\Program Files (x86)\\PlanificationVolsAeriens\\Plannings\\ReadMe.txt";
+            string infosPath = "C:\\Users\\Lucas\\Documents\\PlanificationVolsAeriens\\Plannings\\ReadMe.txt";
             infosTxt.AppendLine("Les jours ou le pilote ne travaille pas contiennent FreeDay");
-            infosTxt.AppendLine("Les jours ou le pilote est en vacance contiennent Vacation");
+            infosTxt.AppendLine("Les jours ou le pilote est en vacances contiennent Vacation");
             infosTxt.AppendLine("Les jours ou le pilote travaille contiennent le nom du vol - l'heure d'arrivée du vol");
             File.WriteAllText(infosPath, infosTxt.ToString());
 
@@ -383,6 +383,10 @@ namespace Application_de_planification_de_vols_aériens
                     if (res == DialogResult.OK)
                     {
                         frmFlightAssignment.Close();
+                        //Update dgvFlight
+                        dgvFlights.Rows.Clear();
+                        displayFlights();
+                        dgvFlights.Refresh();
                     }
                 }
             }
